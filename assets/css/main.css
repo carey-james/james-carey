@@ -1306,7 +1306,7 @@
 	html {
 		background-color: #313a3d;
 		background-attachment: fixed,						fixed;
-		background-image: url("images/overlay.png"), url("../../images/Fuji.jpg");
+		background-image: url("images/overlay.png"), url("../images/greece.jpg");
 		background-position: top left,					center center;
 		background-repeat: repeat,						none;
 		background-size: auto,						cover;
@@ -2168,7 +2168,7 @@
 	}
 
 		.image:before {
-			background: url("../../images/Fuji.jpg");
+			background: url("../images/greece.jpg");
 			content: '';
 			display: block;
 			height: 100%;
