@@ -1,8 +1,10 @@
 :root {
-  --building-color: #FF9800;
-  --house-color: #0288D1;
-  --shop-color: #7B1FA2;
-  --warehouse-color: #558B2F;
+  --grab-and-go: #D05353;
+  --affordable: #41BBD9;
+  --affordable-and-drinks: #7CD179;
+  --expensive: #33658A;
+  --expensive-and-drinks: #679965;
+  --drinks: #FFB140;
 }
 
 /*
@@ -22,6 +24,14 @@ body {
 #map {
   height: 100%;
   width: 100%;
+}
+
+#legend {
+  font-family: Arial, sans-serif;
+  background: #FFFFFF;
+  padding: 10px;
+  margin: 10px;
+  border: 3px solid #000000;
 }
 
 /*
@@ -133,74 +143,97 @@ body {
   height: 50px;
 }
 
-.restaurant .bed {
+.restaurant .dollar {
   color: #FFA000;
 }
 
-.restaurant .bath {
-  color: #03A9F4;
-}
-
-.restaurant .size {
+.restaurant .veg {
   color: #388E3C;
 }
 
-/*
- * House icon colors.
- */
-.restaurant.highlight:has(.sit-down) .icon {
-  color: var(--house-color);
+.restaurant .nonveg {
+  color: #8F3838;
 }
 
-.restaurant:not(.highlight):has(.sit-down) {
-  background-color: var(--house-color);
-}
-
-.restaurant:not(.highlight):has(.sit-down)::after {
-  border-top: 9px solid var(--house-color);
+.restaurant .rez {
+  color: #383B8F;
 }
 
 /*
- * Building icon colors.
+ * Icon colors.
  */
-.restaurant.highlight:has(.fa-building) .icon {
-  color: var(--building-color);
+.restaurant.highlight:has(.grab-and-go) .icon {
+  color: var(--grab-and-go);
 }
 
-.restaurant:not(.highlight):has(.fa-building) {
-  background-color: var(--building-color);
+.restaurant:not(.highlight):has(.grab-and-go) {
+  background-color: var(--grab-and-go);
 }
 
-.restaurant:not(.highlight):has(.fa-building)::after {
-  border-top: 9px solid var(--building-color);
+.restaurant:not(.highlight):has(.grab-and-go)::after {
+  border-top: 9px solid var(--grab-and-go);
 }
 
-/*
- * Warehouse icon colors.
- */
-.restaurant.highlight:has(.fa-warehouse) .icon {
-  color: var(--warehouse-color);
+.restaurant.highlight:has(.grab-and-go) .icon {
+  color: var(--grab-and-go);
 }
 
-.restaurant:not(.highlight):has(.fa-warehouse) {
-  background-color: var(--warehouse-color);
+.restaurant.highlight:has(.affordable) .icon {
+  color: var(--affordable);
 }
 
-.restaurant:not(.highlight):has(.fa-warehouse)::after {
-  border-top: 9px solid var(--warehouse-color);
+.restaurant:not(.highlight):has(.affordable) {
+  background-color: var(--affordable);
 }
 
-/*
- * Shop icon colors.
- */
-.restaurant.highlight:has(.fa-shop) .icon {
-  color: var(--shop-color);
+.restaurant:not(.highlight):has(.affordable)::after {
+  border-top: 9px solid var(--affordable);
 }
 
-.restaurant:not(.highlight):has(.fa-shop) {
-  background-color: var(--shop-color);
+.restaurant.highlight:has(.affordable) .icon {
+  color: var(--affordable);
 }
 
-.restaurant:not(.highlight):has(.fa-shop)::after {
-  border-top: 9px solid var(--shop-color);
+.restaurant:not(.highlight):has(.affordable-and-drinks) {
+  background-color: var(--affordable-and-drinks);
+}
+
+.restaurant:not(.highlight):has(.affordable-and-drinks)::after {
+  border-top: 9px solid var(--affordable-and-drinks);
+}
+
+.restaurant.highlight:has(.expensive) .icon {
+  color: var(--expensive);
+}
+
+.restaurant:not(.highlight):has(.expensive) {
+  background-color: var(--expensive);
+}
+
+.restaurant:not(.highlight):has(.expensive)::after {
+  border-top: 9px solid var(--expensive);
+}
+
+.restaurant.highlight:has(.expensive-and-drinks) .icon {
+  color: var(--expensive-and-drinks);
+}
+
+.restaurant:not(.highlight):has(.expensive-and-drinks) {
+  background-color: var(--expensive-and-drinks);
+}
+
+.restaurant:not(.highlight):has(.expensive-and-drinks)::after {
+  border-top: 9px solid var(--expensive-and-drinks);
+}
+
+.restaurant.highlight:has(.drinks) .icon {
+  color: var(--drinks);
+}
+
+.restaurant:not(.highlight):has(.drinks) {
+  background-color: var(--drinks);
+}
+
+.restaurant:not(.highlight):has(.drinks)::after {
+  border-top: 9px solid var(--drinks);
 }
