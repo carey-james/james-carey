@@ -163,6 +163,42 @@ const restaurants = [
       lng: -77.03146677542595,
     },
   },
+  {
+    name: "ChurchKey",
+    link: "https://www.churchkeydc.com/",
+    address: "1337 14th St NW",
+    description: "Incredibly large draft selection with warm lounge vibes",
+    icon1: "beer-mug",
+    icon2: "",
+    type: "drinks",
+    price: "$10",
+    extra_icon: "utensils",
+    extra_color: "veg",
+    extra_text: "Food",
+    rez: "No Rez",
+    position: { 
+      lat: 38.90847885390439,
+      lng: -77.03163649585525,
+    },
+  },
+  {
+    name: "All Day at Kramers",
+    link: "https://www.kramers.com/all-day-by-kramers-menus/",
+    address: "1337 14th St NW",
+    description: "American bistro food at a bookstore",
+    icon1: "fork-knife",
+    icon2: "",
+    type: "affordable",
+    price: "$20",
+    extra_icon: "leaf",
+    extra_color: "veg",
+    extra_text: "Vegan OK",
+    rez: "No Rez",
+    position: {
+      lat: 38.91083549831795,
+      lng: -77.04374105522061,
+    },
+  },
 ];
 
 initMap();
