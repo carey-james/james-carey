@@ -1,5 +1,3 @@
-import res from "./dc_recs.js";
-
 async function initMap() {
   // Request needed libraries.
   const { Map } = await google.maps.importLibrary("maps");
