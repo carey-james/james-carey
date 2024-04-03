@@ -1,5 +1,3 @@
-import res from "../json/dc_recs.json" assert { type: 'json' };
-
 async function initMap() {
   // Request needed libraries.
   const { Map } = await google.maps.importLibrary("maps");
@@ -70,6 +68,8 @@ function buildContent(restaurant) {
   return content;
 }
 
-const restaurants = JSON.parse(res)
+const response = await fetch("../json/dc_recs.json");
+const res = await response.json();
+const restaurants = JSON.parse(res);
 
 initMap();
