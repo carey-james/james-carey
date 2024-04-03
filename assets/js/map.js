@@ -28,7 +28,7 @@ async function initMap() {
       const color = type.color;
       const div = document.createElement("div");
 
-      div.innerHTML = `<i class="fa-solid fa-circle ${color}"></i>` + name;
+      div.innerHTML = `<span style="color:${type.color};"><i class="fa-solid fa-circle"></i> ${type.name}</span>`;
       legend.appendChild(div);
     }
     map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
@@ -83,29 +83,28 @@ function buildContent(restaurant) {
 const legend_colors = {
   grab_and_go: {
     name: "Grab & Go",
-    color: "grab-and-go"
+    color: "#D05353"
   },
   affordable_sitdown: {
     name: "Affordable Sitdown",
-    color: "affordable"
+    color: "#41BBD9"
   },
   affordable_and_drinks: {
     name: "Affordable & Drinks",
-    color: "affordable-and-drinks"
+    color: "#7CD179"
   },
   expensive_sitdown: {
     name: "Expensive Sitdown",
-    color: "expensive"
+    color: "#33658A"
   },
   expensive_and_drinks: {
     name: "Expensive & Drinks",
-    color: "expensive-and-drinks"
+    color: "#679965"
   },
   drinks: {
     name: "Drinks",
-    color: "drinks"
+    color: "#FFB140"
   },
-
 }
 
 const restaurants = [
@@ -197,6 +196,24 @@ const restaurants = [
     position: {
       lat: 38.91083549831795,
       lng: -77.04374105522061,
+    },
+  },
+  {
+    name: "Pizzeria Paradiso",
+    link: "https://www.eatyourpizza.com/lunch-dinner",
+    address: "2003 P St NW",
+    description: "Woodfired Pizza and Beer",
+    icon1: "pizza-slice",
+    icon2: "",
+    type: "affordable",
+    price: "$15",
+    extra_icon: "leaf",
+    extra_color: "veg",
+    extra_text: "Veg OK",
+    rez: "No Rez",
+    position: { 
+      lat: 38.90987941538678,
+      lng: -77.04515542838818,
     },
   },
 ];

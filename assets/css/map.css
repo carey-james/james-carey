@@ -27,12 +27,12 @@ body {
 }
 
 #legend {
-  font-family: Arial, sans-serif;
   background: #FFFFFF;
-  padding: 10px;
-  margin: 10px;
-  border: 3px solid #000000;
-}
+  padding: 3px;
+  margin: 3px;
+  border-left: 9px solid transparent;
+  font-size: 14px;
+  border-radius: 5%;
 
 /*
  * Resturant styles in unhighlighted state.
@@ -40,17 +40,18 @@ body {
 .restaurant {
   align-items: center;
   background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
   border-radius: 50%;
   color: #263238;
   display: flex;
-  font-size: 14px;
-  gap: 15px;
-  height: 30px;
+  font-size: 20px;
+  gap: 25px;
+  height: 40px;
   justify-content: center;
   padding: 4px;
   position: relative;
   transition: all 0.3s ease-out;
-  width: 30px;
+  width: 40px;
 }
 
 .restaurant::after {
@@ -88,23 +89,23 @@ body {
 
 .restaurant .address {
   color: #9E9E9E;
-  font-size: 10px;
-  margin-bottom: 3px;
-  margin-top: 3px;
+  font-size: 14px;
+  margin-bottom: 2px;
+  margin-top: 2px;
 }
 
 .restaurant .description {
   color: #9E9E9E;
-  font-size: 10px;
-  margin-bottom: 3px;
-  margin-top: 3px;
+  font-size: 14px;
+  margin-bottom: 2px;
+  margin-top: 2px;
 }
 
 .restaurant .features {
   align-items: flex-end;
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 10px;  
 }
 
 .restaurant .features > div {
@@ -115,7 +116,8 @@ body {
   display: flex;
   font-size: 10px;
   gap: 5px;
-  padding: 5px;
+  padding: 6px;
+  z-index: 2;
 }
 
 /*
@@ -174,10 +176,6 @@ body {
   border-top: 9px solid var(--grab-and-go);
 }
 
-.restaurant.highlight:has(.grab-and-go) .icon {
-  color: var(--grab-and-go);
-}
-
 .restaurant.highlight:has(.affordable) .icon {
   color: var(--affordable);
 }
@@ -190,8 +188,8 @@ body {
   border-top: 9px solid var(--affordable);
 }
 
-.restaurant.highlight:has(.affordable) .icon {
-  color: var(--affordable);
+.restaurant.highlight:has(.affordable-and-drinks) .icon {
+  color: var(--affordable-and-drinks);
 }
 
 .restaurant:not(.highlight):has(.affordable-and-drinks) {
