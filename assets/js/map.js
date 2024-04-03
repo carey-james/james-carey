@@ -1,4 +1,4 @@
-import res from "dc_recs.js";
+import res from "./dc_recs.js";
 
 async function initMap() {
   // Request needed libraries.
