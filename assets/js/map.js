@@ -21,18 +21,16 @@ async function initMap() {
       toggleHighlight(AdvancedMarkerElement, restaurant);
     });
   }
-
-  for (const key in legend_colors) {
+  
+    for (const key in legend_colors) {
       const type = legend_colors[key];
-      const name = type.name;
-      const color = type.color;
       const div = document.createElement("div");
 
       div.innerHTML = `<span style="color:${type.color};"><i class="fa-solid fa-circle"></i> ${type.name}</span>`;
       legend.appendChild(div);
     }
     map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
-
+  
 }
 
 function toggleHighlight(markerView, restaurant) {
@@ -105,6 +103,7 @@ const legend_colors = {
     name: "Drinks",
     color: "#FFB140"
   },
+
 }
 
 const restaurants = [
@@ -148,7 +147,7 @@ const restaurants = [
     name: "Left Door",
     link: "",
     address: "1345 S St NW",
-    description: "Speak-easy vibes and Bartender's Choice Craft Cocktails",
+    description: "Bartender's choice cocktails",
     icon1: "martini-glass",
     icon2: "",
     type: "drinks",
@@ -166,7 +165,7 @@ const restaurants = [
     name: "ChurchKey",
     link: "https://www.churchkeydc.com/",
     address: "1337 14th St NW",
-    description: "Incredibly large draft selection with warm lounge vibes",
+    description: "Huge draft selection, warm vibes",
     icon1: "beer-mug",
     icon2: "",
     type: "drinks",
@@ -184,7 +183,7 @@ const restaurants = [
     name: "All Day at Kramers",
     link: "https://www.kramers.com/all-day-by-kramers-menus/",
     address: "1337 14th St NW",
-    description: "American bistro food at a bookstore",
+    description: "American bistro food & books",
     icon1: "fork-knife",
     icon2: "",
     type: "affordable",
