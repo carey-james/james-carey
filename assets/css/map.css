@@ -1,0 +1,206 @@
+:root {
+  --building-color: #FF9800;
+  --house-color: #0288D1;
+  --shop-color: #7B1FA2;
+  --warehouse-color: #558B2F;
+}
+
+/*
+ * Optional: Makes the sample page fill the window.
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map.
+ */
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+/*
+ * Resturant styles in unhighlighted state.
+ */
+.restaurant {
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  color: #263238;
+  display: flex;
+  font-size: 14px;
+  gap: 15px;
+  height: 30px;
+  justify-content: center;
+  padding: 4px;
+  position: relative;
+  transition: all 0.3s ease-out;
+  width: 30px;
+}
+
+.restaurant::after {
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 9px solid #FFFFFF;
+  content: "";
+  height: 0;
+  left: 50%;
+  position: absolute;
+  top: 95%;
+  transform: translate(-50%, 0);
+  transition: all 0.3s ease-out;
+  width: 0;
+  z-index: 1;
+}
+
+.restaurant .icon {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: #FFFFFF;
+}
+
+.restaurant .icon svg {
+  height: 20px;
+  width: auto;
+}
+
+.restaurant .details {
+  display: none;
+  flex-direction: column;
+  flex: 1;
+}
+
+.restaurant .address {
+  color: #9E9E9E;
+  font-size: 10px;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+.restaurant .description {
+  color: #9E9E9E;
+  font-size: 10px;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+.restaurant .features {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.restaurant .features > div {
+  align-items: center;
+  background: #F5F5F5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  display: flex;
+  font-size: 10px;
+  gap: 5px;
+  padding: 5px;
+}
+
+/*
+ * Restaurant styles in highlighted state.
+ */
+.restaurant.highlight {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+  height: 80px;
+  padding: 8px 15px;
+  width: auto;
+}
+
+.restaurant.highlight::after {
+  border-top: 9px solid #FFFFFF;
+}
+
+.restaurant.highlight .details {
+  display: flex;
+}
+
+.restaurant.highlight .icon svg {
+  width: 50px;
+  height: 50px;
+}
+
+.restaurant .bed {
+  color: #FFA000;
+}
+
+.restaurant .bath {
+  color: #03A9F4;
+}
+
+.restaurant .size {
+  color: #388E3C;
+}
+
+/*
+ * House icon colors.
+ */
+.restaurant.highlight:has(.sit-down) .icon {
+  color: var(--house-color);
+}
+
+.restaurant:not(.highlight):has(.sit-down) {
+  background-color: var(--house-color);
+}
+
+.restaurant:not(.highlight):has(.sit-down)::after {
+  border-top: 9px solid var(--house-color);
+}
+
+/*
+ * Building icon colors.
+ */
+.restaurant.highlight:has(.fa-building) .icon {
+  color: var(--building-color);
+}
+
+.restaurant:not(.highlight):has(.fa-building) {
+  background-color: var(--building-color);
+}
+
+.restaurant:not(.highlight):has(.fa-building)::after {
+  border-top: 9px solid var(--building-color);
+}
+
+/*
+ * Warehouse icon colors.
+ */
+.restaurant.highlight:has(.fa-warehouse) .icon {
+  color: var(--warehouse-color);
+}
+
+.restaurant:not(.highlight):has(.fa-warehouse) {
+  background-color: var(--warehouse-color);
+}
+
+.restaurant:not(.highlight):has(.fa-warehouse)::after {
+  border-top: 9px solid var(--warehouse-color);
+}
+
+/*
+ * Shop icon colors.
+ */
+.restaurant.highlight:has(.fa-shop) .icon {
+  color: var(--shop-color);
+}
+
+.restaurant:not(.highlight):has(.fa-shop) {
+  background-color: var(--shop-color);
+}
+
+.restaurant:not(.highlight):has(.fa-shop)::after {
+  border-top: 9px solid var(--shop-color);
+}
