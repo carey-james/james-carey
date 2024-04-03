@@ -1,4 +1,4 @@
-import res from "../json/dc_recs.json";
+import res from "../json/dc_recs.json" assert { type: 'json' };
 
 async function initMap() {
   // Request needed libraries.
