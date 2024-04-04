@@ -944,7 +944,7 @@ const restaurants = [
     description: "Bike-Up Beers",
     icon1: "beer-mug",
     icon2: "",
-    type: "affordable-and-drinks",
+    type: "drinks",
     price: "$7",
     extra_icon: "utensils",
     extra_color: "veg",
@@ -953,6 +953,24 @@ const restaurants = [
     position: {
       lat: 38.907552592880194,                     
       lng: -77.2705644963627,
+    },
+  },
+  {
+    name: "Aslin Alexandria",
+    link: "http://www.aslinbeer.com/",
+    address: "847 S Pickett St, Alexandria",
+    description: "Brewery with cool events",
+    icon1: "beer-mug",
+    icon2: "",
+    type: "drinks",
+    price: "$8",
+    extra_icon: "utensils",
+    extra_color: "veg",
+    extra_text: "Food",
+    rez: "No Rez",
+    position: {
+      lat: 38.80426714390321,                      
+      lng: -77.13787685354649,
     },
   },
 ];
