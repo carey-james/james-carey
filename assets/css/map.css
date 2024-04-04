@@ -5,6 +5,7 @@
   --expensive: #33658A;
   --expensive-and-drinks: #679965;
   --drinks: #FFB140;
+  ---want-to-go: #262626;
 }
 
 /*
@@ -235,4 +236,16 @@ body {
 
 .restaurant:not(.highlight):has(.drinks)::after {
   border-top: 9px solid var(--drinks);
+}
+
+.restaurant.highlight:has(.want-to-go) .icon {
+  color: var(--want-to-go);
+}
+
+.restaurant:not(.highlight):has(.want-to-go) {
+  background-color: var(--want-to-go);
+}
+
+.restaurant:not(.highlight):has(.want-to-go)::after {
+  border-top: 9px solid var(--want-to-go);
 }
