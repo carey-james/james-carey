@@ -18,6 +18,7 @@ async function initMap() {
       position: restaurant.position,
       title: restaurant.name,
       zIndex: (100000 - (restaurant.position.lat * 10000)),
+      optimized: false,
     });
 
     AdvancedMarkerElement.addListener("click", () => {
