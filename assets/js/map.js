@@ -1038,7 +1038,7 @@ const restaurants = [
     description: "Levantine Café",
     icon1: "flatbread-stuffed",
     icon2: "",
-    type: "want-to-go",
+    type: "affordable",
     price: "$15",
     extra_icon: "leaf",
     extra_color: "veg",
