@@ -1247,6 +1247,24 @@ const restaurants = [
       lng: -77.03715367604283,
     },
   },
+  {
+    name: "El Presidente",
+    link: "https://elpresidentedc.com/",
+    address: "1255 Union St NE",
+    description: "Neo Mexico City",
+    icon1: "taco",
+    icon2: "martini-glass",
+    type: "want-to-go",
+    price: "$30",
+    extra_icon: "leaf",
+    extra_color: "veg",
+    extra_text: "Veg OK",
+    rez: "Rez Rec'd",
+    position: {
+      lat: 38.90829662909372,                          
+      lng: -77.0005820894272,
+    },
+  },
 ];
 
 initMap();
