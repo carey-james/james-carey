@@ -1254,7 +1254,7 @@ const restaurants = [
     description: "Neo Mexico City",
     icon1: "taco",
     icon2: "martini-glass",
-    type: "want-to-go",
+    type: "expensive-and-drinks",
     price: "$30",
     extra_icon: "leaf",
     extra_color: "veg",
