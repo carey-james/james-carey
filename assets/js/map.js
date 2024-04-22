@@ -11,6 +11,8 @@ async function initMap() {
     mapId: "347ecc0a4fa8540",
   });
 
+  var restaurants = []
+
   await d3.json("/assets/js/rests.json", function (d) {const restaurants = d});
 
   for (const restaurant of restaurants) {
