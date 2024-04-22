@@ -13,7 +13,7 @@ async function initMap() {
 
   var restaurants = []
 
-  await d3.json("/assets/js/rests.json", function (d) {const restaurants = d});
+  await d3.json("/assets/js/rests.json", function (d) {restaurants = d});
 
   for (const restaurant of restaurants) {
     const AdvancedMarkerElement = new google.maps.marker.AdvancedMarkerElement({
