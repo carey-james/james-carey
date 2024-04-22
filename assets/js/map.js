@@ -13,20 +13,23 @@ async function initMap() {
 
   var restaurants = []
 
-  await d3.json("/assets/js/rests.json", function (d) {restaurants = d});
-
-  for (const restaurant of restaurants) {
-    const AdvancedMarkerElement = new google.maps.marker.AdvancedMarkerElement({
+  await d3.json("/assets/js/rests.json", function (d) {
+    restaurants = d
+    for (const restaurant of restaurants) {
+      const AdvancedMarkerElement = new google.maps.marker.AdvancedMarkerElement({
       map,
       content: buildContent(restaurant),
       position: restaurant.position,
       title: restaurant.name,
-    });
+      });
 
-    AdvancedMarkerElement.addListener("click", () => {
-      toggleHighlight(AdvancedMarkerElement, restaurant);
-    });
-  }
+      AdvancedMarkerElement.addListener("click", () => {
+        toggleHighlight(AdvancedMarkerElement, restaurant);
+      });
+    }
+  });
+
+
   
     for (const key in legend_colors) {
       const type = legend_colors[key];
