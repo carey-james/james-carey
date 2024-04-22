@@ -112,7 +112,7 @@ const legend_colors = {
 
 }
 
-const restaurants = await d3.json("./rests.json");
+const restaurants = d3.json("./rests.json");
 
 // const restaurants = [
 //   {
