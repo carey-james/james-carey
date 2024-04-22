@@ -12,6 +12,7 @@ async function initMap() {
   });
 
   const restaurants = await d3.json("./rests.json");
+  console.log(restaurants);
 
   for (const restaurant of restaurants) {
     const AdvancedMarkerElement = new google.maps.marker.AdvancedMarkerElement({
