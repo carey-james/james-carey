@@ -43,7 +43,7 @@ async function initMap() {
 
   // Build the back button and throw it in the top left
   const arrow_div = document.createElement("div");
-  arrow_div.innerHTML = `<a href="/"><span class="icon major fa-solid fa-arrow-left" style="color:#262626"></span></a>`;
+  arrow_div.innerHTML = `<a href="/"><span class="icon major fa-solid fa-arrow-left" style="color:#262626; font-size: 2.5em"></span></a>`;
   map.controls[google.maps.ControlPosition.LEFT_TOP].push(arrow_div);
 }
 
