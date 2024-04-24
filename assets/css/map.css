@@ -42,14 +42,14 @@ body {
 /* 
  * Back Arrow style.
  */
-#back-arrow {
+.back-arrow {
   color:#262626; 
   font-size: 2.5em;
   margin-top: 2.5vh;
   margin-left: 5vw;
 }
 
-#back-arrow a:hover {
+.back-arrow a:hover {
   color: #ffffff !important;
 }
 
