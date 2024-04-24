@@ -1,4 +1,5 @@
 async function initMap() {
+  
   // Request needed libraries.
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
@@ -11,6 +12,8 @@ async function initMap() {
     mapId: "347ecc0a4fa8540",
   });
 
+  // Get the data on restaurants from the JSON file held in '/assets/data/'
+  // And build the markers based on that
   await d3.json("/assets/data/restaurants.json", function (d) {
     const restaurants = d;
     for (const restaurant of restaurants) {
@@ -28,16 +31,20 @@ async function initMap() {
   });
 
 
-  
-    for (const key in legend_colors) {
-      const type = legend_colors[key];
-      const div = document.createElement("div");
+  // Build the legend and throw it in the bottom right  
+  for (const key in legend_colors) {
+    const type = legend_colors[key];
+    const div = document.createElement("div");
 
-      div.innerHTML = `<span style="color:${type.color};"><i class="fa-solid fa-circle"></i> ${type.name}</span>`;
-      legend.appendChild(div);
-    }
-    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
-  
+    div.innerHTML = `<span style="color:${type.color};"><i class="fa-solid fa-circle"></i> ${type.name}</span>`;
+    legend.appendChild(div);
+  }
+  map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+
+  // Build the back button and throw it in the top left
+  const arrow_div = document.createElement("div");
+  arrow_div.innerHTML = `<a href="/"><span class="icon major fa-solid fa-arrow-left" style="color:#262626"></span></a>`;
+  map.controls[google.maps.ControlPosition.LEFT_TOP].push(arrow_div);
 }
 
 function toggleHighlight(markerView, restaurant) {
