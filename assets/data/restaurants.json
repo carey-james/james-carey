@@ -1151,4 +1151,40 @@
 			"lng": -77.0005820894272
 		}
 	}
+	{
+		"name": "Annabelle",
+		"link": "https://annabelledc.com/",
+		"address": "2132 FL Ave NW",
+		"description": "New American",
+		"icon1": "fork-knife",
+		"icon2": "",
+		"type": "want-to-go",
+		"price": "$45",
+		"extra_icon": "leaf",
+		"extra_color": "nonveg",
+		"extra_text": "Non Veg",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 38.912743220573915, 
+			"lng": -77.04721026118611
+		}
+	}
+	{
+		"name": "Sushi Taro",
+		"link": "http://www.sushitaro.com/",
+		"address": "1503 17 St NW",
+		"description": "Omakase Sushi",
+		"icon1": "sushi",
+		"icon2": "",
+		"type": "want-to-go",
+		"price": "$150",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Veg OK",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": -38.90992279987566,  
+			"lng": -77.03824453711889
+		}
+	}
 ]
