@@ -900,24 +900,6 @@
 		}
 	},
 	{
-		"name": "The Wydown",
-		"link": "http://thewydown.com/",
-		"address": "1924 14th St NW",
-		"description": "Coffee and Pastries",
-		"icon1": "mug-hot",
-		"icon2": "",
-		"type": "grab-and-go",
-		"price": "$5",
-		"extra_icon": "leaf",
-		"extra_color": "veg",
-		"extra_text": "Vegan OK",
-		"rez": "No Rez",
-		"position": {
-			"lat": 38.91638362699135,
-			"lng": -77.03219240448311
-		}
-	},
-	{
 		"name": "Yellow",
 		"link": "http://www.yellowthecafe.com/",
 		"address": "1524 Wisconsin Ave NW",
