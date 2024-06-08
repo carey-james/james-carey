@@ -1169,4 +1169,22 @@
 			"lng": -77.03824453711889
 		}
 	}
+	{
+		"name": "Copycat Co.",
+		"link": "http://www.copycatcompany.com/",
+		"address": "1110 H St NE",
+		"description": "Cocktails and Chinese",
+		"icon1": "martini-glass",
+		"icon2": "bowl-chopsticks-noodles",
+		"type": "expensive-and-drinks",
+		"price": "$30",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Vegan OK",
+		"rez": "No Rez",
+		"position": {
+			"lat": 38.90036981449956,   
+			"lng": -76.99103050708743
+		}
+	}
 ]
