@@ -6,14 +6,17 @@
 		<title>Books Read</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Data Viz of books read by James Carey, 2022–Now.">
+		<meta name="author" content="James Carey">
 		<script src="https://kit.fontawesome.com/15088ec22c.js" crossorigin="anonymous"></script>
     	<script src="https://d3js.org/d3.v4.min.js"></script>
-		<link rel="stylesheet" href="assets/css/main.css" />
+    	<link rel="stylesheet" type="text/css" href="assets/css/tippy.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/books.css" />
 	</head>
 	<body>
 
 		<!-- Header -->
-			<section id="cvhead">
+<!--			<section id="cvhead">
 				<header class="cvhead">
 					<a href="/"><span class="icon major fa-solid fa-arrow-left"></span></a>
 					<h2>Reading List</h2>
@@ -23,15 +26,135 @@
 				</header>
 			</section>
 
-		<!-- Graphs -->
+		Graphs
 		<div id="year_pub_graph"></div>
+-->
+		<div class="wrapper">
+			<div class="columns is-multiline header">
+				<div class="column is-12">
+					<h3>Reading List</h3>
+				</div>
+				<div class="column is-12 headline">
+					<span>Books read by James Carey from 2022–Now.</span>
+				</div>
+			</div>
 
+			<div class="container">
+				<!-- Search -->
+				<div class="search">
+					<div class="field">
+						<label class="label">Search</label>
+						<p class="control search-input-wrapper">
+							<input class="input is-small" id="search-input" type="text" placeholder="Title or Author">
+							<span class="close-x is-hidden js-search-elm js-search-close"><a href="#" class="close-thin"></a></span> 
+						</p>
+						<ul class="search-result is-hidden js-search-elm" id="search-result"></ul>
+					</div>
+				</div>
+				<!-- Sort Options -->
+				<div class="options">
+					<div class="field">
+						<label class="label">Organize books by</label>
+						<p class="control">
+							<span class="select is-small">
+								<select id="sort-0">
+									<option slected value="date_desc">Date (New to Old)</option>
+									<option value="date_asc">Date (Old to New</option>
+									<option disabled="disabled">&#x2500;&#x2500;&#x2500;&#x2500;</option>
+									<option value="genre">Genre</option>
+									<option value="gender">Gender</option>
+									<option value="country">Country</option>
+								</select>
+							</span>
+						</p>
+					</div>
+				</div>
+				<!-- Shelf -->
+				<div id="shelf" class="shelf-wrapper">
+					<svg id="shelf-svg">
+					</svg>
+				</div>
+			</div>
+			<!-- Contents -->
+			<div class="content">
+				<div class="container">
+					<div class="section">
+						<a name="Visualization"></a>
+						<h1>Visualization</h1>
+						<div class="columns is-gapless is-multiline">
+							<div class="column legend is-one-quater-desktop is half-tablet">
+								<ul>
+									<li>The <i>width</i> of each book represents the <i>page numbers.</i></li>
+									<li>The <i>height</i> of each book represents its <i>form.</i></li>
+									<li>The <i>color</i> and <i>symbol</i> of each book represent its <i>genre.</i></li>
+									<li>The <i>stripes</i> on each book represent the <i>gender</i> of the author.</li>
+									<li><i>Yearly favorites</i> are highlighted with an <i>orange triangle</i> on the top left edge.</li>
+								</ul>
+							</div>
+						</div>
+						<a name="datasets"></a>
+						<h1>Dataset</h1>
+						<ul>
+							<li>The data is taken from James' personal reading list, and meta data on each book taken either from the book itself or Goodreads.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<!-- Footer -->
+		<div class="footer">
+			<div class="container">
+				<p class="share">Always happy to talk about books!</p>
+				<p><a href="https://github.com/tanykim/best-bookshelf" target="_blank"><i>Best Bookshelf</i></a> by Tanyoung Kim. Learn more <a href="https://medium.com/@tanykim/best-bookshelf-data-visualization-adapting-real-world-objects-with-d3-js-ca420b5d79cc" target="_blank">here.</a></p>
+			</div>
+		</div>
+		<!-- Modal -->
+		<div class="modal" id="modal">
+			<div class="modal-background"></div>
+			<div class="modal-content">
+				<div class="card">
+					<div class="card-content">
+						<div class="modal-count js-modal-count"></div>
+						<div class="media">
+							<div class="media-left">
+								<figure class="image">
+									<img class="js-book-image">
+								</figure>
+							</div>
+							<div class="media-content">
+								<div class="title is-5">
+									<span class="js-d-title"></span>
+									<span class="js-d-author"></span>
+								</div>
+							<span class="js-d-date"></span>
+							<span class="tag js-d-genre"></span>
+							<div class="info-elm">
+								<p><span class="info js-d-pages"></span> pages.</p>
+								<p>Written <span class="info js-d-written"></span></p>
+							</div>
+						</div>
+					</div>
+					<div id="modal-author" class="media media-author"></div>
+					<div class="media js-d-favorite-wrapper is-hidden">
+						<div class="media-content">
+							<ul class="info modal-favorite js-d-favorite"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="modal-close is-large" id="modal-close"></button>
+		<div class="js-modal-prev is-hidden modal-prev"><i class="arrow-left"></i></div>
+		<div class="js-modal-next is-hidden modal-next"><i class="arrow-right"></i></div>
+		</div>
 		<!-- Scripts -->
-			<script src="assets/js/books.js"></script>
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/lib/lodash.min.js"></script>
+		<script src="assets/js/lib/d3.min.js"></script>
+		<script src="assets/js/lib/tippy.min.js"></script>
+		<script src="assets/js/books.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html
