@@ -323,7 +323,7 @@ function runner(book_data) {
   	function getUpPos(elm, isUp) {
   		// Get current transform value, then update Y pos
   		const currP = elm.attr('transform');
-  		splitted = currP.split(', ');
+  		const splitted = currP.split(', ');
   		const currY = splitted[1].slice(0, splitted[1].length - 1);
   		return `${splitted[0]}, ${currY - (isUp ? 10 : -10)})`;
   	}
