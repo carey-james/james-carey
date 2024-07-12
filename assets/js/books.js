@@ -231,7 +231,7 @@ function runner(book_data) {
       		dimensions.push({
         		x: accW,
         		y: (storyH + storyGap) * accS - h,
-        		bookId: d.title //needed for d3 selection
+        		bookId: d.id //needed for d3 selection
       		})
       		//update prev vals
       		counts[0]++;
@@ -337,17 +337,17 @@ function runner(book_data) {
         		return `${title}<div><div class="author">by <strong>${d.author}</strong></div></div>`;
         	})
       	.attr('class', 'js-books')
-      	.attr('id', (d) => `book-${d.title}`)
+      	.attr('id', (d) => `book-${d.id}`)
       	.attr('prev-y', (d, i) => dimensions[i].y)
       	.on('mouseover', function(d) {
         	if ('ontouchstart' in document) {
           		return false;
         	}
         	//effect of book being picked up
-        	d3.select(`#book-${d.title}`)
+        	d3.select(`#book-${d.id}`)
           		.attr('transform', getUpPos(d3.select(this), true));
         	//tippy
-        	tippy(`#book-${d.book.id}`, {
+        	tippy(`#book-${d.id}`, {
           		arrow: true,
          		duration: 0,
           		size: 'small',
@@ -358,7 +358,7 @@ function runner(book_data) {
         	if ('ontouchstart' in document) {
           		return false;
         	}
-        	d3.select(`#book-${d.title}`)
+        	d3.select(`#book-${d.id}`)
           		.attr('transform', getUpPos(d3.select(this), false));
       	})
       	.on('click', (d, i) => {
@@ -372,7 +372,7 @@ function runner(book_data) {
       		.attr('height', (d) => bookH(getFormHeight(d.form)))
       		.attr('rx', 1)
       		.attr('ry', 1)
-      		.attr('id', (d) => `book-rect-${d.title}`)
+      		.attr('id', (d) => `book-rect-${d.id}`)
       		.attr('class', (d) => `genre-${d.genre} book-${d.gender}`);
 	// Mark favorites *need to add*
     // Modal close
