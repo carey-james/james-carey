@@ -3,7 +3,7 @@
 function dateFixer(arr) {
 	var result = arr;
 	const parseTime = d3.utcParse('%m/%d/%Y');
-	new_date = parseTime(arr.date);
+	const new_date = parseTime(arr.date);
 	result.date = new_date;
 	return result;
 }
