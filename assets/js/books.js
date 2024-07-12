@@ -124,7 +124,7 @@ async function runner() {
 	// Dimensions for each book
 	const pages = [10,1000]//books.map((d) => d.pages);
 	const pageRange = getRange(pages, 100);
-	const bookW = d3.scaleLinear().comain(pageRange).range(bookWRange); // Page
+	const bookW = d3.scaleLinear().domain(pageRange).range(bookWRange); // Page
 	const bookH = d3.scaleLinear().domain([60,100]).range(bookHRange); // Book form
 
 	// Put Legend of First Level (id) and 2nd Level
