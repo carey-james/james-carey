@@ -7,10 +7,8 @@ async function initBooks() {
 	const data_2022 = await d3.dsv("|", "https://raw.githubusercontent.com/carey-james/Reading-List/main/2022/books.csv");
 	const data_2023 = await d3.dsv("|", "https://raw.githubusercontent.com/carey-james/Reading-List/main/2023/books.csv");
 	const data_2024 = await d3.dsv("|", "https://raw.githubusercontent.com/carey-james/Reading-List/main/2024/books.csv");
-	const data = data_2022.concat(data_2023.concat(data_2024));
-
-
-	console.log(data.columns);
+	const data = _.sortBy(data_2022.concat(data_2023.concat(data_2024)),[date]);
+	console.log(data);
 }
 
 // Floor/Ceiling Range
