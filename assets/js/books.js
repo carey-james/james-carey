@@ -116,7 +116,7 @@ function runner(book_data) {
 	// Set range for book size
 	const storyH = 100; // Max Book Height
 	const storyGap = 40; // Height of Gap
-	const bookWRange = [10, 100]; // Book width/thickness range
+	const bookWRange = [10, 50]; // Book width/thickness range
 	const bookHRange = [60, storyH]; // Book Height Range
 
 	// Two d3 Gs in the entire shelf, one for shelf bg, one for other elements
@@ -124,7 +124,7 @@ function runner(book_data) {
 	const g = d3.select('#shelf-svg').append('g');
 
 	// Dimensions for each book
-	const pages = [10,1000]//books.map((d) => d.pages);
+	const pages = books.map((d) => d.pages);
 	const pageRange = getRange(pages, 100);
 	const bookW = d3.scaleLinear().domain(pageRange).range(bookWRange); // Page
 	const bookH = d3.scaleLinear().domain([60,100]).range(bookHRange); // Book form
