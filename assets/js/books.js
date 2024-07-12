@@ -331,7 +331,7 @@ function runner(book_data) {
   		.data(books)
   			.enter()
 		.append('g') // Book wrapper
-  			.attr('trandform', (d, i) => `translate(${dimensions[i].x}, ${dimensions[i].y})`)
+  			.attr('transform', (d, i) => `translate(${dimensions[i].x}, ${dimensions[i].y})`)
   			.attr('title', (d) => {
         		let title = `<strong>${d.title}</strong>`;
         		return `${title}<div><div class="author">by <strong>${d.author}</strong></div></div>`;
