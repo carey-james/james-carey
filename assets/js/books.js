@@ -96,7 +96,7 @@ function getFormHeight(arr) {
 	}
 }
 
-function runner() {
+async function runner() {
 	// Get Books info
 	const books = initBooks();
 	console.log(books);
