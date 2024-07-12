@@ -122,7 +122,7 @@ async function runner() {
 	const g = d3.select('#shelf-svg').append('g');
 
 	// Dimensions for each book
-	const pages = books.map((d) => d.pages);
+	const pages = [10,1000]//books.map((d) => d.pages);
 	const pageRange = getRange(pages, 100);
 	const bookW = d3.scaleLinear().comain(pageRange).range(bookWRange); // Page
 	const bookH = d3.scaleLinear().domain([60,100]).range(bookHRange); // Book form
