@@ -8,7 +8,7 @@ async function initBooks() {
 	const data_2023 = await d3.dsv("|", "https://raw.githubusercontent.com/carey-james/Reading-List/main/2023/books.csv");
 	const data_2024 = await d3.dsv("|", "https://raw.githubusercontent.com/carey-james/Reading-List/main/2024/books.csv");
 
-	const data = sortBy(data_2022.concat(data_2023.concat(data_2024)));
+	const data = _.sortBy(data_2022.concat(data_2023.concat(data_2024)));
 	consol.log(data);
 }
 
