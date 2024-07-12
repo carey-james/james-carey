@@ -99,6 +99,7 @@ function getFormHeight(arr) {
 function runner() {
 	// Get Books info
 	const books = initBooks();
+	console.log(books);
 
 	// Get Wrapper Width
 	let divW = getShelfWidth();
