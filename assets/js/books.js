@@ -28,7 +28,18 @@ function getRange(arr, by) {
 	return [Math.floor(_.min(arr) / by) * by, Math.ceil(_.max(arr) / by) * by];
 }
 
-// Insert divider logic here 
+// Divider Logic
+function getDivider(datum, option) {
+	let val = datum[option];
+	// Get Divider Labels
+	let label = val;
+	if (option == 'year_desc') {
+		label = -val;
+	} else if (option == 'title') {
+		label = _.isNaN(+val.charAt(0) ? val.charAt(0) : '#');
+	}
+	return label;
+}
 
 // Search
 function getSearchedText(arr, entered) {
@@ -380,8 +391,52 @@ async function runner() {
     	d3.select('#modal').classed('is-active', false);
   	});
 
+  	// Search 
+  	/*
+  	let selectedId = -1;
+  	function resetSearch() {
+  		selectedId = -1;
+  		d3.selectAll('.js-search-elm').classed('is-hidden', true);
+  		d3.select('#search-result').html('');
+  	}
 
+  	function triggerModal(obj, i, count, list, entered) {
+  		d3.select('#modal').classed('is-active', true);
+  		showModal(obj, i, count, list, entered);
+  		resetSearch();
+  	}
 
+  	document.getElementById('search-input').addEventListener('keyup', function(d) {
+  		// Check for a min of 3 letters
+  		if (this.value.length > 2) {
+  			const entered = this.value.trim().toLowerCase();
+  			const filtered = _.filter(books, (d) => {
+  				return d.title.toLowerCase().indexOf(entered) > -1 || d.author.toLowerCase().indexOf(entered) > -1;
+  			});
+  		// Show only books with the typed letters
+  		if (filtered.length > 0) {
+  			const
+  		}
+  		}
+  	}
+  	*/
+
+  	// Sort
+  	document.getElementById('sort-0').addEventListener('change', (d) => {
+  		const option = d.target.value;
+  		// Can add second sort option here
+  		sortBooks(d.target.value, 0);
+  	});
+
+  	// Resize
+  	window.addEventListener('resize', _.debounce(() => {
+  		const newW = getShelfWidth();
+  		if (newW !== divW) {
+  			divW = newW;
+  			d3.select('#shelf-svg').attr('width', divW);
+  			resizeShelf();
+  		}
+  	}), 500);
 }
 
 runner();
