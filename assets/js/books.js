@@ -1,5 +1,13 @@
 'use strict';
 
+function dateFixer(arr) {
+	var result = arr;
+	const parseTime = d3.utcParse('%m/%d/%Y');
+	new_date = parseTime(arr.date);
+	result.date = new_date;
+	return result;
+}
+
 async function initBooks() {
 
 	// Get the books data from the Reading List repo
@@ -7,7 +15,8 @@ async function initBooks() {
 	const data_2022 = await d3.dsv("|", "https://raw.githubusercontent.com/carey-james/Reading-List/main/2022/books.csv");
 	const data_2023 = await d3.dsv("|", "https://raw.githubusercontent.com/carey-james/Reading-List/main/2023/books.csv");
 	const data_2024 = await d3.dsv("|", "https://raw.githubusercontent.com/carey-james/Reading-List/main/2024/books.csv");
-	const data = _.sortBy(data_2022.concat(data_2023.concat(data_2024)),['date']);
+	const raw_data = data_2022.concat(data_2023.concat(data_2024));
+	const data = raw_data.map(dateFixer);
 	console.log(data);
 }
 
