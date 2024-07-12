@@ -70,7 +70,7 @@ function showModal(d, i, count, list, entered) {
 		pages: d.pages,
 		country: d.country,
 		series: d.series,
-		gender: b.gender,
+		gender: d.gender,
 		favorite: d.favorite,
 		year: d.year
 	};
@@ -411,11 +411,13 @@ function runner(book_data) {
   	*/
 
   	// Sort
+  	/*
   	document.getElementById('sort-0').addEventListener('change', (d) => {
   		const option = d.target.value;
   		// Can add second sort option here
   		sortBooks(d.target.value, 0);
   	});
+  	*/
 
   	// Resize
   	window.addEventListener('resize', _.debounce(() => {
