@@ -1,13 +1,14 @@
 'use strict';
 
 // Used for fixing '01/01/2022' dates into Date objects and adding Year
-function dateFixer(arr) {
+function dateFixer(arr, index) {
 	var result = arr;
 	const parseTime = d3.utcParse('%m/%d/%Y');
 	const formatYear = d3.utcFormat('%Y');
 	const new_date = parseTime(arr.date);
 	result.date = new_date;
 	result.year = formatYear(new_date);
+	result.id = index;
 	return result;
 }
 
@@ -357,7 +358,7 @@ function runner(book_data) {
         	if ('ontouchstart' in document) {
           		return false;
         	}
-        	d3.select(`#book-${d.book.id}`)
+        	d3.select(`#book-${d.title}`)
           		.attr('transform', getUpPos(d3.select(this), false));
       	})
       	.on('click', (d, i) => {
