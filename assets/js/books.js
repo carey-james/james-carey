@@ -1,5 +1,6 @@
 'use strict';
 
+// Used for fixing '01/01/2022' dates into Date objects and adding Year
 function dateFixer(arr) {
 	var result = arr;
 	const parseTime = d3.utcParse('%m/%d/%Y');
@@ -18,8 +19,8 @@ async function initBooks() {
 	const data_2023 = await d3.dsv("|", "https://raw.githubusercontent.com/carey-james/Reading-List/main/2023/books.csv");
 	const data_2024 = await d3.dsv("|", "https://raw.githubusercontent.com/carey-james/Reading-List/main/2024/books.csv");
 	const raw_data = data_2022.concat(data_2023.concat(data_2024));
-	const data = raw_data.map(dateFixer);
-	console.log(data);
+	const data = _sortBy(raw_data.map(dateFixer),['year','date'];
+	return data;
 }
 
 // Floor/Ceiling Range
@@ -60,15 +61,16 @@ function showModal(d, i, count, list, entered) {
 	const bookInfo = {
 		title,
 		author: d.book.author,
-		date: d.book.date_finished,
-		form: d.book.category,
+		date: d.book.date,
+		form: d.book.form,
 		genre: d.book.genre,
+		published: d.book.published,
 		pages: d.book.pages,
-		written: d.book.year_written,
-		favorite: d.book.favorites,
 		country: d.book.country,
 		series: d.book.series,
-		gender: b.book.gender
+		gender: b.book.gender,
+		favorite: d.book.favorite,
+		year: d.book.year
 	};
 }
 
@@ -77,11 +79,34 @@ function getShelfWidth() {
 	return Math.max(document.getElementById('shelf').clientWidth, 700)
 }
 
-initBooks();
+function runner() {
+	// Get Books info
+	const books = initBooks();
 
-// Big Code Block
-/*
-(() => {
+	// Get Wrapper Width
+	let divW = getShelfWidth();
+	/* Gap is drawn in svg, sides are draw in div style (background & border)
+	=========== gap
+	| story H |
+	=========== gap
+	| story H |
+	=========== gap
+	*/
+
+	// Set range for book size
+	const storyH = 100; // Max Book Height
+	const storyGap = 40; // Height of Gap
+	const bookWRange = [10, 60]; // Book width/thickness range
+	const bookHRange = [60, storyH]; // Book Height Range
+
+	// Two d3 Gs in the entire shelf, one for shelf bg, one for other elements
+	const shelfG = d3.select('#shelf-svg').attr('width', divW).append('g');
+	const g = d3.select('#shelf-svg').append('g');
+
+	// Dimensions for each book
+	const pages = books.map((d) => d.pages);
+	
 
 }
-*/
+
+runner();
