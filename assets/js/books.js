@@ -28,6 +28,8 @@ function getRange(arr, by) {
 	return [Math.floor(_.min(arr) / by) * by, Math.ceil(_.max(arr) / by) * by];
 }
 
+// Insert divider logic here 
+
 // Search
 function getSearchedText(arr, entered) {
 	let result = arr;
