@@ -57,22 +57,22 @@ function showModal(d, i, count, list, entered) {
 	d3.select('.js-modal-count').html(`${entered ? `Searched by <strong>${entered}</strong>, ` : ''}${i + 1}/${count}`);
 	let title = d.title;
 	let favorite = 'N/A';
-	if (!_.isEmpty(d.book.favorite)) {
-		let fv = d.book.favorite;
+	if (!_.isEmpty(d.favorite)) {
+		let fv = d.favorite;
 	}
 	const bookInfo = {
 		title,
-		author: d.book.author,
-		date: d.book.date,
-		form: d.book.form,
-		genre: d.book.genre,
-		published: d.book.published,
-		pages: d.book.pages,
-		country: d.book.country,
-		series: d.book.series,
-		gender: b.book.gender,
-		favorite: d.book.favorite,
-		year: d.book.year
+		author: d.author,
+		date: d.date,
+		form: d.form,
+		genre: d.genre,
+		published: d.published,
+		pages: d.pages,
+		country: d.country,
+		series: d.series,
+		gender: b.gender,
+		favorite: d.favorite,
+		year: d.year
 	};
 }
 
@@ -187,7 +187,7 @@ function runner(book_data) {
   	};
 
   	// Sort Options
-  	let sortOptions = ['year', 'date'];
+  	let sortOptions = ['year'];
 
   	// Get new positions for the books when option is changed and put legends
   	function getDimensions(sortedBooks, isInitial) {
@@ -283,7 +283,7 @@ function runner(book_data) {
     	d3.selectAll('select').attr('disabled', 'disabled');
     	//move books
    	 	_.each(dimensions, (d, i) => {
-     		const bg = d3.select(`#book-${d.bookId}`);
+     		const bg = d3.select(`#book-${d.id}`);
       		//move horizontally first, then move vertically
       		const currentY = +bg.attr('prev-y');
       		bg.attr('prev-y', d.y)
@@ -323,7 +323,7 @@ function runner(book_data) {
   	function getUpPos(elm, isUp) {
   		// Get current transform value, then update Y pos
   		const currP = elm.attr('transform');
-  		const splitted = currP.split(', ');
+  		splitted = currP.split(', ');
   		const currY = splitted[1].slice(0, splitted[1].length - 1);
   		return `${splitted[0]}, ${currY - (isUp ? 10 : -10)})`;
   	}
