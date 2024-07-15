@@ -217,7 +217,7 @@ function runner(book_data) {
 		        isNewLabels[1] = true;
 		    }
       		// check if the accmulated books' width is larger than the shelf width
-	    	if (accW + w > divW) || (dividers[0] !== prevVals[0]) || (dividers[1] !== prevVals[1]) {
+	    	if ((accW + w > divW) || (dividers[0] !== prevVals[0]) || (dividers[1] !== prevVals[1])) {
 	        	accS++;
 	        	if (_.isEqual(prevVals, dividers)) {
 	          		accW = 0;
