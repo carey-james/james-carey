@@ -375,6 +375,19 @@ function runner(book_data) {
       		.attr('id', (d) => `book-rect-${d.id}`)
       		.attr('class', (d) => `genre-${d.genre} book-${d.gender}`);
 	// Mark favorites *need to add*
+
+    // Genre Symbol on Spine
+    _.each(books, (d) => {
+    	d3.select(`#book-${d.id}`)
+    		.append('text')
+    			.attr('class','fa')
+    			.attr('x', bookW(d.pages) / 2)
+    			.attr('y', 20)
+    			.attr('font-size','20px')
+    			.attr('fill','white')
+    			.text('&#xf002;')
+    });
+    
     // Modal close
   	d3.select('#modal-close').on('click', () => {
     	d3.select('#modal').classed('is-active', false);
