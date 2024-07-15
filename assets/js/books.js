@@ -74,6 +74,14 @@ function showModal(d, i, count, list, entered) {
 		favorite: d.favorite,
 		year: d.year
 	};
+	_.each(bookInfo, (v,k) => {
+		if (v) {
+			if (k === 'favorite') {
+				d3.select(`.js-d-${k}-wrapper`).classed('is-hidden', v === 'N/A');
+			}
+			d3.select(`.js-d-${k}`.html(v));
+		}
+	});
 }
 
 // Shelf Width
@@ -273,8 +281,6 @@ function runner(book_data) {
         		.attr('height', storyGap)
         		.attr('class', 'shelf-gap js-shelves')
    		});
-   	///////
-    console.log(dimensions);
     return dimensions;
   	}
 
