@@ -285,7 +285,7 @@ function runner(book_data) {
     	d3.selectAll('select').attr('disabled', 'disabled');
     	// move books
    	 	_.each(dimensions, (d, i) => {
-     		const bg = d3.select(`#book-${d.id}`);
+     		const bg = d3.select(`#book-${d.bookId}`);
      		console.log(bg);
       		// move horizontally first, then move vertically
       		const currentY = bg.attr('prev-y');
