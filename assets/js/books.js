@@ -273,6 +273,8 @@ function runner(book_data) {
         		.attr('height', storyGap)
         		.attr('class', 'shelf-gap js-shelves')
    		});
+   	///////
+    console.log(dimensions);
     return dimensions;
   	}
 
