@@ -380,14 +380,14 @@ function runner(book_data) {
     _.each(books, (d) => {
     	d3.select(`#book-${d.id}`)
     		.append('text')
-    			.attr('class','fa')
+    			.attr('class','fa-solid')
     			.attr('x', bookW(d.pages) / 2)
     			.attr('y', 20)
     			.attr('font-size','20px')
     			.attr('fill','white')
     			.text('&#xf002;')
     });
-    
+
     // Modal close
   	d3.select('#modal-close').on('click', () => {
     	d3.select('#modal').classed('is-active', false);
