@@ -380,8 +380,8 @@ function runner(book_data) {
     _.each(books, (d) => {
     	d3.select(`#book-${d.id}`)
     		.append('svg:image')
-				.attr('x', -(bookW(d.pages) / 2))
-				.attr('y', -(bookH(getFormHeight(d.form)) - 10))
+				.attr('x', (bookW(d.pages) / 2))
+				.attr('y', (bookH(getFormHeight(d.form)) + 10))
 				.attr('width', 12)
 				.attr('height', 12)
 				.attr('xlink:href', `assets/icons/book-icons/${d.genre}.svg`)
