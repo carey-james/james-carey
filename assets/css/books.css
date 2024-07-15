@@ -5440,8 +5440,8 @@ body {
 .shelf-wrapper .bestseller {
   fill: #3B3A38; }
 
-.shelf-wrapper .translated {
-  fill: #3B3A38; }
+.shelf-wrapper .favorite {
+  fill: #F48876; }
 
 .shelf-wrapper .legend-0 {
   fill: #ffffff;
