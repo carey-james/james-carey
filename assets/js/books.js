@@ -379,13 +379,15 @@ function runner(book_data) {
     // Genre Symbol on Spine
     _.each(books, (d) => {
     	d3.select(`#book-${d.id}`)
-    		.append('text')
-    			.attr('class','fa-solid')
+    		.append('i')
+    			.attr('class','fa-regular fa-rotate-90 fa-starfighter')
+    			/*
     			.attr('x', bookW(d.pages) / 2)
     			.attr('y', 20)
     			.attr('font-size','20px')
     			.attr('fill','white')
     			.text('&#xf002;')
+    			*/
     });
 
     // Modal close
