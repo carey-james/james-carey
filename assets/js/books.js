@@ -216,8 +216,8 @@ function runner(book_data) {
 		        accW += gap1;
 		        isNewLabels[1] = true;
 		    }
-      		// check if the accmulated books' width is larger than the shelf width
-	    	if ((accW + w > divW) || (dividers[0] !== prevVals[0]) || (dividers[1] !== prevVals[1])) {
+      		// check if the accmulated books' width is larger than the shelf width or it's a new top-level division
+	    	if ((accW + w > divW) || (dividers[0] !== prevVals[0])) {
 	        	accS++;
 	        	if (_.isEqual(prevVals, dividers)) {
 	          		accW = 0;
@@ -284,6 +284,7 @@ function runner(book_data) {
     	// move books
    	 	_.each(dimensions, (d, i) => {
      		const bg = d3.select(`#book-${d.id}`);
+     		console.log(bg);
       		// move horizontally first, then move vertically
       		const currentY = bg.attr('prev-y');
       		bg.attr('prev-y', d.y)
