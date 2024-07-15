@@ -84,7 +84,7 @@ function getShelfWidth() {
 // Book height based on form
 function getFormHeight(arr) {
 	if (arr == 'Comics') {
-		return 100;
+		return 95;
 	} else if (arr == 'Non-Fiction') {
 		return 85;
 	} else if (arr == 'Fiction') {
@@ -124,7 +124,7 @@ function runner(book_data) {
 	const g = d3.select('#shelf-svg').append('g');
 
 	// Dimensions for each book
-	const pages = books.map((d) => d.pages);
+	const pages = [50,1000];//books.map((d) => d.pages);
 	const pageRange = getRange(pages, 100);
 	const bookW = d3.scaleLinear().domain(pageRange).range(bookWRange); // Page
 	const bookH = d3.scaleLinear().domain([60,100]).range(bookHRange); // Book form
@@ -205,10 +205,10 @@ function runner(book_data) {
     	let isNewLabels = [true, true]; //check if the books are divided
     	let labelCounts = [0, 0]; //counts of each label, used for id
     	_.each(sortedBooks, (d, i) => {
-     		const w = bookW(d.pages); //book width
-      		const h = bookH(getFormHeight(d.form)); //book height
-      		const dividers = sortOptions.map((o) => getDivider(d, o)); //get labels at the dividing postions
-      		//check with the previous vals, then decide to divide or not
+     		const w = bookW(d.pages); // book width
+      		const h = bookH(getFormHeight(d.form)); // book height
+      		const dividers = sortOptions.map((o) => getDivider(d, o)); // get labels at the dividing postions
+      		// check with the previous vals, then decide to divide or not
 		    if (dividers[0] !== prevVals[0]) {
 		    	accW += gap0;
 		        isNewLabels[0] = true;
@@ -216,7 +216,7 @@ function runner(book_data) {
 		        accW += gap1;
 		        isNewLabels[1] = true;
 		    }
-      		//check if the accmulated books' width is larger than the shelf width
+      		// check if the accmulated books' width is larger than the shelf width
 	    	if (accW + w > divW) {
 	        	accS++;
 	        	if (_.isEqual(prevVals, dividers)) {
@@ -227,16 +227,16 @@ function runner(book_data) {
 	          		accW = gap1;
 	        	}
       		}
-      		//add dmensions
+      		// add demensions
       		dimensions.push({
         		x: accW,
         		y: (storyH + storyGap) * accS - h,
         		bookId: d.id //needed for d3 selection
       		})
-      		//update prev vals
+      		// update prev vals
       		counts[0]++;
       		counts[1]++;
-      		//put the first level label
+      		// put the first level label
       		if (isNewLabels[0]) {
         		putLegend0(dividers[0], labelCounts[0], accW, accS, isInitial, gap0);
         		//update count for the previous values
@@ -244,25 +244,25 @@ function runner(book_data) {
        	 		counts[0] = 0;
         		labelCounts[0]++;
       		}
-      		//put the second level only for two sorting options
+      		// put the second level only for two sorting options
      		if ((isNewLabels[0] || isNewLabels[1]) && sortOptions.length === 2) {
         		putLegend1(dividers[1], labelCounts[1], accW, accS, isInitial, gap1);
         		d3.select(`#legend-1-${labelCounts[1] - 1}`).text(counts[1]);
         		counts[1] = 0;
         		labelCounts[1]++;
       		}
-      		//update the last labels; count
+      		// update the last labels; count
       		if (i === sortedBooks.length - 1) {
         		d3.select(`#legend-0-${labelCounts[0] - 1}`).text(counts[0] + 1);
         		d3.select(`#legend-1-${labelCounts[1] - 1}`).text(counts[1] + 1);
       		}
-      		//add width, update before the next iteration
+      		// add width, update before the next iteration
       		accW += (w + 0);
       		prevVals = dividers;
       		isNewLabels = [false, false];
     	});
 
-    	//set the wrapper height to fit
+    	// set the wrapper height to fit
     	d3.select('#shelf-svg').attr('height', accS * (storyGap + storyH) + storyGap);
     	// put story gap
     	_.each(_.range(accS + 1), (i) => {
@@ -279,13 +279,13 @@ function runner(book_data) {
   	function resizeShelf() {
     	const sortedBooks = _.sortBy(books, sortOptions);
     	const dimensions = getDimensions(sortedBooks, false);
-    	//disable the sorting options
+    	// disable the sorting options
     	d3.selectAll('select').attr('disabled', 'disabled');
-    	//move books
+    	// move books
    	 	_.each(dimensions, (d, i) => {
      		const bg = d3.select(`#book-${d.id}`);
-      		//move horizontally first, then move vertically
-      		const currentY = +bg.attr('prev-y');
+      		// move horizontally first, then move vertically
+      		const currentY = bg.attr('prev-y');
       		bg.attr('prev-y', d.y)
         		.transition()
           		.attr('transform', `translate(${d.x}, ${currentY})`)
@@ -298,9 +298,9 @@ function runner(book_data) {
               			.delay(600 * Math.random())
               			.attr('transform', `translate(${d.x}, ${d.y})`)
               			.on('end', () => {
-                			//when animation ends, show the legends
+                			// when animation ends, show the legends
                 			d3.selectAll('.js-legends').classed('is-hidden', false);
-                			//enable back the sorting options
+                			// enable back the sorting options
                 			_.delay(() => { d3.selectAll('select').attr('disabled', null) }, 1400);
               			});
           		});
