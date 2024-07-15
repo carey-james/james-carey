@@ -380,11 +380,11 @@ function runner(book_data) {
     _.each(books, (d) => {
     	d3.select(`#book-${d.id}`)
     		.append('svg:image')
-				.attr('x', -9)
-				.attr('y', -12)
-				.attr('width', 20)
-				.attr('height', 24)
-				.attr('xlink:href', 'assets/icons/book-icons/magnifying-glass-solid.svg')
+				.attr('x', -(bookW(d.pages) / 2))
+				.attr('y', -(bookH(getFormHeight(d.form)) - 10))
+				.attr('width', 12)
+				.attr('height', 12)
+				.attr('xlink:href', `assets/icons/book-icons/${d.genre}.svg`)
     });
 
     // Modal close
