@@ -5397,11 +5397,41 @@ body {
   stroke-width: 1;
   stroke: #53504D; }
 
-.shelf-wrapper .genre-Fiction {
+.shelf-wrapper .genre-Lit {
+  fill: #92140C; }
+
+.shelf-wrapper .genre-Mystery {
+  fill: #B497D6; }
+
+.shelf-wrapper .genre-Horror {
+  fill: #4B4A67; }
+
+.shelf-wrapper .genre-Humor {
+  fill: #EEB902; }
+
+.shelf-wrapper .genre-SciFi {
   fill: #91d8b6; }
 
-.shelf-wrapper .genre-Nonfiction {
-  fill: #f48876; }
+.shelf-wrapper .genre-Fantasy {
+  fill: #345830; }
+
+.shelf-wrapper .genre-History {
+  fill: #895B1E; }
+
+.shelf-wrapper .genre-Memoir {
+  fill: #0496FF; }
+
+.shelf-wrapper .genre-Music {
+  fill: #048BA8; }
+
+.shelf-wrapper .genre-Essays {
+  fill: #6699CC; }
+
+.shelf-wrapper .genre-Economics {
+  fill: #343A1A; }
+
+.shelf-wrapper .genre-Western {
+  fill: #6F1A07; }
 
 .shelf-wrapper .age-overlay {
   stroke: none;
