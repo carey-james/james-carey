@@ -374,14 +374,21 @@ function runner(book_data) {
       		.attr('ry', 1)
       		.attr('id', (d) => `book-rect-${d.id}`)
       		.attr('class', (d) => `genre-${d.genre} book-${d.gender}`);
-	// Mark favorites *need to add*
+	
+	// Mark favorites
+    _.each(_.filter(books, (d) => d.favorite), (d) => {
+    	d3.select(`#book-${d.id}`)
+    		.append('path')
+    		.attr('d', `M 0 0 h ${bookWRange[0]} l -${bookWRange[0]} ${bookWRange[0]} z`)
+    		.attr('class', 'favorite')
+    });
 
     // Genre Symbol on Spine
     _.each(books, (d) => {
     	d3.select(`#book-${d.id}`)
     		.append('svg:image')
 				.attr('x', ((bookW(d.pages) / 2) -6))
-				.attr('y', (bookH(getFormHeight(d.form)) - 10))
+				.attr('y', (bookH(getFormHeight(d.form)) - 20))
 				.attr('width', 12)
 				.attr('height', 12)
 				.attr('xlink:href', `assets/icons/book-icons/${d.genre}.svg`)
