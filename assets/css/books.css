@@ -5661,33 +5661,6 @@ input:focus, input:active, select:focus, select:active {
   width: 2.2rem;
   height: 2.2rem; }
 
-.footer .facebook, .footer .twitter, .footer .googleplus, .footer .linkedin, .footer .email, .footer .github, .footer .medium {
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-position: center center; }
-
-.footer .facebook {
-  background-image: url("../images/facebook.svg"); }
-
-.footer .twitter {
-  background-image: url("../images/twitter.svg"); }
-
-.footer .googleplus {
-  background-image: url("../images/googleplus.svg"); }
-
-.footer .linkedin {
-  background-image: url("../images/linkedin.svg"); }
-
-.footer .email {
-  background-image: url("../images/email.svg"); }
-
-.footer .github {
-  background-image: url("../images/github.svg"); }
-
-.footer .medium {
-  background-image: url("../images/medium.svg"); }
 
 @media screen and (max-width: 768px) {
   .control {

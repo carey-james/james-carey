@@ -196,8 +196,8 @@ function runner(book_data) {
   		d3.selectAll('.js-shelves').remove();
   		let prevVals = _.map(sortOptions, (o) => getDivider(sortedBooks[0], o));
   		let edge = 10;
-  		let gap0 = 40; //first level gap
-  		let gap1 = 28; //second level gap
+  		let gap0 = 28; //first level gap
+  		let gap1 = 20; //second level gap
     	let accW = gap0; //accumulated width
     	let accS = 1; //accumultated number of stories
     	let dimensions = [];
@@ -217,7 +217,7 @@ function runner(book_data) {
 		        isNewLabels[1] = true;
 		    }
       		// check if the accmulated books' width is larger than the shelf width
-	    	if (accW + w > divW) {
+	    	if (accW + w > divW) || (dividers[0] !== prevVals[0]) || (dividers[1] !== prevVals[1]) {
 	        	accS++;
 	        	if (_.isEqual(prevVals, dividers)) {
 	          		accW = 0;
