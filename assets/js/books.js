@@ -379,11 +379,12 @@ function runner(book_data) {
     // Genre Symbol on Spine
     _.each(books, (d) => {
     	d3.select(`#book-${d.id}`)
-    		.append('text')
-			    .attr('font-family', 'Font Awesome 6 Pro-Solid-900')
-			    .attr('font-weight', 900)
-				.attr('font-size', function(d) { return d.size+'em'} )
-				.text(function(d) { return '\uf118' });
+    		.append('svg:image')
+				.attr('x', -9)
+				.attr('y', -12)
+				.attr('width', 20)
+				.attr('height', 24)
+				.attr('xlink:href', 'assets/icons/book-icons/magnifying-glass-solid.svg')
     });
 
     // Modal close
