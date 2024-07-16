@@ -76,13 +76,13 @@ function showModal(d, i, count, list, entered) {
 	};
 
 	console.log(bookInfo);
-	
+
 	_.each(bookInfo, (v,k) => {
 		if (v) {
 			if (k === 'favorite') {
 				d3.select(`.js-d-${k}-wrapper`).classed('is-hidden', v === 'N/A');
 			}
-			d3.select(`.js-d-${k}`.html(v));
+			d3.select(`.js-d-${k}`).html(v);
 		}
 	});
 }
