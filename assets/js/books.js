@@ -229,7 +229,7 @@ function runner(book_data) {
     	let labelCounts = [0, 0]; //counts of each label, used for id
     	_.each(sortedBooks, (d, i) => {
      		const w = bookW(d.pages); // book width
-      		const h = bookH(getPublishedHeight(d.published); // book height
+      		const h = bookH(getPublishedHeight(d.published)); // book height
       		const dividers = sortOptions.map((o) => getDivider(d, o)); // get labels at the dividing postions
       		// check with the previous vals, then decide to divide or not
 		    if (dividers[0] !== prevVals[0]) {
