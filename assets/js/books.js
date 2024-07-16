@@ -53,7 +53,12 @@ function showModal(d, i, count, list, entered) {
 	}
 
 	// Show book elements
-	d3.select('.js-d-genre').classed(`tag-${d.genre}`, true);
+	const re = new RegExp('tag-\S*');
+	if (d3.select('.js-d-genre').className.match(re)) {
+		d3.select('.js-d-genre').className = d3.select('.js-d-genre').replace(`tag-${d.genre}`);
+	}
+	/*d3.select('.js-d-genre').classList.remove('')
+	d3.select('.js-d-genre').classed(`tag-${d.genre}`, true);*/
 	d3.select('.js-modal-count').html(`${entered ? `Searched by <strong>${entered}</strong>, ` : ''}${i + 1}/${count}`);
 	let title = d.title;
 	let favorite = 'N/A';
