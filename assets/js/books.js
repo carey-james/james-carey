@@ -9,7 +9,7 @@ function dateFixer(arr, index) {
 	const new_date = parseTime(arr.date);
 	result.date = new_date;
 	result.year = formatYear(new_date);
-	result.month = Number(formatMonth(new_date)).toString();
+	result.month = Number(formatMonth(new_date));
 	console.log(result.month);
 	result.id = index;
 	return result;
