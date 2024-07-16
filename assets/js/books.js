@@ -99,10 +99,10 @@ function getShelfWidth() {
 	return Math.max(document.getElementById('shelf').clientWidth, 900)
 }
 
-/*
-// Book height based on form
-function getFormHeight(arr) {
-	if (arr == 'Comics') {
+
+// Book height based on published year
+function getPublishedHeight(arr) {
+	/*if (arr == 'Comics') {
 		return 95;
 	} else if (arr == 'Non-Fiction') {
 		return 85;
@@ -114,9 +114,11 @@ function getFormHeight(arr) {
 		return 65;
 	} else {
 		return 70;
-	}
+	}*/
+	return ((arr - 1800)/(2030 - 1800)) * (95 - 65) + 65;
+
 }
-*/
+
 
 function runner(book_data) {
 	// Get Books info
@@ -145,10 +147,10 @@ function runner(book_data) {
 	// Dimensions for each book
 	const pages = [50,1000];//books.map((d) => d.pages);
 	const pageRange = getRange(pages, 100);
-	const pubAges = [1900,2025]//_.filter(books.map((d) => d.published), (d) => d > 0);
-	const pubAgeRange = getRange(pubAges,1850);
+	// const pubAges = [1900,2025]//_.filter(books.map((d) => d.published), (d) => d > 0);
+	// const pubAgeRange = getRange(pubAges,1850);
 	const bookW = d3.scaleLinear().domain(pageRange).range(bookWRange); // Page
-	const bookH = d3.scaleLinear().domain(pubAgeRange).range(bookHRange); // Book form
+	const bookH = d3.scaleLinear().domain([60,100]).range(bookHRange); // Book form
 
 	// Put Legend of First Level (id) and 2nd Level
 	const putLegend0 = (text, count, accW, accS, isInitial, gap) => {
@@ -227,7 +229,7 @@ function runner(book_data) {
     	let labelCounts = [0, 0]; //counts of each label, used for id
     	_.each(sortedBooks, (d, i) => {
      		const w = bookW(d.pages); // book width
-      		const h = bookH(d.published); // book height
+      		const h = bookH(getPublishedHeight(d.published); // book height
       		const dividers = sortOptions.map((o) => getDivider(d, o)); // get labels at the dividing postions
       		// check with the previous vals, then decide to divide or not
 		    if (dividers[0] !== prevVals[0]) {
@@ -390,7 +392,7 @@ function runner(book_data) {
       		.attr('x', 0)
       		.attr('y', 0)
       		.attr('width', (d) => bookW(d.pages))
-      		.attr('height', (d) => bookH(d.published))
+      		.attr('height', (d) => bookH(getPublishedHeight(d.published)))
       		.attr('rx', 1)
       		.attr('ry', 1)
       		.attr('id', (d) => `book-rect-${d.id}`)
@@ -409,7 +411,7 @@ function runner(book_data) {
     	d3.select(`#book-${d.id}`)
     		.append('svg:image')
 				.attr('x', ((bookW(d.pages) / 2) -6))
-				.attr('y', (bookH(d.published) - 20))
+				.attr('y', (bookH(getPublishedHeight(d.published)) - 20))
 				.attr('width', 12)
 				.attr('height', 12)
 				.attr('xlink:href', `assets/icons/book-icons/${d.genre}.svg`)
