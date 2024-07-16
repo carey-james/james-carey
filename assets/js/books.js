@@ -387,7 +387,7 @@ function runner(book_data) {
       		.attr('x', 0)
       		.attr('y', 0)
       		.attr('width', (d) => bookW(d.pages))
-      		.attr('height', (d) => bookH(d.published)
+      		.attr('height', (d) => bookH(d.published))
       		.attr('rx', 1)
       		.attr('ry', 1)
       		.attr('id', (d) => `book-rect-${d.id}`)
