@@ -115,7 +115,7 @@ function getPublishedHeight(arr) {
 	} else {
 		return 70;
 	}*/
-	return ((arr - 1800)/(2030 - 1800)) * (95 - 65) + 65;
+	return ((arr - 1900)/(2030 - 1900)) * (95 - 65) + 65;
 
 }
 
@@ -147,8 +147,6 @@ function runner(book_data) {
 	// Dimensions for each book
 	const pages = [50,1000];//books.map((d) => d.pages);
 	const pageRange = getRange(pages, 100);
-	// const pubAges = [1900,2025]//_.filter(books.map((d) => d.published), (d) => d > 0);
-	// const pubAgeRange = getRange(pubAges,1850);
 	const bookW = d3.scaleLinear().domain(pageRange).range(bookWRange); // Page
 	const bookH = d3.scaleLinear().domain([60,100]).range(bookHRange); // Book form
 
