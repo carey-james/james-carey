@@ -10,7 +10,7 @@ function dateFixer(arr, index) {
 	result.date = new_date;
 	result.year = formatYear(new_date);
 	result.month = Number(formatMonth(new_date));
-	console.log(result.month);
+	console.log(result);
 	result.id = index;
 	return result;
 }
@@ -143,7 +143,7 @@ function runner(book_data) {
 	const pages = [50,1000];//books.map((d) => d.pages);
 	const pageRange = getRange(pages, 100);
 	const pubAges = [1850,2030];//_.filter(books.map((d) => d.published), (d) => d > 0);
-	const pubAgeRange = getRange(pubAges,1800);
+	const pubAgeRange = getRange(pubAges,1850);
 	const bookW = d3.scaleLinear().domain(pageRange).range(bookWRange); // Page
 	const bookH = d3.scaleLinear().domain(pubAgeRange).range(bookHRange); // Book form
 
