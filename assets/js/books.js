@@ -69,9 +69,9 @@ function showModal(d, i, count, list, entered) {
 		published: d.published,
 		pages: d.pages,
 		country: d.country,
-		series: d.series,
+		series: d.series || 'N/A',
 		gender: d.gender,
-		favorite: d.favorite || '',
+		favorite: d.favorite || 'N/A',
 		year: d.year
 	};
 
@@ -79,11 +79,11 @@ function showModal(d, i, count, list, entered) {
 
 	_.each(bookInfo, (v,k) => {
 		if (v) {
-			if (k === 'favorite') {
+			if (k === 'favorite' || k === 'series') {
 				d3.select(`.js-d-${k}-wrapper`).classed('is-hidden', v === 'N/A');
 			}
 			d3.select(`.js-d-${k}`).html(v);
-		}
+		} 
 	});
 }
 
