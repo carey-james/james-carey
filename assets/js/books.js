@@ -30,7 +30,7 @@ function getDivider(datum, option) {
 	} else if (option == 'title') {
 		label = _.isNaN(+val.charAt(0) ? val.charAt(0) : '#');
 	} else if (option == 'month') {
-		const months = ['-','J','F','M','A','M','J','J','A','S','O','N','D'];
+		const months = ['-','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 		label = months[val];
 	}
 	return label;
@@ -93,7 +93,7 @@ function showModal(d, i, count, list, entered) {
 
 // Shelf Width
 function getShelfWidth() {
-	return Math.max(document.getElementById('shelf').clientWidth, 700)
+	return Math.max(document.getElementById('shelf').clientWidth, 900)
 }
 
 // Book height based on form
@@ -210,7 +210,7 @@ function runner(book_data) {
   		d3.selectAll('.js-shelves').remove();
   		let prevVals = _.map(sortOptions, (o) => getDivider(sortedBooks[0], o));
   		let edge = 10;
-  		let gap0 = 28; //first level gap
+  		let gap0 = 0; //first level gap
   		let gap1 = 18; //second level gap
     	let accW = gap0; //accumulated width
     	let accS = 1; //accumultated number of stories
