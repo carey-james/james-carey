@@ -55,7 +55,7 @@ function showModal(d, i, count, list, entered) {
 	// Show book elements
 	const re = new RegExp('tag-\S*');
 	if (d3.select('.js-d-genre').className.match(re)) {
-		d3.select('.js-d-genre').className = d3.select('.js-d-genre').replace(`tag-${d.genre}`);
+		d3.select('.js-d-genre').className = d3.select('.js-d-genre').replace(re,`tag-${d.genre}`);
 	}
 	/*d3.select('.js-d-genre').classList.remove('')
 	d3.select('.js-d-genre').classed(`tag-${d.genre}`, true);*/
