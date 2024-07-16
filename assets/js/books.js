@@ -5,9 +5,11 @@ function dateFixer(arr, index) {
 	var result = arr;
 	const parseTime = d3.utcParse('%m/%d/%Y');
 	const formatYear = d3.utcFormat('%Y');
+	const formatMonth = d3.utcFormat('%m');
 	const new_date = parseTime(arr.date);
 	result.date = new_date;
 	result.year = formatYear(new_date);
+	result.month = formatMonth(new_date);
 	result.id = index;
 	return result;
 }
@@ -26,6 +28,9 @@ function getDivider(datum, option) {
 		label = -val;
 	} else if (option == 'title') {
 		label = _.isNaN(+val.charAt(0) ? val.charAt(0) : '#');
+	} else if (option == 'month') {
+		const months = ['-','J','F','M','A','M','J','J','A','S','O','N','D'];
+		label = months[val];
 	}
 	return label;
 }
@@ -195,7 +200,7 @@ function runner(book_data) {
   	};
 
   	// Sort Options
-  	let sortOptions = ['year'];
+  	let sortOptions = ['year','month'];
 
   	// Get new positions for the books when option is changed and put legends
   	function getDimensions(sortedBooks, isInitial) {
@@ -205,7 +210,7 @@ function runner(book_data) {
   		let prevVals = _.map(sortOptions, (o) => getDivider(sortedBooks[0], o));
   		let edge = 10;
   		let gap0 = 28; //first level gap
-  		let gap1 = 20; //second level gap
+  		let gap1 = 10; //second level gap
     	let accW = gap0; //accumulated width
     	let accS = 1; //accumultated number of stories
     	let dimensions = [];
