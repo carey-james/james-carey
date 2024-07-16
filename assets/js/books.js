@@ -142,7 +142,7 @@ function runner(book_data) {
 	// Dimensions for each book
 	const pages = [50,1000];//books.map((d) => d.pages);
 	const pageRange = getRange(pages, 100);
-	const pubAges = _.filter(books.map((d) => d.published), (d) => d > 0);
+	const pubAges = [1850,2030];//_.filter(books.map((d) => d.published), (d) => d > 0);
 	const pubAgeRange = getRange(pubAges,1800);
 	const bookW = d3.scaleLinear().domain(pageRange).range(bookWRange); // Page
 	const bookH = d3.scaleLinear().domain(pubAgeRange).range(bookHRange); // Book form
