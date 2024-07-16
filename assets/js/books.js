@@ -224,7 +224,7 @@ function runner(book_data) {
     	let labelCounts = [0, 0]; //counts of each label, used for id
     	_.each(sortedBooks, (d, i) => {
      		const w = bookW(d.pages); // book width
-      		const h = bookH(getFormHeight(d.form)); // book height
+      		const h = bookH(d.published); // book height
       		const dividers = sortOptions.map((o) => getDivider(d, o)); // get labels at the dividing postions
       		// check with the previous vals, then decide to divide or not
 		    if (dividers[0] !== prevVals[0]) {
@@ -387,7 +387,7 @@ function runner(book_data) {
       		.attr('x', 0)
       		.attr('y', 0)
       		.attr('width', (d) => bookW(d.pages))
-      		.attr('height', (d) => bookH(getFormHeight(d.form)))
+      		.attr('height', (d) => bookH(d.published)
       		.attr('rx', 1)
       		.attr('ry', 1)
       		.attr('id', (d) => `book-rect-${d.id}`)
@@ -406,7 +406,7 @@ function runner(book_data) {
     	d3.select(`#book-${d.id}`)
     		.append('svg:image')
 				.attr('x', ((bookW(d.pages) / 2) -6))
-				.attr('y', (bookH(getFormHeight(d.form)) - 20))
+				.attr('y', (bookH(d.published) - 20))
 				.attr('width', 12)
 				.attr('height', 12)
 				.attr('xlink:href', `assets/icons/book-icons/${d.genre}.svg`)
