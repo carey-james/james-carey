@@ -54,6 +54,7 @@ function showModal(d, i, count, list, entered) {
 
 	// Show book elements
 	const re = new RegExp('tag-\S*');
+	console.log(d3.select('.js-d-genre').className);
 	if (d3.select('.js-d-genre').className.match(re)) {
 		d3.select('.js-d-genre').className = d3.select('.js-d-genre').replace(re,`tag-${d.genre}`);
 	}
