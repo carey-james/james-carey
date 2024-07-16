@@ -96,6 +96,7 @@ function getShelfWidth() {
 	return Math.max(document.getElementById('shelf').clientWidth, 900)
 }
 
+/*
 // Book height based on form
 function getFormHeight(arr) {
 	if (arr == 'Comics') {
@@ -112,6 +113,7 @@ function getFormHeight(arr) {
 		return 70;
 	}
 }
+*/
 
 function runner(book_data) {
 	// Get Books info
@@ -139,13 +141,15 @@ function runner(book_data) {
 
 	// Dimensions for each book
 	const pages = [50,1000];//books.map((d) => d.pages);
-	const pageRange = getRange(pages, 100);
+	const pageRange = getRange(pages, 100);\
+	const pubAges = _.filter(books.map((d) => d.published), (d) => d > 0);
+	const pubAgeRange = getRange(pubAges,1800);
 	const bookW = d3.scaleLinear().domain(pageRange).range(bookWRange); // Page
-	const bookH = d3.scaleLinear().domain([60,100]).range(bookHRange); // Book form
+	const bookH = d3.scaleLinear().domain(pubAgeRange).range(bookHRange); // Book form
 
 	// Put Legend of First Level (id) and 2nd Level
 	const putLegend0 = (text, count, accW, accS, isInitial, gap) => {
-	    //hide labels first after sorting option is changed
+	    // hide labels first after sorting option is changed
 	    let triangle = 5;
 	    let pX = accW;
 	    let pY = (accS - 1) * (storyH + storyGap);
@@ -210,7 +214,7 @@ function runner(book_data) {
   		d3.selectAll('.js-shelves').remove();
   		let prevVals = _.map(sortOptions, (o) => getDivider(sortedBooks[0], o));
   		let edge = 10;
-  		let gap0 = 0; //first level gap
+  		let gap0 = 18; //first level gap
   		let gap1 = 18; //second level gap
     	let accW = gap0; //accumulated width
     	let accS = 1; //accumultated number of stories
