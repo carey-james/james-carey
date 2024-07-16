@@ -52,7 +52,7 @@ function showModal(d, i, count, list, entered) {
 		d3.select('.js-modal-next').on('click', () => {showModal(list[i + 1], i + 1, count, list, entered)});
 	}
 
-	d3.select('.js-d-genre').classed(`tag-${d.genre}`, true);
+	d3.select('.js-d-genre').attr('class',`tag .js-d-genre tag-${d.genre}`);
 	d3.select('.js-modal-count').html(`${entered ? `Searched by <strong>${entered}</strong>, ` : ''}${i + 1}/${count}`);
 	let title = d.title;
 	let favorite = 'N/A';
@@ -73,8 +73,6 @@ function showModal(d, i, count, list, entered) {
 		favorite: d.favorite || 'N/A',
 		year: d.year
 	};
-
-	console.log(bookInfo);
 
 	_.each(bookInfo, (v,k) => {
 		if (v) {
