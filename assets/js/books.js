@@ -55,6 +55,7 @@ function showModal(d, i, count, list, entered) {
 	// Show book elements
 	d3.select('.js-d-genre').classed(`tag-${d.genre}`, true);
 	d3.select('.js-modal-count').html(`${entered ? `Searched by <strong>${entered}</strong>, ` : ''}${i + 1}/${count}`);
+	d3.select('.js-book-image').attr('href', `assets/images/book-covers/${d.title}.png`);
 	let title = d.title;
 	let favorite = 'N/A';
 	if (!_.isEmpty(d.favorite)) {
