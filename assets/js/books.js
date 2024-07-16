@@ -71,9 +71,12 @@ function showModal(d, i, count, list, entered) {
 		country: d.country,
 		series: d.series,
 		gender: d.gender,
-		favorite: d.favorite,
+		favorite: d.favorite || '',
 		year: d.year
 	};
+
+	console.log(bookInfo);
+	
 	_.each(bookInfo, (v,k) => {
 		if (v) {
 			if (k === 'favorite') {
@@ -109,7 +112,6 @@ function getFormHeight(arr) {
 function runner(book_data) {
 	// Get Books info
 	const books = book_data;
-	console.log(books);
 
 	// Get Wrapper Width
 	let divW = getShelfWidth();
@@ -292,7 +294,6 @@ function runner(book_data) {
     	// move books
    	 	_.each(dimensions, (d, i) => {
      		const bg = d3.select(`#book-${d.bookId}`);
-     		console.log(bg);
       		// move horizontally first, then move vertically
       		const currentY = bg.attr('prev-y');
       		bg.attr('prev-y', d.y)
