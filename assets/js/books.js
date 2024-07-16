@@ -52,14 +52,7 @@ function showModal(d, i, count, list, entered) {
 		d3.select('.js-modal-next').on('click', () => {showModal(list[i + 1], i + 1, count, list, entered)});
 	}
 
-	// Show book elements
-	const re = new RegExp('tag-\S*');
-	console.log(d3.select('.js-d-genre').className);
-	if (d3.select('.js-d-genre').className.match(re)) {
-		d3.select('.js-d-genre').className = d3.select('.js-d-genre').replace(re,`tag-${d.genre}`);
-	}
-	/*d3.select('.js-d-genre').classList.remove('')
-	d3.select('.js-d-genre').classed(`tag-${d.genre}`, true);*/
+	d3.select('.js-d-genre').classed(`tag-${d.genre}`, true);
 	d3.select('.js-modal-count').html(`${entered ? `Searched by <strong>${entered}</strong>, ` : ''}${i + 1}/${count}`);
 	let title = d.title;
 	let favorite = 'N/A';
