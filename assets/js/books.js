@@ -10,6 +10,7 @@ function dateFixer(arr, index) {
 	result.date = new_date;
 	result.year = formatYear(new_date);
 	result.month = formatMonth(new_date);
+	console.log(result.month);
 	result.id = index;
 	return result;
 }
@@ -210,7 +211,7 @@ function runner(book_data) {
   		let prevVals = _.map(sortOptions, (o) => getDivider(sortedBooks[0], o));
   		let edge = 10;
   		let gap0 = 28; //first level gap
-  		let gap1 = 10; //second level gap
+  		let gap1 = 18; //second level gap
     	let accW = gap0; //accumulated width
     	let accS = 1; //accumultated number of stories
     	let dimensions = [];
