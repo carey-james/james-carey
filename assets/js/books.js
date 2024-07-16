@@ -1,6 +1,7 @@
 'use strict';
 
 // Used for fixing '01/01/2022' dates into Date objects and adding Year
+// Also fixes the other numbers
 function dateFixer(arr, index) {
 	var result = arr;
 	const parseTime = d3.utcParse('%m/%d/%Y');
@@ -10,6 +11,8 @@ function dateFixer(arr, index) {
 	result.date = new_date;
 	result.year = formatYear(new_date);
 	result.month = Number(formatMonth(new_date));
+	result.pages = Number(arr.pages);
+	result.published = Number(arr.published);
 	console.log(result);
 	result.id = index;
 	return result;
