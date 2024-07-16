@@ -96,7 +96,7 @@ function showModal(d, i, count, list, entered) {
 
 // Shelf Width
 function getShelfWidth() {
-	return Math.max(document.getElementById('shelf').clientWidth, 500)
+	return Math.max(document.getElementById('shelf').clientWidth, 350)
 }
 
 
