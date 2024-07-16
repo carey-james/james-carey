@@ -96,7 +96,7 @@ function showModal(d, i, count, list, entered) {
 
 // Shelf Width
 function getShelfWidth() {
-	return Math.max(document.getElementById('shelf').clientWidth, 900)
+	return Math.max(document.getElementById('shelf').clientWidth, 500)
 }
 
 
@@ -115,7 +115,7 @@ function getPublishedHeight(arr) {
 	} else {
 		return 70;
 	}*/
-	return ((arr - 1900)/(2030 - 1900)) * (95 - 65) + 65;
+	return ((arr - 1950)/(2030 - 1950)) * (95 - 65) + 65;
 
 }
 
