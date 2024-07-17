@@ -5,6 +5,7 @@ const MIN_SHELF_WIDTH = 250; // Used in getShelfWidth, min width shelf will shri
 const PUB_YEAR_HEIGHT_MIN = 1950; // Used in getPublishedHeight, min year for bottom of book height
 const PUB_YEAR_HEIGHT_MAX = 2030;
 const MAX_BOOK_HEIGHT = 100; // Height of stories (shelf shelves)
+const BOOK_WIDTH_RANGE = [10, 45]; // Book width/thickness range
 const STORY_GAP = 40;  // Gap between stories
 const EDGE_WIDTH = 6; // Shelf edge width
 const DIVIDER_GAP_0 = 18; // First level divider gap (must be bigger than second level, they overlap)
@@ -139,7 +140,7 @@ function runner(book_data) {
 	// Set range for book size
 	const storyH = MAX_BOOK_HEIGHT; // Max Book Height
 	const storyGap = STORY_GAP; // Height of Gap
-	const bookWRange = [10, 50]; // Book width/thickness range
+	const bookWRange = BOOK_WIDTH_RANGE; // Book width/thickness range
 	const bookHRange = [60, storyH]; // Book Height Range
 
 	// Two d3 Gs in the entire shelf, one for shelf bg, one for other elements
