@@ -427,7 +427,8 @@ function runner(book_data) {
     			.attr('x2', bookW(d.pages))
     			.attr('y2', (SPINE_LINE_DISTANCE_FROM_TOP + SPINE_LINE_GAP))
     			.attr('class', `gender-${d.gender}`)
-    	} else if (d.form === 'Comics' || d.form === 'Poetry' || d.form === 'Drama') {
+    	} 
+    	if (d.form === 'Comics' || d.form === 'Poetry' || d.form === 'Drama') {
     		// Three lines for Comics
     		d3.select(`#book-${d.id}`)
     		.append('line')
@@ -437,7 +438,8 @@ function runner(book_data) {
     			.attr('x2', bookW(d.pages))
     			.attr('y2', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 2)))
     			.attr('class', `gender-${d.gender}`)
-    	} else if (d.form === 'Poetry' || d.form === 'Drama') {
+    	} 
+    	if (d.form === 'Poetry' || d.form === 'Drama') {
     		// Four lines for Poetry
     		d3.select(`#book-${d.id}`)
     		.append('line')
@@ -447,7 +449,8 @@ function runner(book_data) {
     			.attr('x2', bookW(d.pages))
     			.attr('y2', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 3)))
     			.attr('class', `gender-${d.gender}`)
-    	} else if (d.form === 'Drama') {
+    	} 
+    	if (d.form === 'Drama') {
     		// Five lines for Drama
     		d3.select(`#book-${d.id}`)
     		.append('line')

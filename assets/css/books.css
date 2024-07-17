@@ -5419,13 +5419,13 @@ body {
   fill: #895B1E; }
 
 .shelf-wrapper .genre-Memoir {
-  fill: #0496FF; }
+  fill: #0B1D51; }
 
 .shelf-wrapper .genre-Music {
   fill: #048BA8; }
 
 .shelf-wrapper .genre-Essays {
-  fill: #6699CC; }
+  fill: #353A47; }
 
 .shelf-wrapper .genre-Economics {
   fill: #343A1A; }
@@ -5527,13 +5527,13 @@ body {
   border: 1px solid #895B1E; }
 
 .tippy-tooltip.book-Memoir-theme {
-  border: 1px solid #0496FF; }
+  border: 1px solid #0B1D51; }
 
 .tippy-tooltip.book-Music-theme {
   border: 1px solid #048BA8; }
 
 .tippy-tooltip.book-Essays-theme {
-  border: 1px solid #6699CC; }
+  border: 1px solid #353A47; }
 
 .tippy-tooltip.book-Economics-theme {
   border: 1px solid #343A1A; }
@@ -5570,16 +5570,16 @@ body {
   border-bottom-color: #895B1E; }
 
 .tippy-tooltip.book-Memoir-theme [x-arrow] {
-  border-top-color: #0496FF;
-  border-bottom-color: #0496FF; }
+  border-top-color: #0B1D51;
+  border-bottom-color: #0B1D51; }
 
 .tippy-tooltip.book-Music-theme [x-arrow] {
   border-top-color: #048BA8;
   border-bottom-color: #048BA8; }
 
 .tippy-tooltip.book-Essays-theme [x-arrow] {
-  border-top-color: #6699CC;
-  border-bottom-color: #6699CC; }
+  border-top-color: #353A47;
+  border-bottom-color: #353A47; }
 
 .tippy-tooltip.book-Economics-theme [x-arrow] {
   border-top-color: #343A1A;
@@ -5632,13 +5632,13 @@ body {
   background-color: #895B1E; }
 
 .modal .tag-Memoir {
-  background-color: #0496FF; }
+  background-color: #0B1D51; }
 
 .modal .tag-Music {
   background-color: #048BA8; }
 
 .modal .tag-Essays {
-  background-color: #6699CC; }
+  background-color: #353A47; }
 
 .modal .tag-Economics {
   background-color: #343A1A; }
