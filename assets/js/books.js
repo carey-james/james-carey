@@ -96,7 +96,7 @@ function showModal(d, i, count, list, entered) {
 
 // Shelf Width
 function getShelfWidth() {
-	return Math.max(document.getElementById('shelf').clientWidth, 350)
+	return Math.max(document.getElementById('shelf').clientWidth, 250)
 }
 
 
@@ -216,9 +216,9 @@ function runner(book_data) {
   		d3.selectAll('.js-legends').remove();
   		d3.selectAll('.js-shelves').remove();
   		let prevVals = _.map(sortOptions, (o) => getDivider(sortedBooks[0], o));
-  		let edge = 10;
-  		let gap0 = 18; //first level gap
-  		let gap1 = 18; //second level gap
+  		let edge = 6;
+  		let gap0 = 14; //first level gap
+  		let gap1 = 14; //second level gap
     	let accW = gap0; //accumulated width
     	let accS = 1; //accumultated number of stories
     	let dimensions = [];
