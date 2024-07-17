@@ -418,7 +418,7 @@ function runner(book_data) {
     			.attr('x2', bookW(d.pages))
     			.attr('y2', SPINE_LINE_DISTANCE_FROM_TOP)
     			.attr('class', `line-gender-${d.gender} line-form-${d.form}`)
-    	if (d.form === 'Fiction' || d.form === 'Comics' || d.form === 'Poetry' || d.form === 'Drama') {
+    	if (d.form === 'Fiction' || d.form === 'Comics' || d.form === 'Poetry') {
     		// Two lines for Fiction and Poetry, Poetry dashed in CSS
     		d3.select(`#book-${d.id}`)
     		.append('line')
@@ -429,7 +429,7 @@ function runner(book_data) {
     			.attr('y2', (SPINE_LINE_DISTANCE_FROM_TOP + SPINE_LINE_GAP))
     			.attr('class', `line-gender-${d.gender} line-form-${d.form}`)
     	} 
-    	if (d.form === 'Comics' || d.form === 'Poetry' || d.form === 'Drama') {
+    	if (d.form === 'Comics') {
     		// Three lines for Comics
     		d3.select(`#book-${d.id}`)
     		.append('line')
