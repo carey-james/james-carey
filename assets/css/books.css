@@ -5441,13 +5441,13 @@ body {
   fill: #F48876; }
 
 .shelf-wrapper .gender-Male {
-  fill: #6699CC; }
+  stroke: #6699CC; }
 
 .shelf-wrapper .gender-Female {
-  fill: #F48876; }
+  stroke: #F48876; }
 
 .shelf-wrapper .gender-NB {
-  fill: #D6D4D2; }
+  stroke: #D6D4D2; }
 
 .shelf-wrapper .legend-0 {
   fill: #ffffff;
