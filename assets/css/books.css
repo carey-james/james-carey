@@ -5440,6 +5440,15 @@ body {
 .shelf-wrapper .favorite {
   fill: #F48876; }
 
+.shelf-wrapper .gender-Male {
+  fill: #6699CC; }
+
+.shelf-wrapper .gender-Female {
+  fill: #F48876; }
+
+.shelf-wrapper .gender-NB {
+  fill: #D6D4D2; }
+
 .shelf-wrapper .legend-0 {
   fill: #ffffff;
   font-size: 14px; }

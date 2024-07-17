@@ -1,5 +1,21 @@
 'use strict';
 
+// Global Constants
+const MIN_SHELF_WIDTH = 250; // Used in getShelfWidth, min width shelf will shrink to
+const PUB_YEAR_HEIGHT_MIN = 1950; // Used in getPublishedHeight, min year for bottom of book height
+const PUB_YEAR_HEIGHT_MAX = 2030;
+const MAX_BOOK_HEIGHT = 100; // Height of stories (shelf shelves)
+const STORY_GAP = 40;  // Gap between stories
+const EDGE_WIDTH = 6; // Shelf edge width
+const DIVIDER_GAP_0 = 18; // First level divider gap (must be bigger than second level, they overlap)
+const DIVIDER_GAP_1 = 18; // Second level divider gap
+const SPINE_LINE_WIDTH = 2; // 'width', aka thickness, of the spine lines
+const SPINE_LINE_DISTANCE_FROM_TOP = 10; // Distance of the first Spine Line from the top of the book
+const SPINE_LINE_GAP = 4 + SPINE_LINE_WIDTH; // Gap between the spine lines
+const GENRE_MARKER_FROM_BOT = 20; // Distance of the genre marker from the bottom of the book
+const GENRE_MARKER_WIDTH = 12; // Width of the Genre Marker Icon
+const GENRE_MARKER_HEIGHT = GENRE_MARKER_WIDTH; // Height of the Genre Marker Icon
+
 // Used for fixing '01/01/2022' dates into Date objects and adding Year
 // Also fixes the other numbers
 function dateFixer(arr, index) {
@@ -96,27 +112,13 @@ function showModal(d, i, count, list, entered) {
 
 // Shelf Width
 function getShelfWidth() {
-	return Math.max(document.getElementById('shelf').clientWidth, 250)
+	return Math.max(document.getElementById('shelf').clientWidth, MIN_SHELF_WIDTH)
 }
 
 
 // Book height based on published year
 function getPublishedHeight(arr) {
-	/*if (arr == 'Comics') {
-		return 95;
-	} else if (arr == 'Non-Fiction') {
-		return 85;
-	} else if (arr == 'Fiction') {
-		return 75;
-	} else if (arr == 'Drama') {
-		return 70;
-	} else if (arr == 'Poetry') {
-		return 65;
-	} else {
-		return 70;
-	}*/
-	return ((arr - 1950)/(2030 - 1950)) * (95 - 65) + 65;
-
+	return ((arr - PUB_YEAR_HEIGHT_MIN)/(PUB_YEAR_HEIGHT_MAX - PUB_YEAR_HEIGHT_MIN)) * (95 - 65) + 65;
 }
 
 
@@ -135,8 +137,8 @@ function runner(book_data) {
 	*/
 
 	// Set range for book size
-	const storyH = 100; // Max Book Height
-	const storyGap = 40; // Height of Gap
+	const storyH = MAX_BOOK_HEIGHT; // Max Book Height
+	const storyGap = STORY_GAP; // Height of Gap
 	const bookWRange = [10, 50]; // Book width/thickness range
 	const bookHRange = [60, storyH]; // Book Height Range
 
@@ -216,9 +218,9 @@ function runner(book_data) {
   		d3.selectAll('.js-legends').remove();
   		d3.selectAll('.js-shelves').remove();
   		let prevVals = _.map(sortOptions, (o) => getDivider(sortedBooks[0], o));
-  		let edge = 6;
-  		let gap0 = 14; //first level gap
-  		let gap1 = 14; //second level gap
+  		let edge = EDGE_WIDTH;
+  		let gap0 = DIVIDER_GAP_0; //first level gap
+  		let gap1 = DIVIDER_GAP_1; //second level gap
     	let accW = gap0; //accumulated width
     	let accS = 1; //accumultated number of stories
     	let dimensions = [];
@@ -334,7 +336,7 @@ function runner(book_data) {
 
   	// Sort Books
   	function sortBooks(option, id) {
-    	//update global sort option and sort the original books
+    	// Update global sort option and sort the original books
     	sortOptions[+id] = option;
     	resizeShelf();
   	}
@@ -404,14 +406,68 @@ function runner(book_data) {
     		.attr('class', 'favorite')
     });
 
-    // Genre Symbol on Spine
+    // Spine Lines for form and gender
+    _.each(books, (d) => {
+    	// One line for Non-Fiction
+    	d3.select(`#book-${d.id}`)
+    		.append('line')
+    			.style('stroke-width', SPINE_LINE_WIDTH)
+    			.attr('x1', 0)
+    			.attr('y1', SPINE_LINE_DISTANCE_FROM_TOP)
+    			.attr('x2', bookW(d.pages))
+    			.attr('y2', SPINE_LINE_DISTANCE_FROM_TOP)
+    			.attr('class', `gender-${d.gender}`)
+    	if (d.form === 'Fiction' || d.form === 'Comics' || d.form === 'Poetry' || d.form === 'Drama') {
+    		// Two lines for Fiction
+    		d3.select(`#book-${d.id}`)
+    		.append('line')
+    			.style('stroke-width', SPINE_LINE_WIDTH)
+    			.attr('x1', 0)
+    			.attr('y1', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP))
+    			.attr('x2', bookW(d.pages))
+    			.attr('y2', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP))
+    			.attr('class', `gender-${d.gender}`)
+    	} else if (d.form === 'Comics' || d.form === 'Poetry' || d.form === 'Drama') {
+    		// Three lines for Comics
+    		d3.select(`#book-${d.id}`)
+    		.append('line')
+    			.style('stroke-width', SPINE_LINE_WIDTH)
+    			.attr('x1', 0)
+    			.attr('y1', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 2))
+    			.attr('x2', bookW(d.pages))
+    			.attr('y2', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 2))
+    			.attr('class', `gender-${d.gender}`)
+    	} else if (d.form === 'Poetry' || d.form === 'Drama') {
+    		// Four lines for Poetry
+    		d3.select(`#book-${d.id}`)
+    		.append('line')
+    			.style('stroke-width', SPINE_LINE_WIDTH)
+    			.attr('x1', 0)
+    			.attr('y1', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 3))
+    			.attr('x2', bookW(d.pages))
+    			.attr('y2', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 3))
+    			.attr('class', `gender-${d.gender}`)
+    	} else if (d.form === 'Drama') {
+    		// Five lines for Drama
+    		d3.select(`#book-${d.id}`)
+    		.append('line')
+    			.style('stroke-width', SPINE_LINE_WIDTH)
+    			.attr('x1', 0)
+    			.attr('y1', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 4))
+    			.attr('x2', bookW(d.pages))
+    			.attr('y2', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 4))
+    			.attr('class', `gender-${d.gender}`)
+    	}
+    });
+
+    // Genre Marker Symbol on Spine
     _.each(books, (d) => {
     	d3.select(`#book-${d.id}`)
     		.append('svg:image')
-				.attr('x', ((bookW(d.pages) / 2) -6))
-				.attr('y', (bookH(getPublishedHeight(d.published)) - 20))
-				.attr('width', 12)
-				.attr('height', 12)
+				.attr('x', ((bookW(d.pages) / 2) - ( GENRE_MARKER_WIDTH / 2)))
+				.attr('y', (bookH(getPublishedHeight(d.published)) - GENRE_MARKER_FROM_BOT))
+				.attr('width', GENRE_MARKER_WIDTH)
+				.attr('height', GENRE_MARKER_HEIGHT)
 				.attr('xlink:href', `assets/icons/book-icons/${d.genre}.svg`)
     });
 
