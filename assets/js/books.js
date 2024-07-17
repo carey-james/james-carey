@@ -409,7 +409,7 @@ function runner(book_data) {
 
     // Spine Lines for form and gender
     _.each(books, (d) => {
-    	// One line for Non-Fiction
+    	// One line for Non-Fiction and Drama, Drama dashed in CSS
     	d3.select(`#book-${d.id}`)
     		.append('line')
     			.style('stroke-width', SPINE_LINE_WIDTH)
@@ -417,9 +417,9 @@ function runner(book_data) {
     			.attr('y1', SPINE_LINE_DISTANCE_FROM_TOP)
     			.attr('x2', bookW(d.pages))
     			.attr('y2', SPINE_LINE_DISTANCE_FROM_TOP)
-    			.attr('class', `gender-${d.gender}`)
+    			.attr('class', `line-gender-${d.gender} line-form-${d.form}`)
     	if (d.form === 'Fiction' || d.form === 'Comics' || d.form === 'Poetry' || d.form === 'Drama') {
-    		// Two lines for Fiction
+    		// Two lines for Fiction and Poetry, Poetry dashed in CSS
     		d3.select(`#book-${d.id}`)
     		.append('line')
     			.style('stroke-width', SPINE_LINE_WIDTH)
@@ -427,7 +427,7 @@ function runner(book_data) {
     			.attr('y1', (SPINE_LINE_DISTANCE_FROM_TOP + SPINE_LINE_GAP))
     			.attr('x2', bookW(d.pages))
     			.attr('y2', (SPINE_LINE_DISTANCE_FROM_TOP + SPINE_LINE_GAP))
-    			.attr('class', `gender-${d.gender}`)
+    			.attr('class', `line-gender-${d.gender} line-form-${d.form}`)
     	} 
     	if (d.form === 'Comics' || d.form === 'Poetry' || d.form === 'Drama') {
     		// Three lines for Comics
@@ -438,29 +438,7 @@ function runner(book_data) {
     			.attr('y1', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 2)))
     			.attr('x2', bookW(d.pages))
     			.attr('y2', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 2)))
-    			.attr('class', `gender-${d.gender}`)
-    	} 
-    	if (d.form === 'Poetry' || d.form === 'Drama') {
-    		// Four lines for Poetry
-    		d3.select(`#book-${d.id}`)
-    		.append('line')
-    			.style('stroke-width', SPINE_LINE_WIDTH)
-    			.attr('x1', 0)
-    			.attr('y1', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 3)))
-    			.attr('x2', bookW(d.pages))
-    			.attr('y2', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 3)))
-    			.attr('class', `gender-${d.gender}`)
-    	} 
-    	if (d.form === 'Drama') {
-    		// Five lines for Drama
-    		d3.select(`#book-${d.id}`)
-    		.append('line')
-    			.style('stroke-width', SPINE_LINE_WIDTH)
-    			.attr('x1', 0)
-    			.attr('y1', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 4)))
-    			.attr('x2', bookW(d.pages))
-    			.attr('y2', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 4)))
-    			.attr('class', `gender-${d.gender}`)
+    			.attr('class', `line-gender-${d.gender} line-form-${d.form}`)
     	}
     });
 

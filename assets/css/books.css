@@ -5440,14 +5440,29 @@ body {
 .shelf-wrapper .favorite {
   fill: #F48876; }
 
-.shelf-wrapper .gender-Male {
+.shelf-wrapper .line-gender-Male {
   stroke: #6699CC; }
 
-.shelf-wrapper .gender-Female {
+.shelf-wrapper .line-gender-Female {
   stroke: #F48876; }
 
-.shelf-wrapper .gender-NB {
+.shelf-wrapper .line-gender-NB {
   stroke: #D6D4D2; }
+
+.shelf-wrapper .line-gender-Male {
+  stroke: #6699CC; }
+
+.shelf-wrapper .line-gender-Female {
+  stroke: #F48876; }
+
+.shelf-wrapper .line-gender-NB {
+  stroke: #D6D4D2; }
+
+.shelf-wrapper .line-form-Poetry {
+  stroke-dasharray: 3,3; }
+
+.shelf-wrapper .line-form-Drama {
+  stroke-dasharray: 3,3; }
 
 .shelf-wrapper .legend-0 {
   fill: #ffffff;
