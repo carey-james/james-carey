@@ -98,7 +98,8 @@ function showModal(d, i, count, list, entered) {
 		series: d.series || 'N/A',
 		gender: d.gender,
 		favorite: d.favorite || 'N/A',
-		year: d.year
+		year: d.year,
+		blurb: d.blurb
 	};
 
 	_.each(bookInfo, (v,k) => {
