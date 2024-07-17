@@ -423,9 +423,9 @@ function runner(book_data) {
     		.append('line')
     			.style('stroke-width', SPINE_LINE_WIDTH)
     			.attr('x1', 0)
-    			.attr('y1', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP))
+    			.attr('y1', (SPINE_LINE_DISTANCE_FROM_TOP + SPINE_LINE_GAP))
     			.attr('x2', bookW(d.pages))
-    			.attr('y2', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP))
+    			.attr('y2', (SPINE_LINE_DISTANCE_FROM_TOP + SPINE_LINE_GAP))
     			.attr('class', `gender-${d.gender}`)
     	} else if (d.form === 'Comics' || d.form === 'Poetry' || d.form === 'Drama') {
     		// Three lines for Comics
@@ -433,9 +433,9 @@ function runner(book_data) {
     		.append('line')
     			.style('stroke-width', SPINE_LINE_WIDTH)
     			.attr('x1', 0)
-    			.attr('y1', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 2))
+    			.attr('y1', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 2)))
     			.attr('x2', bookW(d.pages))
-    			.attr('y2', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 2))
+    			.attr('y2', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 2)))
     			.attr('class', `gender-${d.gender}`)
     	} else if (d.form === 'Poetry' || d.form === 'Drama') {
     		// Four lines for Poetry
@@ -443,9 +443,9 @@ function runner(book_data) {
     		.append('line')
     			.style('stroke-width', SPINE_LINE_WIDTH)
     			.attr('x1', 0)
-    			.attr('y1', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 3))
+    			.attr('y1', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 3)))
     			.attr('x2', bookW(d.pages))
-    			.attr('y2', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 3))
+    			.attr('y2', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 3)))
     			.attr('class', `gender-${d.gender}`)
     	} else if (d.form === 'Drama') {
     		// Five lines for Drama
@@ -453,9 +453,9 @@ function runner(book_data) {
     		.append('line')
     			.style('stroke-width', SPINE_LINE_WIDTH)
     			.attr('x1', 0)
-    			.attr('y1', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 4))
+    			.attr('y1', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 4)))
     			.attr('x2', bookW(d.pages))
-    			.attr('y2', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 4))
+    			.attr('y2', (SPINE_LINE_DISTANCE_FROM_TOP + (SPINE_LINE_GAP * 4)))
     			.attr('class', `gender-${d.gender}`)
     	}
     });
