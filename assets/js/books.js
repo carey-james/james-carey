@@ -22,10 +22,12 @@ const GENRE_MARKER_HEIGHT = GENRE_MARKER_WIDTH; // Height of the Genre Marker Ic
 function dateFixer(arr, index) {
 	var result = arr;
 	const parseTime = d3.utcParse('%m/%d/%Y');
+	const formatDate = d3.utcFormat('%e %B %Y');
 	const formatYear = d3.utcFormat('%Y');
 	const formatMonth = d3.utcFormat('%m');
 	const new_date = parseTime(arr.date);
 	result.date = new_date;
+	result.pretty_date = formatDate(new_date);
 	result.year = formatYear(new_date);
 	result.month = Number(formatMonth(new_date));
 	result.pages = Number(arr.pages);
@@ -99,7 +101,8 @@ function showModal(d, i, count, list, entered) {
 		gender: d.gender,
 		favorite: d.favorite || 'N/A',
 		year: d.year,
-		blurb: d.blurb
+		blurb: d.blurb,
+		pretty_date: d.pretty_date
 	};
 
 	_.each(bookInfo, (v,k) => {

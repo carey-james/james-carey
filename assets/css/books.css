@@ -3048,7 +3048,7 @@ input[type="submit"].button {
   .modal-card {
     margin: 0 auto;
     max-height: calc(100vh - 40px);
-    width: 440px; } }
+    width: 400px; } }
 
 .modal-close {
   -webkit-touch-callout: none;
@@ -5622,7 +5622,7 @@ body {
 .modal .tag {
   color: #ffffff; }
 
-.modal .tag-year {
+.modal .tag-form {
   background-color: #3B3A38; }
 
 .modal .tag-Lit {
