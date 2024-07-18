@@ -516,7 +516,7 @@ function runner(book_data) {
   			const sec_opts = second.options;
   			let flag = true;
   			_.each(sec_opts, (o) => {
-  				console.log(o);
+  				d3.select(o).selected = false;
 				if (!(SECOND_SORT_OPTIONS[option].includes(o.value))) {
 					d3.select(o).property('disabled', true);
   				} else {
