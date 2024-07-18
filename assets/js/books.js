@@ -81,7 +81,7 @@ function showModal(d, i, count, list, entered) {
 	}
 
 	d3.select('.js-d-genre').attr('class',`tag js-d-genre tag-${d.genre}`);
-	d3.select('.js-d-form').attr('class',`tag tag-form js-d-form tag-${d.form}`);
+	//d3.select('.js-d-form').attr('class',`tag tag-form js-d-form tag-${d.form}`);
 	d3.select('.js-modal-count').html(`${entered ? `Searched by <strong>${entered}</strong>, ` : ''}${i + 1}/${count}`);
 	let title = d.title;
 	let favorite = 'N/A';
