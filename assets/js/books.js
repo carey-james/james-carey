@@ -29,6 +29,7 @@ function dateFixer(arr, index) {
 	result.date = new_date;
 	result.pretty_date = formatDate(new_date);
 	result.year = formatYear(new_date);
+	result.year_desc = -result.year;
 	result.month = Number(formatMonth(new_date));
 	result.pages = Number(arr.pages);
 	result.published = Number(arr.published);
@@ -494,13 +495,11 @@ function runner(book_data) {
   	*/
 
   	// Sort
-  	/*
   	document.getElementById('sort-0').addEventListener('change', (d) => {
   		const option = d.target.value;
   		// Can add second sort option here
   		sortBooks(d.target.value, 0);
   	});
-  	*/
 
   	// Resize
   	window.addEventListener('resize', _.debounce(() => {
