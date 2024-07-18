@@ -522,7 +522,7 @@ function runner(book_data) {
   				} else {
   					d3.select(o).property('disabled', false);
   					if (flag) {
-  						d3.select(o).selected = true;
+  						d3.select('sort-1').value = o.value;
   						flag = false;
   					}
   				}
