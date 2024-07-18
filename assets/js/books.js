@@ -16,6 +16,13 @@ const SPINE_LINE_GAP = 4 + SPINE_LINE_WIDTH; // Gap between the spine lines
 const GENRE_MARKER_FROM_BOT = 20; // Distance of the genre marker from the bottom of the book
 const GENRE_MARKER_WIDTH = 12; // Width of the Genre Marker Icon
 const GENRE_MARKER_HEIGHT = GENRE_MARKER_WIDTH; // Height of the Genre Marker Icon
+const SECOND_SORT_OPTIONS = {
+	'year':['month','country','gender','genre'],
+	'year_desc':['month','country','gender','genre'],
+	'country':['year','year_desc','gender','genre'],
+	'gender':['year','year_desc','country','genre'],
+	'genre':['year','year_desc','country','gender']
+}
 
 // Used for fixing '01/01/2022' dates into Date objects and adding Year
 // Also fixes the other numbers
@@ -424,8 +431,8 @@ function runner(book_data) {
     			.attr('x2', bookW(d.pages))
     			.attr('y2', SPINE_LINE_DISTANCE_FROM_TOP)
     			.attr('class', `line-gender-${d.gender} line-form-${d.form}`)
+    	// Two lines for Fiction and Poetry, Poetry dashed in CSS
     	if (d.form === 'Fiction' || d.form === 'Comics' || d.form === 'Poetry') {
-    		// Two lines for Fiction and Poetry, Poetry dashed in CSS
     		d3.select(`#book-${d.id}`)
     		.append('line')
     			.style('stroke-width', SPINE_LINE_WIDTH)
@@ -435,8 +442,8 @@ function runner(book_data) {
     			.attr('y2', (SPINE_LINE_DISTANCE_FROM_TOP + SPINE_LINE_GAP))
     			.attr('class', `line-gender-${d.gender} line-form-${d.form}`)
     	} 
+    	// Three lines for Comics
     	if (d.form === 'Comics') {
-    		// Three lines for Comics
     		d3.select(`#book-${d.id}`)
     		.append('line')
     			.style('stroke-width', SPINE_LINE_WIDTH)
@@ -497,8 +504,34 @@ function runner(book_data) {
   	// Sort
   	document.getElementById('sort-0').addEventListener('change', (d) => {
   		const option = d.target.value;
-  		// Can add second sort option here
+  		// Hide second sort option if first option doesn't support second sort
+  		const withSecond = SECOND_SORT_OPTIONS.keys();
+  		let isHidden = false;
+  		if (withSecond.indexOf(option) === -1) { // Options without second option
+  			isHidden = true;
+  			sortOptions = []; // Empty Sort options
+  		} else {
+  			// Set second options back, when withSecond option is selected
+  			const second = document.getElementById('sort-1');
+  			const sec_opts = second.options;
+  			let flag = true;
+  			_.each(sec_opts, (o) => {
+				if (!(SECOND_SORT_OPTIONS[option].includes(o.value))) {
+					o.property('disabled', true);
+  				} else {
+  					o.property('disabled', false);
+  					if (flag) {
+  						o.selected = true;
+  						flag = false;
+  					}
+  				}
+  			});
+  		}
+  		d3.select('#option-1').classed('is-hidden', isHidden);
   		sortBooks(d.target.value, 0);
+  	});
+  	document.getElementById('sort-1').addEventListener('change', (d) => {
+  		sortBooks(d.target.value, 1);
   	});
 
   	// Resize
