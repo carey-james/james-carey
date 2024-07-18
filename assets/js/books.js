@@ -530,6 +530,9 @@ function runner(book_data) {
   		}
   		d3.select('#option-1').classed('is-hidden', isHidden);
   		sortBooks(d.target.value, 0);
+  		if (!isHidden) {
+  			sortBooks(d3.select('sort-1').value, 1);
+  		}
   	});
   	document.getElementById('sort-1').addEventListener('change', (d) => {
   		sortBooks(d.target.value, 1);
