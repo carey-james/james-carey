@@ -505,7 +505,7 @@ function runner(book_data) {
   	document.getElementById('sort-0').addEventListener('change', (d) => {
   		const option = d.target.value;
   		// Hide second sort option if first option doesn't support second sort
-  		const withSecond = SECOND_SORT_OPTIONS.keys();
+  		const withSecond = Object.keys(SECOND_SORT_OPTIONS);
   		let isHidden = false;
   		if (withSecond.indexOf(option) === -1) { // Options without second option
   			isHidden = true;
