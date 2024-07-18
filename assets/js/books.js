@@ -518,11 +518,11 @@ function runner(book_data) {
   			_.each(sec_opts, (o) => {
   				console.log(o);
 				if (!(SECOND_SORT_OPTIONS[option].includes(o.value))) {
-					o.property('disabled', true);
+					d3.select(o).property('disabled', true);
   				} else {
-  					o.property('disabled', false);
+  					d3.select(o).property('disabled', false);
   					if (flag) {
-  						o.selected = true;
+  						d3.select(o).selected = true;
   						flag = false;
   					}
   				}
