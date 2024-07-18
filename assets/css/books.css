@@ -5407,7 +5407,7 @@ body {
   fill: #4B4A67; }
 
 .shelf-wrapper .genre-Humor {
-  fill: #EEB902; }
+  fill: #C7832B; }
 
 .shelf-wrapper .genre-SciFi {
   fill: #91d8b6; }
@@ -5530,7 +5530,7 @@ body {
   border: 1px solid #4B4A67; }
 
 .tippy-tooltip.book-Humor-theme {
-  border: 1px solid #EEB902; }
+  border: 1px solid #C7832B; }
 
 .tippy-tooltip.book-SciFi-theme {
   border: 1px solid #91d8b6; }
@@ -5569,8 +5569,8 @@ body {
   border-bottom-color: #4B4A67; }
 
 .tippy-tooltip.book-Humor-theme [x-arrow] {
-  border-top-color: #EEB902;
-  border-bottom-color: #EEB902; }
+  border-top-color: #C7832B;
+  border-bottom-color: #C7832B; }
 
 .tippy-tooltip.book-SciFi-theme [x-arrow] {
   border-top-color: #91d8b6;
@@ -5641,7 +5641,7 @@ body {
   background-color: #4B4A67; }
 
 .modal .tag-Humor {
-  background-color: #EEB902; }
+  background-color: #C7832B; }
 
 .modal .tag-SciFi {
   background-color: #91d8b6; }
