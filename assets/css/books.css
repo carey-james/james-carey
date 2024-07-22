@@ -5384,6 +5384,7 @@ body {
 .shelf-wrapper {
   border-right: 1px solid black;
   border-left: 1px solid black;
+  overflow-x: scroll;
   padding-bottom: 20px; }
 
 .shelf-wrapper svg {
