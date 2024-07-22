@@ -5418,65 +5418,65 @@ body {
   stroke: #53504D; }
 
 .shelf-wrapper .genre-Lit {
-  fill: --color-lit; }
+  fill: var(--color-lit); }
 
 .shelf-wrapper .genre-Mystery {
-  fill: --color-mystery; }
+  fill: var(--color-mystery); }
 
 .shelf-wrapper .genre-Horror {
-  fill: --color-horror; }
+  fill: var(--color-horror); }
 
 .shelf-wrapper .genre-Humor {
-  fill: --color-humor; }
+  fill: var(--color-humor); }
 
 .shelf-wrapper .genre-SciFi {
-  fill: --color-scifi; }
+  fill: var(--color-scifi); }
 
 .shelf-wrapper .genre-Fantasy {
-  fill: --color-fantasy; }
+  fill: var(--color-fantasy); }
 
 .shelf-wrapper .genre-History {
-  fill: --color-history; }
+  fill: var(--color-history); }
 
 .shelf-wrapper .genre-Memoir {
-  fill: --color-memoir; }
+  fill: var(--color-memoir); }
 
 .shelf-wrapper .genre-Music {
-  fill: --color-music; }
+  fill: var(--color-music); }
 
 .shelf-wrapper .genre-Essays {
-  fill: --color-essays; }
+  fill: var(--color-essays); }
 
 .shelf-wrapper .genre-Economics {
-  fill: --color-economics; }
+  fill: var(--color-economics); }
 
 .shelf-wrapper .genre-Western {
-  fill: --color-western; }
+  fill: var(--color-western); }
 
 .shelf-wrapper .age-overlay {
   stroke: none;
   fill: rgba(0, 0, 0, 0.2); }
 
 .shelf-wrapper .favorite {
-  fill: --color-favorite; }
+  fill: var(--color-favorite); }
 
 .shelf-wrapper .line-gender-Male {
-  stroke: --color-male; }
+  stroke: var(--color-male); }
 
 .shelf-wrapper .line-gender-Female {
-  stroke: --color-female; }
+  stroke: var(--color-female); }
 
 .shelf-wrapper .line-gender-NB {
-  stroke: --color-nb; }
+  stroke: var(--color-nb); }
 
 .shelf-wrapper .line-gender-Male {
-  stroke: --color-male; }
+  stroke: var(--color-male); }
 
 .shelf-wrapper .line-gender-Female {
-  stroke: --color-female; }
+  stroke: var(--color-female); }
 
 .shelf-wrapper .line-gender-NB {
-  stroke: --color-nb; }
+  stroke: var(--color-nb); }
 
 .shelf-wrapper .line-form-Poetry {
   stroke-dasharray: 3,3; }
@@ -5541,88 +5541,88 @@ body {
   border-bottom-color: #f48876; }
 
 .tippy-tooltip.book-Lit-theme {
-  border: 1px solid --color-lit; }
+  border: 1px solid var(--color-lit); }
 
 .tippy-tooltip.book-Mystery-theme {
-  border: 1px solid --color-mystery; }
+  border: 1px solid var(--color-mystery); }
 
 .tippy-tooltip.book-Horror-theme {
-  border: 1px solid --color-horror; }
+  border: 1px solid var(--color-horror); }
 
 .tippy-tooltip.book-Humor-theme {
-  border: 1px solid --color-humor; }
+  border: 1px solid var(--color-humor); }
 
 .tippy-tooltip.book-SciFi-theme {
-  border: 1px solid --color-scifi; }
+  border: 1px solid var(--color-scifi); }
 
 .tippy-tooltip.book-Fantasy-theme {
-  border: 1px solid --color-fantasy; }
+  border: 1px solid var(--color-fantasy); }
 
 .tippy-tooltip.book-History-theme {
-  border: 1px solid --color-history; }
+  border: 1px solid var(--color-history); }
 
 .tippy-tooltip.book-Memoir-theme {
-  border: 1px solid --color-memoir; }
+  border: 1px solid var(--color-memoir); }
 
 .tippy-tooltip.book-Music-theme {
-  border: 1px solid --color-music; }
+  border: 1px solid var(--color-music); }
 
 .tippy-tooltip.book-Essays-theme {
-  border: 1px solid --color-essays; }
+  border: 1px solid var(--color-essays); }
 
 .tippy-tooltip.book-Economics-theme {
-  border: 1px solid --color-economics; }
+  border: 1px solid var(--color-economics); }
 
 .tippy-tooltip.book-Western-theme {
-  border: 1px solid --color-western; }
+  border: 1px solid var(--color-western); }
 
 .tippy-tooltip.book-Lit-theme [x-arrow] {
-  border-top-color: --color-lit;
-  border-bottom-color: --color-lit; }
+  border-top-color: var(--color-lit);
+  border-bottom-color: var(--color-lit); }
 
 .tippy-tooltip.book-Mystery-theme [x-arrow] {
-  border-top-color: --color-mystery;
-  border-bottom-color: --color-mystery; }
+  border-top-color: var(--color-mystery);
+  border-bottom-color: var(--color-mystery); }
 
 .tippy-tooltip.book-Horror-theme [x-arrow] {
-  border-top-color: --color-horror;
-  border-bottom-color: --color-horror; }
+  border-top-color: var(--color-horror);
+  border-bottom-color: var(--color-horror); }
 
 .tippy-tooltip.book-Humor-theme [x-arrow] {
-  border-top-color: --color-humor;
-  border-bottom-color: --color-humor; }
+  border-top-color: var(--color-humor);
+  border-bottom-color: var(--color-humor); }
 
 .tippy-tooltip.book-SciFi-theme [x-arrow] {
-  border-top-color: --color-scifi;
-  border-bottom-color: --color-scifi; }
+  border-top-color: var(--color-scifi);
+  border-bottom-color: var(--color-scifi); }
 
 .tippy-tooltip.book-Fantasy-theme [x-arrow] {
-  border-top-color: --color-fantasy;
-  border-bottom-color: --color-fantasy; }
+  border-top-color: var(--color-fantasy);
+  border-bottom-color: var(--color-fantasy); }
 
 .tippy-tooltip.book-History-theme [x-arrow] {
-  border-top-color: --color-history;
-  border-bottom-color: --color-history; }
+  border-top-color: var(--color-history);
+  border-bottom-color: var(--color-history); }
 
 .tippy-tooltip.book-Memoir-theme [x-arrow] {
-  border-top-color: --color-memoir;
-  border-bottom-color: --color-memoir; }
+  border-top-color: var(--color-memoir);
+  border-bottom-color: var(--color-memoir); }
 
 .tippy-tooltip.book-Music-theme [x-arrow] {
-  border-top-color: --color-music;
-  border-bottom-color: --color-music; }
+  border-top-color: var(--color-music);
+  border-bottom-color: var(--color-music); }
 
 .tippy-tooltip.book-Essays-theme [x-arrow] {
-  border-top-color: --color-essays;
-  border-bottom-color: --color-essays; }
+  border-top-color: var(--color-essays);
+  border-bottom-color: var(--color-essays); }
 
 .tippy-tooltip.book-Economics-theme [x-arrow] {
-  border-top-color: --color-economics;
-  border-bottom-color: --color-economics; }
+  border-top-color: var(--color-economics);
+  border-bottom-color: var(--color-economics); }
 
 .tippy-tooltip.book-Western-theme [x-arrow] {
-  border-top-color: --color-western;
-  border-bottom-color: --color-western; }
+  border-top-color: var(--color-western);
+  border-bottom-color: var(--color-western); }
 
 .modal .image {
   width: 96px; }
@@ -5646,46 +5646,46 @@ body {
   background-color: #3B3A38; }
 
 .modal .tag-favorite {
-  background-color: --color-favorite; }
+  background-color: var(--color-favorite); }
 
 .modal .tag-series {
   background-color: #3B3A38; }
 
 .modal .tag-Lit {
-  background-color: --color-lit; }
+  background-color: var(--color-lit); }
 
 .modal .tag-Mystery {
-  background-color: --color-mystery; }
+  background-color: var(--color-mystery); }
 
 .modal .tag-Horror {
-  background-color: --color-horror; }
+  background-color: var(--color-horror); }
 
 .modal .tag-Humor {
-  background-color: --color-humor; }
+  background-color: var(--color-humor); }
 
 .modal .tag-SciFi {
-  background-color: --color-scifi; }
+  background-color: var(--color-scifi); }
 
 .modal .tag-Fantasy {
-  background-color: --color-fantasy; }
+  background-color: var(--color-fantasy); }
 
 .modal .tag-History {
-  background-color: --color-history; }
+  background-color: var(--color-history); }
 
 .modal .tag-Memoir {
-  background-color: --color-memoir; }
+  background-color: var(--color-memoir); }
 
 .modal .tag-Music {
-  background-color: --color-music; }
+  background-color: var(--color-music); }
 
 .modal .tag-Essays {
-  background-color: --color-essays; }
+  background-color: var(--color-essays); }
 
 .modal .tag-Economics {
-  background-color: --color-economics; }
+  background-color: var(--color-economics); }
 
 .modal .tag-Western {
-  background-color: --color-western; }
+  background-color: var(--color-western); }
 
 
 .modal .info-elm {
