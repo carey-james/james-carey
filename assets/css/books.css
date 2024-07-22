@@ -5418,65 +5418,65 @@ body {
   stroke: #53504D; }
 
 .shelf-wrapper .genre-Lit {
-  fill: color-lit; }
+  fill: --color-lit; }
 
 .shelf-wrapper .genre-Mystery {
-  fill: color-mystery; }
+  fill: --color-mystery; }
 
 .shelf-wrapper .genre-Horror {
-  fill: color-horror; }
+  fill: --color-horror; }
 
 .shelf-wrapper .genre-Humor {
-  fill: color-humor; }
+  fill: --color-humor; }
 
 .shelf-wrapper .genre-SciFi {
-  fill: color-scifi; }
+  fill: --color-scifi; }
 
 .shelf-wrapper .genre-Fantasy {
-  fill: color-fantasy; }
+  fill: --color-fantasy; }
 
 .shelf-wrapper .genre-History {
-  fill: color-history; }
+  fill: --color-history; }
 
 .shelf-wrapper .genre-Memoir {
-  fill: color-memoir; }
+  fill: --color-memoir; }
 
 .shelf-wrapper .genre-Music {
-  fill: color-music; }
+  fill: --color-music; }
 
 .shelf-wrapper .genre-Essays {
-  fill: color-essays; }
+  fill: --color-essays; }
 
 .shelf-wrapper .genre-Economics {
-  fill: color-economics; }
+  fill: --color-economics; }
 
 .shelf-wrapper .genre-Western {
-  fill: color-western; }
+  fill: --color-western; }
 
 .shelf-wrapper .age-overlay {
   stroke: none;
   fill: rgba(0, 0, 0, 0.2); }
 
 .shelf-wrapper .favorite {
-  fill: color-favorite; }
+  fill: --color-favorite; }
 
 .shelf-wrapper .line-gender-Male {
-  stroke: color-male; }
+  stroke: --color-male; }
 
 .shelf-wrapper .line-gender-Female {
-  stroke: color-female; }
+  stroke: --color-female; }
 
 .shelf-wrapper .line-gender-NB {
-  stroke: color-nb; }
+  stroke: --color-nb; }
 
 .shelf-wrapper .line-gender-Male {
-  stroke: color-male; }
+  stroke: --color-male; }
 
 .shelf-wrapper .line-gender-Female {
-  stroke: color-female; }
+  stroke: --color-female; }
 
 .shelf-wrapper .line-gender-NB {
-  stroke: color-nb; }
+  stroke: --color-nb; }
 
 .shelf-wrapper .line-form-Poetry {
   stroke-dasharray: 3,3; }
@@ -5541,88 +5541,88 @@ body {
   border-bottom-color: #f48876; }
 
 .tippy-tooltip.book-Lit-theme {
-  border: 1px solid color-lit; }
+  border: 1px solid --color-lit; }
 
 .tippy-tooltip.book-Mystery-theme {
-  border: 1px solid color-mystery; }
+  border: 1px solid --color-mystery; }
 
 .tippy-tooltip.book-Horror-theme {
-  border: 1px solid color-horror; }
+  border: 1px solid --color-horror; }
 
 .tippy-tooltip.book-Humor-theme {
-  border: 1px solid color-humor; }
+  border: 1px solid --color-humor; }
 
 .tippy-tooltip.book-SciFi-theme {
-  border: 1px solid color-scifi; }
+  border: 1px solid --color-scifi; }
 
 .tippy-tooltip.book-Fantasy-theme {
-  border: 1px solid color-fantasy; }
+  border: 1px solid --color-fantasy; }
 
 .tippy-tooltip.book-History-theme {
-  border: 1px solid color-history; }
+  border: 1px solid --color-history; }
 
 .tippy-tooltip.book-Memoir-theme {
-  border: 1px solid color-memoir; }
+  border: 1px solid --color-memoir; }
 
 .tippy-tooltip.book-Music-theme {
-  border: 1px solid color-music; }
+  border: 1px solid --color-music; }
 
 .tippy-tooltip.book-Essays-theme {
-  border: 1px solid color-essays; }
+  border: 1px solid --color-essays; }
 
 .tippy-tooltip.book-Economics-theme {
-  border: 1px solid color-economics; }
+  border: 1px solid --color-economics; }
 
 .tippy-tooltip.book-Western-theme {
-  border: 1px solid color-western; }
+  border: 1px solid --color-western; }
 
 .tippy-tooltip.book-Lit-theme [x-arrow] {
-  border-top-color: color-lit;
-  border-bottom-color: color-lit; }
+  border-top-color: --color-lit;
+  border-bottom-color: --color-lit; }
 
 .tippy-tooltip.book-Mystery-theme [x-arrow] {
-  border-top-color: color-mystery;
-  border-bottom-color: color-mystery; }
+  border-top-color: --color-mystery;
+  border-bottom-color: --color-mystery; }
 
 .tippy-tooltip.book-Horror-theme [x-arrow] {
-  border-top-color: color-horror;
-  border-bottom-color: color-horror; }
+  border-top-color: --color-horror;
+  border-bottom-color: --color-horror; }
 
 .tippy-tooltip.book-Humor-theme [x-arrow] {
-  border-top-color: color-humor;
-  border-bottom-color: color-humor; }
+  border-top-color: --color-humor;
+  border-bottom-color: --color-humor; }
 
 .tippy-tooltip.book-SciFi-theme [x-arrow] {
-  border-top-color: color-scifi;
-  border-bottom-color: color-scifi; }
+  border-top-color: --color-scifi;
+  border-bottom-color: --color-scifi; }
 
 .tippy-tooltip.book-Fantasy-theme [x-arrow] {
-  border-top-color: color-fantasy;
-  border-bottom-color: color-fantasy; }
+  border-top-color: --color-fantasy;
+  border-bottom-color: --color-fantasy; }
 
 .tippy-tooltip.book-History-theme [x-arrow] {
-  border-top-color: color-history;
-  border-bottom-color: color-history; }
+  border-top-color: --color-history;
+  border-bottom-color: --color-history; }
 
 .tippy-tooltip.book-Memoir-theme [x-arrow] {
-  border-top-color: color-memoir;
-  border-bottom-color: color-memoir; }
+  border-top-color: --color-memoir;
+  border-bottom-color: --color-memoir; }
 
 .tippy-tooltip.book-Music-theme [x-arrow] {
-  border-top-color: color-music;
-  border-bottom-color: color-music; }
+  border-top-color: --color-music;
+  border-bottom-color: --color-music; }
 
 .tippy-tooltip.book-Essays-theme [x-arrow] {
-  border-top-color: color-essays;
-  border-bottom-color: color-essays; }
+  border-top-color: --color-essays;
+  border-bottom-color: --color-essays; }
 
 .tippy-tooltip.book-Economics-theme [x-arrow] {
-  border-top-color: color-economics;
-  border-bottom-color: color-economics; }
+  border-top-color: --color-economics;
+  border-bottom-color: --color-economics; }
 
 .tippy-tooltip.book-Western-theme [x-arrow] {
-  border-top-color: color-western;
-  border-bottom-color: color-western; }
+  border-top-color: --color-western;
+  border-bottom-color: --color-western; }
 
 .modal .image {
   width: 96px; }
@@ -5646,46 +5646,46 @@ body {
   background-color: #3B3A38; }
 
 .modal .tag-favorite {
-  background-color: color-favorite; }
+  background-color: --color-favorite; }
 
 .modal .tag-series {
   background-color: #3B3A38; }
 
 .modal .tag-Lit {
-  background-color: color-lit; }
+  background-color: --color-lit; }
 
 .modal .tag-Mystery {
-  background-color: color-mystery; }
+  background-color: --color-mystery; }
 
 .modal .tag-Horror {
-  background-color: color-horror; }
+  background-color: --color-horror; }
 
 .modal .tag-Humor {
-  background-color: color-humor; }
+  background-color: --color-humor; }
 
 .modal .tag-SciFi {
-  background-color: color-scifi; }
+  background-color: --color-scifi; }
 
 .modal .tag-Fantasy {
-  background-color: color-fantasy; }
+  background-color: --color-fantasy; }
 
 .modal .tag-History {
-  background-color: color-history; }
+  background-color: --color-history; }
 
 .modal .tag-Memoir {
-  background-color: color-memoir; }
+  background-color: --color-memoir; }
 
 .modal .tag-Music {
-  background-color: color-music; }
+  background-color: --color-music; }
 
 .modal .tag-Essays {
-  background-color: color-essays; }
+  background-color: --color-essays; }
 
 .modal .tag-Economics {
-  background-color: color-economics; }
+  background-color: --color-economics; }
 
 .modal .tag-Western {
-  background-color:color-western; }
+  background-color: --color-western; }
 
 
 .modal .info-elm {
