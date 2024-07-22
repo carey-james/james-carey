@@ -5382,8 +5382,8 @@ body {
   margin-bottom: 0.75em; }
 
 .shelf-wrapper {
-  border-right: 1px solid black;
-  border-left: 1px solid black;
+  border-right: 0px solid black;
+  border-left: 0px solid black;
   overflow-x: auto;
    }
 
