@@ -5369,7 +5369,7 @@ body {
 
 .shelf-wrapper svg {
   float: left;
-  background-color: #F5F3F1; }
+  background-color: rgba(0, 0, 0, 0.2); }
 
 .shelf-wrapper .shelf-gap {
   fill: #3B3A38; }
