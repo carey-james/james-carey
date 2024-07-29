@@ -7,7 +7,7 @@
   --color-humor: #C7832B;
   --color-scifi: #6AAF8D;
   --color-fantasy: #345830;
-  --color-history: #895B1E;
+  --color-historical: #895B1E;
   --color-memoir: #0B1D51;
   --color-music: #048BA8;
   --color-essays: #353A47;
@@ -5435,8 +5435,8 @@ body {
 .shelf-wrapper .genre-Fantasy {
   fill: var(--color-fantasy); }
 
-.shelf-wrapper .genre-History {
-  fill: var(--color-history); }
+.shelf-wrapper .genre-Historical {
+  fill: var(--color-historical); }
 
 .shelf-wrapper .genre-Memoir {
   fill: var(--color-memoir); }
@@ -5558,8 +5558,8 @@ body {
 .tippy-tooltip.book-Fantasy-theme {
   border: 1px solid var(--color-fantasy); }
 
-.tippy-tooltip.book-History-theme {
-  border: 1px solid var(--color-history); }
+.tippy-tooltip.book-Historical-theme {
+  border: 1px solid var(--color-historical); }
 
 .tippy-tooltip.book-Memoir-theme {
   border: 1px solid var(--color-memoir); }
@@ -5600,9 +5600,9 @@ body {
   border-top-color: var(--color-fantasy);
   border-bottom-color: var(--color-fantasy); }
 
-.tippy-tooltip.book-History-theme [x-arrow] {
-  border-top-color: var(--color-history);
-  border-bottom-color: var(--color-history); }
+.tippy-tooltip.book-Historical-theme [x-arrow] {
+  border-top-color: var(--color-historical);
+  border-bottom-color: var(--color-historical); }
 
 .tippy-tooltip.book-Memoir-theme [x-arrow] {
   border-top-color: var(--color-memoir);
@@ -5669,8 +5669,8 @@ body {
 .modal .tag-Fantasy {
   background-color: var(--color-fantasy); }
 
-.modal .tag-History {
-  background-color: var(--color-history); }
+.modal .tag-Historical {
+  background-color: var(--color-historical); }
 
 .modal .tag-Memoir {
   background-color: var(--color-memoir); }
