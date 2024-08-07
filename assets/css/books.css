@@ -5491,7 +5491,7 @@ body {
 	font-size: 14px; }
 
 .shelf-wrapper .legend-0-bg {
-	fill: #D6D4D2; }
+	fill: none; }
 
 .shelf-wrapper .legend-0-count {
 	fill: #D6D4D2;
@@ -5503,19 +5503,19 @@ body {
 	fill: #D6D4D2; }
 
 .shelf-wrapper .legend-1 {
-	fill: black;
+	fill: #FFFFFF;
 	font-size: 12px;
 	alignment-baseline: hanging; }
 
 .shelf-wrapper .legend-1-bg {
-	fill: rgba(0, 0, 0, 0.2); 
-	stroke: #ffffff;
+	fill: none; 
+	stroke: #FFFFFF;
 	stroke-width: 1; }
 
 .shelf-wrapper .legend-1-count {
 	text-anchor: end;
 	font-size: 12px;
-	fill: #53504D; }
+	fill: #D6D4D2; }
 
 .tippy-popper {
 	text-align: left; }
