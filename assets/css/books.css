@@ -5146,11 +5146,14 @@ label.panel-block:hover {
 
 body {
 	/* background-color: #FAF9F8; */
-	font-family: 'Georgia', 'Times New Roman', serif;
-	color: #262524; }
+	color: #6f7577;
+	font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
+	font-size: 15pt;
+	font-weight: 400;
+	line-height: 1.75em; }
 
 .number-text, .shelf-wrapper .legend-0-count, .shelf-wrapper .legend-1-count, .modal .modal-count, .modal .tag {
-	font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }
+	font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }
 
 /*body {
 	background-color: $w-grey-0;
@@ -5191,8 +5194,7 @@ body {
 	margin: 0;
 	text-align: center;
 	padding-top: 2em;
-	padding-bottom: 2em;
-	background-color: white; }
+	padding-bottom: 2em; }
 
 .header .logo {
 	padding: 0; }
@@ -5398,7 +5400,10 @@ body {
 	background-color: rgba(0, 0, 0, 0.2); }
 
 .shelf-wrapper .shelf-gap {
-	fill: #3B3A38; }
+	fill: none;
+	stroke: #ffffff;
+	stroke-dasharray: 0,100,150;
+	}
 
 .shelf-wrapper .diagonal-common {
 	stroke: black;
