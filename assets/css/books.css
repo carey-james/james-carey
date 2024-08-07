@@ -2072,6 +2072,7 @@ input[type="submit"].button {
 	right: 0.625em;
 	top: 0.625em; }
 
+/*
 .icon {
 	align-items: center;
 	display: inline-flex;
@@ -2102,6 +2103,48 @@ input[type="submit"].button {
 
 .icon.is-large .fa {
 	font-size: 42px; }
+*/
+
+/* Icon */
+
+	.icon {
+		text-decoration: none;
+		border-bottom: none;
+		position: relative;
+	}
+
+		.icon:before {
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			text-transform: none !important;
+		}
+
+		.icon > .label {
+			display: none;
+		}
+
+		.icon.major {
+			display: block;
+			margin: 0 0 1em 0;
+		}
+
+			.icon.major:before {
+				font-size: 2.5em;
+			}
+
+		.icon.minor {
+		}
+
+			.icon.minor:before {
+				font-size: 1em;
+			}
+
+		.icon.mini {
+		}
+
+			.icon.mini:before {
+				font-size: .75em;
+			}
 
 .image {
 	display: block;
