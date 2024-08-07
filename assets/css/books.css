@@ -5769,7 +5769,7 @@ input:focus, input:active, select:focus, select:active {
 
 .content {
 	margin-bottom: 0 !important;
-	/* background-color: #ffffff; */}
+	background-color: rgba(0, 0, 0, 0.4);}
 
 .content .section {
 	background-color: transparent; }
@@ -5802,7 +5802,7 @@ input:focus, input:active, select:focus, select:active {
 
 .footer {
 	color: #918E8B;
-	background-color: #262524;
+	background-color: rgba(0, 0, 0, 0.6);
 	color: #ffffff; }
 
 .footer p {
