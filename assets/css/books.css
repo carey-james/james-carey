@@ -5243,16 +5243,7 @@ body {
 
 .header .headline {
 	padding-bottom: 0;
-	color: #262524; }
-
-.header .headline .count {
-	background-color: #91d8b6; }
-
-.header .headline .nyt {
-	background-color: #e5e1b5; }
-
-.header .headline .year {
-	background-color: #f48876; }
+	color: #FFFFFF; }
 
 .header .links, .header .links-mobile, .header .links-mobile-expanded {
 	position: absolute;
@@ -5402,6 +5393,7 @@ body {
 .shelf-wrapper .shelf-gap {
 	fill: none;
 	stroke: #ffffff;
+	stroke-width: 2.5;
 	}
 
 .shelf-wrapper .diagonal-common {
@@ -5777,7 +5769,7 @@ input:focus, input:active, select:focus, select:active {
 
 .content {
 	margin-bottom: 0 !important;
-	background-color: #ffffff; }
+	/* background-color: #ffffff; */}
 
 .content .section {
 	background-color: transparent; }
