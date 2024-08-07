@@ -5178,13 +5178,14 @@ body {
 .book-female {
 	fill: red;
 }*/
+/*
 .wrapper {
 	background: -webkit-linear-gradient(top, #ffffff 0%, #f2f0db 23%, #eff9f4 44%, #d69d94 94%);
 	background: -o-linear-gradient(top, #ffffff 0%, #f2f0db 23%, #eff9f4 44%, #d69d94 94%);
 	background: -ms-linear-gradient(top, #ffffff 0%, #f2f0db 23%, #eff9f4 44%, #d69d94 94%);
 	background: -moz-linear-gradient(top, #ffffff 0%, #f2f0db 23%, #eff9f4 44%, #d69d94 94%);
 	background: linear-gradient(to bottom, #ffffff 0%, #f2f0db 23%, #eff9f4 44%, #d69d94 94%); }
-
+*/
 .header {
 	position: relative;
 	margin: 0;
