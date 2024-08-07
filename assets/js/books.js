@@ -40,7 +40,6 @@ function dateFixer(arr, index) {
 	result.month = Number(formatMonth(new_date));
 	result.pages = Number(arr.pages);
 	result.published = Number(arr.published);
-	console.log(result);
 	result.id = index;
 	return result;
 }
