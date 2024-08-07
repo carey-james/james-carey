@@ -2146,6 +2146,38 @@ input[type="submit"].button {
 				font-size: .75em;
 			}
 
+/* CV Header */
+
+	#cvhead {
+		text-align: left;
+		margin-top: 2.5vh;
+		margin-left: 5vw;
+	}
+
+	#cvhead header {
+		color: rgba(255, 255, 255, 0.5);
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	#cvhead h1, #cvhead h2, #cvhead h3, #cvhead h4, #cvhead h5, #cvhead h6, #cvhead strong, #cvhead b {
+		color: #ffffff;
+	}
+
+	#cvhead a {
+		color: inherit;
+	}
+
+		#cvhead a:hover {
+			color: #ffffff !important;
+		}
+
+	#cvhead h3 {
+			margin-left: 10vw;
+			margin-right: 30vw;
+			text-transform: none;
+		}
+
 .image {
 	display: block;
 	position: relative; }
