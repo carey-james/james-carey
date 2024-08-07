@@ -5402,7 +5402,6 @@ body {
 .shelf-wrapper .shelf-gap {
 	fill: none;
 	stroke: #ffffff;
-	stroke-dasharray: 0,100,150;
 	}
 
 .shelf-wrapper .diagonal-common {

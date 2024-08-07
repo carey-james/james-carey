@@ -65,6 +65,32 @@ function getDivider(datum, option) {
 	return label;
 }
 
+// Borders for shelf story gaps
+function borderToDashArray(dimensions = {width, height}, border = {top, right, bottom, left}) {
+	const sideLengths = {
+		top: dimensions.width,
+		right: dimensions.height,
+		bottom: dimensions.width,
+		left: dimensions.height
+	};
+
+	const dashArray = [];
+	let borderOrder = ['top', 'right', 'bottom', 'left'];
+	let lastSide = -1;
+	for (let side of borderOrder) {
+		if (lastSide !== border[side]) {
+			if (side === 'top' && !border[side]) {
+				dashArray.push(0);
+			}
+		dashArray.push(sideLengths[side]);
+		} else {
+			dashArray[dashArray.length - 1] += sideLengths[side];
+		}
+		lastSide = border[side];
+	}
+	return dashArray.join(',');
+}
+
 // Search
 function getSearchedText(arr, entered) {
 	let result = arr;
@@ -308,6 +334,15 @@ function runner(book_data) {
         		.attr('width', divW)
         		.attr('height', storyGap)
         		.attr('class', 'shelf-gap js-shelves')
+        		.attr('stroke-dasharray', borderToDashArray({
+        			width: divW,
+        			height: storyGap
+        		}, {
+        			top: true,
+        			right: false,
+        			bottom: false,
+        			left: true
+        		}))
    		});
     return dimensions;
   	}
