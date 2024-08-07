@@ -233,7 +233,16 @@ function runner(book_data) {
 	    	.attr('y', 0)
 	    	.attr('width', gap - 1)
 	      	.attr('height', storyH)
-	      	.attr('class', 'legend-1-bg');
+	      	.attr('class', 'legend-1-bg')
+	      	.attr('stroke-dasharray', borderToDashArray({
+        			width: gap - 1,
+        			height: storyH
+        		}, {
+        			top: true,
+        			right: false,
+        			bottom: false,
+        			left: true
+        	}));
 	    wrapper.append('text')
 	      	.attr('x', -4)
 	      	.attr('y', 4)

@@ -5146,7 +5146,7 @@ label.panel-block:hover {
 
 body {
 	/* background-color: #FAF9F8; */
-	color: #6f7577;
+	color: #FFFFFF;
 	font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
 	font-size: 15pt;
 	font-weight: 400;
@@ -5508,7 +5508,9 @@ body {
 	alignment-baseline: hanging; }
 
 .shelf-wrapper .legend-1-bg {
-	fill: #E4E2E0; }
+	fill: rgba(0, 0, 0, 0.2); 
+	stroke: #ffffff;
+	stroke-width: 1; }
 
 .shelf-wrapper .legend-1-count {
 	text-anchor: end;
