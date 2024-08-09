@@ -5565,19 +5565,19 @@ body {
 	fill: var(--color-darkgray); }
 
 .shelf-wrapper .legend-1 {
-	fill: var(--color-lightgray);
+	fill: var(--color-offwhite);
 	font-size: 12px;
 	alignment-baseline: hanging; }
 
 .shelf-wrapper .legend-1-bg {
 	fill: var(--color-slate); 
-	stroke: var(--color-white);
-	stroke-width: 1; }
+	stroke: none;
+	stroke-width: 0; }
 
 .shelf-wrapper .legend-1-count {
 	text-anchor: end;
 	font-size: 12px;
-	fill: var(--color-white); }
+	fill: var(--color-offwhite; }
 
 .tippy-popper {
 	text-align: left; }
