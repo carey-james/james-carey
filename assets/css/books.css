@@ -5410,8 +5410,6 @@ body {
 	border-bottom: 1px solid #53504D;
 	border-bottom-right-radius: 2px;
 	border-bottom-left-radius: 2px;
-	-webkit-box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
-	-moz-box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
 	box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1); }
 
 .search .search-result li.count, .search .search-result .item {
@@ -5452,7 +5450,7 @@ body {
 
 .shelf-wrapper svg {
 	float: left;
-	background-color: rgba(255, 255, 255, 0.4); }
+	background-color: rgba(255, 255, 255, 0.6); }
 
 .shelf-wrapper .shelf-gap {
 	fill: none;
@@ -5474,10 +5472,10 @@ body {
 	stroke-width: 12px; }
 
 .shelf-wrapper .book-female.genre-Fiction {
-	fill: url(#female-Fiction); }
+	fill: url('#female-Fiction'); }
 
 .shelf-wrapper .book-female.genre-Nonfiction {
-	fill: url(#female-Nonfiction); }
+	fill: url('#female-Nonfiction'); }
 
 .shelf-wrapper .book-male, .shelf-wrapper .book-female {
 	stroke-width: 1;
@@ -5567,19 +5565,19 @@ body {
 	fill: var(--color-darkgray); }
 
 .shelf-wrapper .legend-1 {
-	fill: var(--color-darkgray);
+	fill: var(--color-lightgray);
 	font-size: 12px;
 	alignment-baseline: hanging; }
 
 .shelf-wrapper .legend-1-bg {
-	fill: var(--color-offwhite); 
+	fill: var(--color-slate); 
 	stroke: var(--color-white);
 	stroke-width: 1; }
 
 .shelf-wrapper .legend-1-count {
 	text-anchor: end;
 	font-size: 12px;
-	fill: var(--color-slate); }
+	fill: var(--color-white); }
 
 .tippy-popper {
 	text-align: left; }
