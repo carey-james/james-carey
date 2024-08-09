@@ -5565,7 +5565,7 @@ body {
 	fill: var(--color-darkgray); }
 
 .shelf-wrapper .legend-1 {
-	fill: var(--color-offwhite);
+	fill: var(--color-lightgray);
 	font-size: 12px;
 	alignment-baseline: hanging; }
 
@@ -5577,7 +5577,7 @@ body {
 .shelf-wrapper .legend-1-count {
 	text-anchor: end;
 	font-size: 12px;
-	fill: var(--color-offwhite; }
+	fill: var(--color-offwhite); }
 
 .tippy-popper {
 	text-align: left; }
