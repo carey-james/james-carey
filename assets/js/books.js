@@ -333,6 +333,7 @@ function runner(book_data) {
       		if (i === sortedBooks.length - 1) {
         		d3.select(`#legend-0-${labelCounts[0] - 1}`).text(counts[0] + 1);
         		d3.select(`#legend-1-${labelCounts[1] - 1}`).text(counts[1] + 1);
+        		d3.select(`#legend-1-percent-${labelCounts[1] - 1}`).text(`${counts[1] / counts[0]}%`);
       		}
       		// add width, update before the next iteration
       		accW += (w + 0);
