@@ -251,10 +251,10 @@ function runner(book_data) {
 	      	.attr('class', 'legend-1');
 	    wrapper.append('text')
 	      	.attr('x', -4)
-	      	.attr('y', storyH - 10)
+	      	.attr('y', storyH - 14)
 	      	.attr('dy', -4)
 	      	.attr('class', 'legend-1-percent')
-	      	.attr('id', `legend-1-${count}`);
+	      	.attr('id', `legend-1-percent-${count}`);
 	    wrapper.append('text')
 	      	.attr('x', -4)
 	      	.attr('y', storyH)
@@ -325,6 +325,7 @@ function runner(book_data) {
      		if ((isNewLabels[0] || isNewLabels[1]) && sortOptions.length === 2) {
         		putLegend1(dividers[1], labelCounts[1], accW, accS, isInitial, gap1);
         		d3.select(`#legend-1-${labelCounts[1] - 1}`).text(counts[1]);
+        		d3.select(`#legend-1-percent-${labelCounts[1] - 1}`).text(`${counts[1] / counts[0]}%`);
         		counts[1] = 0;
         		labelCounts[1]++;
       		}
