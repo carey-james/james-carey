@@ -5565,7 +5565,7 @@ body {
 	fill: var(--color-darkgray); }
 
 .shelf-wrapper .legend-1 {
-	fill: var(--color-lightgray);
+	fill: var(--color-offwhite);
 	font-size: 12px;
 	alignment-baseline: hanging; }
 
@@ -5574,10 +5574,15 @@ body {
 	stroke: none;
 	stroke-width: 0; }
 
+.shelf-wrapper .legend-1-percent {
+	text-anchor: end;
+	font-size: 12px;
+	fill: var(--color-white); }
+
 .shelf-wrapper .legend-1-count {
 	text-anchor: end;
 	font-size: 12px;
-	fill: var(--color-offwhite); }
+	fill: var(--color-white); }
 
 .tippy-popper {
 	text-align: left; }
@@ -5781,12 +5786,10 @@ body {
 	padding: 6px; }
 
 .modal .modal-prev .arrow-right, .modal .modal-next .arrow-right {
-	transform: rotate(-45deg);
-	-webkit-transform: rotate(-45deg); }
+	transform: rotate(-45deg); }
 
 .modal .modal-prev .arrow-left, .modal .modal-next .arrow-left {
-	transform: rotate(135deg);
-	-webkit-transform: rotate(135deg); }
+	transform: rotate(135deg); }
 
 .modal .modal-prev {
 	padding-left: 20px;

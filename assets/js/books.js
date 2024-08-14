@@ -251,6 +251,12 @@ function runner(book_data) {
 	      	.attr('class', 'legend-1');
 	    wrapper.append('text')
 	      	.attr('x', -4)
+	      	.attr('y', storyH - 10)
+	      	.attr('dy', -4)
+	      	.attr('class', 'legend-1-percent')
+	      	.attr('id', `legend-1-${count}`);
+	    wrapper.append('text')
+	      	.attr('x', -4)
 	      	.attr('y', storyH)
 	      	.attr('dy', -4)
 	      	.attr('class', 'legend-1-count')
