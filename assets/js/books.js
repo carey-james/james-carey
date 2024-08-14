@@ -325,7 +325,7 @@ function runner(book_data) {
      		if ((isNewLabels[0] || isNewLabels[1]) && sortOptions.length === 2) {
         		putLegend1(dividers[1], labelCounts[1], accW, accS, isInitial, gap1);
         		d3.select(`#legend-1-${labelCounts[1] - 1}`).text(counts[1]);
-        		d3.select(`#legend-1-percent-${labelCounts[1] - 1}`).text(`${(counts[1] / counts[0]).toString().split('.')[0]}%`);
+        		d3.select(`#legend-1-percent-${labelCounts[1] - 1}`).text(`${((counts[1] / counts[0]) * 100).toString().split('.')[0]}%`);
         		counts[1] = 0;
         		labelCounts[1]++;
       		}
@@ -333,7 +333,7 @@ function runner(book_data) {
       		if (i === sortedBooks.length - 1) {
         		d3.select(`#legend-0-${labelCounts[0] - 1}`).text(counts[0] + 1);
         		d3.select(`#legend-1-${labelCounts[1] - 1}`).text(counts[1] + 1);
-        		d3.select(`#legend-1-percent-${labelCounts[1] - 1}`).text(`${(counts[1] / counts[0]).toString().split('.')[0]}%`);
+        		d3.select(`#legend-1-percent-${labelCounts[1] - 1}`).text(`${((counts[1] / counts[0]) * 100).toString().split('.')[0]}%`);
       		}
       		// add width, update before the next iteration
       		accW += (w + 0);
