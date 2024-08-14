@@ -5577,8 +5577,8 @@ body {
 .shelf-wrapper .legend-1-percent {
 	text-anchor: end;
 	font-size: 10px;
-	fill: var(--color-white);
-	alignment-baseline: hanging; }
+	fill: var(--color-white); 
+	transform: rotate(90deg); }
 
 .shelf-wrapper .legend-1-count {
 	text-anchor: end;
