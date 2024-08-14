@@ -326,8 +326,7 @@ function runner(book_data) {
         		putLegend1(dividers[1], labelCounts[1], accW, accS, isInitial, gap1);
         		d3.select(`#legend-1-${labelCounts[1] - 1}`).text(counts[1]);
         		d3.select(`#legend-1-percent-${labelCounts[1] - 1}`).text(`${((counts[1] / counts[0]) * 100).toString().split('.')[0]}%`);
-        		console.log(`Count 1: ${counts[1]} divided by Count 0: ${co
-        			[0]} is ${(counts[1] / counts[0]) * 100)}, showing ${((counts[1] / counts[0]) * 100).toString().split('.')[0]}%`);
+        		console.log(`Count 1: ${counts[1]} divided by Count 0: ${count[0]} is ${(counts[1] / counts[0]) * 100)}, showing ${((counts[1] / counts[0]) * 100).toString().split('.')[0]}%`);
         		counts[1] = 0;
         		labelCounts[1]++;
       		}
