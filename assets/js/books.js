@@ -250,9 +250,8 @@ function runner(book_data) {
 	      	.attr('transform', `rotate(90, -4, 4)`)
 	      	.attr('class', 'legend-1');
 	    wrapper.append('text')
-	      	.attr('y', -2)
+	      	.attr('y', 0)
 	      	.attr('x', storyH - 14)
-	      	.attr('dx', -4)
 	      	.attr('class', 'legend-1-percent')
 	      	.attr('id', `legend-1-percent-${count}`);
 	    wrapper.append('text')
@@ -278,7 +277,7 @@ function runner(book_data) {
     	let accW = gap0; //accumulated width
     	let accS = 1; //accumultated number of stories
     	let dimensions = [];
-    	let counts = [0, 0]; //count of books in the current label
+    	let counts = [0, 0, 0]; //count of books in the current label
     	let isNewLabels = [true, true]; //check if the books are divided
     	let labelCounts = [0, 0]; //counts of each label, used for id
     	_.each(sortedBooks, (d, i) => {
@@ -318,6 +317,7 @@ function runner(book_data) {
         		putLegend0(dividers[0], labelCounts[0], accW, accS, isInitial, gap0);
         		//update count for the previous values
         		d3.select(`#legend-0-${labelCounts[0] - 1}`).text(counts[0]);
+        		counts[2] = counts[0]; // Used for Percentage
        	 		counts[0] = 0;
         		labelCounts[0]++;
       		}
@@ -325,8 +325,8 @@ function runner(book_data) {
      		if ((isNewLabels[0] || isNewLabels[1]) && sortOptions.length === 2) {
         		putLegend1(dividers[1], labelCounts[1], accW, accS, isInitial, gap1);
         		d3.select(`#legend-1-${labelCounts[1] - 1}`).text(counts[1]);
-        		d3.select(`#legend-1-percent-${labelCounts[1] - 1}`).text(`${((counts[1] / counts[0]) * 100).toString().split('.')[0]}%`);
-        		console.log(`Count 1: ${counts[1]} divided by Count 0: ${counts[0]} is ${(counts[1] / counts[0]) * 100}, showing ${((counts[1] / counts[0]) * 100).toString().split('.')[0]}%`);
+        		d3.select(`#legend-1-percent-${labelCounts[1] - 1}`).text(`${((counts[1] / counts[2]) * 100).toString().split('.')[0]}%`);
+        		console.log(`Count 1: ${counts[1]} divided by Count 0: ${counts[0]} is ${(counts[1] / counts[0]) * 100}, showing ${((counts[1] / counts[2]) * 100).toString().split('.')[0]}%`);
         		counts[1] = 0;
         		labelCounts[1]++;
       		}
@@ -334,7 +334,7 @@ function runner(book_data) {
       		if (i === sortedBooks.length - 1) {
         		d3.select(`#legend-0-${labelCounts[0] - 1}`).text(counts[0] + 1);
         		d3.select(`#legend-1-${labelCounts[1] - 1}`).text(counts[1] + 1);
-        		d3.select(`#legend-1-percent-${labelCounts[1] - 1}`).text(`${((counts[1] / counts[0]) * 100).toString().split('.')[0]}%`);
+        		d3.select(`#legend-1-percent-${labelCounts[1] - 1}`).text(`${((counts[1] / counts[2]) * 100).toString().split('.')[0]}%`);
       		}
       		// add width, update before the next iteration
       		accW += (w + 0);
