@@ -428,7 +428,7 @@ function runner(book_data) {
   			.attr('transform', (d, i) => `translate(${dimensions[i].x}, ${dimensions[i].y})`)
   			.attr('title', (d) => {
         		let title = `<strong>${d.title}</strong>`;
-        		return `${title}<div><div class="author">by <strong>${d.author}</strong></div></div><div><img src="assets/icons/flags/${d.country}.png" alt="${d.country}"></div>`;
+        		return `${title}<div><div class="author">by <strong>${d.author}</strong></div></div><div><img src="assets/icons/flags/${d.country}.png" alt="${d.country}" style="width:15px; height:15px;"></div>`;
         	})
       	.attr('class', 'js-books')
       	.attr('id', (d) => `book-${d.id}`)

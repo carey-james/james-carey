@@ -137,8 +137,6 @@ body {
 *,
 *::before,
 *::after {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1446,13 +1444,7 @@ html {
 html.is-loading body *,
 html.is-loading body *::before,
 html.is-loading body *::after {
-	-moz-animation: none;
-	-webkit-animation: none;
-	-ms-animation: none;
 	animation: none;
-	-moz-transition: none;
-	-webkit-transition: none;
-	-ms-transition: none;
 	transition: none;
 }
 
@@ -1462,8 +1454,6 @@ html.is-touch {
 }
 
 html.is-touch #wrapper {
-	-webkit-backface-visibility: hidden;
-	-webkit-transform: translate3d(0, 0, 0);
 	height: 100vh;
 	overflow: auto;
 }
@@ -1480,9 +1470,6 @@ textarea {
 }
 
 a {
-	-moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-	-webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-	-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 	border-bottom: dotted 1px;
 	color: var(--color-mint);
