@@ -5592,13 +5592,13 @@ body {
 	font-weight: normal;
 	color: var(--color-white); }
 
-.tippy-tooltip.book-Fiction-theme, .tippy-tooltip.book-Nonfiction-theme {
+.tippy-tooltip {
 	border-radius: 2px;
 	padding: 0.6rem 1rem;
 	color: #B8B5B2;
 	background-color: #53504D; }
 
-.tippy-tooltip.book-Fiction-theme .author, .tippy-tooltip.book-Nonfiction-theme .author {
+.tippy-tooltip .author {
 	border-top: 1px solid #918E8B;
 	display: inline-block;
 	padding-top: 0.4rem;
