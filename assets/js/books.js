@@ -326,7 +326,7 @@ function runner(book_data) {
         		putLegend1(dividers[1], labelCounts[1], accW, accS, isInitial, gap1);
         		d3.select(`#legend-1-${labelCounts[1] - 1}`).text(counts[1]);
         		d3.select(`#legend-1-percent-${labelCounts[1] - 1}`).text(`${((counts[1] / counts[2]) * 100).toString().split('.')[0]}%`);
-        		console.log(`Count 1: ${counts[1]} divided by Count 0: ${counts[0]} is ${(counts[1] / counts[0]) * 100}, showing ${((counts[1] / counts[2]) * 100).toString().split('.')[0]}%`);
+        		// console.log(`Count 1: ${counts[1]} divided by Count 0: ${counts[0]} is ${(counts[1] / counts[0]) * 100}, showing ${((counts[1] / counts[2]) * 100).toString().split('.')[0]}%`);
         		counts[1] = 0;
         		labelCounts[1]++;
       		}
@@ -341,6 +341,11 @@ function runner(book_data) {
       		prevVals = dividers;
       		isNewLabels = [false, false];
     	});
+
+    	// Add the percents
+    	let percent_markers = d3.selectAll('.legend-1-percent');
+
+
 
     	// set the wrapper height to fit
     	d3.select('#shelf-svg').attr('height', accS * (storyGap + storyH) + storyGap);
@@ -423,7 +428,7 @@ function runner(book_data) {
   			.attr('transform', (d, i) => `translate(${dimensions[i].x}, ${dimensions[i].y})`)
   			.attr('title', (d) => {
         		let title = `<strong>${d.title}</strong>`;
-        		return `${title}<div><div class="author">by <strong>${d.author}</strong></div></div>`;
+        		return `${title}<div><div class="author">by <strong>${d.author}</strong></div></div><div><img src="assets/icons/flags/${d.country}.png" alt="${d.country}"></div>`;
         	})
       	.attr('class', 'js-books')
       	.attr('id', (d) => `book-${d.id}`)
