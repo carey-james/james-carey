@@ -5593,16 +5593,16 @@ body {
 	color: var(--color-white); }
 
 .tippy-tooltip {
-	border-radius: 2px;
-	padding: 0.6rem 1rem;
-	color: #B8B5B2;
-	background-color: #53504D; }
+	border-radius: 5px;
+	/* padding: 0.6rem 1rem; */
+	color: var(--color-offwhite);
+	/* background-color: #53504D; */}
 
 .tippy-tooltip .author {
 	border-top: 1px solid #918E8B;
 	display: inline-block;
-	padding-top: 0.4rem;
-	margin-top: 0.4rem; }
+	padding-top: 0.2rem;
+	margin-top: 0.2rem; }
 
 .tippy-tooltip.book-Fiction-theme [x-arrow] {
 	border-top-color: #91d8b6;
