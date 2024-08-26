@@ -5251,8 +5251,8 @@ body {
 	position: relative;
 	margin: 0;
 	text-align: center;
-	padding-top: 2em;
-	padding-bottom: 2em; }
+	/* padding-top: 2em;
+	padding-bottom: 2em; */}
 
 .header .logo {
 	padding: 0; }
