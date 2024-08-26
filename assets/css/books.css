@@ -26,8 +26,8 @@
 	to {
 	transform: rotate(359deg); } }
 
-minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css
-html,
+/* minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css */
+/*html,
 body,
 p,
 ol,
@@ -45,7 +45,7 @@ pre,
 iframe,
 hr,
 h1,
-/* h2, */
+/* h2,
 h3,
 h4,
 h5,
@@ -54,14 +54,14 @@ h6 {
 	padding: 0; }
 
 h1,
-/* h2, */
+/* h2,
 h3,
 h4,
 h5,
 h6 {
 	font-size: 100%;
 	font-weight: normal; }
-
+*/
 ul {
 	list-style: none; }
 
@@ -101,12 +101,6 @@ th {
 	text-align: left; }
 
 html {
-	background-color: #313a3d;
-	background-attachment: fixed,					 fixed;
-	background-image: url("images/overlay.png"), url("../images/greece.jpg");
-	background-position: top left,					center center;
-	background-repeat: repeat,						none;
-	background-size: auto,						cover;
 	font-size: 16px;
 	min-width: 300px;
 	overflow-x: hidden;
