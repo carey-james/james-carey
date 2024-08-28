@@ -252,7 +252,6 @@
 
 	h1 {
 		font-weight: 100;
-		text-align: center;
 	}
 
 	h2 {
@@ -303,6 +302,7 @@
 	#header {
 		height: 100vh;
 		position: relative;
+		text-align: center;
 	}
 
 	#header::after {
