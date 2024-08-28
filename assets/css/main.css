@@ -128,175 +128,6 @@
 		line-height: 1.75em;
 	}
 
-/* lists (ol, ul) */
-	ol,
-	ul {
-		list-style: none;
-	}
-
-	ol {
-		list-style: decimal;
-		margin: 0 0 2em 0;
-		padding-left: 1.25em;
-	}
-
-	ol li {
-		padding-left: 0.25em;
-	}
-
-	ul {
-		list-style: disc;
-		margin: 0 0 2em 0;
-		padding-left: 1em;
-	}
-
-	ul li {
-		padding-left: 0.5em;
-	}
-
-	ul.alt {
-		list-style: none;
-		padding-left: 0;
-	}
-
-	ul.alt li {
-		border-top: solid 1px var(--color-offwhite);
-		padding: 0.5em 0;
-	}
-
-	ul.alt li:first-child {
-		border-top: 0;
-		padding-top: 0;
-	}
-
-	ul.icons {
-		cursor: default;
-		list-style: none;
-		padding-left: 0;
-	}
-
-	ul.icons li {
-		display: inline-block;
-		padding: 0 1.5em 0 0;
-	}
-
-	ul.icons li:last-child {
-		padding-right: 0;
-	}
-
-	ul.icons li .icon::before {
-		font-size: 1.5em;
-	}
-
-	ul.icons-grid {
-		list-style: none;
-		padding: 0;
-		position: relative;
-	}
-
-	ul.icons-grid li {
-		display: block;
-		float: left;
-		padding: 3em 0;
-		width: 50%;
-	}
-
-	ul.icons-grid li h3 {
-		margin: 0;
-	}
-
-	ul.icons-grid li:nth-child(2n + 1) {
-		box-shadow: inset -1px 0 0 0 var(--color-offwhite), 1px 0 0 0 var(--color-offwhite);
-	}
-
-	ul.icons-grid li:nth-child(2n + 3)::before {
-		background: var(--color-offwhite);
-		content: '';
-		display: block;
-		height: 2px;
-		margin-top: -3em;
-		position: absolute;
-		width: 100%;
-	}
-
-	ul.icons-grid::after {
-		clear: both;
-		content: '';
-		display: block;
-	}
-
-	ul.actions {
-		cursor: default;
-		list-style: none;
-		padding-left: 0;
-	}
-
-	ul.actions li {
-		display: inline-block;
-		padding: 0 1em 0 0;
-		vertical-align: middle;
-	}
-
-	ul.actions li:last-child {
-		padding-right: 0;
-	}
-
-	ul.actions.small li {
-		padding: 0 0.5em 0 0;
-	}
-
-	ul.actions.vertical li {
-		display: block;
-		padding: 1em 0 0 0;
-	}
-
-	ul.actions.vertical li:first-child {
-		padding-top: 0;
-	}
-
-	ul.actions.vertical li > * {
-		margin-bottom: 0;
-	}
-
-	ul.actions.vertical.small li {
-		padding: 0.5em 0 0 0;
-	}
-
-	ul.actions.vertical.small li:first-child {
-		padding-top: 0;
-	}
-
-	ul.actions.fit {
-		display: table;
-		margin-left: -1em;
-		padding: 0;
-		table-layout: fixed;
-		width: calc(100% + 1em);
-	}
-
-	ul.actions.fit li {
-		display: table-cell;
-		padding: 0 0 0 1em;
-	}
-
-	ul.actions.fit li > * {
-		margin-bottom: 0;
-		min-width: 0;
-	}
-
-	ul.actions.fit.small {
-		margin-left: -0.5em;
-		width: calc(100% + 0.5em);
-	}
-
-	ul.actions.fit.small li {
-		padding: 0 0 0 0.5em;
-	}
-
-	dl {
-		margin: 0 0 2em 0;
-	}
-
 /* html */
 	html {
 		background-color: var(--color-slate);
@@ -488,6 +319,14 @@
 		margin-top: 0.5em;
 	}
 
+	#header header a {
+		color: inherit;
+	}
+
+	#header header a:hover {
+		color: var(--color-white);
+	}
+
 /* aligns */
 	.align-left {
 		text-align: left;
@@ -590,6 +429,175 @@
 
 
 
+
+/* lists (ol, ul) */
+	ol,
+	ul {
+		list-style: none;
+	}
+
+	ol {
+		list-style: decimal;
+		margin: 0 0 2em 0;
+		padding-left: 1.25em;
+	}
+
+	ol li {
+		padding-left: 0.25em;
+	}
+
+	ul {
+		list-style: disc;
+		margin: 0 0 2em 0;
+		padding-left: 1em;
+	}
+
+	ul li {
+		padding-left: 0.5em;
+	}
+
+	ul.alt {
+		list-style: none;
+		padding-left: 0;
+	}
+
+	ul.alt li {
+		border-top: solid 1px var(--color-offwhite);
+		padding: 0.5em 0;
+	}
+
+	ul.alt li:first-child {
+		border-top: 0;
+		padding-top: 0;
+	}
+
+	ul.icons {
+		cursor: default;
+		list-style: none;
+		padding-left: 0;
+	}
+
+	ul.icons li {
+		display: inline-block;
+		padding: 0 1.5em 0 0;
+	}
+
+	ul.icons li:last-child {
+		padding-right: 0;
+	}
+
+	ul.icons li .icon::before {
+		font-size: 1.5em;
+	}
+
+	ul.icons-grid {
+		list-style: none;
+		padding: 0;
+		position: relative;
+	}
+
+	ul.icons-grid li {
+		display: block;
+		float: left;
+		padding: 3em 0;
+		width: 50%;
+	}
+
+	ul.icons-grid li h3 {
+		margin: 0;
+	}
+
+	ul.icons-grid li:nth-child(2n + 1) {
+		box-shadow: inset -1px 0 0 0 var(--color-offwhite), 1px 0 0 0 var(--color-offwhite);
+	}
+
+	ul.icons-grid li:nth-child(2n + 3)::before {
+		background: var(--color-offwhite);
+		content: '';
+		display: block;
+		height: 2px;
+		margin-top: -3em;
+		position: absolute;
+		width: 100%;
+	}
+
+	ul.icons-grid::after {
+		clear: both;
+		content: '';
+		display: block;
+	}
+
+	ul.actions {
+		cursor: default;
+		list-style: none;
+		padding-left: 0;
+	}
+
+	ul.actions li {
+		display: inline-block;
+		padding: 0 1em 0 0;
+		vertical-align: middle;
+	}
+
+	ul.actions li:last-child {
+		padding-right: 0;
+	}
+
+	ul.actions.small li {
+		padding: 0 0.5em 0 0;
+	}
+
+	ul.actions.vertical li {
+		display: block;
+		padding: 1em 0 0 0;
+	}
+
+	ul.actions.vertical li:first-child {
+		padding-top: 0;
+	}
+
+	ul.actions.vertical li > * {
+		margin-bottom: 0;
+	}
+
+	ul.actions.vertical.small li {
+		padding: 0.5em 0 0 0;
+	}
+
+	ul.actions.vertical.small li:first-child {
+		padding-top: 0;
+	}
+
+	ul.actions.fit {
+		display: table;
+		margin-left: -1em;
+		padding: 0;
+		table-layout: fixed;
+		width: calc(100% + 1em);
+	}
+
+	ul.actions.fit li {
+		display: table-cell;
+		padding: 0 0 0 1em;
+	}
+
+	ul.actions.fit li > * {
+		margin-bottom: 0;
+		min-width: 0;
+	}
+
+	ul.actions.fit.small {
+		margin-left: -0.5em;
+		width: calc(100% + 0.5em);
+	}
+
+	ul.actions.fit.small li {
+		padding: 0 0 0 0.5em;
+	}
+
+	dl {
+		margin: 0 0 2em 0;
+	}
 
 /* icon */
 	.icon {
