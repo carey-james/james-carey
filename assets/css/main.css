@@ -134,6 +134,12 @@
 		background-position: top left, center center;
 		background-repeat: repeat, none;
 		background-size: auto, cover;
+		box-sizing: border-box;
+		font-size: 16px;
+		min-width: 300px;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		text-rendering: optimizeLegibility;
 	}
 
 	html.is-touch {
