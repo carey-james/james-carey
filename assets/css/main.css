@@ -299,40 +299,40 @@
 		margin: 2em 0;
 	}
 
-	.header {
+	header {
 		height: 100vh;
 		position: relative;
 		text-align: center;
 	}
 
-	.header::after {
+	header::after {
 		content: '';
 		display: inline-block;
 		height: 100vh;
 		vertical-align: middle;
 	}
 
-	.header header {
+	header header {
 		color: rgba(255, 255, 255, 0.5);
 		display: inline-block;
 		vertical-align: middle;
 	}
 
-	.header header h1 {
+	header header h1 {
 		font-size: 3em;
 		line-height: 1.25em;
 		margin: 0;
 	}
 
-	.header header h1::after {
+	header header h1::after {
 		margin-top: 0.5em;
 	}
 
-	.header header a {
+	header header a {
 		color: inherit;
 	}
 
-	.header header a:hover {
+	header header a:hover {
 		color: var(--color-white);
 	}
 
