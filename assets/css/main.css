@@ -252,6 +252,7 @@
 
 	h1 {
 		font-weight: 100;
+		text-align: center;
 	}
 
 	h2 {
@@ -302,16 +303,15 @@
 	#header {
 		height: 100vh;
 		position: relative;
-		text-align: center;
 	}
-	/*
+
 	#header::after {
 		content: '';
 		display: inline-block;
 		height: 100vh;
 		vertical-align: middle;
 	}
-	*/
+
 	#header header {
 		color: rgba(255, 255, 255, 0.5);
 		display: inline-block;
