@@ -402,6 +402,7 @@
 		line-height: 1em;
 		margin: 0 0 1em 0;
 		text-transform: uppercase;
+		text-align: center;
 		position: relative;
 	}
 
@@ -457,6 +458,36 @@
 		border-bottom: solid 1px var(--color-offwhite);
 		margin: 2em 0;
 	}
+
+	#header {
+		height: 100vh;
+		position: relative;
+		text-align: center;
+	}
+
+	#header::after {
+		content: '';
+		display: inline-block;
+		height: 100vh;
+		vertical-align: middle;
+	}
+
+	#header header {
+		color: rgba(255, 255, 255, 0.5);
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	#header header h1 {
+		font-size: 3em;
+		line-height: 1.25em;
+		margin: 0;
+	}
+
+	#header header h1::after {
+		margin-top: 0.5em;
+	}
+
 
 /* aligns */
 	.align-left {
