@@ -976,9 +976,9 @@
 	.modal .tag-Western {
 		background-color: var(--color-western); }
 
-
 	.modal .info-elm {
 		margin-top: 12px;
+		font-family: "Bitter", serif;
 		font-size: 14px;
 		color: #918E8B; }
 
@@ -1107,7 +1107,8 @@
 		max-height: calc(100vh - 160px);
 		overflow: auto;
 		position: relative;
-		width: 100%; }
+		width: 100%;
+		font-family: "Raleway", "Helvetica", sans-serif; }
 
 	@media screen and (min-width: 769px), print {
 		.modal-content,
@@ -1117,7 +1118,6 @@
 		width: 400px; } }
 
 	.modal-close {
-		-webkit-touch-callout: none;
 		-webkit-user-select: none;
 		-moz-user-select: none;
 		-ms-user-select: none;

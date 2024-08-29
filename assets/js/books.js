@@ -250,7 +250,7 @@ function runner(book_data) {
 	      	.attr('transform', `rotate(90, -4, 4)`)
 	      	.attr('class', 'legend-1');
 	    wrapper.append('text')
-	      	.attr('y', 0)
+	      	.attr('y', -4)
 	      	.attr('x', storyH - 14)
 	      	.attr('class', 'legend-1-percent')
 	      	.attr('id', `legend-1-percent-${count}`);
