@@ -1183,11 +1183,11 @@
 
 	.modal-close:before {
 		height: 2px;
-		width: 50%; }
+		width: 25%; }
 
-/*	.modal-close:after {
+	.modal-close:after {
 		height: 50%;
-		width: 2px; } */
+		width: 2px; } 
 
 	.modal-close:hover, .modal-close:focus {
 		background-color: rgba(10, 10, 10, 0.3); }
