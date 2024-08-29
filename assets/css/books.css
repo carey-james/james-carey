@@ -916,7 +916,7 @@
 
 /* modal */
 	.modal p {
-		margin: 0 0 0 0;
+		margin: 0 0 0.2em 0;
 	}
 	.modal .image {
 		width: 96px; }
