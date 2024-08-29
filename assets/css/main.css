@@ -83,7 +83,7 @@
 		margin: 0;
 		padding: 0;
 		border: 0;
-		/* font-size: 100%; */
+		font-size: 100%;
 		font: inherit;
 		vertical-align: baseline;
 	}
@@ -169,7 +169,7 @@
 		content: '\f1ce';
 		cursor: default;
 		display: block;
-		font-size: 2em;
+		/* font-size: 2em; */
 		height: 2em;
 		left: 50%;
 		opacity: 0;
