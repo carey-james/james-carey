@@ -815,6 +815,10 @@
 		font-family: "Raleway", "Helvetica", sans-serif;
 		/* background-color: #53504D; */}
 
+	.tippy-tooltip .bname {
+		font-size: 1.5em;
+	}
+
 	.tippy-tooltip .author {
 		border-top: 1px solid #918E8B;
 		display: inline-block;
@@ -1277,7 +1281,7 @@
 	.content .legend ul {
 		margin-bottom: 1rem;
 		font-size: 14px; 
-		color: var(--color-off-white); }
+		color: var(--color-white); }
 
 	.content .legend ul li {
 		list-style: circle; }

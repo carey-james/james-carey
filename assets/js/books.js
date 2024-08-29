@@ -427,7 +427,7 @@ function runner(book_data) {
 		.append('g') // Book wrapper
   			.attr('transform', (d, i) => `translate(${dimensions[i].x}, ${dimensions[i].y})`)
   			.attr('title', (d) => {
-        		let title = `<strong>${d.title}</strong>`;
+        		let title = `<span class="bname"><strong>${d.title}</strong></span>`;
         		return `${title}<div><div class="author">by <strong>${d.author}</strong></div></div><div><img src="assets/icons/flags/${d.country}.png" alt="${d.country}" style="width:15px; height:15px;"></div>`;
         	})
       	.attr('class', 'js-books')
