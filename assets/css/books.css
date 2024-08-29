@@ -602,6 +602,7 @@
 
 	.search .label, .options .label {
 		font-weight: normal;
+		font-size: 14pt;
 		margin-right: 0.2rem;
 		margin-left: 0.2rem; }
 
