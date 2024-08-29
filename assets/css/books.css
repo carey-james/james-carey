@@ -812,13 +812,15 @@
 		border-radius: 5px;
 		/* padding: 0.6rem 1rem; */
 		color: var(--color-offwhite);
+		font-family: "Raleway", "Helvetica", sans-serif;
 		/* background-color: #53504D; */}
 
 	.tippy-tooltip .author {
 		border-top: 1px solid #918E8B;
 		display: inline-block;
 		padding-top: 0.2rem;
-		margin-top: 0.2rem; }
+		margin-top: 0.2rem;
+		font-family: "Bitter", serif; }
 
 	.tippy-tooltip.book-Fiction-theme [x-arrow] {
 		border-top-color: #91d8b6;
@@ -927,6 +929,20 @@
 		margin-top: 6px;
 		font-size: 14px;
 		color: #918E8B; }
+
+	.tag {
+		align-items: center;
+		background-color: whitesmoke;
+		border-radius: 290486px;
+		color: #4a4a4a;
+		display: inline-flex;
+		font-size: 0.75rem;
+		height: 2em;
+		justify-content: center;
+		line-height: 1.5;
+		padding-left: 0.875em;
+		padding-right: 0.875em;
+		white-space: nowrap; }
 
 	.modal .tag {
 		color: var(--color-white); }
