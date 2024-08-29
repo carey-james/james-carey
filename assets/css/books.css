@@ -1276,7 +1276,8 @@
 
 	.content .legend ul {
 		margin-bottom: 1rem;
-		font-size: 14px; }
+		font-size: 14px; 
+		color: var(--color-off-white); }
 
 	.content .legend ul li {
 		list-style: circle; }
@@ -1412,7 +1413,8 @@
 	.footer {
 		color: #918E8B;
 		background-color: rgba(0, 0, 0, 0.6);
-		color: var(--color-white); }
+		color: var(--color-white); 
+		font-size: 10pt}
 
 	.footer p {
 		line-height: 200%; }
