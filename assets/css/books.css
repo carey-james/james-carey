@@ -816,7 +816,7 @@
 		/* background-color: #53504D; */}
 
 	.tippy-tooltip .bname {
-		font-size: 1.5em;
+		font-size: 1.25em;
 	}
 
 	.tippy-tooltip .author {
@@ -1185,9 +1185,9 @@
 		height: 2px;
 		width: 50%; }
 
-	.modal-close:after {
+/*	.modal-close:after {
 		height: 50%;
-		width: 2px; }
+		width: 2px; } */
 
 	.modal-close:hover, .modal-close:focus {
 		background-color: rgba(10, 10, 10, 0.3); }
