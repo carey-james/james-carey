@@ -120,10 +120,9 @@
 	body {
 		line-height: 1;
 		color: var(--color-lightgray);
-		font-family: "Raleway", "Helvetica", sans-serif;
+		font-family: "Bitter", serif;
 		font-size: 16pt;
 		font-weight: 400;
-		line-height: 1.75em;
 	}
 
 /* html */
@@ -235,7 +234,7 @@
 		letter-spacing: 0.075em;
 		line-height: 1em;
 		margin: 0 0 1em 0;
-		/* text-transform: uppercase; */
+		font-family: "Raleway", "Helvetica", sans-serif;
 		text-align: center;
 		position: relative;
 	}
