@@ -749,15 +749,6 @@
 	.shelf-wrapper .line-gender-NB {
 		stroke: var(--color-nb); }
 
-	.shelf-wrapper .line-gender-Male {
-		stroke: var(--color-male); }
-
-	.shelf-wrapper .line-gender-Female {
-		stroke: var(--color-female); }
-
-	.shelf-wrapper .line-gender-NB {
-		stroke: var(--color-nb); }
-
 	.shelf-wrapper .line-form-Poetry {
 		stroke-dasharray: 3,3; }
 
@@ -1297,8 +1288,15 @@
 
 	.content .book-template {
 		stroke-width: 2;
-		stroke: var(--color-offwhite);
-	}
+		stroke: var(--color-offwhite); 
+		fill: none; }
+
+	.content .line-gender-Example {
+		stroke: var(--color-offwhite); 
+		stroke-width: 2; }
+
+	.content .line-form-dash {
+		stroke-dasharray: 3,3; }
 
 /* title and subtitle */
 	.title,
