@@ -1287,13 +1287,22 @@
 		background-color: #e5e1b5; }
 
 	.content .book-template {
-		stroke-width: 2;
-		stroke: var(--color-offwhite); 
+		stroke-width: 3;
+		stroke: var(--color-white); 
 		fill: none; }
 
 	.content .line-gender-Example {
-		stroke: var(--color-offwhite); 
+		stroke: var(--color-white); 
 		stroke-width: 2; }
+
+	.content .line-gender-Male {
+		stroke: var(--color-male); }
+
+	.content .line-gender-Female {
+		stroke: var(--color-female); }
+
+	.content .line-gender-NB {
+		stroke: var(--color-nb); }
 
 	.content .line-form-dash {
 		stroke-dasharray: 3,3; }
