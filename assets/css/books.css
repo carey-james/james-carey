@@ -1292,26 +1292,26 @@
 		fill: none; }
 
 	.content .line-gender-Example {
-		stroke: var(--color-white); 
-		stroke-width: 2; }
+		stroke-width: 2;
+		stroke: var(--color-white); }
 
 	.content .line-gender-Male {
-		stroke: var(--color-male);
-		stroke-width: 2; }
+		stroke-width: 2;
+		stroke: var(--color-male); }
 
 	.content .line-gender-Female {
-		stroke: var(--color-female);
-		stroke-width: 2; }
+		stroke-width: 2;
+		stroke: var(--color-female); }
 
 	.content .line-gender-NB {
-		stroke: var(--color-nb);
-		stroke-width: 2; }
+		stroke-width: 2;
+		stroke: var(--color-nb);}
 
 	.content .line-form-dash {
 		stroke-dasharray: 3,3; }
 
 	.content .line-label {
-		color:  var(--color-white);
+		color: var(--color-white);
 		font-size: 12px;
 		alignment-baseline: hanging; }
 
