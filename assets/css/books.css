@@ -1312,6 +1312,7 @@
 
 	.content .line-label {
 		color: var(--color-white);
+		font-family: "Raleway", "Helvetica", sans-serif;
 		font-size: 12px;
 		alignment-baseline: hanging; }
 
