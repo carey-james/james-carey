@@ -1295,13 +1295,10 @@
 		font-style: normal;
 		background-color: #e5e1b5; }
 
-	.content i.fiction {
-		background-color: #91d8b6;
-		color: var(--color-white); }
-
-	.content i.nonfiction {
-		background-color: #f48876;
-		color: var(--color-white); }
+	.content .book-template {
+		stroke-width: 2;
+		stroke: var(--color-off-white);
+	}
 
 /* title and subtitle */
 	.title,
