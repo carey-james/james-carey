@@ -1311,7 +1311,7 @@
 		stroke-dasharray: 3,3; }
 
 	.content .line-label {
-		color: var(--color-white);
+		fill: var(--color-white);
 		font-family: "Raleway", "Helvetica", sans-serif;
 		font-size: 12px;
 		alignment-baseline: hanging; }
