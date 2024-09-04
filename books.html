@@ -97,18 +97,19 @@
 				<div class="content">
 					<div class="section">
 						<a name="Visualization"></a>
-						<svg id="legend-1-svg" width=300>
+						<svg id="main-legend-svg" width=300>
 							<defs>
 							  	<marker id="head" orient="auto" markerWidth="3" markerHeight="4" refX="0.1" refY="2">
 							    	<path d="M0,0 V4 L2,2 Z" fill="white"/>
 							  </marker>
 							</defs>
 							<g>
-								<text x="18" y="-34" transform="rotate(90, -4, 4)" class="line-label">Year Published</text>
+								<text x="14" y="-32" transform="rotate(90, -4, 4)" class="line-label">Year Published</text>
 								<path id="arrow-line" marker-end="url(#head)" stroke-width="2" fill="none" stroke="white" d="M40,90, 40 15,0"/>
 								<rect class="book-template" x="50" y="10" width=25 height=90 rx=1 ry=1></rect>
+								<line x1="50" y1="20" x2="75" y2="20" class="line-gender-Example"></line>
 								<path id="arrow-line" marker-end="url(#head)" stroke-width="2" fill="none" stroke="white" d="M50,110, 75 110,0"/>
-								<text x="50" y="115" class="line-label">Page Count</text>
+								<text x="50" y="116" class="line-label">Pages</text>
 								<line x1="90" y1="20" x2="115" y2="20" class="line-gender-Example"></line>
 								<text x="24" y="-104" transform="rotate(90, -4, 4)" class="line-label">Non-Fiction</text>
 								<line x1="130" y1="20" x2="155" y2="20" class="line-gender-Example"></line>
@@ -125,7 +126,7 @@
 								<text x="24" y="-264" transform="rotate(90, -4, 4)" class="line-label">Drama</text>
 							</g>
 						</svg>
-						<svg id="legend-2-svg" width=300>
+						<svg id="genders-legend-svg" width=120>
 							<g>
 								<line x1="0" y1="20" x2="25" y2="20" class="line-gender-Male"></line>
 								<text x="24" y="-14" transform="rotate(90, -4, 4)" class="line-label">Male</text>
@@ -135,20 +136,22 @@
 								<text x="24" y="-94" transform="rotate(90, -4, 4)" class="line-label">NB</text>
 							</g>
 						</svg>
-						<!--
-						<div class="columns is-gapless is-multiline">
-							<div class="column legend is-one-quater-desktop is-half-tablet">
-								<ul>
-									<li>The <i>width</i> of each book represents the number of <i>pages.</i></li>
-									<li>The <i>height</i> of each book represents its <i>publication year.</i></li>
-									<li>The <i>color</i> and <i>symbol</i> of each book represent its <i>genre.</i></li>
-									<li>The <i>color of stripes</i> on each book represent the <i>gender</i> of the author.</li>
-									<li>The <i>number of stripes</i> on each book represent the <i>form</i> of the book.</li>
-									<li><i>Yearly favorites</i> are highlighted with an <i>orange triangle</i> on the top left edge.</li>
-								</ul>
-							</div>
-						</div>
-					-->
+						<svg id="genres-legend-svg" width=300>
+							<g>
+								<image x="0" y="20" width="12" height="12" href="assets/icons/book-icons/Economics.svg" class="genre-icon-Economics"></image>
+								<image x="15" y="20" width="12" height="12" href="assets/icons/book-icons/Essays.svg" class="genre-icon-Essays"></image>
+								<image x="30" y="20" width="12" height="12" href="assets/icons/book-icons/Fantasy.svg" class="genre-icon-Fantasy"></image>
+								<image x="45" y="20" width="12" height="12" href="assets/icons/book-icons/Historical.svg" class="genre-icon-Historical"></image>
+								<image x="60" y="20" width="12" height="12" href="assets/icons/book-icons/Horror.svg" class="genre-icon-Horror"></image>
+								<image x="75" y="20" width="12" height="12" href="assets/icons/book-icons/Humor.svg" class="genre-icon-Humor"></image>
+								<image x="90" y="20" width="12" height="12" href="assets/icons/book-icons/Lit.svg" class="genre-icon-Lit"></image>
+								<image x="105" y="20" width="12" height="12" href="assets/icons/book-icons/Memoir.svg" class="genre-icon-Memoir"></image>
+								<image x="120" y="20" width="12" height="12" href="assets/icons/book-icons/Music.svg" class="genre-icon-Music"></image>
+								<image x="135" y="20" width="12" height="12" href="assets/icons/book-icons/Mystery.svg" class="genre-icon-Mystery"></image>
+								<image x="150" y="20" width="12" height="12" href="assets/icons/book-icons/SciFi.svg" class="genre-icon-SciFi"></image>
+								<image x="75" y="20" width="12" height="12" href="assets/icons/book-icons/Western.svg" class="genre-icon-Western"></image>
+							</g>
+						</svg>
 					</div>
 				</div>
 			</div>
@@ -180,7 +183,7 @@
 								<span class="js-d-series-wrapper is-hidden"><span class="tag tag-series js-d-series"></span></span>
 								<div class="info-elm">
 									<p>Finished on <span class="info js-d-pretty_date"></span>.</p>
-									<p>Page Count:<span class="info js-d-pages"></span>.</p>
+									<p>Page Count: <span class="info js-d-pages"></span>.</p>
 									<p>Published in <span class="info js-d-published"></span>.</p>
 									<p>Author is from <span class="info js-d-country"></span>.</p>
 									<p>Author is <span class="info js-d-gender"></span>.</p>

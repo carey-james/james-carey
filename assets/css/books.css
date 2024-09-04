@@ -1316,6 +1316,42 @@
 		font-size: 12px;
 		alignment-baseline: hanging; }
 
+	.content .genre-icon-Economics {
+		filter: invert(21%) sepia(31%) saturate(541%) hue-rotate(31deg) brightness(100%) contrast(103%); }
+	
+	.content .genre-icon-Essays {
+		filter: invert(19%) sepia(29%) saturate(367%) hue-rotate(185deg) brightness(98%) contrast(90%); }
+
+	.content .genre-icon-Fantasy {
+		filter: invert(27%) sepia(65%) saturate(382%) hue-rotate(67deg) brightness(88%) contrast(85%); }
+
+	.content .genre-icon-Historical {
+		filter: invert(38%) sepia(33%) saturate(1015%) hue-rotate(354deg) brightness(89%) contrast(88%); }
+	
+	.content .genre-icon-Horror {
+		filter: invert(30%) sepia(8%) saturate(1713%) hue-rotate(203deg) brightness(91%) contrast(89%); }
+	
+	.content .genre-icon-Humor {
+		filter: invert(76%) sepia(69%) saturate(2774%) hue-rotate(343deg) brightness(84%) contrast(83%); }
+	
+	.content .genre-icon-Lit {
+		filter: invert(17%) sepia(55%) saturate(2258%) hue-rotate(339deg) brightness(103%) contrast(117%); }
+	
+	.content .genre-icon-Memoir {
+		filter: invert(9%) sepia(29%) saturate(5774%) hue-rotate(218deg) brightness(95%) contrast(101%); }
+	
+	.content .genre-icon-Music {
+		filter: invert(38%) sepia(66%) saturate(5138%) hue-rotate(169deg) brightness(94%) contrast(97%); }
+	
+	.content .genre-icon-Mystery {
+		filter: invert(73%) sepia(42%) saturate(6012%) hue-rotate(221deg) brightness(81%) contrast(77%); }
+
+	.content .genre-icon-SciFi {
+		filter: invert(63%) sepia(16%) saturate(783%) hue-rotate(98deg) brightness(97%) contrast(93%); }
+
+	.content .genre-icon-Western {
+		filter: invert(10%) sepia(72%) saturate(4202%) hue-rotate(8deg) brightness(92%) contrast(95%); }
+
 /* title and subtitle */
 	.title,
 	.subtitle {
