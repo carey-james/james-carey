@@ -1317,7 +1317,9 @@
 		alignment-baseline: hanging; }
 
 	.content .favorite {
-		fill: var(--color-favorite); }
+		fill: var(--color-favorite);
+		font-family: "Raleway", "Helvetica", sans-serif;
+		font-size: 12px; }
 
 	.content .genre-square {
 	border-radius: 1px; }
