@@ -473,7 +473,7 @@ function runner(book_data) {
     	d3.select(`#book-${d.id}`)
     		.append('path')
     		//.attr('d', `M 0 0 h ${bookWRange[0]} l -${bookWRange[0]} ${bookWRange[0]} z`)
-    		.attr('d',`M 0 0 V -10 L 6 -4 L 12 -10 V 0 Z')
+    		.attr('d','M 0 0 V -10 L 6 -4 L 12 -10 V 0 Z')
     		.attr('class', 'favorite')
     });
 
