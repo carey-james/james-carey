@@ -1316,6 +1316,9 @@
 		font-size: 12px;
 		alignment-baseline: hanging; }
 
+	.content .favorite {
+		fill: var(--color-favorite); }
+
 	.content .genre-square {
 	border-radius: 1px; }
 
