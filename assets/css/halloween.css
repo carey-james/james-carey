@@ -1,0 +1,64 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('background.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tree {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+.gates {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.gate {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+.left-gate {
+    left: 0;
+    transform: translateX(0);
+}
+
+.right-gate {
+    right: 0;
+    transform: translateX(0);
+}
+
+.lock {
+    position: absolute;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.message {
+    position: absolute;
+    top: 20px;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    display: none; /* Hidden initially */
+}
