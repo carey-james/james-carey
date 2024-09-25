@@ -30,6 +30,6 @@ function fadeInMessage() {
         setTimeout(() => {
             part.style.opacity = 1; // Fade in
         }, delay);
-        delay += 500; // Adjust delay for each part (0.5 seconds)
+        delay += 1500; // Adjust delay for each part (1.5 seconds)
     });
 }

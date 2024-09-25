@@ -63,7 +63,7 @@ body, html {
     font-family: "Allura", cursive;
     font-weight: 400;
     font-style: normal;
-    color: white;
+    color: var(--color-mystery);
     font-size: 2rem;
     text-align: center;
     display: none; /* Hidden initially */
