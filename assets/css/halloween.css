@@ -9,16 +9,9 @@ body, html {
     width: 100%;
     height: 100vh;
     background-color: black;
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.tree {
-    position: absolute;
-    bottom: 0;
-    z-index: 1;
 }
 
 .gates {
@@ -61,6 +54,7 @@ body, html {
 .message {
     top: 30px;
     text-align: center;
+    z-index: 666;
     pointer-events: auto; /* Allow pointer events */
 }
 
@@ -75,7 +69,7 @@ body, html {
     font-weight: 400;
     font-style: normal;
     color: #c0a6df;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .title {
@@ -94,6 +88,6 @@ body, html {
     font-size: 1rem;
 }
 
-.rsvp{
+.rsvp {
     z-index: 666;
 }
