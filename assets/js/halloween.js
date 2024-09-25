@@ -11,7 +11,7 @@ document.getElementById('lock').addEventListener('click', function() {
 
     // Hide the lock
     lock.style.display = 'none';
-
+    
     // Show the message
     message.style.display = 'block';
 
