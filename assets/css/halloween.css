@@ -55,6 +55,7 @@ body, html {
     top: 30px;
     text-align: center;
     pointer-events: auto; /* Allow pointer events */
+    display: none;
 }
 
 .part {

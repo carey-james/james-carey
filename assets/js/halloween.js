@@ -15,6 +15,9 @@ document.getElementById('lock').addEventListener('click', function() {
     // Show the message
     message.style.display = 'block';
 
+    // Set z-index to 666
+    message.style.zIndex = 666;
+
     // Play music
     music.play();
 
