@@ -58,7 +58,7 @@ body, html {
 }
 
 .message {
-    top: 20px;
+    top: 30px;
     text-align: center;
     display: none; /* Hidden initially */
 }
@@ -78,15 +78,15 @@ body, html {
 
 .title {
     font-family: "Raleway", "Helvetica", sans-serif;
-    font-weight: 400;
+    font-weight: 100;
     font-style: normal;
-    color: var(--color-white);
+    color: var(--color-offwhite);
     font-size: 3rem;
 }
 
 .info {
     font-family: "Bitter", serif;
-    font-weight: 400;
+    font-weight: 100;
     font-style: normal;
     color: var(--color-offwhite);
     font-size: 2rem;
