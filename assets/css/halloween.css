@@ -50,8 +50,9 @@ body, html {
 
 .lock {
     position: absolute;
+    height: 10vh; /* Dynamic size: 10% of viewport height */
+    width: auto; /* Maintain aspect ratio */
     z-index: 3;
-    cursor: pointer;
 }
 
 .message {
