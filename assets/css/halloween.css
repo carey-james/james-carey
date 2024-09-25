@@ -73,5 +73,21 @@ body, html {
     font-weight: 400;
     font-style: normal;
     color: var(--color-mystery);
+    font-size: 3rem;
+}
+
+.title {
+    font-family: "Raleway", "Helvetica", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-white);
+    font-size: 3rem;
+}
+
+.info {
+    font-family: "Bitter", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-offwhite);
     font-size: 2rem;
 }
