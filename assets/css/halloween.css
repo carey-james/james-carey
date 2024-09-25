@@ -60,13 +60,13 @@ body, html {
 .message {
     top: 30px;
     text-align: center;
-    display: none; /* Hidden initially */
     pointer-events: auto; /* Allow pointer events */
 }
 
 .part {
     opacity: 0; /* Start hidden */
     transition: opacity 1s ease; /* Fade effect */
+    display: inline;
 }
 
 .lyric {
