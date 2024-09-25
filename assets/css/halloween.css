@@ -8,7 +8,7 @@ body, html {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color: #19181a;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,4 +90,8 @@ body, html {
 
 .rsvp {
     z-index: 666;
+    font-family: "Bitter", serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1rem;
 }
