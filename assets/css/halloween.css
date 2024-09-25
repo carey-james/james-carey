@@ -8,7 +8,7 @@ body, html {
     position: relative;
     width: 100%;
     height: auto;
-    min-height: 80%;
+    min-height:  100vh;
     background-image: none !important;
     background-color: #19181a;
     display: flex;
