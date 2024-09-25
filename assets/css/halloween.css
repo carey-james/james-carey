@@ -46,6 +46,7 @@ body, html {
 .right-gate {
     right: 0;
     transform: translateX(0);
+    transform: rotateY(180deg);
 }
 
 .lock {
@@ -73,7 +74,7 @@ body, html {
     font-family: "Allura", cursive;
     font-weight: 400;
     font-style: normal;
-    color: var(--color-mystery);
+    color: #c0a6df;
     font-size: 3rem;
 }
 
@@ -91,4 +92,8 @@ body, html {
     font-style: normal;
     color: var(--color-offwhite);
     font-size: 1rem;
+}
+
+.rsvp{
+    z-index: 666;
 }
