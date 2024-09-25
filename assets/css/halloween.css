@@ -54,7 +54,6 @@ body, html {
 .message {
     top: 30px;
     text-align: center;
-    z-index: 666;
     pointer-events: auto; /* Allow pointer events */
 }
 
