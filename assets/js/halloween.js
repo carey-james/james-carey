@@ -17,4 +17,19 @@ document.getElementById('lock').addEventListener('click', function() {
 
     // Play music
     music.play();
+
+    // Fade in the message parts
+    fadeInMessage();
 });
+
+function fadeInMessage() {
+    const parts = document.querySelectorAll('.part');
+    let delay = 0;
+
+    parts.forEach((part, index) => {
+        setTimeout(() => {
+            part.style.opacity = 1; // Fade in
+        }, delay);
+        delay += 500; // Adjust delay for each part (0.5 seconds)
+    });
+}
