@@ -730,6 +730,9 @@
 	.shelf-wrapper .genre-Economics {
 		fill: var(--color-economics); }
 
+	.shelf-wrapper .genre-Philosophy {
+		fill: var(--color-philosophy); }
+
 	.shelf-wrapper .genre-Western {
 		fill: var(--color-western); }
 
@@ -859,6 +862,9 @@
 	.tippy-tooltip.book-Economics-theme {
 		border: 1px solid var(--color-economics); }
 
+	.tippy-tooltip.book-Philosophy-theme {
+		border: 1px solid var(--color-philosophy); }
+
 	.tippy-tooltip.book-Western-theme {
 		border: 1px solid var(--color-western); }
 
@@ -905,6 +911,10 @@
 	.tippy-tooltip.book-Economics-theme [x-arrow] {
 		border-top-color: var(--color-economics);
 		border-bottom-color: var(--color-economics); }
+
+	.tippy-tooltip.book-Philosophy-theme [x-arrow] {
+		border-top-color: var(--color-philosophy);
+		border-bottom-color: var(--color-philosophy); }
 
 	.tippy-tooltip.book-Western-theme [x-arrow] {
 		border-top-color: var(--color-western);
@@ -987,6 +997,9 @@
 
 	.modal .tag-Economics {
 		background-color: var(--color-economics); }
+
+	.modal .tag-Philosophy {
+		background-color: var(--color-philosophy); }
 
 	.modal .tag-Western {
 		background-color: var(--color-western); }
@@ -1353,6 +1366,9 @@
 	
 	.content .genre-icon-Mystery {
 		fill: var(--color-mystery); }
+
+	.content .genre-icon-Philosophy {
+		fill: var(--color-philosophy); }
 
 	.content .genre-icon-SciFi {
 		fill: var(--color-scifi); }
