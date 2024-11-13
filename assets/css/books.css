@@ -1492,7 +1492,9 @@
 		color: #918E8B;
 		background-color: rgba(0, 0, 0, 0.6);
 		color: var(--color-white); 
-		font-size: 10pt}
+		font-size: 10pt;
+		padding-left: 10px;
+	}
 
 	.footer p {
 		line-height: 200%; }
