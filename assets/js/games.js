@@ -27,6 +27,7 @@ function runner(games_data) {
 				},
 				sortable: true,
 				comparator: (valueA, valueB, nodeA, nodeB, isInverted) => {
+					if (!nodeA.data || !nodeB.data) return 0;
 					if (isInverted) {
 						return (nodeA.data.min_players - nodeB.data.min_players);
 					} else {
