@@ -26,7 +26,7 @@ function runner(games_data) {
 					return `${minPlayers} - ${maxPlayers}`;
 				},
 				sortable: true,
-				comparator: (nodeA, nodeB, isInverted) => {
+				comparator: (valueA, valueB, nodeA, nodeB, isInverted) => {
 					if (isInverted) {
 						return (nodeA.data.min_players - nodeB.data.min_players);
 					} else {
