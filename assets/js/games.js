@@ -3,8 +3,15 @@
 function runner(games_data) {
 	let gridApi;
 
+	const gamesTheme = themeQuartz.withParams({
+	    fontFamily: 'Bitter',
+		headerFontFamily: 'Raleway',
+		cellFontFamily: 'Bitter',
+	});
+
 	// Grid Options: Contains all of the Data Grid configurations
 	const gridOptions = {
+		theme: gamesTheme,
 		rowData: games_data,
 		columnDefs: [
 			{ field: 'game' },
