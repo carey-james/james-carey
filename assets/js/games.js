@@ -17,8 +17,17 @@ function runner(games_data) {
 			{ field: 'game', headerName: 'Game' },
 	        { field: 'mechanics', headerName: 'Mechanics' },
 	        { field: 'theme', headerName: 'Theme' },
-	        { field: 'min_players', headerName: 'Min Players' },
-	        { field: 'max_players', headerName: 'Max Players' },
+	        {
+				field: 'players',
+				headerName: 'Players',
+				valueGetter: (params) => {
+					const minPlayers = params.data.min_players;
+					const maxPlayers = params.data.max_players;
+					return `${minPlayers} - ${maxPlayers}`;
+				},
+			},
+	        { field: 'min_players', hide: true },
+	        { field: 'max_players', hide: true },
 	        { field: 'min_best', headerName: 'Min Best' },
 	        { field: 'max_best', headerName: 'Max Best' },
 	        { field: 'min_time', headerName: 'Min Time' },

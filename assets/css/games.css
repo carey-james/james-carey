@@ -1,23 +1,39 @@
 /* Grid */
-.ag-header-cell {
-    font-size: 18px; 
-    font-weight: bold;
-    font-family: 'Raleway', 'Helvetica', sans-serif;
-    padding: 15px 10px;
-}
-.ag-cell {
-    font-size: 14px;
-    font-family: 'Bitter', sans-serif;
-    padding: 8px 10px;
-}
-.ag-cell[col-id="game"] {
-    font-size: 16px; 
-    font-family: 'Raleway', 'Helvetica', sans-serif;
-}
-.ag-header-cell[col-id="game"],
-.ag-cell[col-id="game"] {
-    min-width: 200px;
-}
+	.ag-header-cell {
+	    font-size: 18px; 
+	    font-weight: bold;
+	    font-family: 'Raleway', 'Helvetica', sans-serif;
+	    padding: 15px 10px; }
+
+	.ag-cell {
+	    font-size: 14px;
+	    font-family: 'Bitter', sans-serif;
+	    padding: 8px 10px; }
+
+	.ag-cell[col-id='game'] {
+	    font-size: 16px; 
+	    font-family: 'Raleway', 'Helvetica', sans-serif; }
+
+	.ag-header-cell[col-id='game'],
+	.ag-cell[col-id='game'] {
+	    min-width: 200px;
+	    text-align: left; }
+
+	.ag-cell[col-id='mechanics'], 
+	.ag-cell[col-id='theme'], 
+	.ag-cell[col-id='players'],
+	.ag-cell[col-id='min_best'], 
+	.ag-cell[col-id='max_best'], 
+	.ag-cell[col-id='min_time'], 
+	.ag-cell[col-id='max_time'], 
+	.ag-cell[col-id='learning_complexity'], 
+	.ag-cell[col-id='playing_complexity'], 
+	.ag-cell[col-id='expansion'], 
+	.ag-cell[col-id='co-op'], 
+	.ag-cell[col-id='legacy'], 
+	.ag-cell[col-id='favorite'], 
+	.ag-cell[col-id='play_more'] {
+	    text-align: center; }
 
 /* container */
 	.container {
