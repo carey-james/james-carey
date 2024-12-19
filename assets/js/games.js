@@ -75,7 +75,7 @@ function runner(games_data) {
     		flex: 1,
     		resizable: false,
     		suppressMovable: true,
-    		autoHeight=true,
+    		autoHeight: true,
 			wrapText: true,
   		},
 	};
