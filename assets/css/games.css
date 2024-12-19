@@ -21,11 +21,8 @@
 
 	.ag-cell[col-id='mechanics'], 
 	.ag-cell[col-id='theme'], 
-	.ag-cell[col-id='players'],
-	.ag-cell[col-id='min_best'], 
-	.ag-cell[col-id='max_best'], 
-	.ag-cell[col-id='min_time'], 
-	.ag-cell[col-id='max_time'], 
+	.ag-cell[col-id='players'], 
+	.ag-cell[col-id='time'],
 	.ag-cell[col-id='learning_complexity'], 
 	.ag-cell[col-id='playing_complexity'], 
 	.ag-cell[col-id='expansion'], 

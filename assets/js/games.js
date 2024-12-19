@@ -23,22 +23,43 @@ function runner(games_data) {
 				valueGetter: (params) => {
 					const minPlayers = params.data.min_players;
 					const maxPlayers = params.data.max_players;
-					return `${minPlayers} - ${maxPlayers}`;
+					const minBest = params.data.min_best;
+					const maxBest = params.data.max_best;
+					return `${minPlayers} - ${maxPlayers}\n${minBest} - ${maxBest}`;
 				},
 				sortable: true,
 				comparator: (valueA, valueB, nodeA, nodeB, isInverted) => {
 					if (!nodeA.data || !nodeB.data) return 0;
 					if (isInverted) {
-						return (nodeA.data.min_players - nodeB.data.min_players);
-					} else {
 						return (nodeA.data.max_players - nodeB.data.max_players);
+					} else {
+						return (nodeA.data.min_players - nodeB.data.min_players);
 					}
 				}
 			},
 	        { field: 'min_players', hide: true },
 	        { field: 'max_players', hide: true },
-	        { field: 'min_best', headerName: 'Min Best' },
-	        { field: 'max_best', headerName: 'Max Best' },
+	        { field: 'min_best', hide: true },
+	        { field: 'max_best', hide: true },
+	        {
+				field: 'time',
+				headerName: 'Time',
+				valueGetter: (params) => {
+					const minTime = params.data.min_time;
+					const maxTime = params.data.max_time;
+					return `${minTime} - ${maxTime}`;
+				},
+				sortable: true,
+				comparator: (valueA, valueB, nodeA, nodeB, isInverted) => {
+					if (!nodeA.data || !nodeB.data) return 0;
+					if (isInverted) {
+						return (nodeA.data.max_time - nodeB.data.max_time);
+					} else {
+						return (nodeA.data.min_time - nodeB.data.min_time);
+					}
+				}
+			},
+
 	        { field: 'min_time', headerName: 'Min Time' },
 	        { field: 'max_time', headerName: 'Max Time' },
 	        { field: 'learning_complexity', headerName: 'Learning Complexity' },
