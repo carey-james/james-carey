@@ -25,6 +25,14 @@ function runner(games_data) {
 					const maxPlayers = params.data.max_players;
 					return `${minPlayers} - ${maxPlayers}`;
 				},
+				sortable: true,
+				comparator: (nodeA, nodeB, isInverted) => {
+					if (isInverted) {
+						return (nodeA.data.min_players - nodeB.data.min_players);
+					} else {
+						return (nodeA.data.max_players - nodeB.data.max_players);
+					}
+				}
 			},
 	        { field: 'min_players', hide: true },
 	        { field: 'max_players', hide: true },
