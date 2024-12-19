@@ -27,6 +27,10 @@ function runner(games_data) {
 					const maxBest = params.data.max_best;
 					return `${minPlayers} - ${maxPlayers}<br>${minBest} - ${maxBest}`;
 				},
+				cellRenderer: (params) => {
+		        	const value = params.value;
+		        	return value ? value.replace(/<br>/g, '<br/>') : '';
+		    	},
 				sortable: true,
 				comparator: (valueA, valueB, nodeA, nodeB, isInverted) => {
 					if (!nodeA.data || !nodeB.data) return 0;
