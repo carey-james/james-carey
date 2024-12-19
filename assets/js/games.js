@@ -29,3 +29,5 @@ async function initGames() {
 	const games = await d3.dsv('|', 'https://raw.githubusercontent.com/carey-james/Games-List/refs/heads/main/games.csv');
 	console.log(games)
 }
+
+initGames();
