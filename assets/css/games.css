@@ -1,3 +1,25 @@
+/* Grid */
+.ag-header-cell {
+    font-size: 18px; 
+    font-weight: bold;
+    font-family: 'Raleway', 'Helvetica', sans-serif;
+    padding: 15px 10px;
+}
+.ag-cell {
+    font-size: 14px;
+    font-family: 'Bitter', sans-serif;
+    padding: 8px 10px;
+}
+.ag-cell[col-id="game"] {
+    font-size: 16px; 
+    font-family: 'Raleway', 'Helvetica', sans-serif;
+    font-weight: bold;
+}
+.ag-header-cell[col-id="game"],
+.ag-cell[col-id="game"] {
+    min-width: 200px;
+}
+
 /* container */
 	.container {
 		position: relative; }
