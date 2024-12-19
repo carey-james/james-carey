@@ -1,0 +1,22 @@
+/* footer */
+	.footer {
+		color: #918E8B;
+		background-color: rgba(0, 0, 0, 0.6);
+		color: var(--color-white); 
+		font-size: 10pt;
+		padding-left: 10px;
+	}
+
+	.footer p {
+		line-height: 200%; }
+
+	.footer a {
+		color: #e5e1b5; }
+
+	.footer .share {
+		display: flex;
+		align-items: center; }
+
+	.footer .share span {
+		width: 2.2rem;
+		height: 2.2rem; }
