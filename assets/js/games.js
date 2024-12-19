@@ -3,7 +3,7 @@
 function runner(games_data) {
 	let gridApi;
 
-	const gamesTheme = themeQuartz.withParams({
+	const gamesTheme = agGrid.themeQuartz.withParams({
 	    fontFamily: 'Bitter',
 		headerFontFamily: 'Raleway',
 		cellFontFamily: 'Bitter',
