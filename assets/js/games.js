@@ -25,7 +25,7 @@ function runner(games_data) {
 					const maxPlayers = params.data.max_players;
 					const minBest = params.data.min_best;
 					const maxBest = params.data.max_best;
-					return `${minPlayers} - ${maxPlayers}\n${minBest} - ${maxBest}`;
+					return `${minPlayers} - ${maxPlayers}<br>${minBest} - ${maxBest}`;
 				},
 				sortable: true,
 				comparator: (valueA, valueB, nodeA, nodeB, isInverted) => {
@@ -59,9 +59,6 @@ function runner(games_data) {
 					}
 				}
 			},
-
-	        { field: 'min_time', headerName: 'Min Time' },
-	        { field: 'max_time', headerName: 'Max Time' },
 	        { field: 'learning_complexity', headerName: 'Learning Complexity' },
 	        { field: 'playing_complexity', headerName: 'Playing Complexity' },
 	        { field: 'expansion', headerName: 'Expansion' },
