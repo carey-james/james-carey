@@ -32,7 +32,6 @@ function runner(games_data) {
 		        	return value ? value.replace(/<br>/g, '<br/>') : '';
 		    	},
 				sortable: true,
-				wrapText: true,
 				comparator: (valueA, valueB, nodeA, nodeB, isInverted) => {
 					if (!nodeA.data || !nodeB.data) return 0;
 					if (isInverted) {
@@ -76,6 +75,8 @@ function runner(games_data) {
     		flex: 1,
     		resizable: false,
     		suppressMovable: true,
+    		autoHeight=true,
+			wrapText: true,
   		},
 	};
 
