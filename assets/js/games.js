@@ -27,10 +27,6 @@ function runner(games_data) {
 					const maxBest = params.data.max_best;
 					return `${minPlayers} - ${maxPlayers}<br>${minBest} - ${maxBest}`;
 				},
-				cellRenderer: (params) => {
-		        	const value = params.value;
-		        	return value ? value.replace(/<br>/g, '<br/>') : '';
-		    	},
 				sortable: true,
 				comparator: (valueA, valueB, nodeA, nodeB, isInverted) => {
 					if (!nodeA.data || !nodeB.data) return 0;
@@ -67,8 +63,8 @@ function runner(games_data) {
 					}
 				}
 			},
-	        { field: 'learning_complexity', headerName: 'Learning Complexity' },
-	        { field: 'playing_complexity', headerName: 'Playing Complexity' },
+	        { field: 'learning_complexity', headerName: 'Learning<br>Complexity' },
+	        { field: 'playing_complexity', headerName: 'Playing<br>Complexity' },
 	        { field: 'expansion', headerName: 'Expansion', hide: true },
 	        { field: 'co-op', headerName: 'Co-op', hide: true },
 	        { field: 'legacy', headerName: 'Legacy', hide: true },
@@ -81,6 +77,10 @@ function runner(games_data) {
     		suppressMovable: true,
     		autoHeight: true,
 			wrapText: true,
+			cellRenderer: (params) => {
+		        const value = params.value;
+		        return value ? value.replace(/<br>/g, '<br/>') : '';
+		    },
   		},
 	};
 

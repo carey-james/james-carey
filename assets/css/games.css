@@ -1,12 +1,13 @@
 /* Grid */
 	.ag-header-cell {
-	    font-size: 18px; 
-	    font-weight: bold;
+	    font-size: 18px;
 	    font-family: 'Raleway', 'Helvetica', sans-serif;
-	    padding: 15px 10px; }
+	    font-weight: 100;
+	    padding: 15px 10px; 
+		text-align: center; }
 
 	.ag-cell {
-	    font-size: 14px;
+	    font-size: 9px;
 	    font-family: 'Bitter', sans-serif;
 	    padding: 1px 1px;
 	    line-height: 1;
@@ -14,8 +15,9 @@
     	word-wrap: break-word; }
 
 	.ag-cell[col-id='game'] {
-	    font-size: 16px; 
-	    font-family: 'Raleway', 'Helvetica', sans-serif; }
+	    font-size: 14px;
+	    font-family: 'Raleway', 'Helvetica', sans-serif;
+	    font-weight: 100; }
 
 	.ag-header-cell[col-id='game'],
 	.ag-cell[col-id='game'] {
