@@ -51,7 +51,7 @@ function runner(games_data) {
 				valueGetter: (params) => {
 					const minTime = params.data.min_time;
 					const maxTime = params.data.max_time;
-					if (minTime == max_ti me) {
+					if (minTime == maxTime) {
 						return `${minTime} mins`;
 					} else {
 						return `${minTime} - ${maxTime} mins`;
