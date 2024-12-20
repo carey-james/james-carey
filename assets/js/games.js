@@ -51,7 +51,11 @@ function runner(games_data) {
 				valueGetter: (params) => {
 					const minTime = params.data.min_time;
 					const maxTime = params.data.max_time;
-					return `${minTime} - ${maxTime}`;
+					if (minTime == max_ti me) {
+						return `${minTime} mins`;
+					} else {
+						return `${minTime} - ${maxTime} mins`;
+					}
 				},
 				sortable: true,
 				comparator: (valueA, valueB, nodeA, nodeB, isInverted) => {
@@ -65,11 +69,11 @@ function runner(games_data) {
 			},
 	        { field: 'learning_complexity', headerName: 'Learning Complexity' },
 	        { field: 'playing_complexity', headerName: 'Playing Complexity' },
-	        { field: 'expansion', headerName: 'Expansion' },
-	        { field: 'co-op', headerName: 'Co-op' },
-	        { field: 'legacy', headerName: 'Legacy' },
-	        { field: 'favorite', headerName: 'Favorite' },
-	        { field: 'play_more', headerName: 'Play More' },
+	        { field: 'expansion', headerName: 'Expansion', hide: true },
+	        { field: 'co-op', headerName: 'Co-op', hide: true },
+	        { field: 'legacy', headerName: 'Legacy', hide: true },
+	        { field: 'favorite', headerName: 'Favorite', hide: true },
+	        { field: 'play_more', headerName: 'Play More', hide: true },
 		],
 		defaultColDef: {
     		flex: 1,
