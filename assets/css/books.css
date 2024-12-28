@@ -718,8 +718,8 @@
 	.shelf-wrapper .genre-Historical {
 		fill: var(--color-historical); }
 
-	.shelf-wrapper .genre-Memoir {
-		fill: var(--color-memoir); }
+	.shelf-wrapper .genre-Biography {
+		fill: var(--color-biography); }
 
 	.shelf-wrapper .genre-Music {
 		fill: var(--color-music); }
@@ -850,8 +850,8 @@
 	.tippy-tooltip.book-Historical-theme {
 		border: 1px solid var(--color-historical); }
 
-	.tippy-tooltip.book-Memoir-theme {
-		border: 1px solid var(--color-memoir); }
+	.tippy-tooltip.book-Biography-theme {
+		border: 1px solid var(--color-biography); }
 
 	.tippy-tooltip.book-Music-theme {
 		border: 1px solid var(--color-music); }
@@ -896,9 +896,9 @@
 		border-top-color: var(--color-historical);
 		border-bottom-color: var(--color-historical); }
 
-	.tippy-tooltip.book-Memoir-theme [x-arrow] {
-		border-top-color: var(--color-memoir);
-		border-bottom-color: var(--color-memoir); }
+	.tippy-tooltip.book-Biography-theme [x-arrow] {
+		border-top-color: var(--color-biography);
+		border-bottom-color: var(--color-biography); }
 
 	.tippy-tooltip.book-Music-theme [x-arrow] {
 		border-top-color: var(--color-music);
@@ -986,8 +986,8 @@
 	.modal .tag-Historical {
 		background-color: var(--color-historical); }
 
-	.modal .tag-Memoir {
-		background-color: var(--color-memoir); }
+	.modal .tag-Biography {
+		background-color: var(--color-biography); }
 
 	.modal .tag-Music {
 		background-color: var(--color-music); }
@@ -1358,8 +1358,8 @@
 	.content .genre-icon-Lit {
 		fill: var(--color-lit); }
 	
-	.content .genre-icon-Memoir {
-		fill: var(--color-memoir); }
+	.content .genre-icon-Biography {
+		fill: var(--color-biography); }
 	
 	.content .genre-icon-Music {
 		fill: var(--color-music); }
