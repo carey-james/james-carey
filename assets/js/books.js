@@ -354,7 +354,7 @@ function runner(book_data) {
         				}
         				console.log(`${((value / oldCount) * 100).toString().split('.')[0]}%`);
         			} else {
-        				if ((value == 0) && (oldCount == 0)) {
+        				if ((value == 0) && (counts[0] == 0)) {
         					d3.select(`#legend-1-percent-${key}`).text(`100%`);
         				} else {
         					d3.select(`#legend-1-percent-${key}`).text(`${((value / counts[0]) * 100).toString().split('.')[0]}%`);
