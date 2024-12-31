@@ -280,6 +280,7 @@ function runner(book_data) {
     	let counts = [0, 0, 0]; //count of books in the current label
     	let isNewLabels = [true, true]; //check if the books are divided
     	let labelCounts = [0, 0]; //counts of each label, used for id
+    	let runningCounts = new Map();
     	_.each(sortedBooks, (d, i) => {
      		const w = bookW(d.pages); // book width
       		const h = bookH(getPublishedHeight(d.published)); // book height
@@ -318,6 +319,10 @@ function runner(book_data) {
         		//update count for the previous values
         		d3.select(`#legend-0-${labelCounts[0] - 1}`).text(counts[0]);
         		counts[2] = counts[0]; // Used for Percentage
+        		runningCounts.forEach(function(value, key){
+        			d3.select(`#legend-1-percent-${key}`).text(`${((value / counts[0]) * 100).toString().split('.')[0]}%`);
+        		})
+        		runningCounts.clear();
        	 		counts[0] = 0;
         		labelCounts[0]++;
       		}
@@ -325,7 +330,7 @@ function runner(book_data) {
      		if ((isNewLabels[0] || isNewLabels[1]) && sortOptions.length === 2) {
         		putLegend1(dividers[1], labelCounts[1], accW, accS, isInitial, gap1);
         		d3.select(`#legend-1-${labelCounts[1] - 1}`).text(counts[1]);
-        		//d3.select(`#legend-1-percent-${labelCounts[1] - 1}`).text(`${((counts[1] / counts[2]) * 100).toString().split('.')[0]}%`);
+        		runningCounts.set(labelCounts[1], counts[1]);
         		counts[1] = 0;
         		labelCounts[1]++;
       		}
@@ -333,7 +338,6 @@ function runner(book_data) {
       		if (i === sortedBooks.length - 1) {
         		d3.select(`#legend-0-${labelCounts[0] - 1}`).text(counts[0] + 1);
         		d3.select(`#legend-1-${labelCounts[1] - 1}`).text(counts[1] + 1);
-        		d3.select(`#legend-1-percent-${labelCounts[1] - 1}`).text(`${((counts[1] / counts[2]) * 100).toString().split('.')[0]}%`);
       		}
       		// add width, update before the next iteration
       		accW += (w + 0);
