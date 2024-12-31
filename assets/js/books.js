@@ -320,7 +320,7 @@ function runner(book_data) {
         		d3.select(`#legend-0-${labelCounts[0] - 1}`).text(counts[0]);
         		counts[2] = counts[0]; // Used for Percentage
         		runningCounts.forEach(function(value, key){
-        			d3.select(`#legend-1-percent-${key - 1}`).text(`${((value / counts[0]) * 100).toString().split('.')[0]}%`);
+        			d3.select(`#legend-1-percent-${key}`).text(`${((value / counts[0]) * 100).toString().split('.')[0]}%`);
         		})
         		runningCounts.clear();
        	 		counts[0] = 0;
@@ -330,7 +330,7 @@ function runner(book_data) {
      		if ((isNewLabels[0] || isNewLabels[1]) && sortOptions.length === 2) {
         		putLegend1(dividers[1], labelCounts[1], accW, accS, isInitial, gap1);
         		d3.select(`#legend-1-${labelCounts[1] - 1}`).text(counts[1]);
-        		runningCounts.set(labelCounts[1], counts[1]);
+        		runningCounts.set(labelCounts[1] - 1, counts[1]);
         		counts[1] = 0;
         		labelCounts[1]++;
       		}
@@ -339,7 +339,7 @@ function runner(book_data) {
         		d3.select(`#legend-0-${labelCounts[0] - 1}`).text(counts[0] + 1);
         		d3.select(`#legend-1-${labelCounts[1] - 1}`).text(counts[1] + 1);
         		runningCounts.forEach(function(value, key){
-        			d3.select(`#legend-1-percent-${key - 1}`).text(`${((value / counts[0]) * 100).toString().split('.')[0]}%`);
+        			d3.select(`#legend-1-percent-${key}`).text(`${((value / counts[0]) * 100).toString().split('.')[0]}%`);
         		})
         		runningCounts.clear();
       		}
