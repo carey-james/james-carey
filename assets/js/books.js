@@ -318,11 +318,16 @@ function runner(book_data) {
         		putLegend0(dividers[0], labelCounts[0], accW, accS, isInitial, gap0);
         		//update count for the previous values
         		d3.select(`#legend-0-${labelCounts[0] - 1}`).text(counts[0]);
-        		counts[2] = counts[0]; // Used for Percentage
         		runningCounts.forEach(function(value, key){
-        			d3.select(`#legend-1-percent-${key}`).text(`${((value / counts[0]) * 100).toString().split('.')[0]}%`);
+        			if (key < counts[2]) {
+        				let oldCount = parseInt(d3.select(`#legend-0-${labelCounts[0] - 1}`).text());
+        				d3.select(`#legend-1-percent-${key}`).text(`${((value / oldCount) * 100).toString().split('.')[0]}%`);
+        			} else {
+        				d3.select(`#legend-1-percent-${key}`).text(`${((value / counts[0]) * 100).toString().split('.')[0]}%`);
+        			}	
         		})
         		runningCounts.clear();
+        		counts[2] = labelCounts[1]; // Used for Percentage
        	 		counts[0] = 0;
         		labelCounts[0]++;
       		}
