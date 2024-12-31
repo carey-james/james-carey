@@ -352,15 +352,12 @@ function runner(book_data) {
         				} else {
         					d3.select(`#legend-1-percent-${key}`).text(`${((value / oldCount) * 100).toString().split('.')[0]}%`);
         				}
-        				console.log(`${((value / oldCount) * 100).toString().split('.')[0]}%`);
         			} else {
         				if ((value == 0) && (counts[0] == 0)) {
         					d3.select(`#legend-1-percent-${key}`).text(`100%`);
         				} else {
         					d3.select(`#legend-1-percent-${key}`).text(`${((value / counts[0]) * 100).toString().split('.')[0]}%`);
         				}
-        				console.log(`key : ${key}, counts2 : ${counts[2]}, value : ${value}, counts0: ${counts[0]}`);
-        				console.log(`${((value / counts[0]) * 100).toString().split('.')[0]}%`);
         			}	
         		})
       		}
@@ -601,13 +598,13 @@ function runner(book_data) {
   			const sec_opts = second.options;
   			let flag = true;
   			_.each(sec_opts, (o) => {
-  				d3.select(o).selected = false;
+  				d3.select(o).property('selected', false);
 				if (!(SECOND_SORT_OPTIONS[option].includes(o.value))) {
 					d3.select(o).property('disabled', true);
   				} else {
   					d3.select(o).property('disabled', false);
   					if (flag) {
-  						d3.select('sort-1').value = o.value;
+  						d3.select('#sort-1').property('value', o.value);
   						flag = false;
   					}
   				}
@@ -616,7 +613,7 @@ function runner(book_data) {
   		d3.select('#option-1').classed('is-hidden', isHidden);
   		sortBooks(d.target.value, 0);
   		if (!isHidden) {
-  			sortBooks(d3.select('sort-1').value, 1);
+  			sortBooks(d3.select('#sort-1').value, 1);
   		}
   	});
   	document.getElementById('sort-1').addEventListener('change', (d) => {
