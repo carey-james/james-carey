@@ -321,9 +321,9 @@ function runner(book_data) {
         		runningCounts.forEach(function(value, key){
         			if ((key < counts[2]) && (counts[2] != 0)) {
         				let oldCount = parseInt(d3.select(`#legend-0-${labelCounts[0] - 2}`).text());
-        				d3.select(`#legend-1-percent-${key}`).text(`${(((value + 1) / (oldCount + 1)) * 100).toString().split('.')[0]}%`);
+        				d3.select(`#legend-1-percent-${key}`).text(`${((value / oldCount) * 100).toString().split('.')[0]}%`);
         			} else {
-        				d3.select(`#legend-1-percent-${key}`).text(`${(((value + 1) / (counts[0] + 1)) * 100).toString().split('.')[0]}%`);
+        				d3.select(`#legend-1-percent-${key}`).text(`${((value / counts[0]) * 100).toString().split('.')[0]}%`);
         			}	
         		})
         		runningCounts.clear();
@@ -347,10 +347,18 @@ function runner(book_data) {
         		runningCounts.forEach(function(value, key){
         			if ((key < counts[2]) && (counts[2] != 0)) {
         				let oldCount = parseInt(d3.select(`#legend-0-${labelCounts[0] - 2}`).text());
-        				d3.select(`#legend-1-percent-${key}`).text(`${(((value + 1) / (oldCount + 1)) * 100).toString().split('.')[0]}%`);
+        				if ((value == 0) && (oldCount == 0)) {
+        					d3.select(`#legend-1-percent-${key}`).text(`100%`);
+        				} else {
+        					d3.select(`#legend-1-percent-${key}`).text(`${((value / oldCount) * 100).toString().split('.')[0]}%`);
+        				}
         				console.log(`${((value / oldCount) * 100).toString().split('.')[0]}%`);
         			} else {
-        				d3.select(`#legend-1-percent-${key}`).text(`${(((value + 1) / (counts[0] + 1)) * 100).toString().split('.')[0]}%`);
+        				if ((value == 0) && (oldCount == 0)) {
+        					d3.select(`#legend-1-percent-${key}`).text(`100%`);
+        				} else {
+        					d3.select(`#legend-1-percent-${key}`).text(`${((value / counts[0]) * 100).toString().split('.')[0]}%`);
+        				}
         				console.log(`key : ${key}, counts2 : ${counts[2]}, value : ${value}, counts0: ${counts[0]}`);
         				console.log(`${((value / counts[0]) * 100).toString().split('.')[0]}%`);
         			}	
