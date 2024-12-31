@@ -319,6 +319,7 @@ function runner(book_data) {
         		//update count for the previous values
         		d3.select(`#legend-0-${labelCounts[0] - 1}`).text(counts[0]);
         		runningCounts.forEach(function(value, key){
+        			console.log(`key : ${key}, counts2 : ${counts[2]}`)
         			if (key < counts[2]) {
         				let oldCount = parseInt(d3.select(`#legend-0-${labelCounts[0] - 1}`).text());
         				d3.select(`#legend-1-percent-${key}`).text(`${((value / oldCount) * 100).toString().split('.')[0]}%`);
