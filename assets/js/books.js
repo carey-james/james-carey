@@ -613,7 +613,10 @@ function runner(book_data) {
   		d3.select('#option-1').classed('is-hidden', isHidden);
   		sortBooks(d.target.value, 0);
   		if (!isHidden) {
-  			sortBooks(d3.select('#sort-1').value, 1);
+  			const sort1Element = document.getElementById('sort-1');
+        	sortBooks(d3.select('#sort-1').value, 1);
+        	// Trigger the change event for sort-1 manually if needed
+        	sort1Element.dispatchEvent(new Event('change'));
   		}
   	});
   	document.getElementById('sort-1').addEventListener('change', (d) => {
