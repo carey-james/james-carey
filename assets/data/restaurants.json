@@ -1194,7 +1194,7 @@
 		"description": "Vinyl Lounge and Craft Cocktails",
 		"icon1": "martini-glass",
 		"icon2": "",
-		"type": "drinks",
+		"type": "want-to-go",
 		"price": "$20",
 		"extra_icon": "leaf",
 		"extra_color": "veg",
