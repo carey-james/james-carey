@@ -1080,24 +1080,6 @@
 		}
 	},
 	{
-		"name": "Baby Shank",
-		"link": "http://babyshank.com/",
-		"address": "1602 U St NW",
-		"description": "French Steaks, Unique Seafood",
-		"icon1": "steak",
-		"icon2": "sushi",
-		"type": "expensive",
-		"price": "$30",
-		"extra_icon": "leaf",
-		"extra_color": "nonveg",
-		"extra_text": "Non Veg",
-		"rez": "Rez Rec'd",
-		"position": {
-			"lat": 38.91687381557427,
-			"lng": -77.03705160557993
-		}
-	},
-	{
 		"name": "Bandit Taco",
 		"link": "https://www.bandittacodc.com/",
 		"address": "1946 NH Ave NW",
@@ -1178,13 +1160,49 @@
 		"icon2": "bowl-chopsticks-noodles",
 		"type": "expensive-and-drinks",
 		"price": "$30",
-		"extra_icon": "leaf",
+		"extra_icon": "utensils",
 		"extra_color": "veg",
 		"extra_text": "Vegan OK",
 		"rez": "No Rez",
 		"position": {
 			"lat": 38.90036981449956,   
 			"lng": -76.99103050708743
+		}
+	},
+	{
+		"name": "Silver Lyan",
+		"link": "https://www.silverlyan.com/",
+		"address": "900 F St NW",
+		"description": "Fansy Cocktails in a Basement Vault",
+		"icon1": "martini-glass",
+		"icon2": "",
+		"type": "drinks",
+		"price": "$20",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Snacks",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 38.89708112499451,    
+			"lng": -77.02438958466213
+		}
+	},
+	{
+		"name": "Press Club",
+		"link": "https://www.pressclubdc.com/",
+		"address": "1506 19th St NW",
+		"description": "Vinyl Lounge and Craft Cocktails",
+		"icon1": "martini-glass",
+		"icon2": "",
+		"type": "drinks",
+		"price": "$20",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Snacks",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 38.9107206932717,     
+			"lng": -77.04362909841187
 		}
 	}
 ]
