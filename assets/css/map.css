@@ -1,11 +1,11 @@
 :root {
-  --grab-and-go: #D05353;
-  --affordable: #41BBD9;
-  --affordable-and-drinks: #7CD179;
-  --expensive: #33658A;
-  --expensive-and-drinks: #679965;
-  --drinks: #FFB140;
-  --want-to-go: #262626;
+  --grab-and-go: var(--color-female);/*#D05353;*/
+  --affordable: var(--color-male);/*#41BBD9;*/
+  --affordable-and-drinks: var(--color-mint);/*#7CD179;*/
+  --expensive: var(--color-music);/*#33658A;*/
+  --expensive-and-drinks: var(--color-fantasy);/*#679965;*/
+  --drinks: var(--color-humor);/*#FFB140;*/
+  --want-to-go: var(--color-slate);/*#262626;*/
 }
 
 /*
