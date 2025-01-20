@@ -79,7 +79,18 @@ function runner(games_data, feedback_data) {
 					}
 				}
 			},
-	        { field: 'learning_complexity', headerName: 'Learning Complexity' },
+	        { 
+	        	field: 'learning_complexity', 
+	        	headerName: 'Learning Complexity',
+	        	valueGetter: (params) => {
+	        		const game = params.data.game;
+	        		const complexities = feedback_data
+  						.filter(item => item.game === `${game}`)
+  						.map(item => parseInt(item.learning_complexity, 10));  // Convert  Complexity to Int
+  					const averageComplexity = complexities.reduce((sum, playtime) => sum + complex, 0) / complexities.length;
+	        		return `${averageComplexity}`;
+	        	}
+	        },
 	        { field: 'playing_complexity', headerName: 'Playing Complexity' },
 	        { field: 'expansion', headerName: 'Expansion', hide: true },
 	        { field: 'co-op', headerName: 'Co-op', hide: true },
@@ -110,8 +121,6 @@ async function initGames() {
 	// https://github.com/carey-james/Games-List
 	const games = await d3.dsv('|', 'https://raw.githubusercontent.com/carey-james/Games-List/refs/heads/main/games.csv');
 	const feedback = await d3.dsv('|', 'https://raw.githubusercontent.com/carey-james/Games-List/refs/heads/main/feedback.csv');
-	runner(games, feedback);
-	console.log(games);
-}
+	runner(games, feedback);}
 
 initGames();
