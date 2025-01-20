@@ -28,7 +28,7 @@ function runner(games_data, feedback_data) {
 	        	headerName: 'Theme',
 				valueGetter: (params) => {
 	        		const theme = params.data.theme;
-	        		return `<img src="assets/icons/game-icons/theme-icons/${theme}.svg" alt="${mech}" style="width:15px; height:15px;"><br>${theme}`;
+	        		return `<img src="assets/icons/game-icons/theme-icons/${theme}.svg" alt="${theme}" style="width:15px; height:15px;"><br>${theme}`;
 	        	} 
 	        },
 	        {
