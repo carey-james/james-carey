@@ -91,7 +91,18 @@ function runner(games_data, feedback_data) {
 	        		return `${averageComplexity}`;
 	        	}
 	        },
-	        { field: 'playing_complexity', headerName: 'Playing Complexity' },
+	        { 
+	        	field: 'playing_complexity', 
+	        	headerName: 'Playing Complexity',
+	        	valueGetter: (params) => {
+	        		const game = params.data.game;
+	        		const complexities = feedback_data
+  						.filter(item => item.game === `${game}`)
+  						.map(item => parseInt(item.playing_complexity, 10));  // Convert  Complexity to Int
+  					const averageComplexity = complexities.reduce((sum, complex) => sum + complex, 0) / complexities.length;
+	        		return `${averageComplexity}`;
+	        	}
+	        },
 	        { field: 'expansion', headerName: 'Expansion', hide: true },
 	        { field: 'co-op', headerName: 'Co-op', hide: true },
 	        { field: 'legacy', headerName: 'Legacy', hide: true },
