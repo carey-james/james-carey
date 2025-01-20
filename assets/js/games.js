@@ -15,7 +15,14 @@ function runner(games_data) {
 		rowData: games_data,
 		columnDefs: [
 			{ field: 'game', headerName: 'Game' },
-	        { field: 'mechanics', headerName: 'Mechanics' },
+	        { 
+	        	field: 'mechanics', 
+	        	headerName: 'Mechanics',
+	        	valueGetter: (params) => {
+	        		const mech = params.data.mechanics;
+	        		return `<img src="assets/icons/game-icons/mechanics-icons/${mech}.svg" alt="${mech}" style="width:15px; height:15px;"><br>${mech}`;
+	        	} 
+	        },
 	        { field: 'theme', headerName: 'Theme' },
 	        {
 				field: 'players',
