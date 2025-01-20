@@ -87,7 +87,7 @@ function runner(games_data, feedback_data) {
 	        		const complexities = feedback_data
   						.filter(item => item.game === `${game}`)
   						.map(item => parseInt(item.learning_complexity, 10));  // Convert  Complexity to Int
-  					const averageComplexity = complexities.reduce((sum, playtime) => sum + complex, 0) / complexities.length;
+  					const averageComplexity = complexities.reduce((sum, complex) => sum + complex, 0) / complexities.length;
 	        		return `${averageComplexity}`;
 	        	}
 	        },
