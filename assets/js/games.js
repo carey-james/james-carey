@@ -63,8 +63,8 @@ function runner(games_data) {
 					}
 				}
 			},
-	        { field: 'learning_complexity', headerName: 'Learning \nComplexity' },
-	        { field: 'playing_complexity', headerName: 'Playing \nComplexity' },
+	        { field: 'learning_complexity', headerName: 'Learning Complexity' },
+	        { field: 'playing_complexity', headerName: 'Playing Complexity' },
 	        { field: 'expansion', headerName: 'Expansion', hide: true },
 	        { field: 'co-op', headerName: 'Co-op', hide: true },
 	        { field: 'legacy', headerName: 'Legacy', hide: true },
