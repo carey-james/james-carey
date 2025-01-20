@@ -1,6 +1,6 @@
 'use strict';
 
-function runner(games_data) {
+function runner(games_data, feedback_data) {
 	let gridApi;
 
 	const gamesTheme = agGrid.themeQuartz.withParams({
@@ -23,7 +23,14 @@ function runner(games_data) {
 	        		return `<img src="assets/icons/game-icons/mechanics-icons/${mech}.svg" alt="${mech}" style="width:15px; height:15px;"><br>${mech}`;
 	        	} 
 	        },
-	        { field: 'theme', headerName: 'Theme' },
+	        { 
+	        	field: 'theme', 
+	        	headerName: 'Theme',
+				valueGetter: (params) => {
+	        		const theme = params.data.theme;
+	        		return `<img src="assets/icons/game-icons/theme-icons/${theme}.svg" alt="${mech}" style="width:15px; height:15px;"><br>${theme}`;
+	        	} 
+	        },
 	        {
 				field: 'players',
 				headerName: 'Players',
@@ -101,7 +108,7 @@ async function initGames() {
 	// https://github.com/carey-james/Games-List
 	const games = await d3.dsv('|', 'https://raw.githubusercontent.com/carey-james/Games-List/refs/heads/main/games.csv');
 	const feedback = await d3.dsv('|', 'https://raw.githubusercontent.com/carey-james/Games-List/refs/heads/main/feedback.csv');
-	runner(games);
+	runner(games, feedback);
 	console.log(games);
 }
 
