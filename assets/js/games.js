@@ -63,8 +63,8 @@ function runner(games_data) {
 					}
 				}
 			},
-	        { field: 'learning_complexity', headerName: 'Learning<br>Complexity' },
-	        { field: 'playing_complexity', headerName: 'Playing<br>Complexity' },
+	        { field: 'learning_complexity', headerName: 'Learning \nComplexity' },
+	        { field: 'playing_complexity', headerName: 'Playing \nComplexity' },
 	        { field: 'expansion', headerName: 'Expansion', hide: true },
 	        { field: 'co-op', headerName: 'Co-op', hide: true },
 	        { field: 'legacy', headerName: 'Legacy', hide: true },
@@ -93,6 +93,7 @@ async function initGames() {
 	// Get the games from the Games List repo
 	// https://github.com/carey-james/Games-List
 	const games = await d3.dsv('|', 'https://raw.githubusercontent.com/carey-james/Games-List/refs/heads/main/games.csv');
+	const feedback = await d3.dsv('|', 'https://raw.githubusercontent.com/carey-james/Games-List/refs/heads/main/feedback.csv');
 	runner(games);
 	console.log(games);
 }
