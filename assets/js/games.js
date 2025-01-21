@@ -136,7 +136,7 @@ function runner(games_data, feedback_data) {
   						return `${averageComplexity}`;
   					}
 	        	},
-	        	cellRenderFramework: (params) => {
+	        	cellRender: (params) => {
 	        		const canvas = document.createElement('canvas');
 	        		canvas.width = 42;
 	        		canvas.height = 16;
@@ -172,9 +172,12 @@ function runner(games_data, feedback_data) {
   					smoothedCounts.forEach((count, index) => {
   						const x = (canvas.width / 4) * index;
   						const y = canvas.height - scaledCounts[index];
-  						context.fillStyle = 'rgba(0, 0, 255, 0.4)';
-  						context.fillRect(x, y, 10, scaledCounts[index]);
+  						context.lineTo(x, y);
   					});
+
+  					context.lineWidth = 2;
+  					context.strokeStyle = 'blue';
+  					context.stroke();
   					return canvas;
   				},
 	        },
