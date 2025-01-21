@@ -19,7 +19,7 @@ function runner(games_data, feedback_data) {
 			{ field: 'game', headerName: 'Game' },
 	        { 
 	        	field: 'mechanics', 
-	        	headerName: 'Mechanics',
+	        	headerName: `<img src="assets/icons/game-icons/other-icons/mechanics.svg" alt="Mechanics" style="width:15px; height:15px;"><br>Mechanics`,
 	        	valueGetter: (params) => {
 	        		const mech = params.data.mechanics;
 	        		return `<img src="assets/icons/game-icons/mechanics-icons/${mech}.svg" alt="${mech}" style="width:15px; height:15px;"><br>${mech}`;
