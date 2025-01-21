@@ -33,7 +33,7 @@ function runner(games_data, feedback_data) {
 	        		const ratings = feedback_data
   						.filter(item => item.game === `${game}`)
   						.map(item => parseInt(item.mechanics_enjoyment, 10));  // Convert  Complexity to Int
-  					const averageRating = ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length;
+  					const averageRating = parseFloat((ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length).toFixed(1));
 	        		return `${averageRating}`;
 	        	}
 	        },
@@ -111,7 +111,7 @@ function runner(games_data, feedback_data) {
 	        		const complexities = feedback_data
   						.filter(item => item.game === `${game}`)
   						.map(item => parseInt(item.learning_complexity, 10));  // Convert  Complexity to Int
-  					const averageComplexity = complexities.reduce((sum, complex) => sum + complex, 0) / complexities.length;
+  					const averageComplexity = parseFloat((complexities.reduce((sum, complex) => sum + complex, 0) / complexities.length).toFixed(1));
 	        		return `${averageComplexity}`;
 	        	}
 	        },
@@ -123,7 +123,7 @@ function runner(games_data, feedback_data) {
 	        		const complexities = feedback_data
   						.filter(item => item.game === `${game}`)
   						.map(item => parseInt(item.playing_complexity, 10));  // Convert  Complexity to Int
-  					const averageComplexity = complexities.reduce((sum, complex) => sum + complex, 0) / complexities.length;
+  					const averageComplexity = parseFloat((complexities.reduce((sum, complex) => sum + complex, 0) / complexities.length).toFixed(1));
 	        		return `${averageComplexity}`;
 	        	}
 	        },
