@@ -65,7 +65,17 @@ function runner(games_data, feedback_data) {
 					const maxPlayers = params.data.max_players;
 					const minBest = params.data.min_best;
 					const maxBest = params.data.max_best;
-					return `${minPlayers} - ${maxPlayers}<br>${minBest} - ${maxBest}`;
+					let playerDots = ``
+					for (let i = 0; i > max_players; i++) {
+						if (i < minPlayers) {
+							playerDots += `<img src="assets/icons/game-icons/other-icons/players-not-playable.svg" alt="Light Blue Dot" style="width:4px; height:4px;">`;
+						} else if ((i > minBest) && (i < maxBest)) {
+							playerDots += `<img src="assets/icons/game-icons/other-icons/players-best.svg" alt="Gold Dot" style="width:4px; height:4px;">`;
+						} else {
+							playerDots += `<img src="assets/icons/game-icons/other-icons/players-playable.svg" alt="Dark Blue Dot" style="width:4px; height:4px;">`;
+						}
+					}
+					return `${minPlayers} - ${maxPlayers}<br>${playerDots}<br>${minBest} - ${maxBest}`;
 				},
 				sortable: true,
 				comparator: (valueA, valueB, nodeA, nodeB, isInverted) => {
