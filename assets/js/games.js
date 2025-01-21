@@ -136,7 +136,7 @@ function runner(games_data, feedback_data) {
   						return `${averageComplexity}`;
   					}
 	        	},
-	        	cellRender: (params) => {
+	        	cellRenderer: (params) => {
 	        		const canvas = document.createElement('canvas');
 	        		canvas.width = 42;
 	        		canvas.height = 16;
