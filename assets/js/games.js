@@ -46,6 +46,18 @@ function runner(games_data, feedback_data) {
 	        	} 
 	        },
 	        {
+	        	field: 'theme_rating', 
+	        	headerName: 'Theme Rating',
+	        	valueGetter: (params) => {
+	        		const game = params.data.game;
+	        		const ratings = feedback_data
+  						.filter(item => item.game === `${game}`)
+  						.map(item => parseInt(item.theme_enjoyment, 10));  // Convert  Complexity to Int
+  					const averageRating = ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length;
+	        		return `${averageRating}`;
+	        	}
+	        },
+	        {
 				field: 'players',
 				headerName: 'Players',
 				valueGetter: (params) => {
