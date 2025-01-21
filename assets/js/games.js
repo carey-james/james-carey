@@ -135,7 +135,48 @@ function runner(games_data, feedback_data) {
   					} else {
   						return `${averageComplexity}`;
   					}
-	        	}
+	        	},
+	        	cellRenderFramework: (params) => {
+	        		const canvas = document.createElement('canvas');
+	        		canvas.width = 42;
+	        		canvas.height = 16;
+	        		const context = canvas.getContext('2d');
+	        		const game = params.data.game;
+	        		const complexities = feedback_data
+  						.filter(item => item.game === `${game}`)
+  						.map(item => parseInt(item.learning_complexity, 10));
+  					const counts = [0, 0, 0, 0, 0];
+  					complexities.forEach(complexity => {
+  						counts[complexity - 1] += 1;
+  					});
+  					const smoothedCounts = [];
+  					const smoothingFactor = 1;
+  					for (let i = 0; i < counts.length; i++) {
+  						let sum = counts[i];
+  						let count = 1;
+  						if (i > 0) {
+  							sum += counts[i - 1];
+  							count++;
+  						}
+  						if (i < counts.length - 1) {
+  							sum += counts[i + 1];
+  							count++;
+  						}
+  						smoothedCounts.push(sum / count);
+  					}
+  					const maxCount = Math.max(...smoothedCounts);
+  					const scaledCounts = smoothedCounts.maaap(count => (count / maxCount) * 16);
+  					context.clearRect(0, 0, canvas.width, canvas.height);
+  					context.beginPath();
+  					context.moveTo(0, canvas.height - scaledCounts[0]);
+  					smoothedCounts.forEach((count, index) => {
+  						const x = (canvas.width / 4) * index;
+  						const y = canvas.height - scaledCounts[index];
+  						context.fillStyle = 'rgba(0, 0, 255, 0.4)';
+  						context.fillRect(x, y, 10, scaledCounts[index]);
+  					});
+  					return canvas;
+  				},
 	        },
 	        { 
 	        	field: 'playing_complexity', 
