@@ -25,7 +25,7 @@ function runner(games_data, feedback_data) {
 	        		return `<img src="assets/icons/game-icons/mechanics-icons/${mech}.svg" alt="${mech}" style="width:15px; height:15px;"><br>${mech}`;
 	        	} 
 	        },
-
+	        {
 	        	field: 'mechanics_rating', 
 	        	headerName: 'Mechanics Rating',
 	        	valueGetter: (params) => {
