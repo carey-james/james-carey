@@ -19,7 +19,7 @@ function runner(games_data, feedback_data) {
 			{ field: 'game', headerName: 'Game' },
 	        { 
 	        	field: 'mechanics', 
-	        	headerName: `<img src="assets/icons/game-icons/other-icons/mechanics.svg" alt="Mechanics" style="width:15px; height:15px;"><br>Mechanics`,
+	        	headerName: 'Mechanics',
 	        	valueGetter: (params) => {
 	        		const mech = params.data.mechanics;
 	        		return `<img src="assets/icons/game-icons/mechanics-icons/${mech}.svg" alt="${mech}" style="width:15px; height:15px;"><br>${mech}`;
@@ -34,7 +34,11 @@ function runner(games_data, feedback_data) {
   						.filter(item => item.game === `${game}`)
   						.map(item => parseInt(item.mechanics_enjoyment, 10));  // Convert  Complexity to Int
   					const averageRating = parseFloat((ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length).toFixed(1));
-	        		return `${averageRating}`;
+	        		if (isNaN(averageRating)) {
+  						return 'Not Yet Rated';
+  					} else {
+  						return `${averageRating}`;
+  					}
 	        	}
 	        },
 	        { 
@@ -54,7 +58,11 @@ function runner(games_data, feedback_data) {
   						.filter(item => item.game === `${game}`)
   						.map(item => parseInt(item.theme_enjoyment, 10));  // Convert  Complexity to Int
   					const averageRating = parseFloat((ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length).toFixed(1));
-	        		return `${averageRating}`;
+  					if (isNaN(averageRating)) {
+  						return 'Not Yet Rated';
+  					} else {
+  						return `${averageRating}`;
+  					}
 	        	}
 	        },
 	        {
@@ -122,7 +130,11 @@ function runner(games_data, feedback_data) {
   						.filter(item => item.game === `${game}`)
   						.map(item => parseInt(item.learning_complexity, 10));  // Convert  Complexity to Int
   					const averageComplexity = parseFloat((complexities.reduce((sum, complex) => sum + complex, 0) / complexities.length).toFixed(1));
-	        		return `${averageComplexity}`;
+	        		if (isNaN(averageComplexity)) {
+  						return 'Not Yet Rated';
+  					} else {
+  						return `${averageComplexity}`;
+  					}
 	        	}
 	        },
 	        { 
@@ -134,7 +146,11 @@ function runner(games_data, feedback_data) {
   						.filter(item => item.game === `${game}`)
   						.map(item => parseInt(item.playing_complexity, 10));  // Convert  Complexity to Int
   					const averageComplexity = parseFloat((complexities.reduce((sum, complex) => sum + complex, 0) / complexities.length).toFixed(1));
-	        		return `${averageComplexity}`;
+	        		if (isNaN(averageComplexity)) {
+  						return 'Not Yet Rated';
+  					} else {
+  						return `${averageComplexity}`;
+  					}
 	        	}
 	        },
 	        { field: 'expansion', headerName: 'Expansion', hide: true },
