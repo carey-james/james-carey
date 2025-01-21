@@ -25,6 +25,18 @@ function runner(games_data, feedback_data) {
 	        		return `<img src="assets/icons/game-icons/mechanics-icons/${mech}.svg" alt="${mech}" style="width:15px; height:15px;"><br>${mech}`;
 	        	} 
 	        },
+
+	        	field: 'mechanics_rating', 
+	        	headerName: 'Mechanics Rating',
+	        	valueGetter: (params) => {
+	        		const game = params.data.game;
+	        		const ratings = feedback_data
+  						.filter(item => item.game === `${game}`)
+  						.map(item => parseInt(item.mechanics_enjoyment, 10));  // Convert  Complexity to Int
+  					const averageRating = ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length;
+	        		return `${averageRating}`;
+	        	}
+	        },
 	        { 
 	        	field: 'theme', 
 	        	headerName: 'Theme',
