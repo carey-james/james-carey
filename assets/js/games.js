@@ -53,7 +53,7 @@ function runner(games_data, feedback_data) {
 	        		const ratings = feedback_data
   						.filter(item => item.game === `${game}`)
   						.map(item => parseInt(item.theme_enjoyment, 10));  // Convert  Complexity to Int
-  					const averageRating = ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length;
+  					const averageRating = parseFloat((ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length).toFixed(1));
 	        		return `${averageRating}`;
 	        	}
 	        },
