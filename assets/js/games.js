@@ -165,7 +165,7 @@ function runner(games_data, feedback_data) {
   						smoothedCounts.push(sum / count);
   					}
   					const maxCount = Math.max(...smoothedCounts);
-  					const scaledCounts = smoothedCounts.maaap(count => (count / maxCount) * 16);
+  					const scaledCounts = smoothedCounts.map(count => (count / maxCount) * 16);
   					context.clearRect(0, 0, canvas.width, canvas.height);
   					context.beginPath();
   					context.moveTo(0, canvas.height - scaledCounts[0]);
