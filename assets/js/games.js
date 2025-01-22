@@ -138,8 +138,8 @@ function runner(games_data, feedback_data) {
 	        	},
 	        	cellRenderer: (params) => {
 	        		const canvas = document.createElement('canvas');
-	        		canvas.width = 42;
-	        		canvas.height = 16;
+	        		canvas.width = 32;
+	        		canvas.height = 10;
 	        		const context = canvas.getContext('2d');
 	        		const game = params.data.game;
 	        		const complexities = feedback_data
@@ -165,7 +165,7 @@ function runner(games_data, feedback_data) {
   						smoothedCounts.push(sum / count);
   					}
   					const maxCount = Math.max(...smoothedCounts);
-  					const scaledCounts = smoothedCounts.map(count => (count / maxCount) * 16);
+  					const scaledCounts = smoothedCounts.map(count => (count / maxCount) * canvas.height);
   					context.clearRect(0, 0, canvas.width, canvas.height);
   					context.beginPath();
   					context.moveTo(0, canvas.height - scaledCounts[0]);
