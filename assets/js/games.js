@@ -136,6 +136,7 @@ function runner(games_data, feedback_data) {
   						return `${averageComplexity}`;
   					}
 	        	},
+	        	/*
 	        	cellRenderer: (params) => {
 	        		const canvas = document.createElement('canvas');
 	        		canvas.width = 32;
@@ -179,7 +180,7 @@ function runner(games_data, feedback_data) {
   					context.strokeStyle = 'blue';
   					context.stroke();
   					return canvas;
-  				},
+  				},*/
 	        },
 	        { 
 	        	field: 'playing_complexity', 
