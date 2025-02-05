@@ -74,7 +74,7 @@ body, html {
 .star {
     font-family: "Inknut Antiqua", serif;
     font-weight: 300;
-    font-style: normal;
-    color: var(--color-nb);
+    font-style: italic;
+    color: var(--color-cream);
     font-size: 0.5rem;
 }
