@@ -19,12 +19,15 @@ body, html {
     overflow-x: hidden;
 }
 
+.grain {
+    background: url("images/noise.svg");
+}
+
 .message {
     top: 30px;
     background-color: var(--color-fantasy);
     text-align: center;
     pointer-events: auto; /* Allow pointer events */
-    display: none;
 }
 
 .part {
