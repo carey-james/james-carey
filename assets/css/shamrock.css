@@ -49,7 +49,7 @@ body, html {
     font-weight: 400;
     font-style: normal;
     color: var(--color-cream);
-    text-align: center;
+    text-align: right;
     font-size: 3rem;
 }
 
@@ -57,14 +57,24 @@ body, html {
     font-family: "Inknut Antiqua", serif;
     font-weight: 300;
     font-style: normal;
+    text-align: center;
     color: var(--color-cream);
     font-size: 1rem;
 }
 
 .rsvp {
-    z-index: 666;
-    font-family: "Bitter", serif;
-    font-weight: 100;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 300;
     font-style: normal;
+    text-align: center;
+    color: var(--color-cream);
     font-size: 1rem;
+}
+
+.star {
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 300;
+    font-style: normal;
+    color: var(--color-nb);
+    font-size: 0.5rem;
 }
