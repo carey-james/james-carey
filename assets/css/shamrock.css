@@ -1,0 +1,65 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.background {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height:  100vh;
+    background-image: none !important;
+    background-color: var(--color-cream);
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.message {
+    top: 30px;
+    text-align: center;
+    pointer-events: auto; /* Allow pointer events */
+    display: none;
+}
+
+.part {
+    opacity: 0; /* Start hidden */
+    transition: opacity 1s ease; /* Fade effect */
+    display: inline;
+}
+
+.poem {
+    font-family: "Quintessential", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-cream);
+    font-size: 2rem;
+}
+
+.title {
+    font-family: "Raleway", "Helvetica", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    color: var(--color-offwhite);
+    font-size: 3rem;
+}
+
+.info {
+    font-family: "Bitter", serif;
+    font-weight: 100;
+    font-style: normal;
+    color: var(--color-offwhite);
+    font-size: 1rem;
+}
+
+.rsvp {
+    z-index: 666;
+    font-family: "Bitter", serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1rem;
+}
