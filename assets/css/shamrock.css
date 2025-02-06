@@ -30,7 +30,7 @@ body, html {
 }
 
 .message {
-    width: max(600px, 80%);
+    width: min(600px, 80%);
     background-color: var(--color-fantasy);
     padding: 20px;
 }
