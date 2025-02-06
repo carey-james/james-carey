@@ -25,6 +25,10 @@ body, html {
 }
 
 .poem {
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     font-family: "Quintessential", serif;
     font-weight: 400;
     font-style: normal;
@@ -32,6 +36,11 @@ body, html {
     text-align: left;
     font-size: 1rem;
     line-height: 0.25rem;
+}
+
+.harpimage {
+    width: 30%;
+    height: auto;
 }
 
 .title {
