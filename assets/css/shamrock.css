@@ -50,6 +50,8 @@ body, html {
     color: var(--color-cream);
     text-align: right;
     font-size: 2rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .info {
@@ -68,6 +70,8 @@ body, html {
     text-align: center;
     color: var(--color-cream);
     font-size: 1rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .star {
