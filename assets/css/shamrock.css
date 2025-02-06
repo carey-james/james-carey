@@ -30,6 +30,7 @@ body, html {
 }
 
 .message {
+    width: max(600px, 80%);
     background-color: var(--color-fantasy);
     padding: 20px;
 }
@@ -51,7 +52,7 @@ body, html {
     text-align: right;
     font-size: 2rem;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 
 .info {
