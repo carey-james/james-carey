@@ -924,7 +924,7 @@
 		"description": "Themed French Menus",
 		"icon1": "fork-knife",
 		"icon2": "",
-		"type": "want-to-go",
+		"type": "expensive",
 		"price": "$95",
 		"extra_icon": "leaf",
 		"extra_color": "nonveg",
