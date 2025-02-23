@@ -105,7 +105,7 @@ function runner(games_data, feedback_data) {
 				valueGetter: (params) => {
 					const minTime = params.data.min_time;
 					const maxTime = params.data.max_time;
-					const medTime = (minTime + maxTime) / 2;
+					const medTime = (Number(minTime) + Number(maxTime)) / 2;
 					let numClocks = 0;
 					let clocks = ``;
 					let timeLeg = ``;
@@ -121,7 +121,7 @@ function runner(games_data, feedback_data) {
 						numClocks = 5;
 					}
 					for (let i = 0; i <= numClocks; i++) {
-						clocks += `<img src="assets/icons/game-icons/other-icons/time.svg" alt="Light Blue Dot" style="width:15px; height:15px;">`;
+						clocks += `<img src="assets/icons/game-icons/other-icons/clock.svg" alt="Clock" style="width:15px; height:15px;">`;
 					}
 					if (minTime == maxTime) {
 						timeLeg = `${minTime} mins`;
