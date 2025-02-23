@@ -73,7 +73,7 @@ function runner(games_data, feedback_data) {
 					const maxPlayers = params.data.max_players;
 					const minBest = params.data.min_best;
 					const maxBest = params.data.max_best;
-					let playerDots = ``
+					let playerDots = ``;
 					for (let i = 1; ((i <= maxPlayers) && (i <= 20)); i++) {
 						if (i < minPlayers) {
 							playerDots += `<img src="assets/icons/game-icons/other-icons/players-not-playable.svg" alt="Light Blue Dot" style="width:4px; height:4px;">`;
@@ -105,20 +105,36 @@ function runner(games_data, feedback_data) {
 				valueGetter: (params) => {
 					const minTime = params.data.min_time;
 					const maxTime = params.data.max_time;
-					if (minTime == maxTime) {
-						return `${minTime} mins`;
+					const medTime = (minTime + maxTime) / 2;
+					let numClocks = 0;
+					let clocks = ``;
+					let timeLeg = ``;
+					if (medTime <= 20) {
+						numClocks = 1;
+					} else if (medTime <= 40) {
+						numClocks = 2;
+					} else if (medTime <= 80) {
+						numClocks = 3;
+					} else if (medTime <= 110) {
+						numClocks = 4;
 					} else {
-						return `${minTime} - ${maxTime} mins`;
+						numClocks = 5;
 					}
+					for (let i = 0; i <= numClocks; i++) {
+						clocks += `<img src="assets/icons/game-icons/other-icons/time.svg" alt="Light Blue Dot" style="width:15px; height:15px;">`;
+					}
+					if (minTime == maxTime) {
+						timeLeg = `${minTime} mins`;
+					} else {
+						timeLeg = `${minTime} - ${maxTime} mins`;
+					}
+					return `${clocks}<br>${timeLeg}`;
+
 				},
 				sortable: true,
 				comparator: (valueA, valueB, nodeA, nodeB, isInverted) => {
 					if (!nodeA.data || !nodeB.data) return 0;
-					if (isInverted) {
-						return (nodeA.data.max_time - nodeB.data.max_time);
-					} else {
-						return (nodeA.data.min_time - nodeB.data.min_time);
-					}
+					return (((nodeA.data.max_time + nodeA.data.mim_time) / 2) - ((nodeB.data.max_time + nodeB.data.mim_time) / 2));
 				}
 			},
 	        { 
