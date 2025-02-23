@@ -27,17 +27,21 @@ function runner(games_data, feedback_data) {
 	        },
 	        {
 	        	field: 'mechanics_rating', 
-	        	headerName: 'Mechanics Rating',
+	        	headerName: 'Rating',
 	        	valueGetter: (params) => {
 	        		const game = params.data.game;
 	        		const ratings = feedback_data
   						.filter(item => item.game === `${game}`)
   						.map(item => parseInt(item.mechanics_enjoyment, 10));  // Convert  Complexity to Int
   					const averageRating = parseFloat((ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length).toFixed(1));
+  					let mechs = ``;
 	        		if (isNaN(averageRating)) {
-  						return 'Not Yet Rated';
+  						return 'TBD';
   					} else {
-  						return `${averageRating}`;
+						for (let i = 0; i < Math.round(averageRating); i++) {
+							mechs += `<img src="assets/icons/game-icons/other-icons/mechanics.svg" alt="Clock" style="width:15px; height:15px;">`;
+						}
+	  						return `${mechs}<br>${averageRating}`;
   					}
 	        	}
 	        },
@@ -51,17 +55,21 @@ function runner(games_data, feedback_data) {
 	        },
 	        {
 	        	field: 'theme_rating', 
-	        	headerName: 'Theme Rating',
+	        	headerName: 'Rating',
 	        	valueGetter: (params) => {
 	        		const game = params.data.game;
 	        		const ratings = feedback_data
   						.filter(item => item.game === `${game}`)
   						.map(item => parseInt(item.theme_enjoyment, 10));  // Convert  Complexity to Int
   					const averageRating = parseFloat((ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length).toFixed(1));
-  					if (isNaN(averageRating)) {
-  						return 'Not Yet Rated';
+  					let themes = ``;
+	        		if (isNaN(averageRating)) {
+  						return 'TBD';
   					} else {
-  						return `${averageRating}`;
+						for (let i = 0; i < Math.round(averageRating); i++) {
+							themes += `<img src="assets/icons/game-icons/other-icons/theme.svg" alt="Clock" style="width:15px; height:15px;">`;
+						}
+	  						return `${themes}<br>${averageRating}`;
   					}
 	        	}
 	        },
