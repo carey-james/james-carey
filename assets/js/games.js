@@ -134,10 +134,7 @@ function runner(games_data, feedback_data) {
 				sortable: true,
 				comparator: (valueA, valueB, nodeA, nodeB, isInverted) => {
 					if (!nodeA.data || !nodeB.data) return 0;
-					console.log(nodeA.data.max_time);
-					console.log(Number(nodeA.data.max_time));
-					console.log((Number(nodeA.data.max_time) + Number(nodeA.data.mim_time)) - (Number(nodeB.data.max_time) + Number(nodeB.data.mim_time)));
-					return ((Number(nodeA.data.max_time) + Number(nodeA.data.mim_time)) - (Number(nodeB.data.max_time) + Number(nodeB.data.mim_time)));
+					return ((Number(nodeA.data.max_time) + Number(nodeA.data.min_time)) - (Number(nodeB.data.max_time) + Number(nodeB.data.min_time)));
 				}
 			},
 	        { 
