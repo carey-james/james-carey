@@ -120,7 +120,7 @@ function runner(games_data, feedback_data) {
 					} else {
 						numClocks = 5;
 					}
-					for (let i = 0; i <= numClocks; i++) {
+					for (let i = 0; i < numClocks; i++) {
 						clocks += `<img src="assets/icons/game-icons/other-icons/clock.svg" alt="Clock" style="width:15px; height:15px;">`;
 					}
 					if (minTime == maxTime) {
