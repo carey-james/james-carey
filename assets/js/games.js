@@ -44,7 +44,7 @@ function runner(games_data, feedback_data) {
 						if ((Math.round(averageRating * 2) % 2) == 1) {
 							mechs += `<img src="assets/icons/game-icons/other-icons/half-gear.svg" alt="Clock" style="width:6px; height:12px;">`;
 						}
-	  					return `${mechs}<br>${averageRating}`;
+	  					return `<span class='rate_al'>${mechs}</span><br>${averageRating}`;
   					}
 	        	}
 	        },
@@ -75,7 +75,7 @@ function runner(games_data, feedback_data) {
 						if ((Math.round(averageRating * 2) % 2) == 1) {
 							themes += `<img src="assets/icons/game-icons/other-icons/half-bulb.svg" alt="Clock" style="width:6px; height:12px;">`;
 						}
-	  					return `${themes}<br>${averageRating}`;
+	  					return `<span class='rate_al'>${themes}</span><br>${averageRating}`;
   					}
 	        	}
 	        },
@@ -170,7 +170,7 @@ function runner(games_data, feedback_data) {
 						if ((Math.round(averageComplexity * 2) % 2) == 1) {
 							learning += `<img src="assets/icons/game-icons/other-icons/half-learning-complexity.svg" alt="Clock" style="width:6px; height:12px;">`;
 						}
-	  					return `${learning}<br>${averageComplexity}`;
+	  					return `<span class='rate_al'>${learning}</span><br>${averageComplexity}`;
   					}
 	        	},
 	        	/*
@@ -238,7 +238,7 @@ function runner(games_data, feedback_data) {
 						if ((Math.round(averageComplexity * 2) % 2) == 1) {
 							playing += `<img src="assets/icons/game-icons/other-icons/half-playing-complexity.svg" alt="Clock" style="width:6px; height:12px;">`;
 						}
-	  					return `${playing}<br>${averageComplexity}`;
+	  					return `<span class='rate_al'>${playing}<span><br>${averageComplexity}`;
   					}
 	        	}
 	        },

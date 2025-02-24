@@ -40,6 +40,10 @@
 	.ag-cell[col-id='play_more'] {
 	    text-align: center; }
 
+	.rate_al {
+		text-align: left;
+	}
+
 /* container */
 	.container {
 		position: relative; }
