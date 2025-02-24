@@ -42,7 +42,8 @@
 	.ag-cell[col-id='time'],
 	.ag-cell[col-id='learning_complexity'], 
 	.ag-cell[col-id='playing_complexity'] {
-		text-align: left; }
+		text-align: left; 
+		align-items: center; }
 
 /* container */
 	.container {
