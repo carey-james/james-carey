@@ -39,7 +39,7 @@ function runner(games_data, feedback_data) {
   						return 'TBD';
   					} else {
 						for (let i = 0; i < Math.round(averageRating); i++) {
-							mechs += `<img src="assets/icons/game-icons/other-icons/mechanics.svg" alt="Clock" style="width:10px; height:10px;">`;
+							mechs += `<img src="assets/icons/game-icons/other-icons/gear.svg" alt="Clock" style="width:12px; height:12px;">`;
 						}
 	  						return `${mechs}<br>${averageRating}`;
   					}
@@ -67,7 +67,7 @@ function runner(games_data, feedback_data) {
   						return 'TBD';
   					} else {
 						for (let i = 0; i < Math.round(averageRating); i++) {
-							themes += `<img src="assets/icons/game-icons/other-icons/theme.svg" alt="Clock" style="width:10px; height:10px;">`;
+							themes += `<img src="assets/icons/game-icons/other-icons/bulb.svg" alt="Clock" style="width:12px; height:12px;">`;
 						}
 	  						return `${themes}<br>${averageRating}`;
   					}
@@ -129,7 +129,7 @@ function runner(games_data, feedback_data) {
 						numClocks = 5;
 					}
 					for (let i = 0; i < numClocks; i++) {
-						clocks += `<img src="assets/icons/game-icons/other-icons/clock.svg" alt="Clock" style="width:10px; height:10px;">`;
+						clocks += `<img src="assets/icons/game-icons/other-icons/clock.svg" alt="Clock" style="width:12px; height:12px;">`;
 					}
 					if (minTime == maxTime) {
 						timeLeg = `${minTime} mins`;
