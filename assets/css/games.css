@@ -43,6 +43,7 @@
 	.ag-cell[col-id='learning_complexity'], 
 	.ag-cell[col-id='playing_complexity'] {
 		text-align: left; 
+		position: absolute;
 		top: 50%; }
 
 /* container */
