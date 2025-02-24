@@ -30,9 +30,6 @@
 	.ag-cell[col-id='mechanics'], 
 	.ag-cell[col-id='theme'], 
 	.ag-cell[col-id='players'], 
-	.ag-cell[col-id='time'],
-	.ag-cell[col-id='learning_complexity'], 
-	.ag-cell[col-id='playing_complexity'], 
 	.ag-cell[col-id='expansion'], 
 	.ag-cell[col-id='co-op'], 
 	.ag-cell[col-id='legacy'], 
@@ -40,9 +37,12 @@
 	.ag-cell[col-id='play_more'] {
 	    text-align: center; }
 
-	.rate_al {
-		text-align: left;
-	}
+	.ag-cell[col-id='mechanics_rating'], 
+	.ag-cell[col-id='theme_rating'], 
+	.ag-cell[col-id='time'],
+	.ag-cell[col-id='learning_complexity'], 
+	.ag-cell[col-id='playing_complexity'] {
+		text-align: left; }
 
 /* container */
 	.container {
