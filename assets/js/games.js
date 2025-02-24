@@ -161,16 +161,16 @@ function runner(games_data, feedback_data) {
   						.map(item => parseInt(item.learning_complexity, 10));  // Convert  Complexity to Int
   					const averageComplexity = parseFloat((complexities.reduce((sum, complex) => sum + complex, 0) / complexities.length).toFixed(1));
 	        		let learning = ``;
-	        		if (isNaN(averageRating)) {
+	        		if (isNaN(averageComplexity)) {
   						return 'TBD';
   					} else {
-						for (let i = 0; i < Math.trunc(averageRating); i++) {
+						for (let i = 0; i < Math.trunc(averageComplexity); i++) {
 							learning += `<img src="assets/icons/game-icons/other-icons/learning-complexity.svg" alt="Clock" style="width:12px; height:12px;">`;
 						}
-						if ((Math.round(averageRating * 2) % 2) == 1) {
+						if ((Math.round(averageComplexity * 2) % 2) == 1) {
 							learning += `<img src="assets/icons/game-icons/other-icons/half-learning-complexity.svg" alt="Clock" style="width:6px; height:12px;">`;
 						}
-	  					return `${learning}<br>${averageRating}`;
+	  					return `${learning}<br>${averageComplexity}`;
   					}
 	        	},
 	        	/*
@@ -229,16 +229,16 @@ function runner(games_data, feedback_data) {
   						.map(item => parseInt(item.playing_complexity, 10));  // Convert  Complexity to Int
   					const averageComplexity = parseFloat((complexities.reduce((sum, complex) => sum + complex, 0) / complexities.length).toFixed(1));
 	        		let playing = ``;
-	        		if (isNaN(averageRating)) {
+	        		if (isNaN(averageComplexity)) {
   						return 'TBD';
   					} else {
-						for (let i = 0; i < Math.trunc(averageRating); i++) {
+						for (let i = 0; i < Math.trunc(averageComplexity); i++) {
 							playing += `<img src="assets/icons/game-icons/other-icons/playing-complexity.svg" alt="Clock" style="width:12px; height:12px;">`;
 						}
-						if ((Math.round(averageRating * 2) % 2) == 1) {
+						if ((Math.round(averageComplexity * 2) % 2) == 1) {
 							playing += `<img src="assets/icons/game-icons/other-icons/half-playing-complexity.svg" alt="Clock" style="width:6px; height:12px;">`;
 						}
-	  					return `${playing}<br>${averageRating}`;
+	  					return `${playing}<br>${averageComplexity}`;
   					}
 	        	}
 	        },
