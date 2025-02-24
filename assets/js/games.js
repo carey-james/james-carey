@@ -38,10 +38,13 @@ function runner(games_data, feedback_data) {
 	        		if (isNaN(averageRating)) {
   						return 'TBD';
   					} else {
-						for (let i = 0; i < Math.round(averageRating); i++) {
+						for (let i = 0; i < Math.trunc(averageRating); i++) {
 							mechs += `<img src="assets/icons/game-icons/other-icons/gear.svg" alt="Clock" style="width:12px; height:12px;">`;
 						}
-	  						return `${mechs}<br>${averageRating}`;
+						if ((Math.round(averageRating * 2) % 2) == 1) {
+							mechs += `<img src="assets/icons/game-icons/other-icons/half-gear.svg" alt="Clock" style="width:6px; height:12px;">`;
+						}
+	  					return `${mechs}<br>${averageRating}`;
   					}
 	        	}
 	        },
@@ -66,10 +69,13 @@ function runner(games_data, feedback_data) {
 	        		if (isNaN(averageRating)) {
   						return 'TBD';
   					} else {
-						for (let i = 0; i < Math.round(averageRating); i++) {
+						for (let i = 0; i < Math.trunc(averageRating); i++) {
 							themes += `<img src="assets/icons/game-icons/other-icons/bulb.svg" alt="Clock" style="width:12px; height:12px;">`;
 						}
-	  						return `${themes}<br>${averageRating}`;
+						if ((Math.round(averageRating * 2) % 2) == 1) {
+							mechs += `<img src="assets/icons/game-icons/other-icons/half-bulb.svg" alt="Clock" style="width:6px; height:12px;">`;
+						}
+	  					return `${themes}<br>${averageRating}`;
   					}
 	        	}
 	        },
