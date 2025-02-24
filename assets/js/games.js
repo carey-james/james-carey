@@ -73,7 +73,7 @@ function runner(games_data, feedback_data) {
 							themes += `<img src="assets/icons/game-icons/other-icons/bulb.svg" alt="Clock" style="width:12px; height:12px;">`;
 						}
 						if ((Math.round(averageRating * 2) % 2) == 1) {
-							mechs += `<img src="assets/icons/game-icons/other-icons/half-bulb.svg" alt="Clock" style="width:6px; height:12px;">`;
+							themes += `<img src="assets/icons/game-icons/other-icons/half-bulb.svg" alt="Clock" style="width:6px; height:12px;">`;
 						}
 	  					return `${themes}<br>${averageRating}`;
   					}
