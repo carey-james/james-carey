@@ -160,10 +160,17 @@ function runner(games_data, feedback_data) {
   						.filter(item => item.game === `${game}`)
   						.map(item => parseInt(item.learning_complexity, 10));  // Convert  Complexity to Int
   					const averageComplexity = parseFloat((complexities.reduce((sum, complex) => sum + complex, 0) / complexities.length).toFixed(1));
-	        		if (isNaN(averageComplexity)) {
-  						return 'Not Yet Rated';
+	        		let learning = ``;
+	        		if (isNaN(averageRating)) {
+  						return 'TBD';
   					} else {
-  						return `${averageComplexity}`;
+						for (let i = 0; i < Math.trunc(averageRating); i++) {
+							learning += `<img src="assets/icons/game-icons/other-icons/learning-complexity.svg" alt="Clock" style="width:12px; height:12px;">`;
+						}
+						if ((Math.round(averageRating * 2) % 2) == 1) {
+							learning += `<img src="assets/icons/game-icons/other-icons/half-learning-complexity.svg" alt="Clock" style="width:6px; height:12px;">`;
+						}
+	  					return `${learning}<br>${averageRating}`;
   					}
 	        	},
 	        	/*
@@ -221,10 +228,17 @@ function runner(games_data, feedback_data) {
   						.filter(item => item.game === `${game}`)
   						.map(item => parseInt(item.playing_complexity, 10));  // Convert  Complexity to Int
   					const averageComplexity = parseFloat((complexities.reduce((sum, complex) => sum + complex, 0) / complexities.length).toFixed(1));
-	        		if (isNaN(averageComplexity)) {
-  						return 'Not Yet Rated';
+	        		let playing = ``;
+	        		if (isNaN(averageRating)) {
+  						return 'TBD';
   					} else {
-  						return `${averageComplexity}`;
+						for (let i = 0; i < Math.trunc(averageRating); i++) {
+							playing += `<img src="assets/icons/game-icons/other-icons/playing-complexity.svg" alt="Clock" style="width:12px; height:12px;">`;
+						}
+						if ((Math.round(averageRating * 2) % 2) == 1) {
+							playing += `<img src="assets/icons/game-icons/other-icons/half-playing-complexity.svg" alt="Clock" style="width:6px; height:12px;">`;
+						}
+	  					return `${playing}<br>${averageRating}`;
   					}
 	        	}
 	        },
