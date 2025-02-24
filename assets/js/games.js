@@ -22,7 +22,7 @@ function runner(games_data, feedback_data) {
 	        	headerName: 'Mechanics',
 	        	valueGetter: (params) => {
 	        		const mech = params.data.mechanics;
-	        		return `<img src="assets/icons/game-icons/mechanics-icons/${mech}.svg" alt="${mech}" style="width:15px; height:15px;"><br>${mech}`;
+	        		return `<img src="assets/icons/game-icons/mechanics-icons/${mech}.svg" alt="${mech}" style="width:20px; height:20px;"><br>${mech}`;
 	        	} 
 	        },
 	        {
@@ -39,7 +39,7 @@ function runner(games_data, feedback_data) {
   						return 'TBD';
   					} else {
 						for (let i = 0; i < Math.round(averageRating); i++) {
-							mechs += `<img src="assets/icons/game-icons/other-icons/mechanics.svg" alt="Clock" style="width:15px; height:15px;">`;
+							mechs += `<img src="assets/icons/game-icons/other-icons/mechanics.svg" alt="Clock" style="width:10px; height:10px;">`;
 						}
 	  						return `${mechs}<br>${averageRating}`;
   					}
@@ -50,7 +50,7 @@ function runner(games_data, feedback_data) {
 	        	headerName: 'Theme',
 				valueGetter: (params) => {
 	        		const theme = params.data.theme;
-	        		return `<img src="assets/icons/game-icons/theme-icons/${theme}.svg" alt="${theme}" style="width:15px; height:15px;"><br>${theme}`;
+	        		return `<img src="assets/icons/game-icons/theme-icons/${theme}.svg" alt="${theme}" style="width:20px; height:20px;"><br>${theme}`;
 	        	} 
 	        },
 	        {
@@ -67,7 +67,7 @@ function runner(games_data, feedback_data) {
   						return 'TBD';
   					} else {
 						for (let i = 0; i < Math.round(averageRating); i++) {
-							themes += `<img src="assets/icons/game-icons/other-icons/theme.svg" alt="Clock" style="width:15px; height:15px;">`;
+							themes += `<img src="assets/icons/game-icons/other-icons/theme.svg" alt="Clock" style="width:10px; height:10px;">`;
 						}
 	  						return `${themes}<br>${averageRating}`;
   					}
@@ -84,11 +84,11 @@ function runner(games_data, feedback_data) {
 					let playerDots = ``;
 					for (let i = 1; ((i <= maxPlayers) && (i <= 20)); i++) {
 						if (i < minPlayers) {
-							playerDots += `<img src="assets/icons/game-icons/other-icons/players-not-playable.svg" alt="Light Blue Dot" style="width:4px; height:4px;">`;
+							playerDots += `<img src="assets/icons/game-icons/other-icons/players-not-playable.svg" alt="Light Blue Dot" style="width:5px; height:5px;">`;
 						} else if ((i >= minBest) && (i <= maxBest)) {
-							playerDots += `<img src="assets/icons/game-icons/other-icons/players-best.svg" alt="Gold Dot" style="width:4px; height:4px;">`;
+							playerDots += `<img src="assets/icons/game-icons/other-icons/players-best.svg" alt="Gold Dot" style="width:5px; height:5px;">`;
 						} else {
-							playerDots += `<img src="assets/icons/game-icons/other-icons/players-playable.svg" alt="Dark Blue Dot" style="width:4px; height:4px;">`;
+							playerDots += `<img src="assets/icons/game-icons/other-icons/players-playable.svg" alt="Dark Blue Dot" style="width:5px; height:5px;">`;
 						}
 					}
 					return `Players: ${minPlayers} - ${maxPlayers}<br>${playerDots}<br>Best with: ${minBest} - ${maxBest}`;
@@ -129,7 +129,7 @@ function runner(games_data, feedback_data) {
 						numClocks = 5;
 					}
 					for (let i = 0; i < numClocks; i++) {
-						clocks += `<img src="assets/icons/game-icons/other-icons/clock.svg" alt="Clock" style="width:15px; height:15px;">`;
+						clocks += `<img src="assets/icons/game-icons/other-icons/clock.svg" alt="Clock" style="width:10px; height:10px;">`;
 					}
 					if (minTime == maxTime) {
 						timeLeg = `${minTime} mins`;
