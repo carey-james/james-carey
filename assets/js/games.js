@@ -6,7 +6,7 @@ function runner(games_data, feedback_data) {
 	let summary_data = [];
 	const feedback_games = [...new Set(feedback_data.map(item => item.game))];
 	feedback_games.forEach(game => {
-		const filtered_items = summary_data.filter(item => item.game === game);
+		const filtered_items = feedback_games.filter(item => item.game === game);
 		let summary_item = {};
 		summary_item.game = game;
 		console.log(filtered_items);
