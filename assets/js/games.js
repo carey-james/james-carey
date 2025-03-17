@@ -16,8 +16,6 @@ function runner(games_data, feedback_data) {
 		summary_data.push(summary_item);
 	});
 
-	console.log(summary_data);
-
 	const gamesTheme = agGrid.themeQuartz.withParams({
 	    fontFamily: 'Bitter',
 		headerFontFamily: 'Raleway',
@@ -198,6 +196,7 @@ function runner(games_data, feedback_data) {
 						for (let i = 0; i < Math.floor(games[0].avg_play_comp); i++) {
 							playing += `<img src="assets/icons/game-icons/other-icons/playing-complexity.svg" alt="Clock" style="width:12px; height:12px;">`;
 						}
+						console.log(games[0].avg_theme_rating);
 						console.log(games[0].avg_theme_rating - Math.floor(games[0].avg_play_comp));
 						if ((games[0].avg_theme_rating - Math.floor(games[0].avg_play_comp)) >= 0.49 ) {
 							playing += `<img src="assets/icons/game-icons/other-icons/half-playing-complexity.svg" alt="Clock" style="width:6px; height:12px;">`;
