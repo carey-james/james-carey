@@ -259,6 +259,7 @@ function runner(games_data, feedback_data) {
 		        return value ? value.replace(/<br>/g, '<br/>') : '';
 		    },
   		},
+  		headerHeight: 60,
 	};
 
 	// Your Javascript code to create the Data Grid

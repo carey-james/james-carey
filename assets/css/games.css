@@ -6,8 +6,7 @@
 	    padding: 5px 3px; 
 		text-align: center; 
 		white-space: normal;
-    	word-wrap: break-word;
-    	line-height: 1.5; }
+    	word-wrap: break-word; }
 
 	.ag-cell {
 	    font-size: 10px;
