@@ -40,10 +40,10 @@ function runner(games_data, feedback_data) {
   						return 'TBD';
   					} else {
 						for (let i = 0; i < Math.trunc(averageRating); i++) {
-							mechs += `<img src="assets/icons/game-icons/other-icons/gear.svg" alt="Clock" style="width:12px; height:12px;">`;
+							mechs += `<img src="assets/icons/game-icons/other-icons/gear.svg" alt="Gear" style="width:12px; height:12px;">`;
 						}
 						if ((Math.round(averageRating * 2) % 2) == 1) {
-							mechs += `<img src="assets/icons/game-icons/other-icons/half-gear.svg" alt="Clock" style="width:6px; height:12px;">`;
+							mechs += `<img src="assets/icons/game-icons/other-icons/half-gear.svg" alt="Half Gear" style="width:6px; height:12px;">`;
 						}
 	  					return `${mechs}<br>${averageRating}`;
   					}
@@ -73,10 +73,10 @@ function runner(games_data, feedback_data) {
   						return 'TBD';
   					} else {
 						for (let i = 0; i < Math.trunc(averageRating); i++) {
-							themes += `<img src="assets/icons/game-icons/other-icons/bulb.svg" alt="Clock" style="width:12px; height:12px;">`;
+							themes += `<img src="assets/icons/game-icons/other-icons/bulb.svg" alt="Bulb" style="width:12px; height:12px;">`;
 						}
 						if ((Math.round(averageRating * 2) % 2) == 1) {
-							themes += `<img src="assets/icons/game-icons/other-icons/half-bulb.svg" alt="Clock" style="width:6px; height:12px;">`;
+							themes += `<img src="assets/icons/game-icons/other-icons/half-bulb.svg" alt="Half Bulb" style="width:6px; height:12px;">`;
 						}
 	  					return `${themes}<br>${averageRating}`;
   					}
@@ -179,21 +179,6 @@ function runner(games_data, feedback_data) {
 	  					return `${learning}<br>${averageComplexity}`;
   					}
 	        	},
-				sortable: true,
-				comparator: (valueA, valueB, nodeA, nodeB, isInverted) => {
-					if (!nodeA.data || !nodeB.data) return 0;
-					const gameA = nodeA.data.game;
-        			const complexitiesA = feedback_data
-						.filter(item => item.gameA === `${gameA}`)
-						.map(item => parseInt(item.learning_complexity, 10));  // Convert  Complexity to Int
-					const averageComplexityA = parseFloat((complexitiesA.reduce((sum, complex) => sum + complex, 0) / complexitiesA.length).toFixed(1));
-					const gameB = nodeB.data.game;
-        			const complexitiesB = feedback_data
-						.filter(item => item.gameB === `${gameB}`)
-						.map(item => parseInt(item.learning_complexity, 10));  // Convert  Complexity to Int
-					const averageComplexityB = parseFloat((complexitiesB.reduce((sum, complex) => sum + complex, 0) / complexitiesB.length).toFixed(1));
-					return (averageComplexityA - averageComplexityB);
-				},
 				minWidth: 150
 	        },
 	        { 
