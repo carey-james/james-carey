@@ -44,7 +44,7 @@ function runner(games_data, feedback_data) {
 	        		/*const ratings = feedback_data
   						.filter(item => item.game === `${game}`)
   						.map(item => parseInt(item.mechanics_enjoyment, 10));  // Convert  Complexity to Int */
-	        		console.log(summary_data.filter(item => item.game === `${game}`).avg_mech_rating);
+	        		console.log(summary_data.filter(item => item.game === `${game}`));
   					const averageRating = summary_data.filter(item => item.game === `${game}`).avg_mech_rating; //parseFloat((ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length).toFixed(1));
   					let mechs = ``;
 	        		if (isNaN(averageRating)) {
