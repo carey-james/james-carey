@@ -186,9 +186,8 @@ function runner(games_data, feedback_data) {
 					if (!nodeA.data || !nodeB.data) return 0;
 					const gamesA = summary_data.filter(item => item.game === `${nodeA.data.game}`);
 					const gamesB = summary_data.filter(item => item.game === `${nodeB.data.game}`);
-					if (!gamesA[0] || !gamesB[0]) return 0;
-					const gamesAVal = gamesA[0].length < 1 ? 0 : gamesA[0].avg_learn_comp;
-					const gamesBVal = gamesB[0].length < 1 ? 0 : gamesB[0].avg_learn_comp;
+					const gamesAVal = gamesA.length < 1 ? 0 : gamesA[0].avg_learn_comp;
+					const gamesBVal = gamesB.length < 1 ? 0 : gamesB[0].avg_learn_comp;
 					return (gamesAVal - gamesBVal);
 				},
 				minWidth: 150
