@@ -56,6 +56,15 @@ function runner(games_data, feedback_data) {
 	  					return `${mechs}<br>${games[0].avg_mech_rating}`;
   					}
 	        	},
+	        	sortable: true,
+				comparator: (valueA, valueB, nodeA, nodeB, isInverted) => {
+					if (!nodeA.data || !nodeB.data) return 0;
+					const gamesA = summary_data.filter(item => item.game === `${nodeA.data.game}`);
+					const gamesB = summary_data.filter(item => item.game === `${nodeB.data.game}`);
+					const gamesAVal = gamesA.length < 1 ? 0 : gamesA[0].avg_mech_rating;
+					const gamesBVal = gamesB.length < 1 ? 0 : gamesB[0].avg_mech_rating;
+					return (gamesAVal - gamesBVal);
+				},
 	        	minWidth: 100
 	        },
 	        { 
@@ -86,6 +95,15 @@ function runner(games_data, feedback_data) {
 	  					return `${themes}<br>${games[0].avg_theme_rating}`;
   					}
 	        	},
+	        	sortable: true,
+				comparator: (valueA, valueB, nodeA, nodeB, isInverted) => {
+					if (!nodeA.data || !nodeB.data) return 0;
+					const gamesA = summary_data.filter(item => item.game === `${nodeA.data.game}`);
+					const gamesB = summary_data.filter(item => item.game === `${nodeB.data.game}`);
+					const gamesAVal = gamesA.length < 1 ? 0 : gamesA[0].avg_theme_rating;
+					const gamesBVal = gamesB.length < 1 ? 0 : gamesB[0].avg_theme_rating;
+					return (gamesAVal - gamesBVal);
+				},
 	        	minWidth: 100
 	        },
 	        {
@@ -211,6 +229,15 @@ function runner(games_data, feedback_data) {
 	  					return `${playing}<br>${games[0].avg_play_comp}`;
   					}
 	        	},
+	        	sortable: true,
+				comparator: (valueA, valueB, nodeA, nodeB, isInverted) => {
+					if (!nodeA.data || !nodeB.data) return 0;
+					const gamesA = summary_data.filter(item => item.game === `${nodeA.data.game}`);
+					const gamesB = summary_data.filter(item => item.game === `${nodeB.data.game}`);
+					const gamesAVal = gamesA.length < 1 ? 0 : gamesA[0].avg_play_comp;
+					const gamesBVal = gamesB.length < 1 ? 0 : gamesB[0].avg_play_comp;
+					return (gamesAVal - gamesBVal);
+				},
 				minWidth: 150
 	        },
 	        { field: 'expansion', headerName: 'Expansion', hide: true, },
