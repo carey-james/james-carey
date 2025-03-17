@@ -15,7 +15,10 @@
 	    line-height: 1.1;
 	    white-space: normal;
     	word-wrap: break-word;
-    	text-align: center; }
+    	text-align: center;
+    	display: flex;
+    	justify-content: center;
+    	align-items: center; }
 
 	.ag-cell[col-id='game'] {
 	    font-size: 14px;
