@@ -9,8 +9,6 @@ function runner(games_data, feedback_data) {
 		const filtered_items = feedback_data.filter(item => item.game === game);
 		let summary_item = {};
 		summary_item.game = game;
-		console.log(filtered_items);
-		console.log(filtered_items.map(item => parseInt(item.mechanics_enjoyment, 10)));
 		summary_item.avg_mech_rating = parseFloat((filtered_items.map(item => parseInt(item.mechanics_enjoyment, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
 		summary_data.push(summary_item);
 	});
@@ -46,7 +44,7 @@ function runner(games_data, feedback_data) {
 	        		/*const ratings = feedback_data
   						.filter(item => item.game === `${game}`)
   						.map(item => parseInt(item.mechanics_enjoyment, 10));  // Convert  Complexity to Int */
-  					const averageRating = summary_data.filter(item => item.game === `${game}`).avg_mech_rating; //parseFloat((ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length).toFixed(1));
+  					const averageRating = summary_data.filter(item => item.game === `${game}`)[0].avg_mech_rating; //parseFloat((ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length).toFixed(1));
   					let mechs = ``;
 	        		if (isNaN(averageRating)) {
   						return 'TBD';
