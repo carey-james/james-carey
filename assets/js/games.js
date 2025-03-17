@@ -180,7 +180,7 @@ function runner(games_data, feedback_data) {
 						if ((games[0].avg_theme_rating - Math.floor(games[0].avg_learn_comp)) >= 0.49 ) {
 							learning += `<img src="assets/icons/game-icons/other-icons/half-learning-complexity.svg" alt="Clock" style="width:6px; height:12px;">`;
 						}
-	  					return `${playing}<br>${games[0].avg_learn_comp}`;
+	  					return `${learning}<br>${games[0].avg_learn_comp}`;
   					}
 	        	},
 				minWidth: 150
