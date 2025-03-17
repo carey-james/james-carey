@@ -68,7 +68,23 @@
 		.container.is-fluid {
 		margin: 0 20px;
 		max-width: none;
-		width: auto; } }
+		width: auto; } 
+		#gamesGrid {
+	        overflow-x: auto;         /* Enable horizontal scrolling */
+	        -webkit-overflow-scrolling: touch;  /* Smooth scrolling for touch devices */
+	        max-width: 100%;          /* Ensure it doesn’t exceed the container’s width */
+	    }
+	    /* Optional: Style the scrollbar for better visibility */
+	    #gamesGrid::-webkit-scrollbar {
+	        height: 8px;
+	    }
+	    #gamesGrid::-webkit-scrollbar-thumb {
+	        background-color: darkgrey;
+	        border-radius: 4px;
+	    }
+	    #gamesGrid::-webkit-scrollbar-track {
+	        background-color: #f1f1f1;
+	    }}
 
 	@media screen and (min-width: 1192px) {
 		.container {
