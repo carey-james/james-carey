@@ -5,6 +5,16 @@ function runner(games_data, feedback_data) {
 
 	console.log(feedback_data);
 
+	let summary_data = [];
+	const feedback_games = [...new Set(feedback_data.map(item => item.game))];
+	feedback_games.forEach(game => {
+		const fitered_items = summary_data.filter(item => item.game === game);
+		let summary_item = {};
+		summary_item.game = game;
+		summary_item.avg_mech_rating = parseFloat((filtered_items.map(item => parseInt(item.mechanics_enjoyment, 10)).reduce((sum, rating) => sum + rating, 0) / ratings.length).toFixed(1));
+		summary_data.push(summary_item);
+	});
+
 	const gamesTheme = agGrid.themeQuartz.withParams({
 	    fontFamily: 'Bitter',
 		headerFontFamily: 'Raleway',
@@ -31,10 +41,10 @@ function runner(games_data, feedback_data) {
 	        	headerName: 'Rating',
 	        	valueGetter: (params) => {
 	        		const game = params.data.game;
-	        		const ratings = feedback_data
+	        		/*const ratings = feedback_data
   						.filter(item => item.game === `${game}`)
-  						.map(item => parseInt(item.mechanics_enjoyment, 10));  // Convert  Complexity to Int
-  					const averageRating = parseFloat((ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length).toFixed(1));
+  						.map(item => parseInt(item.mechanics_enjoyment, 10));  // Convert  Complexity to Int */
+  					const averageRating = summary_data.filter(item => item.game === `${game}`)[0].avg_mech_rating;//parseFloat((ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length).toFixed(1));
   					let mechs = ``;
 	        		if (isNaN(averageRating)) {
   						return 'TBD';
