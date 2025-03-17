@@ -11,6 +11,8 @@ function runner(games_data, feedback_data) {
 		summary_item.game = game;
 		summary_item.avg_mech_rating = parseFloat((filtered_items.map(item => parseInt(item.mechanics_enjoyment, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
 		summary_item.avg_theme_rating = parseFloat((filtered_items.map(item => parseInt(item.theme_enjoyment, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
+		summary_item.avg_learn_comp = parseFloat((filtered_items.map(item => parseInt(item.learning_complexity, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
+		summary_item.avg_play_comp = parseFloat((filtered_items.map(item => parseInt(item.playing_complexity, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
 		summary_data.push(summary_item);
 	});
 
@@ -42,18 +44,18 @@ function runner(games_data, feedback_data) {
 	        	headerName: 'Rating',
 	        	valueGetter: (params) => {
 	        		const game = params.data.game;
-  					const averageRating = summary_data.filter(item => item.game === `${game}`);
+  					const games = summary_data.filter(item => item.game === `${game}`);
   					let mechs = ``;
-	        		if (averageRating.length < 1) {
+	        		if (games.length < 1) {
   						return 'TBD';
   					} else {
-						for (let i = 0; i < Math.floor(averageRating[0].avg_mech_rating); i++) {
+						for (let i = 0; i < Math.floor(games[0].avg_mech_rating); i++) {
 							mechs += `<img src="assets/icons/game-icons/other-icons/gear.svg" alt="Gear" style="width:12px; height:12px;">`;
 						}
-						if ((averageRating[0].avg_mech_rating - Math.floor(averageRating[0].avg_mech_rating)) >= 0.49 ) {
+						if ((games[0].avg_mech_rating - Math.floor(games[0].avg_mech_rating)) >= 0.49 ) {
 							mechs += `<img src="assets/icons/game-icons/other-icons/half-gear.svg" alt="Half Gear" style="width:6px; height:12px;">`;
 						}
-	  					return `${mechs}<br>${averageRating[0].avg_mech_rating}`;
+	  					return `${mechs}<br>${games[0].avg_mech_rating}`;
   					}
 	        	},
 	        	minWidth: 100
@@ -72,18 +74,18 @@ function runner(games_data, feedback_data) {
 	        	headerName: 'Rating',
 	        	valueGetter: (params) => {
 	        		const game = params.data.game;
-	        		const averageRating = summary_data.filter(item => item.game === `${game}`);
+	        		const games = summary_data.filter(item => item.game === `${game}`);
   					let themes = ``;
-	        		if (averageRating.length < 1) {
+	        		if (games.length < 1) {
   						return 'TBD';
   					} else {
-						for (let i = 0; i < Math.floor(averageRating[0].avg_theme_rating); i++) {
+						for (let i = 0; i < Math.floor(games[0].avg_theme_rating); i++) {
 							themes += `<img src="assets/icons/game-icons/other-icons/bulb.svg" alt="Bulb" style="width:12px; height:12px;">`;
 						}
-						if ((averageRating[0].avg_theme_rating - Math.floor(averageRating[0].avg_theme_rating)) >= 0.49 ) {
+						if ((games[0].avg_theme_rating - Math.floor(games[0].avg_theme_rating)) >= 0.49 ) {
 							themes += `<img src="assets/icons/game-icons/other-icons/half-bulb.svg" alt="Half Bulb" style="width:6px; height:12px;">`;
 						}
-	  					return `${themes}<br>${averageRating[0].avg_theme_rating}`;
+	  					return `${themes}<br>${games[0].avg_theme_rating}`;
   					}
 	        	},
 	        	minWidth: 100
@@ -167,21 +169,18 @@ function runner(games_data, feedback_data) {
 	        	headerName: 'Learning Complexity',
 	        	valueGetter: (params) => {
 	        		const game = params.data.game;
-	        		const complexities = feedback_data
-  						.filter(item => item.game === `${game}`)
-  						.map(item => parseInt(item.learning_complexity, 10));  // Convert  Complexity to Int
-  					const averageComplexity = parseFloat((complexities.reduce((sum, complex) => sum + complex, 0) / complexities.length).toFixed(1));
+  					const games = summary_data.filter(item => item.game === `${game}`);
 	        		let learning = ``;
-	        		if (isNaN(averageComplexity)) {
+	        		if (games.length < 1) {
   						return 'TBD';
   					} else {
-						for (let i = 0; i < Math.trunc(averageComplexity); i++) {
+						for (let i = 0; i < Math.floor(games[0].avg_learn_comp); i++) {
 							learning += `<img src="assets/icons/game-icons/other-icons/learning-complexity.svg" alt="Clock" style="width:12px; height:12px;">`;
 						}
-						if ((Math.round(averageComplexity * 2) % 2) == 1) {
+						if ((games[0].avg_theme_rating - Math.floor(games[0].avg_learn_comp)) >= 0.49 ) {
 							learning += `<img src="assets/icons/game-icons/other-icons/half-learning-complexity.svg" alt="Clock" style="width:6px; height:12px;">`;
 						}
-	  					return `${learning}<br>${averageComplexity}`;
+	  					return `${playing}<br>${games[0].avg_learn_comp}`;
   					}
 	        	},
 				minWidth: 150
@@ -191,21 +190,18 @@ function runner(games_data, feedback_data) {
 	        	headerName: 'Playing Complexity',
 	        	valueGetter: (params) => {
 	        		const game = params.data.game;
-	        		const complexities = feedback_data
-  						.filter(item => item.game === `${game}`)
-  						.map(item => parseInt(item.playing_complexity, 10));  // Convert  Complexity to Int
-  					const averageComplexity = parseFloat((complexities.reduce((sum, complex) => sum + complex, 0) / complexities.length).toFixed(1));
+	        		const games = summary_data.filter(item => item.game === `${game}`);
 	        		let playing = ``;
-	        		if (isNaN(averageComplexity)) {
+	        		if (games.length < 1) {
   						return 'TBD';
   					} else {
-						for (let i = 0; i < Math.trunc(averageComplexity); i++) {
+						for (let i = 0; i < Math.floor(games[0].avg_play_comp); i++) {
 							playing += `<img src="assets/icons/game-icons/other-icons/playing-complexity.svg" alt="Clock" style="width:12px; height:12px;">`;
 						}
-						if ((Math.round(averageComplexity * 2) % 2) == 1) {
+						if ((games[0].avg_theme_rating - Math.floor(games[0].avg_play_comp)) >= 0.49 ) {
 							playing += `<img src="assets/icons/game-icons/other-icons/half-playing-complexity.svg" alt="Clock" style="width:6px; height:12px;">`;
 						}
-	  					return `${playing}<br>${averageComplexity}`;
+	  					return `${playing}<br>${games[0].avg_play_comp}`;
   					}
 	        	},
 				minWidth: 150
