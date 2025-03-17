@@ -16,14 +16,15 @@ function runner(games_data, feedback_data) {
 		theme: gamesTheme,
 		rowData: games_data,
 		columnDefs: [
-			{ field: 'game', headerName: 'Game' },
+			{ field: 'game', headerName: 'Game', minWidth: 200 },
 	        { 
 	        	field: 'mechanics', 
 	        	headerName: 'Mechanics',
 	        	valueGetter: (params) => {
 	        		const mech = params.data.mechanics;
 	        		return `<img src="assets/icons/game-icons/mechanics-icons/${mech}.svg" alt="${mech}" style="width:20px; height:20px;"><br>${mech}`;
-	        	} 
+	        	},
+	        	minWidth: 150
 	        },
 	        {
 	        	field: 'mechanics_rating', 
@@ -46,7 +47,8 @@ function runner(games_data, feedback_data) {
 						}
 	  					return `${mechs}<br>${averageRating}`;
   					}
-	        	}
+	        	},
+	        	minWidth: 100
 	        },
 	        { 
 	        	field: 'theme', 
@@ -54,7 +56,8 @@ function runner(games_data, feedback_data) {
 				valueGetter: (params) => {
 	        		const theme = params.data.theme;
 	        		return `<img src="assets/icons/game-icons/theme-icons/${theme}.svg" alt="${theme}" style="width:20px; height:20px;"><br>${theme}`;
-	        	} 
+	        	},
+	        	minWidth: 100 
 	        },
 	        {
 	        	field: 'theme_rating', 
@@ -77,7 +80,8 @@ function runner(games_data, feedback_data) {
 						}
 	  					return `${themes}<br>${averageRating}`;
   					}
-	        	}
+	        	},
+	        	minWidth: 100
 	        },
 	        {
 				field: 'players',
@@ -107,7 +111,8 @@ function runner(games_data, feedback_data) {
 					} else {
 						return (nodeA.data.min_players - nodeB.data.min_players);
 					}
-				}
+				},
+	        	minWidth: 100
 			},
 	        { field: 'min_players', hide: true },
 	        { field: 'max_players', hide: true },
@@ -149,7 +154,8 @@ function runner(games_data, feedback_data) {
 				comparator: (valueA, valueB, nodeA, nodeB, isInverted) => {
 					if (!nodeA.data || !nodeB.data) return 0;
 					return ((Number(nodeA.data.max_time) + Number(nodeA.data.min_time)) - (Number(nodeB.data.max_time) + Number(nodeB.data.min_time)));
-				}
+				},
+				minWidth: 100
 			},
 	        { 
 	        	field: 'learning_complexity', 
@@ -173,6 +179,7 @@ function runner(games_data, feedback_data) {
 	  					return `${learning}<br>${averageComplexity}`;
   					}
 	        	},
+				minWidth: 100
 	        	/*
 	        	cellRenderer: (params) => {
 	        		const canvas = document.createElement('canvas');
@@ -240,9 +247,10 @@ function runner(games_data, feedback_data) {
 						}
 	  					return `${playing}<br>${averageComplexity}`;
   					}
-	        	}
+	        	},
+				minWidth: 100
 	        },
-	        { field: 'expansion', headerName: 'Expansion', hide: true },
+	        { field: 'expansion', headerName: 'Expansion', hide: true, },
 	        { field: 'co-op', headerName: 'Co-op', hide: true },
 	        { field: 'legacy', headerName: 'Legacy', hide: true },
 	        { field: 'favorite', headerName: 'Favorite', hide: true },
