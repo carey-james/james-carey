@@ -4,16 +4,28 @@ function runner(games_data, feedback_data) {
 	let gridApi;
 
 	let summary_data = [];
+	const all_games = [...new Set(games_data.map(item => item.game))];
 	const feedback_games = [...new Set(feedback_data.map(item => item.game))];
-	feedback_games.forEach(game => {
-		const filtered_items = feedback_data.filter(item => item.game === game);
+	all_games.forEach(game => {
 		let summary_item = {};
 		summary_item.game = game;
-		summary_item.avg_mech_rating = parseFloat((filtered_items.map(item => parseInt(item.mechanics_enjoyment, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
-		summary_item.avg_theme_rating = parseFloat((filtered_items.map(item => parseInt(item.theme_enjoyment, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
-		summary_item.avg_learn_comp = parseFloat((filtered_items.map(item => parseInt(item.learning_complexity, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
-		summary_item.avg_play_comp = parseFloat((filtered_items.map(item => parseInt(item.playing_complexity, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
-		summary_data.push(summary_item);
+		if feedback_games.includes(game) {
+			summary_item.rated = true;
+			const filtered_items = feedback_data.filter(item => item.game === game);
+			summary_item.avg_mech_rating = parseFloat((filtered_items.map(item => parseInt(item.mechanics_enjoyment, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
+			summary_item.avg_theme_rating = parseFloat((filtered_items.map(item => parseInt(item.theme_enjoyment, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
+			summary_item.avg_learn_comp = parseFloat((filtered_items.map(item => parseInt(item.learning_complexity, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
+			summary_item.avg_play_comp = parseFloat((filtered_items.map(item => parseInt(item.playing_complexity, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
+			summary_data.push(summary_item);
+		} else {
+			summary_item.rated = false;
+			const filtered_item = all_data.filter(item => item.game === game)[0];
+			summary_item.avg_mech_rating = 0;
+			summary_item.avg_theme_rating = 0;
+			summary_item.avg_learn_comp = filtered_item.learning_complexity;
+			summary_item.avg_play_comp = filtered_item.learning_complexity;
+			summary_data.push(summary_item);
+		};
 	});
 
 	const gamesTheme = agGrid.themeQuartz.withParams({
@@ -45,13 +57,21 @@ function runner(games_data, feedback_data) {
   					const games = summary_data.filter(item => item.game === `${game}`);
   					let mechs = ``;
 	        		if (games.length < 1) {
-  						return 'TBD';
-  					} else {
+  						return 'ERROR';
+  					} else if (games.rated[0]) {
 						for (let i = 0; i < Math.floor(games[0].avg_mech_rating); i++) {
 							mechs += `<img src="assets/icons/game-icons/other-icons/gear.svg" alt="Gear" style="width:12px; height:12px;">`;
 						}
 						if ((games[0].avg_mech_rating - Math.floor(games[0].avg_mech_rating)) >= 0.49 ) {
 							mechs += `<img src="assets/icons/game-icons/other-icons/half-gear.svg" alt="Half Gear" style="width:6px; height:12px;">`;
+						}
+	  					return `${mechs}<br>${games[0].avg_mech_rating}`;
+  					} else {
+						for (let i = 0; i < Math.floor(games[0].avg_mech_rating); i++) {
+							mechs += `<img src="assets/icons/game-icons/other-icons/nr_gear.svg" alt="Gear" style="width:12px; height:12px;">`;
+						}
+						if ((games[0].avg_mech_rating - Math.floor(games[0].avg_mech_rating)) >= 0.49 ) {
+							mechs += `<img src="assets/icons/game-icons/other-icons/nr_half-gear.svg" alt="Half Gear" style="width:6px; height:12px;">`;
 						}
 	  					return `${mechs}<br>${games[0].avg_mech_rating}`;
   					}
@@ -189,12 +209,20 @@ function runner(games_data, feedback_data) {
 	        		let learning = ``;
 	        		if (games.length < 1) {
   						return 'TBD';
-  					} else {
+  					} else if (games[0].rated) {
 						for (let i = 0; i < Math.floor(games[0].avg_learn_comp); i++) {
 							learning += `<img src="assets/icons/game-icons/other-icons/learning-complexity.svg" alt="Clock" style="width:12px; height:12px;">`;
 						}
 						if ((games[0].avg_learn_comp - Math.floor(games[0].avg_learn_comp)) >= 0.49 ) {
 							learning += `<img src="assets/icons/game-icons/other-icons/half-learning-complexity.svg" alt="Clock" style="width:6px; height:12px;">`;
+						}
+	  					return `${learning}<br>${games[0].avg_learn_comp}`;
+  					} else {
+						for (let i = 0; i < Math.floor(games[0].avg_learn_comp); i++) {
+							learning += `<img src="assets/icons/game-icons/other-icons/nr_learning-complexity.svg" alt="Clock" style="width:12px; height:12px;">`;
+						}
+						if ((games[0].avg_learn_comp - Math.floor(games[0].avg_learn_comp)) >= 0.49 ) {
+							learning += `<img src="assets/icons/game-icons/other-icons/nr_half-learning-complexity.svg" alt="Clock" style="width:6px; height:12px;">`;
 						}
 	  					return `${learning}<br>${games[0].avg_learn_comp}`;
   					}
