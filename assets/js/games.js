@@ -271,7 +271,12 @@ function runner(games_data, feedback_data) {
 			wrapText: true,
 			cellRenderer: (params) => {
 		        const value = params.value;
-		        return value ? value.replace(/<br>/g, '<br/>') : '';
+		        // Ensure value is a string before using replace
+		        if (value && typeof value === 'string') {
+		            return value.replace(/<br>/g, '<br/>');  // Safely apply the replace method
+		        }
+		        // Return value as is if it's not a string
+		        return value || '';  // In case value is null or undefined, return an empty string
 		    },
   		},
   		headerHeight: 60,
