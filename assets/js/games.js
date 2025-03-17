@@ -10,6 +10,7 @@ function runner(games_data, feedback_data) {
 		let summary_item = {};
 		summary_item.game = game;
 		summary_item.avg_mech_rating = parseFloat((filtered_items.map(item => parseInt(item.mechanics_enjoyment, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
+		summary_item.avg_theme_rating = parseFloat((filtered_items.map(item => parseInt(item.theme_enjoyment, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
 		summary_data.push(summary_item);
 	});
 
@@ -41,18 +42,15 @@ function runner(games_data, feedback_data) {
 	        	headerName: 'Rating',
 	        	valueGetter: (params) => {
 	        		const game = params.data.game;
-	        		/*const ratings = feedback_data
-  						.filter(item => item.game === `${game}`)
-  						.map(item => parseInt(item.mechanics_enjoyment, 10));  // Convert  Complexity to Int */
-  					const averageRating = summary_data.filter(item => item.game === `${game}`); //parseFloat((ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length).toFixed(1));
+  					const averageRating = summary_data.filter(item => item.game === `${game}`);
   					let mechs = ``;
 	        		if (averageRating.length < 1) {
   						return 'TBD';
   					} else {
-						for (let i = 0; i < Math.trunc(averageRating[0].avg_mech_rating); i++) {
+						for (let i = 0; i < Math.floor(averageRating[0].avg_mech_rating); i++) {
 							mechs += `<img src="assets/icons/game-icons/other-icons/gear.svg" alt="Gear" style="width:12px; height:12px;">`;
 						}
-						if ((Math.round(averageRating[0].avg_mech_rating * 2) % 2) == 1) {
+						if ((averageRating[0].avg_mech_rating - Math.floor(averageRating[0].avg_mech_rating)) >= 0.49 ) {
 							mechs += `<img src="assets/icons/game-icons/other-icons/half-gear.svg" alt="Half Gear" style="width:6px; height:12px;">`;
 						}
 	  					return `${mechs}<br>${averageRating[0].avg_mech_rating}`;
@@ -74,21 +72,18 @@ function runner(games_data, feedback_data) {
 	        	headerName: 'Rating',
 	        	valueGetter: (params) => {
 	        		const game = params.data.game;
-	        		const ratings = feedback_data
-  						.filter(item => item.game === `${game}`)
-  						.map(item => parseInt(item.theme_enjoyment, 10));  // Convert  Complexity to Int
-  					const averageRating = parseFloat((ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length).toFixed(1));
-  					let themes = ``;
-	        		if (isNaN(averageRating)) {
+	        		const averageRating = summary_data.filter(item => item.game === `${game}`);
+  					let mechs = ``;
+	        		if (averageRating.length < 1) {
   						return 'TBD';
   					} else {
-						for (let i = 0; i < Math.trunc(averageRating); i++) {
+						for (let i = 0; i < Math.floor(averageRating[0].avg_theme_rating); i++) {
 							themes += `<img src="assets/icons/game-icons/other-icons/bulb.svg" alt="Bulb" style="width:12px; height:12px;">`;
 						}
-						if ((Math.round(averageRating * 2) % 2) == 1) {
+						if ((averageRating[0].avg_theme_rating - Math.floor(averageRating[0].avg_theme_rating)) >= 0.49 ) {
 							themes += `<img src="assets/icons/game-icons/other-icons/half-bulb.svg" alt="Half Bulb" style="width:6px; height:12px;">`;
 						}
-	  					return `${themes}<br>${averageRating}`;
+	  					return `${themes}<br>${averageRating[0].avg_theme_rating}`;
   					}
 	        	},
 	        	minWidth: 100
