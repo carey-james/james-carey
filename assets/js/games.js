@@ -73,7 +73,7 @@ function runner(games_data, feedback_data) {
 	        	valueGetter: (params) => {
 	        		const game = params.data.game;
 	        		const averageRating = summary_data.filter(item => item.game === `${game}`);
-  					let mechs = ``;
+  					let themes = ``;
 	        		if (averageRating.length < 1) {
   						return 'TBD';
   					} else {
