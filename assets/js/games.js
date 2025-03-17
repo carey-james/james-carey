@@ -175,7 +175,7 @@ function runner(games_data, feedback_data) {
 						for (let i = 0; i < Math.floor(games[0].avg_learn_comp); i++) {
 							learning += `<img src="assets/icons/game-icons/other-icons/learning-complexity.svg" alt="Clock" style="width:12px; height:12px;">`;
 						}
-						if ((games[0].avg_theme_rating - Math.floor(games[0].avg_learn_comp)) >= 0.49 ) {
+						if ((games[0].avg_learn_comp - Math.floor(games[0].avg_learn_comp)) >= 0.49 ) {
 							learning += `<img src="assets/icons/game-icons/other-icons/half-learning-complexity.svg" alt="Clock" style="width:6px; height:12px;">`;
 						}
 	  					return `${learning}<br>${games[0].avg_learn_comp}`;
@@ -196,9 +196,7 @@ function runner(games_data, feedback_data) {
 						for (let i = 0; i < Math.floor(games[0].avg_play_comp); i++) {
 							playing += `<img src="assets/icons/game-icons/other-icons/playing-complexity.svg" alt="Clock" style="width:12px; height:12px;">`;
 						}
-						console.log(games[0].avg_theme_rating);
-						console.log(games[0].avg_theme_rating - Math.floor(games[0].avg_play_comp));
-						if ((games[0].avg_theme_rating - Math.floor(games[0].avg_play_comp)) >= 0.49 ) {
+						if ((games[0].avg_play_comp - Math.floor(games[0].avg_play_comp)) >= 0.49 ) {
 							playing += `<img src="assets/icons/game-icons/other-icons/half-playing-complexity.svg" alt="Clock" style="width:6px; height:12px;">`;
 						}
 	  					return `${playing}<br>${games[0].avg_play_comp}`;
