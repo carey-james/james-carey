@@ -27,7 +27,7 @@
 
 	.ag-header-cell[col-id='game'],
 	.ag-cell[col-id='game'] {
-	    min-width: 200px;
+	    min-width: 180px;
 	    text-align: left;
 	    display: flex;
 	    justify-content: flex-start;

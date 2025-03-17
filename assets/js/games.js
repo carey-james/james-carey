@@ -16,7 +16,7 @@ function runner(games_data, feedback_data) {
 		theme: gamesTheme,
 		rowData: games_data,
 		columnDefs: [
-			{ field: 'game', headerName: 'Game', minWidth: 200 },
+			{ field: 'game', headerName: 'Game', minWidth: 180 },
 	        { 
 	        	field: 'mechanics', 
 	        	headerName: 'Mechanics',
@@ -179,52 +179,7 @@ function runner(games_data, feedback_data) {
 	  					return `${learning}<br>${averageComplexity}`;
   					}
 	        	},
-				minWidth: 100
-	        	/*
-	        	cellRenderer: (params) => {
-	        		const canvas = document.createElement('canvas');
-	        		canvas.width = 32;
-	        		canvas.height = 10;
-	        		const context = canvas.getContext('2d');
-	        		const game = params.data.game;
-	        		const complexities = feedback_data
-  						.filter(item => item.game === `${game}`)
-  						.map(item => parseInt(item.learning_complexity, 10));
-  					const counts = [0, 0, 0, 0, 0];
-  					complexities.forEach(complexity => {
-  						counts[complexity - 1] += 1;
-  					});
-  					const smoothedCounts = [];
-  					const smoothingFactor = 1;
-  					for (let i = 0; i < counts.length; i++) {
-  						let sum = counts[i];
-  						let count = 1;
-  						if (i > 0) {
-  							sum += counts[i - 1];
-  							count++;
-  						}
-  						if (i < counts.length - 1) {
-  							sum += counts[i + 1];
-  							count++;
-  						}
-  						smoothedCounts.push(sum / count);
-  					}
-  					const maxCount = Math.max(...smoothedCounts);
-  					const scaledCounts = smoothedCounts.map(count => (count / maxCount) * canvas.height);
-  					context.clearRect(0, 0, canvas.width, canvas.height);
-  					context.beginPath();
-  					context.moveTo(0, canvas.height - scaledCounts[0]);
-  					smoothedCounts.forEach((count, index) => {
-  						const x = (canvas.width / 4) * index;
-  						const y = canvas.height - scaledCounts[index];
-  						context.lineTo(x, y);
-  					});
-
-  					context.lineWidth = 2;
-  					context.strokeStyle = 'blue';
-  					context.stroke();
-  					return canvas;
-  				},*/
+				minWidth: 150
 	        },
 	        { 
 	        	field: 'playing_complexity', 
@@ -248,7 +203,7 @@ function runner(games_data, feedback_data) {
 	  					return `${playing}<br>${averageComplexity}`;
   					}
 	        	},
-				minWidth: 100
+				minWidth: 150
 	        },
 	        { field: 'expansion', headerName: 'Expansion', hide: true, },
 	        { field: 'co-op', headerName: 'Co-op', hide: true },
