@@ -8,7 +8,7 @@ function runner(games_data, feedback_data) {
 	let summary_data = [];
 	const feedback_games = [...new Set(feedback_data.map(item => item.game))];
 	feedback_games.forEach(game => {
-		const fitered_items = summary_data.filter(item => item.game === game);
+		const filtered_items = summary_data.filter(item => item.game === game);
 		let summary_item = {};
 		summary_item.game = game;
 		summary_item.avg_mech_rating = parseFloat((filtered_items.map(item => parseInt(item.mechanics_enjoyment, 10)).reduce((sum, rating) => sum + rating, 0) / ratings.length).toFixed(1));
