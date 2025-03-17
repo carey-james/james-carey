@@ -45,18 +45,18 @@ function runner(games_data, feedback_data) {
   						.filter(item => item.game === `${game}`)
   						.map(item => parseInt(item.mechanics_enjoyment, 10));  // Convert  Complexity to Int */
 	        		console.log(summary_data.filter(item => item.game === `${game}`));
-  					const averageRating = summary_data.filter(item => item.game === `${game}`).avg_mech_rating; //parseFloat((ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length).toFixed(1));
+  					const averageRating = summary_data.filter(item => item.game === `${game}`)[0]; //parseFloat((ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length).toFixed(1));
   					let mechs = ``;
 	        		if (isNaN(averageRating)) {
   						return 'TBD';
   					} else {
-						for (let i = 0; i < Math.trunc(averageRating); i++) {
+						for (let i = 0; i < Math.trunc(averageRating.avg_mech_rating); i++) {
 							mechs += `<img src="assets/icons/game-icons/other-icons/gear.svg" alt="Gear" style="width:12px; height:12px;">`;
 						}
-						if ((Math.round(averageRating * 2) % 2) == 1) {
+						if ((Math.round(averageRating.avg_mech_rating * 2) % 2) == 1) {
 							mechs += `<img src="assets/icons/game-icons/other-icons/half-gear.svg" alt="Half Gear" style="width:6px; height:12px;">`;
 						}
-	  					return `${mechs}<br>${averageRating}`;
+	  					return `${mechs}<br>${averageRating.avg_mech_rating}`;
   					}
 	        	},
 	        	minWidth: 100
