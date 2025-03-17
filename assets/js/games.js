@@ -30,24 +30,37 @@ function runner(games_data, feedback_data) {
 	        	field: 'mechanics_rating', 
 	        	headerName: 'Rating',
 	        	valueGetter: (params) => {
-	        		const game = params.data.game;
-	        		const ratings = feedback_data
-  						.filter(item => item.game === `${game}`)
-  						.map(item => parseInt(item.mechanics_enjoyment, 10));  // Convert  Complexity to Int
-  					const averageRating = parseFloat((ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length).toFixed(1));
-  					let mechs = ``;
-	        		if (isNaN(averageRating)) {
-  						return 'TBD';
-  					} else {
-						for (let i = 0; i < Math.trunc(averageRating); i++) {
-							mechs += `<img src="assets/icons/game-icons/other-icons/gear.svg" alt="Clock" style="width:12px; height:12px;">`;
-						}
-						if ((Math.round(averageRating * 2) % 2) == 1) {
-							mechs += `<img src="assets/icons/game-icons/other-icons/half-gear.svg" alt="Clock" style="width:6px; height:12px;">`;
-						}
-	  					return `${mechs}<br>${averageRating}`;
-  					}
-	        	},
+			        const game = params.data.game;
+			        const ratings = feedback_data
+			            .filter(item => item.game === game)
+			            .map(item => parseInt(item.mechanics_enjoyment, 10));  // Extract numeric rating
+
+			        const averageRating = ratings.length > 0 
+			            ? (ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length) 
+			            : NaN;
+
+			        return isNaN(averageRating) ? 'TBD' : averageRating;  // Return numeric value for sorting
+			    },
+			    valueFormatter: (params) => {
+			        const averageRating = params.value;
+			        let mechs = '';
+			        if (isNaN(averageRating)) {
+			            return 'TBD';
+			        } else {
+			            // Generate HTML based on the numeric rating
+			            for (let i = 0; i < Math.trunc(averageRating); i++) {
+			                mechs += `<img src="assets/icons/game-icons/other-icons/gear.svg" alt="Clock" style="width:12px; height:12px;">`;
+			            }
+			            if ((Math.round(averageRating * 2) % 2) == 1) {
+			                mechs += `<img src="assets/icons/game-icons/other-icons/half-gear.svg" alt="Clock" style="width:6px; height:12px;">`;
+			            }
+			            return `${mechs}<br>${averageRating}`;
+			        }
+			    },
+			    sortable: true,
+			    comparator: (valueA, valueB) => {
+			        return valueA - valueB;  // Compare numeric values for sorting
+			    },
 	        	minWidth: 100
 	        },
 	        { 
@@ -63,24 +76,37 @@ function runner(games_data, feedback_data) {
 	        	field: 'theme_rating', 
 	        	headerName: 'Rating',
 	        	valueGetter: (params) => {
-	        		const game = params.data.game;
-	        		const ratings = feedback_data
-  						.filter(item => item.game === `${game}`)
-  						.map(item => parseInt(item.theme_enjoyment, 10));  // Convert  Complexity to Int
-  					const averageRating = parseFloat((ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length).toFixed(1));
-  					let themes = ``;
-	        		if (isNaN(averageRating)) {
-  						return 'TBD';
-  					} else {
-						for (let i = 0; i < Math.trunc(averageRating); i++) {
-							themes += `<img src="assets/icons/game-icons/other-icons/bulb.svg" alt="Clock" style="width:12px; height:12px;">`;
-						}
-						if ((Math.round(averageRating * 2) % 2) == 1) {
-							themes += `<img src="assets/icons/game-icons/other-icons/half-bulb.svg" alt="Clock" style="width:6px; height:12px;">`;
-						}
-	  					return `${themes}<br>${averageRating}`;
-  					}
-	        	},
+			        const game = params.data.game;
+			        const ratings = feedback_data
+			            .filter(item => item.game === game)
+			            .map(item => parseInt(item.theme_enjoyment, 10));  // Extract numeric rating
+
+			        const averageRating = ratings.length > 0 
+			            ? (ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length) 
+			            : NaN;
+
+			        return isNaN(averageRating) ? 'TBD' : averageRating;  // Return numeric value for sorting
+			    },
+			    valueFormatter: (params) => {
+			        const averageRating = params.value;
+			        let themes = '';
+			        if (isNaN(averageRating)) {
+			            return 'TBD';
+			        } else {
+			            // Generate HTML based on the numeric rating
+			            for (let i = 0; i < Math.trunc(averageRating); i++) {
+			                themes += `<img src="assets/icons/game-icons/other-icons/bulb.svg" alt="Clock" style="width:12px; height:12px;">`;
+			            }
+			            if ((Math.round(averageRating * 2) % 2) == 1) {
+			                themes += `<img src="assets/icons/game-icons/other-icons/half-bulb.svg" alt="Clock" style="width:6px; height:12px;">`;
+			            }
+			            return `${themes}<br>${averageRating}`;
+			        }
+			    },
+			    sortable: true,
+			    comparator: (valueA, valueB) => {
+			        return valueA - valueB;  // Compare numeric values for sorting
+			    },
 	        	minWidth: 100
 	        },
 	        {
@@ -161,48 +187,74 @@ function runner(games_data, feedback_data) {
 	        	field: 'learning_complexity', 
 	        	headerName: 'Learning Complexity',
 	        	valueGetter: (params) => {
-	        		const game = params.data.game;
-	        		const complexities = feedback_data
-  						.filter(item => item.game === `${game}`)
-  						.map(item => parseInt(item.learning_complexity, 10));  // Convert  Complexity to Int
-  					const averageComplexity = parseFloat((complexities.reduce((sum, complex) => sum + complex, 0) / complexities.length).toFixed(1));
-	        		let learning = ``;
-	        		if (isNaN(averageComplexity)) {
-  						return 'TBD';
-  					} else {
-						for (let i = 0; i < Math.trunc(averageComplexity); i++) {
-							learning += `<img src="assets/icons/game-icons/other-icons/learning-complexity.svg" alt="Clock" style="width:12px; height:12px;">`;
-						}
-						if ((Math.round(averageComplexity * 2) % 2) == 1) {
-							learning += `<img src="assets/icons/game-icons/other-icons/half-learning-complexity.svg" alt="Clock" style="width:6px; height:12px;">`;
-						}
-	  					return `${learning}<br>${averageComplexity}`;
-  					}
-	        	},
+			        const game = params.data.game;
+			        const complexities = feedback_data
+			            .filter(item => item.game === game)
+			            .map(item => parseInt(item.learning_complexity, 10));  // Extract numeric rating
+
+			        const averageComplexity = complexities.length > 0 
+			            ? (complexities.reduce((sum, complex) => sum + complex, 0) / complexities.length) 
+			            : NaN;
+
+			        return isNaN(averageComplexity) ? 'TBD' : averageComplexity;  // Return numeric value for sorting
+			    },
+			    valueFormatter: (params) => {
+			        const averageComplexity = params.value;
+			        let learning = '';
+			        if (isNaN(averageComplexity)) {
+			            return 'TBD';
+			        } else {
+			            // Generate HTML based on the numeric rating
+			            for (let i = 0; i < Math.trunc(averageComplexity); i++) {
+			                learning += `<img src="assets/icons/game-icons/other-icons/learning-complexity.svg" alt="Clock" style="width:12px; height:12px;">`;
+			            }
+			            if ((Math.round(averageComplexity * 2) % 2) == 1) {
+			                learning += `<img src="assets/icons/game-icons/other-icons/half-learning-complexity.svg" alt="Clock" style="width:6px; height:12px;">`;
+			            }
+			            return `${learning}<br>${averageComplexity}`;
+			        }
+			    },
+			    sortable: true,
+			    comparator: (valueA, valueB) => {
+			        return valueA - valueB;  // Compare numeric values for sorting
+			    },
 				minWidth: 150
 	        },
 	        { 
 	        	field: 'playing_complexity', 
 	        	headerName: 'Playing Complexity',
 	        	valueGetter: (params) => {
-	        		const game = params.data.game;
-	        		const complexities = feedback_data
-  						.filter(item => item.game === `${game}`)
-  						.map(item => parseInt(item.playing_complexity, 10));  // Convert  Complexity to Int
-  					const averageComplexity = parseFloat((complexities.reduce((sum, complex) => sum + complex, 0) / complexities.length).toFixed(1));
-	        		let playing = ``;
-	        		if (isNaN(averageComplexity)) {
-  						return 'TBD';
-  					} else {
-						for (let i = 0; i < Math.trunc(averageComplexity); i++) {
-							playing += `<img src="assets/icons/game-icons/other-icons/playing-complexity.svg" alt="Clock" style="width:12px; height:12px;">`;
-						}
-						if ((Math.round(averageComplexity * 2) % 2) == 1) {
-							playing += `<img src="assets/icons/game-icons/other-icons/half-playing-complexity.svg" alt="Clock" style="width:6px; height:12px;">`;
-						}
-	  					return `${playing}<br>${averageComplexity}`;
-  					}
-	        	},
+			        const game = params.data.game;
+			        const complexities = feedback_data
+			            .filter(item => item.game === game)
+			            .map(item => parseInt(item.playing_complexity, 10));  // Extract numeric rating
+
+			        const averageComplexity = complexities.length > 0 
+			            ? (complexities.reduce((sum, complex) => sum + complex, 0) / complexities.length) 
+			            : NaN;
+
+			        return isNaN(averageComplexity) ? 'TBD' : averageComplexity;  // Return numeric value for sorting
+			    },
+			    valueFormatter: (params) => {
+			        const averageComplexity = params.value;
+			        let playing = '';
+			        if (isNaN(averageComplexity)) {
+			            return 'TBD';
+			        } else {
+			            // Generate HTML based on the numeric rating
+			            for (let i = 0; i < Math.trunc(averageComplexity); i++) {
+			                playing += `<img src="assets/icons/game-icons/other-icons/playing-complexity.svg" alt="Clock" style="width:12px; height:12px;">`;
+			            }
+			            if ((Math.round(averageComplexity * 2) % 2) == 1) {
+			                playing += `<img src="assets/icons/game-icons/other-icons/half-playing-complexity.svg" alt="Clock" style="width:6px; height:12px;">`;
+			            }
+			            return `${playing}<br>${averageComplexity}`;
+			        }
+			    },
+			    sortable: true,
+			    comparator: (valueA, valueB) => {
+			        return valueA - valueB;  // Compare numeric values for sorting
+			    },
 				minWidth: 150
 	        },
 	        { field: 'expansion', headerName: 'Expansion', hide: true, },
