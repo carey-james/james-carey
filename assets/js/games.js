@@ -19,7 +19,7 @@ function runner(games_data, feedback_data) {
 			summary_data.push(summary_item);
 		} else {
 			summary_item.rated = false;
-			const filtered_item = all_data.filter(item => item.game === game)[0];
+			const filtered_item = all_games.filter(item => item.game === game)[0];
 			summary_item.avg_mech_rating = 0;
 			summary_item.avg_theme_rating = 0;
 			summary_item.avg_learn_comp = filtered_item.learning_complexity;
