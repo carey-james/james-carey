@@ -7,13 +7,12 @@ function runner(games_data, feedback_data) {
 	const all_games = [...new Set(games_data.map(item => item.game))];
 	console.log(all_games);
 	const feedback_games = [...new Set(feedback_data.map(item => item.game))];
-	all_games.forEach(igame => {
-		console.log(igame);
+	all_games.forEach(game => {
 		let summary_item = {};
-		summary_item.game = igame;
-		if (feedback_games.includes(igame)) {
+		summary_item.game = game;
+		if (feedback_games.includes(game)) {
 			summary_item.rated = true;
-			const filtered_items = feedback_data.filter(item => item.game === igame);
+			const filtered_items = feedback_data.filter(item => item.game === game);
 			summary_item.avg_mech_rating = parseFloat((filtered_items.map(item => parseInt(item.mechanics_enjoyment, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
 			summary_item.avg_theme_rating = parseFloat((filtered_items.map(item => parseInt(item.theme_enjoyment, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
 			summary_item.avg_learn_comp = parseFloat((filtered_items.map(item => parseInt(item.learning_complexity, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
@@ -21,8 +20,7 @@ function runner(games_data, feedback_data) {
 			summary_data.push(summary_item);
 		} else {
 			summary_item.rated = false;
-			const filtered_item = games_data.filter(item => item.game === igame);
-			console.log(filtered_item);
+			const filtered_item = games_data.filter(item => item.game === game)[0];
 			summary_item.avg_mech_rating = 0;
 			summary_item.avg_theme_rating = 0;
 			summary_item.avg_learn_comp = filtered_item.learning_complexity;
