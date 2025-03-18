@@ -31,8 +31,15 @@
 				<h3>James' Games</h3>
 			</header>
 		</section>
-
 		<!-- Main Content -->
+		<div class="options">
+			<div class="field">
+				<label class="label">Find a game with:</label>
+				<label for="players-slider">Players:</label>
+    			<input type="range" id="players-slider" min="1" max="13" step="1" value="1">
+    			<span id="slider-value">1</span>
+			</div>
+		</div>
 		<div class="wrapper">
 			<div class="container">
 				<div id="gamesGrid" style="height: 500px"></div>
