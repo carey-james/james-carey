@@ -59,7 +59,7 @@ function runner(games_data, feedback_data) {
   					let mechs = ``;
 	        		if (games.length < 1) {
   						return 'ERROR';
-  					} else if (games.rated[0]) {
+  					} else if (games[0].rated) {
 						for (let i = 0; i < Math.floor(games[0].avg_mech_rating); i++) {
 							mechs += `<img src="assets/icons/game-icons/other-icons/gear.svg" alt="Gear" style="width:12px; height:12px;">`;
 						}
