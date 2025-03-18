@@ -169,7 +169,9 @@ function runner(games_data, feedback_data) {
 				headerName: 'Time',
 				valueGetter: (params) => {
 					const minTime = summary_data.min_time;
+					console.log(minTime);
 					const maxTime = summary_data.max_time;
+					console.log(maxTime);
 					const medTime = (Number(minTime) + Number(maxTime)) / 2;
 					let numClocks = 0;
 					let clocks = ``;
