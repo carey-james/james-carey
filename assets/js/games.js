@@ -68,13 +68,9 @@ function runner(games_data, feedback_data) {
 						}
 	  					return `${mechs}<br>${games[0].avg_mech_rating}`;
   					} else {
-						for (let i = 0; i < Math.floor(games[0].avg_mech_rating); i++) {
-							mechs += `<img src="assets/icons/game-icons/other-icons/nr_gear.svg" alt="Gear" style="width:12px; height:12px;">`;
+						mechs += `<img src="assets/icons/game-icons/other-icons/question.svg" alt="Question Mark" style="width:12px; height:12px;">`;
 						}
-						if ((games[0].avg_mech_rating - Math.floor(games[0].avg_mech_rating)) >= 0.49 ) {
-							mechs += `<img src="assets/icons/game-icons/other-icons/nr_half-gear.svg" alt="Half Gear" style="width:6px; height:12px;">`;
-						}
-	  					return `${mechs}<br>${games[0].avg_mech_rating}`;
+	  					return `${mechs}<br>Not Rated`;
   					}
 	        	},
 	        	sortable: true,
@@ -106,7 +102,7 @@ function runner(games_data, feedback_data) {
   					let themes = ``;
 	        		if (games.length < 1) {
   						return 'TBD';
-  					} else {
+  					} else if (games[0].rated) {
 						for (let i = 0; i < Math.floor(games[0].avg_theme_rating); i++) {
 							themes += `<img src="assets/icons/game-icons/other-icons/bulb.svg" alt="Bulb" style="width:12px; height:12px;">`;
 						}
@@ -114,6 +110,10 @@ function runner(games_data, feedback_data) {
 							themes += `<img src="assets/icons/game-icons/other-icons/half-bulb.svg" alt="Half Bulb" style="width:6px; height:12px;">`;
 						}
 	  					return `${themes}<br>${games[0].avg_theme_rating}`;
+  					} else {
+						themes += `<img src="assets/icons/game-icons/other-icons/question.svg" alt="Question Mark" style="width:12px; height:12px;">`;
+						}
+	  					return `${themes}<br>Not Rated`;
   					}
 	        	},
 	        	sortable: true,
@@ -248,12 +248,20 @@ function runner(games_data, feedback_data) {
 	        		let playing = ``;
 	        		if (games.length < 1) {
   						return 'TBD';
-  					} else {
+  					} else if (games[0].rated) {
 						for (let i = 0; i < Math.floor(games[0].avg_play_comp); i++) {
 							playing += `<img src="assets/icons/game-icons/other-icons/playing-complexity.svg" alt="Clock" style="width:12px; height:12px;">`;
 						}
 						if ((games[0].avg_play_comp - Math.floor(games[0].avg_play_comp)) >= 0.49 ) {
 							playing += `<img src="assets/icons/game-icons/other-icons/half-playing-complexity.svg" alt="Clock" style="width:6px; height:12px;">`;
+						}
+	  					return `${playing}<br>${games[0].avg_play_comp}`;
+  					} else {
+  						for (let i = 0; i < Math.floor(games[0].avg_play_comp); i++) {
+							playing += `<img src="assets/icons/game-icons/other-icons/nr_playing-complexity.svg" alt="Clock" style="width:12px; height:12px;">`;
+						}
+						if ((games[0].avg_play_comp - Math.floor(games[0].avg_play_comp)) >= 0.49 ) {
+							playing += `<img src="assets/icons/game-icons/other-icons/nr_half-playing-complexity.svg" alt="Clock" style="width:6px; height:12px;">`;
 						}
 	  					return `${playing}<br>${games[0].avg_play_comp}`;
   					}
