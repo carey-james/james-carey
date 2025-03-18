@@ -16,11 +16,7 @@ function runner(games_data, feedback_data) {
 			summary_item.avg_mech_rating = parseFloat((filtered_items.map(item => parseInt(item.mechanics_enjoyment, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
 			summary_item.avg_theme_rating = parseFloat((filtered_items.map(item => parseInt(item.theme_enjoyment, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
 			summary_item.min_time = Math.ceil(d3.quantile(filtered_items.map(item => parseInt(item.playtime, 10)).sort((a, b) => (a - b)), 0.25)/ 5) * 5;
-			console.log(filtered_items.map(item => parseInt(item.playtime, 10)).sort((a, b) => (a - b)));
-			console.log(d3.quantile(filtered_items.map(item => parseInt(item.playtime, 10)).sort((a, b) => (a - b)), 0.25));
-			console.log(summary_item.min_time);
-			summary_item.max_time = Math.ceil(d3.quantile(filtered_items.map(item => parseInt(item.playtime, 10)).sort((a, b) => (a - b)), 0.75)/ 5) * 5;
-			console.log(summary_item.max_time);		
+			summary_item.max_time = Math.ceil(d3.quantile(filtered_items.map(item => parseInt(item.playtime, 10)).sort((a, b) => (a - b)), 0.75)/ 5) * 5;	
 			summary_item.avg_learn_comp = parseFloat((filtered_items.map(item => parseInt(item.learning_complexity, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
 			summary_item.avg_play_comp = parseFloat((filtered_items.map(item => parseInt(item.playing_complexity, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
 			summary_data.push(summary_item);
@@ -205,7 +201,9 @@ function runner(games_data, feedback_data) {
 				sortable: true,
 				comparator: (valueA, valueB, nodeA, nodeB, isInverted) => {
 					if (!nodeA.data || !nodeB.data) return 0;
-					return (((Number(nodeA.data.max_time) + Number(nodeA.data.min_time)) / 2) - ((Number(nodeB.data.max_time) + Number(nodeB.data.min_time)) / 2));
+					const gamesA = summary_data.filter(item => item.game === `${nodeA.data.game}`);
+					const gamesB = summary_data.filter(item => item.game === `${nodeB.data.game}`);
+					return (((Number(gamesA[0].max_time) + Number(gamesA[0].min_time)) / 2) - ((Number(gamesB[0].max_time) + Number(gamesB[0].min_time)) / 2));
 				},
 				minWidth: 100
 			},
@@ -285,11 +283,11 @@ function runner(games_data, feedback_data) {
 				},
 				minWidth: 150
 	        },
-	        { field: 'expansion', headerName: 'Expansion', hide: true, },
-	        { field: 'co-op', headerName: 'Co-op', hide: true },
-	        { field: 'legacy', headerName: 'Legacy', hide: true },
-	        { field: 'favorite', headerName: 'Favorite', hide: true },
-	        { field: 'play_more', headerName: 'Play More', hide: true },
+	        { field: 'expansion', headerName: 'Expansion', hide: false, },
+	        { field: 'co-op', headerName: 'Co-op', hide: false },
+	        { field: 'legacy', headerName: 'Legacy', hide: false },
+	        { field: 'favorite', headerName: 'Favorite', hide: false },
+	        { field: 'play_more', headerName: 'Play More', hide: false },
 		],
 		defaultColDef: {
     		flex: 1,
