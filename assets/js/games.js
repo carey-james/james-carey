@@ -345,9 +345,11 @@ function runner(games_data, feedback_data) {
 	const slider = document.getElementById('players-slider');
 	const sliderValue = document.getElementById('slider-value');
 	slider.addEventListener('input', function () {
-		let value = slider.value;
-		if (value == 13) {
+		let value = slider.value - 1;
+		if (value == 12) {
 			sliderValue.textContent = '12+';
+		} else if (value == 0) {
+			sliderValue.textContent = 'All Games'
 		} else {
 			sliderValue.textContent = value;
 		}
