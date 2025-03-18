@@ -5,7 +5,6 @@ function runner(games_data, feedback_data) {
 
 	let summary_data = [];
 	const all_games = [...new Set(games_data.map(item => item.game))];
-	console.log(all_games);
 	const feedback_games = [...new Set(feedback_data.map(item => item.game))];
 	all_games.forEach(game => {
 		let summary_item = {};
@@ -378,7 +377,7 @@ function runner(games_data, feedback_data) {
 		} else {
 			players_slider_value.textContent = value;
 		}
-		players = newValue;
+		players = value;
 		gridApi.onFilterChanged();
 	});
 	
