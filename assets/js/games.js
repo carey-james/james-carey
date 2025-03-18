@@ -351,12 +351,17 @@ function runner(games_data, feedback_data) {
 		} else {
 			sliderValue.textContent = value;
 		}
-		//filterGames(value);
+		filterGames(value);
 	});
-	/*
+	
 	function filterGames(players) {
-		//const filter = (players ==  
-	}*/
+		gridOptions.api.setRowData(rowData.filter(row => {
+			if (players === 12) {
+            	return row.max_players >= 12; // Show games with max_players >= 12
+        	}
+			return players >= row.min_players && players <= row.max_players;
+		}));
+	}
 }
 
 async function initGames() {

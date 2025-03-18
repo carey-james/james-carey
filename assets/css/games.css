@@ -1,17 +1,23 @@
 /* Options */
-.options {
+	.options {
 		text-align: center;
 		padding-top: 0.75em;
 		padding-bottom: 0.75rem;
 		margin-bottom: 0.75em; } 
 
-.options .field, .options .label, .options .control {
+	.options .field, .options .label, .options .control {
 		margin-bottom: 0;
 		display: inline-block; }
-		
-.options .label {
+
+	.options .label {
 		font-weight: normal;
 		font-size: 12pt;
+		margin-right: 0.2rem;
+		margin-left: 0.2rem; }
+
+	.options .slider-value {
+		font-weight: normal;
+		font-size: 10pt;
 		margin-right: 0.2rem;
 		margin-left: 0.2rem; }
 
