@@ -335,37 +335,69 @@ function runner(games_data, feedback_data) {
 		    },
   		},
   		headerHeight: 60,
-  		onGridReady: function(params) {
-  			gridApi = params.api;
-    		// Player selection slider
-			const slider = document.getElementById('players-slider');
-			const sliderValue = document.getElementById('slider-value');
-			slider.addEventListener('input', function () {
-				let value = slider.value;
-				if (value == 12) {
-					sliderValue.textContent = '12+';
-				} else {
-					sliderValue.textContent = value;
-				}
-				filterGames(value);
-			});
+  		isExternalFilterPresent: isExternalFilterPresent,
+  		doesExternalFilterPass: doesExternalFilterPass
+  		// onGridReady: function(params) {
+  		// 	gridApi = params.api;
+    	// 	// Player selection slider
+		// 	const slider = document.getElementById('players-slider');
+		// 	const sliderValue = document.getElementById('slider-value');
+		// 	slider.addEventListener('input', function () {
+		// 		let value = slider.value;
+		// 		if (value == 12) {
+		// 			sliderValue.textContent = '12+';
+		// 		} else {
+		// 			sliderValue.textContent = value;
+		// 		}
+		// 		filterGames(value);
+		// 	});
 			
-			function filterGames(players) {
-				if (gridApi) {
-					gridApi.setRowData(games_data.filter(row => {
-						if (players === 12) {
-		            		return row.max_players >= 12; // Show games with max_players >= 12
-		        		}
-						return players >= row.min_players && players <= row.max_players;
-					}));
-				}
-			}
-  		}
+		// 	function filterGames(players) {
+		// 		if (gridApi) {
+		// 			gridApi.setRowData(games_data.filter(row => {
+		// 				if (players === 12) {
+		//             		return row.max_players >= 12; // Show games with max_players >= 12
+		//         		}
+		// 				return players >= row.min_players && players <= row.max_players;
+		// 			}));
+		// 		}
+		// 	}
+  		// }
 	};
+
+	let players = 0;
+	function isExternalFilterPresent() {
+		return players !== 0;
+	}
+	function doesExternalFilterPass(node) {
+		if (node.data) {
+			if (players === 12) {
+				return node.data.max_players >= 12; // Show games with max_players >= 12
+			}
+			return players >= node.data.min_players && players <= node.data.max_players;
+		}
+		return true;
+	}
+	function externalFilterChanged(newValue) {
+		players = newValue;
+		gridApi.onFilterChanged();
+	}
 
 	// Your Javascript code to create the Data Grid
 	const myGridElement = document.querySelector('#gamesGrid');
-	agGrid.createGrid(myGridElement, gridOptions);
+	gridApi = agGrid.createGrid(myGridElement, gridOptions);
+
+	const slider = document.getElementById('players-slider');
+	const sliderValue = document.getElementById('slider-value');
+	slider.addEventListener('input', function () {
+		let value = slider.value;
+		if (value == 12) {
+			sliderValue.textContent = '12+';
+		} else {
+			sliderValue.textContent = value;
+		}
+		externalFilterChanged(value);
+	});
 
 }
 
