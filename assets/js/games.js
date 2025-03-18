@@ -25,9 +25,9 @@ function runner(games_data, feedback_data) {
 			const filtered_item = games_data.filter(item => item.game === game)[0];
 			summary_item.avg_mech_rating = 0;
 			summary_item.avg_theme_rating = 0;
-			console.log(filtered_item.min_time);
-			summary_item.min_time = filtered_item.min_time;
-			summary_item.max_time = filtered_item.max_time;
+			console.log(parseInt(filtered_item.min_time, 10));
+			summary_item.min_time = parseInt(filtered_item.min_time, 10);
+			summary_item.max_time = parseInt(filtered_item.max_time, 10);
 			summary_item.avg_learn_comp = filtered_item.learning_complexity;
 			summary_item.avg_play_comp = filtered_item.learning_complexity;
 			summary_data.push(summary_item);
