@@ -339,39 +339,49 @@ function runner(games_data, feedback_data) {
   		doesExternalFilterPass: doesExternalFilterPass
 	};
 
+	let player_filter = false;
 	let players = 0;
 	function isExternalFilterPresent() {
 		return players !== 0;
 	}
 	function doesExternalFilterPass(node) {
 		if (node.data) {
-			if (players === 12) {
-				return node.data.max_players >= 12; // Show games with max_players >= 12
+			if (player_filter) {
+				if (players === 12) {
+					return node.data.max_players >= 12; // Show games with max_players >= 12
+				}
+				return ((players >= Number(node.data.min_players)) && (players <= Number(node.data.max_players)));
 			}
-			return ((players >= Number(node.data.min_players)) && (players <= Number(node.data.max_players)));
 		}
 		return true;
-	}
-	function externalFilterChanged(newValue) {
-		players = newValue;
-		gridApi.onFilterChanged();
 	}
 
 	// Your Javascript code to create the Data Grid
 	const myGridElement = document.querySelector('#gamesGrid');
 	gridApi = agGrid.createGrid(myGridElement, gridOptions);
 
-	const slider = document.getElementById('players-slider');
-	const sliderValue = document.getElementById('slider-value');
-	slider.addEventListener('input', function () {
-		let value = slider.value;
-		if (value == 12) {
-			sliderValue.textContent = '12+';
+	const players_box = document.getElementById('players-box');
+	players_box.addEventListener('change', function(event) {
+		if (event.target.checked) {
+			player_filter = true;
 		} else {
-			sliderValue.textContent = value;
+			player_filter = false;
 		}
-		externalFilterChanged(value);
+		gridApi.onFilterChanged();
 	});
+	const players_slider = document.getElementById('players-slider');
+	const players_slider_value = document.getElementById('slider-value');
+	players_slider.addEventListener('input', function () {
+		let value = players_slider.value;
+		if (value == 12) {
+			players_slider_value.textContent = '12+';
+		} else {
+			players_slider_value.textContent = value;
+		}
+		players = newValue;
+		gridApi.onFilterChanged();
+	});
+	
 
 }
 
