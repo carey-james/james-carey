@@ -187,8 +187,14 @@ function runner(games_data, feedback_data) {
 					} else {
 						numClocks = 5;
 					}
-					for (let i = 0; i < numClocks; i++) {
-						clocks += `<img src="assets/icons/game-icons/other-icons/clock.svg" alt="Clock" style="width:12px; height:12px;">`;
+					if (games[0].rated) {
+						for (let i = 0; i < numClocks; i++) {
+							clocks += `<img src="assets/icons/game-icons/other-icons/clock.svg" alt="Clock" style="width:12px; height:12px;">`;
+						}
+					} else {
+						for (let i = 0; i < numClocks; i++) {
+							clocks += `<img src="assets/icons/game-icons/other-icons/nr_clock.svg" alt="Clock" style="width:12px; height:12px;">`;
+						}
 					}
 					if (minTime == maxTime) {
 						timeLeg = `${minTime} mins`;
