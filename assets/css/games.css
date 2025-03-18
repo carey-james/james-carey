@@ -11,8 +11,8 @@
 
 	.options .checkbox {
 		display: inline-block;
-  		width: auto;
-  		height: auto;
+  		width: 16px;
+  		height: 16px;
 	}
 
 	.options .slider, .options .checkbox {
