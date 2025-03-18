@@ -15,6 +15,8 @@ function runner(games_data, feedback_data) {
 			const filtered_items = feedback_data.filter(item => item.game === game);
 			summary_item.avg_mech_rating = parseFloat((filtered_items.map(item => parseInt(item.mechanics_enjoyment, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
 			summary_item.avg_theme_rating = parseFloat((filtered_items.map(item => parseInt(item.theme_enjoyment, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
+			summary_item.min_time = Math.ceil(d3.quantile(filtered_items.map(item => parseInt(item.theme_enjoyment, 10)), 0.25)/ 5) * 5;
+			summary_item.max_time = Math.ceil(d3.quantile(filtered_items.map(item => parseInt(item.theme_enjoyment, 10)), 0.75)/ 5) * 5;		
 			summary_item.avg_learn_comp = parseFloat((filtered_items.map(item => parseInt(item.learning_complexity, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
 			summary_item.avg_play_comp = parseFloat((filtered_items.map(item => parseInt(item.playing_complexity, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
 			summary_data.push(summary_item);
@@ -23,6 +25,8 @@ function runner(games_data, feedback_data) {
 			const filtered_item = games_data.filter(item => item.game === game)[0];
 			summary_item.avg_mech_rating = 0;
 			summary_item.avg_theme_rating = 0;
+			summary_item.min_time = filtered_item.min_time;
+			summary_item.max_time = filtered_item.max_time;
 			summary_item.avg_learn_comp = filtered_item.learning_complexity;
 			summary_item.avg_play_comp = filtered_item.learning_complexity;
 			summary_data.push(summary_item);
@@ -164,8 +168,8 @@ function runner(games_data, feedback_data) {
 				field: 'time',
 				headerName: 'Time',
 				valueGetter: (params) => {
-					const minTime = params.data.min_time;
-					const maxTime = params.data.max_time;
+					const minTime = summary_data.min_time;
+					const maxTime = summary_data.max_time;
 					const medTime = (Number(minTime) + Number(maxTime)) / 2;
 					let numClocks = 0;
 					let clocks = ``;
