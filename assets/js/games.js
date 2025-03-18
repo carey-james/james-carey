@@ -360,7 +360,7 @@ function runner(games_data, feedback_data) {
 			}
 			if (time_filter) {
 				if (time_slide < 175) {
-					if (time_slide > (games[0].max_time + 5)) { // Allow for a bit of wiggle room
+					if (time_slide < (games[0].max_time + 5)) { // Allow for a bit of wiggle room
 						return false; 
 					}
 				}
