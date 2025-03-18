@@ -16,7 +16,8 @@
 		margin-left: 0.2rem; }
 
 	.options .slider-value {
-		font-weight: normal;
+		color: var(--color-goldenrod);
+		font-weight: bold;
 		font-size: 10pt;
 		margin-right: 0.2rem;
 		margin-left: 0.2rem; }
