@@ -783,7 +783,7 @@
 		width: 3em;
 	}
 
-	input[type="checkbox"],
+/* 	input[type="checkbox"],
 	input[type="radio"] {
 		-moz-appearance: none;
 		-webkit-appearance: none;
@@ -823,7 +823,7 @@
 		background: var(--color-slate);
 		color: var(--color-white);
 		content: '\f00c';
-	}
+	} */
 
 	input[type="checkbox"]:focus + label::before,
 	input[type="radio"]:focus + label::before {
