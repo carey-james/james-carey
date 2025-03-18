@@ -340,6 +340,23 @@ function runner(games_data, feedback_data) {
 	// Your Javascript code to create the Data Grid
 	const myGridElement = document.querySelector('#gamesGrid');
 	agGrid.createGrid(myGridElement, gridOptions);
+
+	// Player selection slider
+	const slider = document.getElementById('players-slider');
+	const sliderValue = document.getElementById('slider-value');
+	slider.addEventListener('input', function () {
+		let value = slider.value;
+		if (value == 13) {
+			sliderValue.textContent = '12+';
+		} else {
+			sliderValue.textContent = value;
+		}
+		//filterGames(value);
+	});
+	/*
+	function filterGames(players) {
+		//const filter = (players ==  
+	}*/
 }
 
 async function initGames() {
