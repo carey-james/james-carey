@@ -15,9 +15,9 @@ function runner(games_data, feedback_data) {
 			const filtered_items = feedback_data.filter(item => item.game === game);
 			summary_item.avg_mech_rating = parseFloat((filtered_items.map(item => parseInt(item.mechanics_enjoyment, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
 			summary_item.avg_theme_rating = parseFloat((filtered_items.map(item => parseInt(item.theme_enjoyment, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
-			summary_item.min_time = Math.ceil(d3.quantile(filtered_items.map(item => parseInt(item.theme_enjoyment, 10)), 0.25)/ 5) * 5;
+			summary_item.min_time = Math.ceil(d3.quantile(filtered_items.map(item => parseInt(item.playtime, 10)), 0.25)/ 5) * 5;
 			console.log(summary_item.min_time);
-			summary_item.max_time = Math.ceil(d3.quantile(filtered_items.map(item => parseInt(item.theme_enjoyment, 10)), 0.75)/ 5) * 5;
+			summary_item.max_time = Math.ceil(d3.quantile(filtered_items.map(item => parseInt(item.playtime, 10)), 0.75)/ 5) * 5;
 			console.log(summary_item.max_time);		
 			summary_item.avg_learn_comp = parseFloat((filtered_items.map(item => parseInt(item.learning_complexity, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
 			summary_item.avg_play_comp = parseFloat((filtered_items.map(item => parseInt(item.playing_complexity, 10)).reduce((sum, rating) => sum + rating, 0) / filtered_items.length).toFixed(1));
