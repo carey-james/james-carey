@@ -352,12 +352,14 @@ function runner(games_data, feedback_data) {
 			});
 			
 			function filterGames(players) {
-				gridOptions.api.setRowData(rowData.filter(row => {
-					if (players === 12) {
-		            	return row.max_players >= 12; // Show games with max_players >= 12
-		        	}
-					return players >= row.min_players && players <= row.max_players;
-				}));
+				if (gridApi) {
+					gridOptions.api.setRowData(games_data.filter(row => {
+						if (players === 12) {
+		            		return row.max_players >= 12; // Show games with max_players >= 12
+		        		}
+						return players >= row.min_players && players <= row.max_players;
+					}));
+				}
 			}
   		}
 	};
