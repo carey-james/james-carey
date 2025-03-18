@@ -168,6 +168,8 @@ function runner(games_data, feedback_data) {
 				field: 'time',
 				headerName: 'Time',
 				valueGetter: (params) => {
+					const game = params.data.game;
+  					const games = summary_data.filter(item => item.game === `${game}`);
 					const minTime = summary_data.min_time;
 					console.log(minTime);
 					const maxTime = summary_data.max_time;
