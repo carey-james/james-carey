@@ -310,7 +310,7 @@ function runner(games_data, feedback_data) {
 	        	},
 	        	sortable: false,
 	        	minWidth: 150
-	        }
+	        },
 	        { field: 'expansion', headerName: 'Expansion', hide: true },
 	        { field: 'co-op', headerName: 'Co-op', hide: true },
 	        { field: 'legacy', headerName: 'Legacy', hide: true },
