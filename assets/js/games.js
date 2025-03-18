@@ -406,7 +406,7 @@ function runner(games_data, feedback_data) {
 	});
 	const time_slider = document.getElementById('time-slider');
 	const time_slider_value = document.getElementById('time-slider-value');
-	players_slider.addEventListener('input', function () {
+	time_slider.addEventListener('input', function () {
 		let value = time_slider.value;
 		if (value == 180) {
 			time_slider_value.textContent = '180+';

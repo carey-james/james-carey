@@ -5,9 +5,12 @@
 		padding-bottom: 0.75rem;
 		margin-bottom: 0.75em; } 
 
+	.options .field {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
 	.options .field, .options .label, .options .control {
-		margin-right: 0.2rem;
-		margin-left: 0.2rem;
 		margin-bottom: 0;
 		display: inline-block; }
 
