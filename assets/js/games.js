@@ -283,11 +283,39 @@ function runner(games_data, feedback_data) {
 				},
 				minWidth: 150
 	        },
-	        { field: 'expansion', headerName: 'Expansion', hide: false, },
-	        { field: 'co-op', headerName: 'Co-op', hide: false },
-	        { field: 'legacy', headerName: 'Legacy', hide: false },
-	        { field: 'favorite', headerName: 'Favorite', hide: false },
-	        { field: 'play_more', headerName: 'Play More', hide: false },
+	        {
+	        	field: 'extras',
+	        	headerName: '',
+	        	valueGetter: (params) => {
+	        		let extras = ``;
+	        		if (params.data.expansion !== '') {
+	        			extras += `<img src="assets/icons/game-icons/other-icons/expansion.svg" alt="Expansion" style="width:12px; height:12px;">`;
+	        		}
+	        		if (params.data.co_op !== '') {
+	        			extras += `<img src="assets/icons/game-icons/other-icons/co_op.svg" alt="Co-Op" style="width:12px; height:12px;">`;
+	        		}
+	        		if (params.data.team !== '') {
+	        			extras += `<img src="assets/icons/game-icons/other-icons/team.svg" alt="Team" style="width:12px; height:12px;">`;
+	        		}
+	        		if (params.data.legacy !== '') {
+	        			extras += `<img src="assets/icons/game-icons/other-icons/legacy.svg" alt="Legacy" style="width:12px; height:12px;">`;
+	        		}
+	        		if (params.data.favorite !== '') {
+	        			extras += `<img src="assets/icons/game-icons/other-icons/favorite.svg" alt="Favorite" style="width:12px; height:12px;">`;
+	        		}
+	        		if (params.data.play_more !== '') {
+	        			extras += `<img src="assets/icons/game-icons/other-icons/play_more.svg" alt="Play More" style="width:12px; height:12px;">`;
+	        		}
+	        		return `${extras}`;
+	        	},
+	        	sortable: false,
+	        	minWidth: 150
+	        }
+	        { field: 'expansion', headerName: 'Expansion', hide: true },
+	        { field: 'co-op', headerName: 'Co-op', hide: true },
+	        { field: 'legacy', headerName: 'Legacy', hide: true },
+	        { field: 'favorite', headerName: 'Favorite', hide: true },
+	        { field: 'play_more', headerName: 'Play More', hide: true },
 		],
 		defaultColDef: {
     		flex: 1,
