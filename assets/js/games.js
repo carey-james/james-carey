@@ -289,22 +289,22 @@ function runner(games_data, feedback_data) {
 	        	valueGetter: (params) => {
 	        		let extras = ``;
 	        		if (params.data.expansion !== '') {
-	        			extras += `<img src="assets/icons/game-icons/other-icons/expansion.svg" alt="Expansion" style="width:12px; height:12px;">`;
+	        			extras += `<img src="assets/icons/game-icons/other-icons/expansion.svg" alt="Expansion" style="width:14px; height:14px;">  `;
 	        		}
 	        		if (params.data.co_op !== '') {
-	        			extras += `<img src="assets/icons/game-icons/other-icons/co_op.svg" alt="Co-Op" style="width:12px; height:12px;">`;
+	        			extras += `<img src="assets/icons/game-icons/other-icons/co_op.svg" alt="Co-Op" style="width:14px; height:14px;">  `;
 	        		}
 	        		if (params.data.team !== '') {
-	        			extras += `<img src="assets/icons/game-icons/other-icons/team.svg" alt="Team" style="width:12px; height:12px;">`;
+	        			extras += `<img src="assets/icons/game-icons/other-icons/team.svg" alt="Team" style="width:14px; height:14px;">  `;
 	        		}
 	        		if (params.data.legacy !== '') {
-	        			extras += `<img src="assets/icons/game-icons/other-icons/legacy.svg" alt="Legacy" style="width:12px; height:12px;">`;
+	        			extras += `<img src="assets/icons/game-icons/other-icons/legacy.svg" alt="Legacy" style="width:14px; height:14px;">  `;
 	        		}
 	        		if (params.data.favorite !== '') {
-	        			extras += `<img src="assets/icons/game-icons/other-icons/favorite.svg" alt="Favorite" style="width:12px; height:12px;">`;
+	        			extras += `<img src="assets/icons/game-icons/other-icons/favorite.svg" alt="Favorite" style="width:14px; height:14px;">  `;
 	        		}
 	        		if (params.data.play_more !== '') {
-	        			extras += `<img src="assets/icons/game-icons/other-icons/play_more.svg" alt="Play More" style="width:12px; height:12px;">`;
+	        			extras += `<img src="assets/icons/game-icons/other-icons/play_more.svg" alt="Play More" style="width:14px; height:14px;">  `;
 	        		}
 	        		return `${extras}`;
 	        	},
