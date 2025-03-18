@@ -21,7 +21,7 @@ function runner(games_data, feedback_data) {
 			summary_data.push(summary_item);
 		} else {
 			summary_item.rated = false;
-			const filtered_item = all_games.filter(item => item.game === igame);
+			const filtered_item = games_data.filter(item => item.game === igame);
 			console.log(filtered_item);
 			summary_item.avg_mech_rating = 0;
 			summary_item.avg_theme_rating = 0;
