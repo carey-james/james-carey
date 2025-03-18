@@ -409,9 +409,9 @@ function runner(games_data, feedback_data) {
 	players_slider.addEventListener('input', function () {
 		let value = time_slider.value;
 		if (value == 180) {
-			players_slider_value.textContent = '180+';
+			time_slider_value.textContent = '180+';
 		} else {
-			players_slider_value.textContent = value;
+			time_slider_value.textContent = value;
 		}
 		time_slide = value;
 		gridApi.onFilterChanged();

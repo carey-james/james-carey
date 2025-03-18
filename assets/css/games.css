@@ -15,11 +15,11 @@
 		display: inline-block;
   		width: 16px;
   		height: 16px;
-	}
+  		border-width: 1px;
+  		border-color: var(--color-mint); }
 
 	.options .slider, .options .checkbox {
-		accent-color: var(--color-mint);
-	}
+		accent-color: var(--color-mint); }
 
 	.options .label {
 		font-weight: normal;
