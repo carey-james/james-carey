@@ -138,7 +138,7 @@ function runner(games_data, feedback_data) {
 					const minBest = params.data.min_best;
 					const maxBest = params.data.max_best;
 					let playerDots = ``;
-					for (let i = 1; ((i <= maxPlayers) && (i <= 20)); i++) {
+					for (let i = 1; ((i <= maxPlayers) && (i <= 15)); i++) {
 						if (i < minPlayers) {
 							playerDots += `<img src="assets/icons/game-icons/other-icons/players-not-playable.svg" alt="Light Blue Dot" style="width:5px; height:5px;">`;
 						} else if ((i >= minBest) && (i <= maxBest)) {
