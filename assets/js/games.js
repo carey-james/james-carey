@@ -205,7 +205,7 @@ function runner(games_data, feedback_data) {
 				sortable: true,
 				comparator: (valueA, valueB, nodeA, nodeB, isInverted) => {
 					if (!nodeA.data || !nodeB.data) return 0;
-					return ((Number(nodeA.data.max_time) + Number(nodeA.data.min_time)) - (Number(nodeB.data.max_time) + Number(nodeB.data.min_time)));
+					return (((Number(nodeA.data.max_time) + Number(nodeA.data.min_time)) / 2) - ((Number(nodeB.data.max_time) + Number(nodeB.data.min_time)) / 2));
 				},
 				minWidth: 100
 			},
