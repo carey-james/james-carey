@@ -339,17 +339,33 @@ function runner(games_data, feedback_data) {
 	};
 
 	let player_filter = false;
-	let players = 0;
+	let players = 1;
+	let time_filter = false;
+	let time_slide = 180;
 	function isExternalFilterPresent() {
-		return players !== 0;
+		return (player_filter || time_filter);
 	}
 	function doesExternalFilterPass(node) {
 		if (node.data) {
 			if (player_filter) {
 				if (players === 12) {
-					return node.data.max_players >= 12; // Show games with max_players >= 12
+					if (!(node.data.max_players >= 12)) {
+						return false;
+					} // Show games with max_players >= 12
 				}
-				return ((players >= Number(node.data.min_players)) && (players <= Number(node.data.max_players)));
+				if (!((players >= Number(node.data.min_players)) && (players <= Number(node.data.max_players)))) {
+					return false;
+				}
+			}
+			if (time_filter) {
+				if (players === 12) {
+					if (!(node.data.max_players >= 12)) {
+						return false;
+					} // Show games with max_players >= 12
+				}
+				if (!((players >= Number(node.data.min_players)) && (players <= Number(node.data.max_players)))) {
+					return false;
+				}
 			}
 		}
 		return true;
@@ -359,6 +375,7 @@ function runner(games_data, feedback_data) {
 	const myGridElement = document.querySelector('#gamesGrid');
 	gridApi = agGrid.createGrid(myGridElement, gridOptions);
 
+	// Filter listeners
 	const players_box = document.getElementById('players-box');
 	players_box.addEventListener('change', function(event) {
 		if (event.target.checked) {
@@ -369,7 +386,7 @@ function runner(games_data, feedback_data) {
 		gridApi.onFilterChanged();
 	});
 	const players_slider = document.getElementById('players-slider');
-	const players_slider_value = document.getElementById('slider-value');
+	const players_slider_value = document.getElementById('players-slider-value');
 	players_slider.addEventListener('input', function () {
 		let value = players_slider.value;
 		if (value == 12) {
@@ -378,6 +395,27 @@ function runner(games_data, feedback_data) {
 			players_slider_value.textContent = value;
 		}
 		players = value;
+		gridApi.onFilterChanged();
+	});
+	const time_box = document.getElementById('time-box');
+	time_box.addEventListener('change', function(event) {
+		if (event.target.checked) {
+			time_filter = true;
+		} else {
+			time_filter = false;
+		}
+		gridApi.onFilterChanged();
+	});
+	const time_slider = document.getElementById('time-slider');
+	const time_slider_value = document.getElementById('time-slider-value');
+	players_slider.addEventListener('input', function () {
+		let value = players_slider.value;
+		if (value == 180) {
+			players_slider_value.textContent = '180+';
+		} else {
+			players_slider_value.textContent = value;
+		}
+		time_slide = value;
 		gridApi.onFilterChanged();
 	});
 	
