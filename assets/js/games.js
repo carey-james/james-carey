@@ -69,7 +69,6 @@ function runner(games_data, feedback_data) {
 	  					return `${mechs}<br>${games[0].avg_mech_rating}`;
   					} else {
 						mechs += `<img src="assets/icons/game-icons/other-icons/question.svg" alt="Question Mark" style="width:12px; height:12px;">`;
-						}
 	  					return `${mechs}<br>Not Rated`;
   					}
 	        	},
@@ -112,7 +111,6 @@ function runner(games_data, feedback_data) {
 	  					return `${themes}<br>${games[0].avg_theme_rating}`;
   					} else {
 						themes += `<img src="assets/icons/game-icons/other-icons/question.svg" alt="Question Mark" style="width:12px; height:12px;">`;
-						}
 	  					return `${themes}<br>Not Rated`;
   					}
 	        	},
