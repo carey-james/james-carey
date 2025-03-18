@@ -347,6 +347,7 @@ function runner(games_data, feedback_data) {
 	}
 	function doesExternalFilterPass(node) {
 		if (node.data) {
+			const games = summary_data.filter(item => item.game === `${node.data.game}`);
 			if (player_filter) {
 				if (players === 12) {
 					if (!(node.data.max_players >= 12)) {
@@ -358,13 +359,10 @@ function runner(games_data, feedback_data) {
 				}
 			}
 			if (time_filter) {
-				if (players === 12) {
-					if (!(node.data.max_players >= 12)) {
-						return false;
-					} // Show games with max_players >= 12
-				}
-				if (!((players >= Number(node.data.min_players)) && (players <= Number(node.data.max_players)))) {
-					return false;
+				if (time_slide < 175) {
+					if (time_slide > (games[0].max_time + 5)) { // Allow for a bit of wiggle room
+						return false; 
+					}
 				}
 			}
 		}
@@ -409,7 +407,7 @@ function runner(games_data, feedback_data) {
 	const time_slider = document.getElementById('time-slider');
 	const time_slider_value = document.getElementById('time-slider-value');
 	players_slider.addEventListener('input', function () {
-		let value = players_slider.value;
+		let value = time_slider.value;
 		if (value == 180) {
 			players_slider_value.textContent = '180+';
 		} else {
