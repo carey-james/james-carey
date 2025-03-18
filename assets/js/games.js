@@ -171,9 +171,9 @@ function runner(games_data, feedback_data) {
 				valueGetter: (params) => {
 					const game = params.data.game;
   					const games = summary_data.filter(item => item.game === `${game}`);
-					const minTime = summary_data.min_time;
+					const minTime = games[0].min_time;
 					console.log(minTime);
-					const maxTime = summary_data.max_time;
+					const maxTime = games[0].max_time;
 					console.log(maxTime);
 					const medTime = (Number(minTime) + Number(maxTime)) / 2;
 					let numClocks = 0;
