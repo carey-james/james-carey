@@ -9,6 +9,11 @@
 		margin-bottom: 0;
 		display: inline-block; }
 
+	.options .checkbox {
+		display: inline-block;
+  		width: auto;
+  		height: auto;
+	}
 
 	.options .slider, .options .checkbox {
 		accent-color: var(--color-mint);
