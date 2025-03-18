@@ -336,8 +336,7 @@ function runner(games_data, feedback_data) {
   		},
   		headerHeight: 60,
   		onGridReady: function(params) {
-  			gridOptions.api = params.api;
-    		gridOptions.columnApi = params.columnApi;
+  			gridApi = params.api;
     		// Player selection slider
 			const slider = document.getElementById('players-slider');
 			const sliderValue = document.getElementById('slider-value');
@@ -353,7 +352,7 @@ function runner(games_data, feedback_data) {
 			
 			function filterGames(players) {
 				if (gridApi) {
-					gridOptions.api.setRowData(games_data.filter(row => {
+					gridApi.setRowData(games_data.filter(row => {
 						if (players === 12) {
 		            		return row.max_players >= 12; // Show games with max_players >= 12
 		        		}
