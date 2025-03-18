@@ -335,33 +335,37 @@ function runner(games_data, feedback_data) {
 		    },
   		},
   		headerHeight: 60,
+  		onGridReady: function(params) {
+  			gridOptions.api = params.api;
+    		gridOptions.columnApi = params.columnApi;
+    		// Player selection slider
+			const slider = document.getElementById('players-slider');
+			const sliderValue = document.getElementById('slider-value');
+			slider.addEventListener('input', function () {
+				let value = slider.value;
+				if (value == 12) {
+					sliderValue.textContent = '12+';
+				} else {
+					sliderValue.textContent = value;
+				}
+				filterGames(value);
+			});
+			
+			function filterGames(players) {
+				gridOptions.api.setRowData(rowData.filter(row => {
+					if (players === 12) {
+		            	return row.max_players >= 12; // Show games with max_players >= 12
+		        	}
+					return players >= row.min_players && players <= row.max_players;
+				}));
+			}
+  		}
 	};
 
 	// Your Javascript code to create the Data Grid
 	const myGridElement = document.querySelector('#gamesGrid');
 	agGrid.createGrid(myGridElement, gridOptions);
 
-	// Player selection slider
-	const slider = document.getElementById('players-slider');
-	const sliderValue = document.getElementById('slider-value');
-	slider.addEventListener('input', function () {
-		let value = slider.value;
-		if (value == 12) {
-			sliderValue.textContent = '12+';
-		} else {
-			sliderValue.textContent = value;
-		}
-		filterGames(value);
-	});
-	
-	function filterGames(players) {
-		gridOptions.api.setRowData(rowData.filter(row => {
-			if (players === 12) {
-            	return row.max_players >= 12; // Show games with max_players >= 12
-        	}
-			return players >= row.min_players && players <= row.max_players;
-		}));
-	}
 }
 
 async function initGames() {
