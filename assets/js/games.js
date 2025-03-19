@@ -308,9 +308,9 @@ function runner(games_data, feedback_data) {
 	        		if (params.data.favorite !== '') {
 	        			extras += `<img src="assets/icons/game-icons/other-icons/favorite.svg" alt="Favorite" style="width:14px; height:14px;">  `;
 	        		}
-	        		if (params.data.play_more !== '') {
-	        			extras += `<img src="assets/icons/game-icons/other-icons/play_more.svg" alt="Play More" style="width:14px; height:14px;">  `;
-	        		}
+	        		// if (params.data.play_more !== '') {
+	        		// 	extras += `<img src="assets/icons/game-icons/other-icons/play_more.svg" alt="Play More" style="width:14px; height:14px;">  `;
+	        		// }
 	        		return `${extras}`;
 	        	},
 	        	sortable: false,
@@ -348,7 +348,7 @@ function runner(games_data, feedback_data) {
 	let unrated_filter = false
 	// let play_more_filter = false;
 	function isExternalFilterPresent() {
-		return (player_filter || time_filter || co_op_filter || team_filter);
+		return (player_filter || time_filter || co_op_filter || team_filter || favorite_filter || unrated_filter);
 	}
 	function doesExternalFilterPass(node) {
 		if (node.data) {
