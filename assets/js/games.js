@@ -385,7 +385,7 @@ function runner(games_data, feedback_data) {
 				}
 			}
 			if (play_more_filter) {
-				if (!(games[0].favorite)) {
+				if (!(games[0].play_more)) {
 					return false;
 				}
 			}

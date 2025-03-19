@@ -21,6 +21,12 @@
   		border-width: 1px;
   		border-color: var(--color-mint); }
 
+  	.options .filter-sub {
+		font-weight: normal;
+		font-size: 10pt;
+	 	font-style: italic;
+	 	color: var(--color-lightgray); }
+
 	.options .slider, .options .checkbox {
 		accent-color: var(--color-mint); }
 
