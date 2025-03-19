@@ -374,6 +374,21 @@ function runner(games_data, feedback_data) {
 					return false;
 				}
 			}
+			if (team_filter) {
+				if (!(games[0].team)) {
+					return false;
+				}
+			}
+			if (favorite_filter) {
+				if (!(games[0].favorite)) {
+					return false;
+				}
+			}
+			if (play_more_filter) {
+				if (!(games[0].favorite)) {
+					return false;
+				}
+			}
 		}
 		return true;
 	}
@@ -431,6 +446,33 @@ function runner(games_data, feedback_data) {
 			co_op_filter = true;
 		} else {
 			co_op_filter = false;
+		}
+		gridApi.onFilterChanged();
+	});
+	const team_box = document.getElementById('team-box');
+	team_box.addEventListener('change', function(event) {
+		if (event.target.checked) {
+			team_filter = true;
+		} else {
+			team_filter = false;
+		}
+		gridApi.onFilterChanged();
+	});
+	const favorite_box = document.getElementById('favorite-box');
+	favorite_box.addEventListener('change', function(event) {
+		if (event.target.checked) {
+			favorite_filter = true;
+		} else {
+			favorite_filter = false;
+		}
+		gridApi.onFilterChanged();
+	});
+	const play_more_box = document.getElementById('play-more-box');
+	play_more_box.addEventListener('change', function(event) {
+		if (event.target.checked) {
+			play_more_filter = true;
+		} else {
+			play_more_filter = false;
 		}
 		gridApi.onFilterChanged();
 	});
