@@ -314,7 +314,7 @@ function runner(games_data, feedback_data) {
 	        		return `${extras}`;
 	        	},
 	        	sortable: false,
-	        	minWidth: 30
+	        	minWidth: 20
 	        },
 	        { 
 	        	field: 'blurb', 
