@@ -84,7 +84,7 @@ function runner(games_data, feedback_data) {
 					const gamesBVal = gamesB.length < 1 ? 0 : gamesB[0].avg_mech_rating;
 					return (gamesAVal - gamesBVal);
 				},
-	        	minWidth: 100
+	        	minWidth: 90
 	        },
 	        { 
 	        	field: 'theme', 
@@ -126,7 +126,7 @@ function runner(games_data, feedback_data) {
 					const gamesBVal = gamesB.length < 1 ? 0 : gamesB[0].avg_theme_rating;
 					return (gamesAVal - gamesBVal);
 				},
-	        	minWidth: 100
+	        	minWidth: 90
 	        },
 	        {
 				field: 'players',
@@ -157,7 +157,7 @@ function runner(games_data, feedback_data) {
 						return (nodeA.data.min_players - nodeB.data.min_players);
 					}
 				},
-	        	minWidth: 100
+	        	minWidth: 120
 			},
 	        { field: 'min_players', hide: true },
 	        { field: 'max_players', hide: true },
@@ -248,7 +248,7 @@ function runner(games_data, feedback_data) {
 					const gamesBVal = gamesB.length < 1 ? 0 : gamesB[0].avg_learn_comp;
 					return (gamesAVal - gamesBVal);
 				},
-				minWidth: 130
+				minWidth: 120
 	        },
 	        { 
 	        	field: 'playing_complexity', 
@@ -286,7 +286,7 @@ function runner(games_data, feedback_data) {
 					const gamesBVal = gamesB.length < 1 ? 0 : gamesB[0].avg_play_comp;
 					return (gamesAVal - gamesBVal);
 				},
-				minWidth: 130
+				minWidth: 120
 	        },
 	        {
 	        	field: 'extras',
