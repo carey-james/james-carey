@@ -51,7 +51,7 @@ function runner(games_data, feedback_data) {
 	        		const mech = params.data.mechanics;
 	        		return `<img src="assets/icons/game-icons/mechanics-icons/${mech}.svg" alt="${mech}" style="width:20px; height:20px;"><br>${mech}`;
 	        	},
-	        	minWidth: 100
+	        	minWidth: 130
 	        },
 	        {
 	        	field: 'mechanics_rating', 
@@ -248,7 +248,7 @@ function runner(games_data, feedback_data) {
 					const gamesBVal = gamesB.length < 1 ? 0 : gamesB[0].avg_learn_comp;
 					return (gamesAVal - gamesBVal);
 				},
-				minWidth: 120
+				minWidth: 130
 	        },
 	        { 
 	        	field: 'playing_complexity', 
@@ -286,7 +286,7 @@ function runner(games_data, feedback_data) {
 					const gamesBVal = gamesB.length < 1 ? 0 : gamesB[0].avg_play_comp;
 					return (gamesAVal - gamesBVal);
 				},
-				minWidth: 120
+				minWidth: 130
 	        },
 	        {
 	        	field: 'extras',
