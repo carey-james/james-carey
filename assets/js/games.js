@@ -248,7 +248,7 @@ function runner(games_data, feedback_data) {
 					const gamesBVal = gamesB.length < 1 ? 0 : gamesB[0].avg_learn_comp;
 					return (gamesAVal - gamesBVal);
 				},
-				minWidth: 150
+				minWidth: 130
 	        },
 	        { 
 	        	field: 'playing_complexity', 
@@ -286,7 +286,7 @@ function runner(games_data, feedback_data) {
 					const gamesBVal = gamesB.length < 1 ? 0 : gamesB[0].avg_play_comp;
 					return (gamesAVal - gamesBVal);
 				},
-				minWidth: 150
+				minWidth: 130
 	        },
 	        {
 	        	field: 'extras',
@@ -320,7 +320,7 @@ function runner(games_data, feedback_data) {
 	        	field: 'blurb', 
 	        	headerName: 'Description',
 	        	sortable: false,
-	        	minWidth: 150
+	        	minWidth: 160
 	        },
 	        { field: 'expansion', headerName: 'Expansion', hide: true },
 	        { field: 'co-op', headerName: 'Co-op', hide: true },
