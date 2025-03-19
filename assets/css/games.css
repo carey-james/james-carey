@@ -150,6 +150,14 @@
 		max-width: 1344px;
 		width: 1344px; } }
 
+/* lower text */
+	.lower-text {
+		padding-top: 0.75em;
+		padding-bottom: 0.75rem; 
+		font-weight: normal;
+		font-size: 10pt;
+	 	font-style: italic;
+	 	color: var(--color-offwhite); }
 /* footer */
 	.footer {
 		color: #918E8B;
