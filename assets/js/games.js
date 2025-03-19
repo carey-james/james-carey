@@ -288,6 +288,12 @@ function runner(games_data, feedback_data) {
 				},
 				minWidth: 130
 	        },
+	        { 
+	        	field: 'blurb', 
+	        	headerName: 'Description',
+	        	sortable: false,
+	        	minWidth: 170
+	        },
 	        {
 	        	field: 'extras',
 	        	headerName: '',
@@ -315,12 +321,6 @@ function runner(games_data, feedback_data) {
 	        	},
 	        	sortable: false,
 	        	minWidth: 20
-	        },
-	        { 
-	        	field: 'blurb', 
-	        	headerName: 'Description',
-	        	sortable: false,
-	        	minWidth: 170
 	        },
 	        { field: 'expansion', headerName: 'Expansion', hide: true },
 	        { field: 'co-op', headerName: 'Co-op', hide: true },
