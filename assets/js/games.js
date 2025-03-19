@@ -293,18 +293,18 @@ function runner(games_data, feedback_data) {
 	        	headerName: '',
 	        	valueGetter: (params) => {
 	        		let extras = ``;
-	        		if (params.data.expansion !== '') {
-	        			extras += `<img src="assets/icons/game-icons/other-icons/expansion.svg" alt="Expansion" style="width:14px; height:14px;">  `;
-	        		}
+	        		// if (params.data.expansion !== '') {
+	        		// 	extras += `<img src="assets/icons/game-icons/other-icons/expansion.svg" alt="Expansion" style="width:14px; height:14px;">  `;
+	        		// }
 	        		if (params.data.co_op !== '') {
 	        			extras += `<img src="assets/icons/game-icons/other-icons/co_op.svg" alt="Co-Op" style="width:14px; height:14px;">  `;
 	        		}
 	        		if (params.data.team !== '') {
 	        			extras += `<img src="assets/icons/game-icons/other-icons/team.svg" alt="Team" style="width:14px; height:14px;">  `;
 	        		}
-	        		if (params.data.legacy !== '') {
-	        			extras += `<img src="assets/icons/game-icons/other-icons/legacy.svg" alt="Legacy" style="width:14px; height:14px;">  `;
-	        		}
+	        		// if (params.data.legacy !== '') {
+	        		// 	extras += `<img src="assets/icons/game-icons/other-icons/legacy.svg" alt="Legacy" style="width:14px; height:14px;">  `;
+	        		// }
 	        		if (params.data.favorite !== '') {
 	        			extras += `<img src="assets/icons/game-icons/other-icons/favorite.svg" alt="Favorite" style="width:14px; height:14px;">  `;
 	        		}
@@ -342,8 +342,12 @@ function runner(games_data, feedback_data) {
 	let players = 1;
 	let time_filter = false;
 	let time_slide = 180;
+	let co_op_filter = false;
+	let team_filter = false;
+	let favorite_filter = false;
+	let play_more_filter = false;
 	function isExternalFilterPresent() {
-		return (player_filter || time_filter);
+		return (player_filter || time_filter || co_op_filter || team_filter);
 	}
 	function doesExternalFilterPass(node) {
 		if (node.data) {
@@ -360,9 +364,14 @@ function runner(games_data, feedback_data) {
 			}
 			if (time_filter) {
 				if (time_slide < 175) {
-					if (time_slide < (games[0].max_time + 5)) { // Allow for a bit of wiggle room
+					if (time_slide < (games[0].max_time - 5)) { // Allow for a bit of wiggle room
 						return false; 
 					}
+				}
+			}
+			if (co_op_filter) {
+				if (!(games[0].co_op)) {
+					return false;
 				}
 			}
 		}
@@ -414,6 +423,15 @@ function runner(games_data, feedback_data) {
 			time_slider_value.textContent = value;
 		}
 		time_slide = value;
+		gridApi.onFilterChanged();
+	});
+	const co_op_box = document.getElementById('co-op-box');
+	co_op_box.addEventListener('change', function(event) {
+		if (event.target.checked) {
+			co_op_filter = true;
+		} else {
+			co_op_filter = false;
+		}
 		gridApi.onFilterChanged();
 	});
 	
