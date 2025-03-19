@@ -345,7 +345,8 @@ function runner(games_data, feedback_data) {
 	let co_op_filter = false;
 	let team_filter = false;
 	let favorite_filter = false;
-	let play_more_filter = false;
+	let unrated_filter = false
+	// let play_more_filter = false;
 	function isExternalFilterPresent() {
 		return (player_filter || time_filter || co_op_filter || team_filter);
 	}
@@ -384,11 +385,16 @@ function runner(games_data, feedback_data) {
 					return false;
 				}
 			}
-			if (play_more_filter) {
-				if (!(node.data.play_more)) {
+			if (unrated_filter) {
+				if (!(games[0].rated)) {
 					return false;
 				}
 			}
+			// if (play_more_filter) {
+			// 	if (!(node.data.play_more)) {
+			// 		return false;
+			// 	}
+			// }
 		}
 		return true;
 	}
@@ -467,15 +473,24 @@ function runner(games_data, feedback_data) {
 		}
 		gridApi.onFilterChanged();
 	});
-	const play_more_box = document.getElementById('play-more-box');
-	play_more_box.addEventListener('change', function(event) {
+	const unrated_box = document.getElementById('unrated-box');
+	unrated_box.addEventListener('change', function(event) {
 		if (event.target.checked) {
-			play_more_filter = true;
+			unrated_filter = true;
 		} else {
-			play_more_filter = false;
+			unrated_filter = false;
 		}
 		gridApi.onFilterChanged();
 	});
+	// const play_more_box = document.getElementById('play-more-box');
+	// play_more_box.addEventListener('change', function(event) {
+	// 	if (event.target.checked) {
+	// 		play_more_filter = true;
+	// 	} else {
+	// 		play_more_filter = false;
+	// 	}
+	// 	gridApi.onFilterChanged();
+	// });
 	
 
 }
