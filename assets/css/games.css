@@ -25,7 +25,7 @@
 		font-weight: normal;
 		font-size: 10pt;
 	 	font-style: italic;
-	 	color: var(--color-lightgray); }
+	 	color: var(--color-offwhite); }
 
 	.options .slider, .options .checkbox {
 		accent-color: var(--color-mint); }

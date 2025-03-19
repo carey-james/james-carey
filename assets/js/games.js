@@ -370,22 +370,22 @@ function runner(games_data, feedback_data) {
 				}
 			}
 			if (co_op_filter) {
-				if (!(games[0].co_op)) {
+				if (!(node.data.co_op)) {
 					return false;
 				}
 			}
 			if (team_filter) {
-				if (!(games[0].team)) {
+				if (!(node.data.team)) {
 					return false;
 				}
 			}
 			if (favorite_filter) {
-				if (!(games[0].favorite)) {
+				if (!(node.data.favorite)) {
 					return false;
 				}
 			}
 			if (play_more_filter) {
-				if (!(games[0].play_more)) {
+				if (!(node.data.play_more)) {
 					return false;
 				}
 			}
