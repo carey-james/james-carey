@@ -100,11 +100,15 @@
 	.ag-cell[col-id='time'],
 	.ag-cell[col-id='learning_complexity'], 
 	.ag-cell[col-id='playing_complexity'],
-	.ag-cell[col-id='extras'] {
+	.ag-cell[col-id='extras'],
+	.ag-cell[col-id='blurb'] {
 		text-align: left;
 	    display: flex;
 	    justify-content: flex-start;
 	    align-items: center; }
+
+	.ag-cell[col-id='blurb'] {
+		font-style: italic; }
 
 /* container */
 	.container {

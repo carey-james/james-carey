@@ -314,8 +314,14 @@ function runner(games_data, feedback_data) {
 	        		return `${extras}`;
 	        	},
 	        	sortable: false,
-	        	minWidth: 150
+	        	minWidth: 30
 	        },
+	        { 
+	        	field: 'blurb', 
+	        	headerName: 'Description',
+	        	sortable: false;
+	        	minWidth: 150
+	        }
 	        { field: 'expansion', headerName: 'Expansion', hide: true },
 	        { field: 'co-op', headerName: 'Co-op', hide: true },
 	        { field: 'legacy', headerName: 'Legacy', hide: true },
