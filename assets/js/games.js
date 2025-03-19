@@ -51,7 +51,7 @@ function runner(games_data, feedback_data) {
 	        		const mech = params.data.mechanics;
 	        		return `<img src="assets/icons/game-icons/mechanics-icons/${mech}.svg" alt="${mech}" style="width:20px; height:20px;"><br>${mech}`;
 	        	},
-	        	minWidth: 150
+	        	minWidth: 100
 	        },
 	        {
 	        	field: 'mechanics_rating', 
@@ -320,7 +320,7 @@ function runner(games_data, feedback_data) {
 	        	field: 'blurb', 
 	        	headerName: 'Description',
 	        	sortable: false,
-	        	minWidth: 160
+	        	minWidth: 170
 	        },
 	        { field: 'expansion', headerName: 'Expansion', hide: true },
 	        { field: 'co-op', headerName: 'Co-op', hide: true },
