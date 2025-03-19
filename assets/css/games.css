@@ -157,8 +157,8 @@
 		font-weight: normal;
 		font-size: 10pt;
 	 	font-style: italic;
-	 	color: var(--color-offwhite);
-	 	background-color: rgba(0, 0, 0, 0.6); }
+	 	color: var(--color-white); }
+	 	
 /* footer */
 	.footer {
 		background-color: rgba(0, 0, 0, 0.6);
