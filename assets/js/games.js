@@ -386,7 +386,7 @@ function runner(games_data, feedback_data) {
 				}
 			}
 			if (unrated_filter) {
-				if (!(games[0].rated)) {
+				if (games[0].rated) {
 					return false;
 				}
 			}
