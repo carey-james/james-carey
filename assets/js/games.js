@@ -146,7 +146,19 @@ function runner(games_data, feedback_data) {
 							playerDots += `<img src="assets/icons/game-icons/other-icons/players-playable.svg" alt="Dark Blue Dot" style="width:5px; height:5px;">`;
 						}
 					}
-					return `Players: ${minPlayers} - ${maxPlayers}<br>${playerDots}<br>Best with: ${minBest} - ${maxBest}`;
+					let playersLeg = ``;
+					let bestPlayersLeg = ``;
+					if (minPlayers == maxPlayers) {
+						playersLeg = `${minPlayers}`;
+					} else {
+						playersLeg = `${minPlayers} - ${maxPlayers}`;
+					}
+					if (minBest == maxBest) {
+						bestPlayersLeg = `${minBest}`;
+					} else {
+						bestPlayersLeg = `${minBest} - ${maxBest}`;
+					}
+					return `Players: ${playersLeg}<br>${playerDots}<br>Best with: ${bestPlayersLeg}`;
 				},
 				sortable: true,
 				comparator: (valueA, valueB, nodeA, nodeB, isInverted) => {
