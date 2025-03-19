@@ -8,6 +8,7 @@
 	.options .field {
 		margin-left: 16px;
 		margin-right: 16px;
+		margin-bottom: 8px;
 	}
 
 	.options .field, .options .label, .options .control {
