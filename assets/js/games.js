@@ -84,7 +84,7 @@ function runner(games_data, feedback_data) {
 					const gamesBVal = gamesB.length < 1 ? 0 : gamesB[0].avg_mech_rating;
 					return (gamesAVal - gamesBVal);
 				},
-	        	minWidth: 90
+	        	minWidth: 95
 	        },
 	        { 
 	        	field: 'theme', 
@@ -126,7 +126,7 @@ function runner(games_data, feedback_data) {
 					const gamesBVal = gamesB.length < 1 ? 0 : gamesB[0].avg_theme_rating;
 					return (gamesAVal - gamesBVal);
 				},
-	        	minWidth: 90
+	        	minWidth: 95
 	        },
 	        {
 				field: 'players',
