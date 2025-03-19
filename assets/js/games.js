@@ -319,7 +319,7 @@ function runner(games_data, feedback_data) {
 	        { 
 	        	field: 'blurb', 
 	        	headerName: 'Description',
-	        	sortable: false;
+	        	sortable: false,
 	        	minWidth: 150
 	        }
 	        { field: 'expansion', headerName: 'Expansion', hide: true },
