@@ -27,7 +27,7 @@ function runner(games_data, feedback_data) {
 			summary_item.min_time = parseInt(filtered_item.min_time, 10);
 			summary_item.max_time = parseInt(filtered_item.max_time, 10);
 			summary_item.avg_learn_comp = filtered_item.learning_complexity;
-			summary_item.avg_play_comp = filtered_item.learning_complexity;
+			summary_item.avg_play_comp = filtered_item.playing_complexity;
 			summary_data.push(summary_item);
 		};
 	});
