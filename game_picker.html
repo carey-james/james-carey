@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+
+<html lang="en-US">
+    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico"/>
+	<head>
+		<title>Automatic Game Picker</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<script src="https://kit.fontawesome.com/15088ec22c.js" crossorigin="anonymous"></script>
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link rel="stylesheet"  type="text/css" href="assets/css/colors.css">
+    	<link rel="stylesheet" type="text/css" href="assets/css/tippy.css">
+    	<link rel="stylesheet"  type="text/css" href="assets/css/main.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/games.css">
+	</head>
+	<body>
+		<!-- Header -->
+		<section id="cvhead">
+			<header class="cvhead">
+				<a href="/"><span class="icon major fa-solid fa-arrow-left"></span></a>
+			</header>
+		</section>
+		<section>
+			<header class="major">
+				<h1>Automatic Game Picker</h1>
+				<h3>Game Picker, Game Picker, Pick Me A Game...</h3>
+			</header>
+		</section>
+		<!-- Main Content -->
+		<div class="options">
+			<header>
+				<h4>Let me help you pick a game.</h4>
+			</header>
+			<div>
+				<div class="field">
+					<label class="label" for="players-slider">How many players?</label>
+					<br>
+	    			<img src="assets/icons/game-icons/other-icons/player.svg" alt="One Player" style="width:14px; height:14px;">
+	    			<input class="slider" type="range" id="players-slider" min="1" max="12" step="1" value="4">
+	    			<img src="assets/icons/game-icons/other-icons/players.svg" alt="Many Players" style="width:16px; height:16px;">
+	    			<br>
+	    			<span class="slider-value" id="players-slider-value">4</span>
+	    		</div>
+	    		<div class="field">
+					<label class="label" for="time-slider">How much time do you have?</label>
+					<br>
+	    			<img src="assets/icons/game-icons/other-icons/clock.svg" alt="One Clock" style="width:12px; height:12px;">
+	    			<input class="slider" type="range" id="time-slider" min="5" max="180" step="5" value="180">
+	    			<img src="assets/icons/game-icons/other-icons/clock.svg" alt="Many Clocks" style="width:16px; height:16px;">
+	    			<br>
+	    			<span class="slider-value" id="time-slider-value">180</span><span class="slider-value"> min.</span>
+	    		</div>
+	    		<div class="field">
+					<label class="label">How willing are you to learn?</label>
+					<br>
+	    			<img src="assets/icons/game-icons/other-icons/co_op.svg" alt="Co-Op" style="width:20px; height:20px;">
+	    			<br>
+	    			<span class="filter-sub">Play together!</span>
+	    		</div>
+	    		<div class="field">
+					<input class="checkbox" type="checkbox" id="team-box" name="team-box">
+					<br>
+					<label class="label">Team Play</label>
+					<br>
+	    			<img src="assets/icons/game-icons/other-icons/team.svg" alt="Team" style="width:20px; height:20px;">
+	    			<br>
+	    			<span class="filter-sub">Play on a team!</span>
+	    		</div>
+	    		<div class="field">
+					<input class="checkbox" type="checkbox" id="favorite-box" name="favorite-box">
+					<br>
+					<label class="label">James' Favorites</label>
+					<br>
+	    			<img src="assets/icons/game-icons/other-icons/favorite.svg" alt="Favorite" style="width:20px; height:20px;">
+	    			<br>
+	    			<span class="filter-sub">Guaranteed Good!</span>
+	    		</div>
+	    		<div class="field">
+					<input class="checkbox" type="checkbox" id="unrated-box" name="unrated-box">
+					<br>
+					<label class="label">Unrated</label>
+					<br>
+	    			<img src="assets/icons/game-icons/other-icons/question.svg" alt="Unrated" style="width:20px; height:20px;">
+	    			<br>
+	    			<span class="filter-sub">Need to play!</span>
+	    		</div>
+	    		<!-- <div class="field">
+					<input class="checkbox" type="checkbox" id="play-more-box" name="play-more-box">
+					<br>
+					<label class="label">New</label>
+					<br>
+	    			<img src="assets/icons/game-icons/other-icons/play_more.svg" alt="Play More" style="width:20px; height:20px;">
+	    			<br>
+	    			<span class="filter-sub">Need to play!</span>
+	    		</div> -->
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="container">
+				<div id="gamesGrid" style="height: 500px"></div>
+			</div>
+		</div>
+		<!-- Scripts -->
+		<script src="assets/js/games.js"></script>
+		<script src="assets/js/lib/tippy.min.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
