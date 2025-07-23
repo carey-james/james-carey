@@ -34,5 +34,41 @@
 			"lat": 38.280608328669736,
 			"lng": -122.41694620024585
 		}
+	},
+	{
+		"name": "the girl & the fig",
+		"link": "https://www.thegirlandthefig.com/",
+		"address": "110 W Spain St, Sonoma, CA 95476",
+		"description": "French Cheese and Picnic Spot",
+		"icon1": "fork-knife",
+		"icon2": "",
+		"type": "food",
+		"price": "$40",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Vegan OK",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 38.29391305294663,
+			"lng": -122.45880655282608
+		}
+	},
+	{
+		"name": "Jack London State Historic Park",
+		"link": "https://jacklondonpark.com/",
+		"address": "2400 London Ranch Rd, Glen Ellen, CA 95442",
+		"description": "French Cheese and Picnic Spot",
+		"icon1": "house",
+		"icon2": "",
+		"type": "hike",
+		"price": "$40",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Vegan OK",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 38.35595142590703,
+			"lng": -122.54251933838889
+		}
 	}
 ]
