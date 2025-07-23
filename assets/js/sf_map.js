@@ -28,6 +28,7 @@ async function initMap() {
       toggleHighlight(marker, rec);
     });
   }
+}
 
 function toggleHighlight(markerView, rec) {
   if (markerView.content.classList.contains("highlight")) {
