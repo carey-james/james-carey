@@ -250,5 +250,95 @@
 			"lat": 37.80925657944884, 
 			"lng": -122.41586048249867 
 		}
+	},
+	{
+		"name": "Lyon Street Steps",
+		"link": "https://www.nps.gov/places/000/lyon-street-steps.html",
+		"address": "2990-2996 Lyon St & Broadway, San Francisco, CA 94115",
+		"description": "French Cheese and Picnic Spot",
+		"icon1": "stairs",
+		"icon2": "",
+		"type": "point",
+		"price": "$40",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Vegan OK",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 37.79331929062808, 
+			"lng": -122.4465277143687
+		}
+	},
+	{
+		"name": "Japanese Tea Garden",
+		"link": "https://gggp.org/japanese-tea-garden/",
+		"address": "75 Hagiwara Tea Garden Dr, San Francisco, CA 94118",
+		"description": "French Cheese and Picnic Spot",
+		"icon1": "mug-tea",
+		"icon2": "",
+		"type": "hike",
+		"price": "$40",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Vegan OK",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 37.76995608404201,  
+			"lng": -122.4704640478082
+		}
+	},
+	{
+		"name": "Ocean Beach",
+		"link": "",
+		"address": "",
+		"description": "French Cheese and Picnic Spot",
+		"icon1": "wave",
+		"icon2": "",
+		"type": "point",
+		"price": "$40",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Vegan OK",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 37.76032219022279,  
+			"lng": -122.510990715952
+		}
+	},
+	{
+		"name": "Hong Kong Lounge",
+		"link": "https://www.newhongkonglounge.com/",
+		"address": "5322 Geary Blvd, San Francisco, CA 94121",
+		"description": "French Cheese and Picnic Spot",
+		"icon1": "bowl-chopsticks",
+		"icon2": "",
+		"type": "food",
+		"price": "$40",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Vegan OK",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 37.78062062767096,  
+			"lng": -122.47681289077484
+		}
+	},
+	{
+		"name": "Han Il Kwan",
+		"link": "https://hanilkwan.store/",
+		"address": "1802 Balboa St, San Francisco, CA 94121",
+		"description": "French Cheese and Picnic Spot",
+		"icon1": "meat",
+		"icon2": "",
+		"type": "food",
+		"price": "$40",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Vegan OK",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 37.77672305938178,   
+			"lng": -122.4783790951455
+		}
 	}
 ]
