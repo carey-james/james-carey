@@ -5,7 +5,7 @@
 		"address": "7510 Pt. Reyes - Petaluma Rd, Petaluma, CA 94952",
 		"description": "French Cheese and Picnic Spot",
 		"icon1": "cheese-swiss",
-		"icon2": "martini-glass",
+		"icon2": "",
 		"type": "food",
 		"price": "$40",
 		"extra_icon": "leaf",
@@ -15,6 +15,24 @@
 		"position": {
 			"lat": 38.137449602066624,
 			"lng": -122.70978142999168
+		}
+	},
+	{
+		"name": "Gundlach Bundschu",
+		"link": "https://www.gunbun.com/",
+		"address": "2000 Denmark St, Sonoma, CA 95476",
+		"description": "French Cheese and Picnic Spot",
+		"icon1": "grapes",
+		"icon2": "",
+		"type": "wine",
+		"price": "$40",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Vegan OK",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 38.280608328669736,
+			"lng": -122.41694620024585
 		}
 	}
 ]

@@ -1,7 +1,7 @@
 :root {
-  --grab-and-go: var(--color-female);/*#D05353;*/
-  --affordable: var(--color-male);/*#41BBD9;*/
-  --affordable-and-drinks: var(--color-mint);/*#7CD179;*/
+  --food: var(--color-humor);
+  --hike: var(--color-fantasy);
+  --wine: var(--color-philosophy);
   --expensive: var(--color-music);/*#33658A;*/
   --expensive-and-drinks: var(--color-fantasy);/*#679965;*/
   --drinks: var(--color-humor);/*#FFB140;*/
@@ -183,40 +183,40 @@ body {
 /*
  * Icon colors.
  */
-.rec.highlight:has(.grab-and-go) .icon {
-  color: var(--grab-and-go);
+.rec.highlight:has(.food) .icon {
+  color: var(--food);
 }
 
-.rec:not(.highlight):has(.grab-and-go) {
-  background-color: var(--grab-and-go);
+.rec:not(.highlight):has(.food) {
+  background-color: var(--food);
 }
 
-.rec:not(.highlight):has(.grab-and-go)::after {
-  border-top: 9px solid var(--grab-and-go);
+.rec:not(.highlight):has(.food)::after {
+  border-top: 9px solid var(--food);
 }
 
-.rec.highlight:has(.affordable) .icon {
-  color: var(--affordable);
+.rec.highlight:has(.hike) .icon {
+  color: var(--hike);
 }
 
-.rec:not(.highlight):has(.affordable) {
-  background-color: var(--affordable);
+.rec:not(.highlight):has(.hike) {
+  background-color: var(--hike);
 }
 
-.rec:not(.highlight):has(.affordable)::after {
-  border-top: 9px solid var(--affordable);
+.rec:not(.highlight):has(.hike)::after {
+  border-top: 9px solid var(--hike);
 }
 
-.rec.highlight:has(.affordable-and-drinks) .icon {
-  color: var(--affordable-and-drinks);
+.rec.highlight:has(.wine) .icon {
+  color: var(--wine);
 }
 
-.rec:not(.highlight):has(.affordable-and-drinks) {
-  background-color: var(--affordable-and-drinks);
+.rec:not(.highlight):has(.wine) {
+  background-color: var(--wine);
 }
 
-.rec:not(.highlight):has(.affordable-and-drinks)::after {
-  border-top: 9px solid var(--affordable-and-drinks);
+.rec:not(.highlight):has(.wine)::after {
+  border-top: 9px solid var(--wine);
 }
 
 .rec.highlight:has(.expensive) .icon {
