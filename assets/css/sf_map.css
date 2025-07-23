@@ -2,9 +2,9 @@
   --food: var(--color-humor);
   --hike: var(--color-fantasy);
   --wine: var(--color-philosophy);
-  --expensive: var(--color-music);/*#33658A;*/
+  --shopping: var(--color-goldenrod);
   --museum: var(--color-western);
-  --drinks: var(--color-humor);/*#FFB140;*/
+  --point: var(--color-teal);
   --want-to-go: var(--color-slate);/*#262626;*/
 }
 
@@ -219,16 +219,16 @@ body {
   border-top: 9px solid var(--wine);
 }
 
-.rec.highlight:has(.expensive) .icon {
-  color: var(--expensive);
+.rec.highlight:has(.shopping) .icon {
+  color: var(--shopping);
 }
 
-.rec:not(.highlight):has(.expensive) {
-  background-color: var(--expensive);
+.rec:not(.highlight):has(.shopping) {
+  background-color: var(--shopping);
 }
 
-.rec:not(.highlight):has(.expensive)::after {
-  border-top: 9px solid var(--expensive);
+.rec:not(.highlight):has(.shopping)::after {
+  border-top: 9px solid var(--shopping);
 }
 
 .rec.highlight:has(.museum) .icon {
@@ -243,16 +243,16 @@ body {
   border-top: 9px solid var(--museum);
 }
 
-.rec.highlight:has(.drinks) .icon {
-  color: var(--drinks);
+.rec.highlight:has(.point) .icon {
+  color: var(--point);
 }
 
-.rec:not(.highlight):has(.drinks) {
-  background-color: var(--drinks);
+.rec:not(.highlight):has(.point) {
+  background-color: var(--point);
 }
 
-.rec:not(.highlight):has(.drinks)::after {
-  border-top: 9px solid var(--drinks);
+.rec:not(.highlight):has(.point)::after {
+  border-top: 9px solid var(--point);
 }
 
 .rec.highlight:has(.want-to-go) .icon {

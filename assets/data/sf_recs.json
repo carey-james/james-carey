@@ -124,5 +124,131 @@
 			"lat": 37.7843548526039,
 			"lng": -122.50087135897752
 		}
-	}
+	},
+	{
+		"name": "Asian Art Museum",
+		"link": "https://asianart.org/",
+		"address": "200 Larkin St, San Francisco, CA 94102",
+		"description": "French Cheese and Picnic Spot",
+		"icon1": "palette",
+		"icon2": "",
+		"type": "museum",
+		"price": "$40",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Vegan OK",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 37.78026202035785, 
+			"lng": -122.41620704557583
+		}
+	},
+	{
+		"name": "SF MoMA",
+		"link": "https://www.sfmoma.org/",
+		"address": "151 3rd St, San Francisco, CA 94103",
+		"description": "French Cheese and Picnic Spot",
+		"icon1": "palette",
+		"icon2": "",
+		"type": "museum",
+		"price": "$40",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Vegan OK",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 37.785725444733025,
+			"lng": -122.4010400362769
+		}
+	},
+	{
+		"name": "de Young Museum",
+		"link": "https://www.famsf.org/visit/de-young",
+		"address": "50 Hagiwara Tea Garden Dr, San Francisco, CA 94118",
+		"description": "French Cheese and Picnic Spot",
+		"icon1": "palette",
+		"icon2": "",
+		"type": "museum",
+		"price": "$40",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Vegan OK",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 37.77144757267929, 
+			"lng": -122.46876737062782
+		}
+	},
+	{
+		"name": "California Academy of Sciences",
+		"link": "https://www.calacademy.org/",
+		"address": "55 Music Concourse Dr, San Francisco, CA 94118",
+		"description": "French Cheese and Picnic Spot",
+		"icon1": "fish-fins",
+		"icon2": "",
+		"type": "museum",
+		"price": "$40",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Vegan OK",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 37.76965991883575, 
+			"lng": -122.46595998168091
+		}
+	},
+	{
+		"name": "Exploratorium",
+		"link": "https://www.exploratorium.edu/",
+		"address": "Pier 15 Embarcadero at, Green St, San Francisco, CA 94111",
+		"description": "French Cheese and Picnic Spot",
+		"icon1": "flask",
+		"icon2": "",
+		"type": "museum",
+		"price": "$40",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Vegan OK",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 37.80152725034486, 
+			"lng": -122.39747776878289 
+		}
+	},
+	{
+		"name": "Pier 39 Sea Lions",
+		"link": "https://www.pier39.com/sealions/",
+		"address": "Pier 39, San Francisco, CA 94133",
+		"description": "French Cheese and Picnic Spot",
+		"icon1": "otter",
+		"icon2": "",
+		"type": "point",
+		"price": "$40",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Vegan OK",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 37.810722655066016, 
+			"lng": -122.41152008106474 
+		}
+	},
+	{
+		"name": "Musée Mécanique",
+		"link": "https://museemecanique.com/",
+		"address": "Pier 45, San Francisco, CA 94133",
+		"description": "French Cheese and Picnic Spot",
+		"icon1": "slot-machine",
+		"icon2": "",
+		"type": "museum",
+		"price": "$40",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Vegan OK",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 37.80925657944884, 
+			"lng": -122.41586048249867 
+		}
+	},
 ]
