@@ -70,5 +70,59 @@
 			"lat": 38.35595142590703,
 			"lng": -122.54251933838889
 		}
+	},
+	{
+		"name": "Armstrong Redwoods",
+		"link": "https://www.parks.ca.gov/?page_id=450",
+		"address": "17000 Armstrong Woods Rd, Guerneville, CA 95446",
+		"description": "French Cheese and Picnic Spot",
+		"icon1": "tree",
+		"icon2": "",
+		"type": "hike",
+		"price": "$40",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Vegan OK",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 38.537036217550074,
+			"lng": -123.0066685678897
+		}
+	},
+	{
+		"name": "Helen Putnam Park",
+		"link": "https://parks.sonomacounty.ca.gov/visit/find-a-park/helen-putnam-regional-park",
+		"address": "411 Chileno Valley Rd, Petaluma, CA 94952",
+		"description": "French Cheese and Picnic Spot",
+		"icon1": "mountains",
+		"icon2": "",
+		"type": "hike",
+		"price": "$40",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Vegan OK",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 38.21579059624877,
+			"lng": -122.65883200571473
+		}
+	},
+	{
+		"name": "Legion of Honor",
+		"link": "https://www.famsf.org/visit/legion-of-honor",
+		"address": "100 34th Ave, San Francisco, CA 94121",
+		"description": "French Cheese and Picnic Spot",
+		"icon1": "palette",
+		"icon2": "",
+		"type": "museum",
+		"price": "$40",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Vegan OK",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 37.7843548526039,
+			"lng": -122.50087135897752
+		}
 	}
 ]

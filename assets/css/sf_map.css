@@ -3,7 +3,7 @@
   --hike: var(--color-fantasy);
   --wine: var(--color-philosophy);
   --expensive: var(--color-music);/*#33658A;*/
-  --expensive-and-drinks: var(--color-fantasy);/*#679965;*/
+  --museum: var(--color-western);
   --drinks: var(--color-humor);/*#FFB140;*/
   --want-to-go: var(--color-slate);/*#262626;*/
 }
@@ -231,16 +231,16 @@ body {
   border-top: 9px solid var(--expensive);
 }
 
-.rec.highlight:has(.expensive-and-drinks) .icon {
-  color: var(--expensive-and-drinks);
+.rec.highlight:has(.museum) .icon {
+  color: var(--museum);
 }
 
-.rec:not(.highlight):has(.expensive-and-drinks) {
-  background-color: var(--expensive-and-drinks);
+.rec:not(.highlight):has(.museum) {
+  background-color: var(--museum);
 }
 
-.rec:not(.highlight):has(.expensive-and-drinks)::after {
-  border-top: 9px solid var(--expensive-and-drinks);
+.rec:not(.highlight):has(.museum)::after {
+  border-top: 9px solid var(--museum);
 }
 
 .rec.highlight:has(.drinks) .icon {
