@@ -1,0 +1,268 @@
+:root {
+  --grab-and-go: var(--color-female);/*#D05353;*/
+  --affordable: var(--color-male);/*#41BBD9;*/
+  --affordable-and-drinks: var(--color-mint);/*#7CD179;*/
+  --expensive: var(--color-music);/*#33658A;*/
+  --expensive-and-drinks: var(--color-fantasy);/*#679965;*/
+  --drinks: var(--color-humor);/*#FFB140;*/
+  --want-to-go: var(--color-slate);/*#262626;*/
+}
+
+/*
+ * Makes the sample page fill the window.
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map.
+ */
+#map {
+  height: 600px;
+  width: 100%;
+}
+
+/*
+ * Legend Styles
+ */
+#legend {
+  background: #FFFFFF;
+  padding: 3px;
+  margin: 3px;
+  border-left: 9px solid transparent;
+  font-size: 14px;
+  border-radius: 5%;
+}
+
+/* 
+ * Back Arrow style.
+ */
+.back-arrow {
+  color:#262626; 
+  font-size: 5em;
+  margin-top: 2.5vh;
+  margin-left: 5vw;
+}
+
+.back-arrow a:hover {
+  color: #FFFFFF !important;
+}
+
+/*
+ * Resturant styles in unhighlighted state.
+ */
+.restaurant {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+  color: #263238;
+  display: flex;
+  font-size: 20px;
+  gap: 25px;
+  height: 40px;
+  justify-content: center;
+  padding: 4px;
+  position: relative;
+  transition: all 0.3s ease-out;
+  width: 40px;
+}
+
+.restaurant::after {
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 9px solid #FFFFFF;
+  content: "";
+  height: 0;
+  left: 50%;
+  position: absolute;
+  top: 95%;
+  transform: translate(-50%, 0);
+  transition: all 0.3s ease-out;
+  width: 0;
+  z-index: 1;
+}
+
+.restaurant .icon {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: #FFFFFF;
+}
+
+.restaurant .icon svg {
+  height: 20px;
+  width: auto;
+}
+
+.restaurant .details {
+  display: none;
+  flex-direction: column;
+  flex: 1;
+}
+
+.restaurant .address {
+  color: #9E9E9E;
+  font-size: 14px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+.restaurant .description {
+  color: #9E9E9E;
+  font-size: 14px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+.restaurant .features {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;  
+}
+
+.restaurant .features > div {
+  align-items: center;
+  background: #F5F5F5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  display: flex;
+  font-size: 10px;
+  gap: 5px;
+  padding: 6px;
+  z-index: 2;
+}
+
+/*
+ * Restaurant styles in highlighted state.
+ */
+.restaurant.highlight {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+  height: 80px;
+  padding: 8px 15px;
+  width: auto;
+}
+
+.restaurant.highlight::after {
+  border-top: 9px solid #FFFFFF;
+}
+
+.restaurant.highlight .details {
+  display: flex;
+}
+
+.restaurant.highlight .icon svg {
+  width: 50px;
+  height: 50px;
+}
+
+.restaurant .dollar {
+  color: #FFA000;
+}
+
+.restaurant .veg {
+  color: #388E3C;
+}
+
+.restaurant .nonveg {
+  color: #8F3838;
+}
+
+.restaurant .rez {
+  color: #383B8F;
+}
+
+/*
+ * Icon colors.
+ */
+.restaurant.highlight:has(.grab-and-go) .icon {
+  color: var(--grab-and-go);
+}
+
+.restaurant:not(.highlight):has(.grab-and-go) {
+  background-color: var(--grab-and-go);
+}
+
+.restaurant:not(.highlight):has(.grab-and-go)::after {
+  border-top: 9px solid var(--grab-and-go);
+}
+
+.restaurant.highlight:has(.affordable) .icon {
+  color: var(--affordable);
+}
+
+.restaurant:not(.highlight):has(.affordable) {
+  background-color: var(--affordable);
+}
+
+.restaurant:not(.highlight):has(.affordable)::after {
+  border-top: 9px solid var(--affordable);
+}
+
+.restaurant.highlight:has(.affordable-and-drinks) .icon {
+  color: var(--affordable-and-drinks);
+}
+
+.restaurant:not(.highlight):has(.affordable-and-drinks) {
+  background-color: var(--affordable-and-drinks);
+}
+
+.restaurant:not(.highlight):has(.affordable-and-drinks)::after {
+  border-top: 9px solid var(--affordable-and-drinks);
+}
+
+.restaurant.highlight:has(.expensive) .icon {
+  color: var(--expensive);
+}
+
+.restaurant:not(.highlight):has(.expensive) {
+  background-color: var(--expensive);
+}
+
+.restaurant:not(.highlight):has(.expensive)::after {
+  border-top: 9px solid var(--expensive);
+}
+
+.restaurant.highlight:has(.expensive-and-drinks) .icon {
+  color: var(--expensive-and-drinks);
+}
+
+.restaurant:not(.highlight):has(.expensive-and-drinks) {
+  background-color: var(--expensive-and-drinks);
+}
+
+.restaurant:not(.highlight):has(.expensive-and-drinks)::after {
+  border-top: 9px solid var(--expensive-and-drinks);
+}
+
+.restaurant.highlight:has(.drinks) .icon {
+  color: var(--drinks);
+}
+
+.restaurant:not(.highlight):has(.drinks) {
+  background-color: var(--drinks);
+}
+
+.restaurant:not(.highlight):has(.drinks)::after {
+  border-top: 9px solid var(--drinks);
+}
+
+.restaurant.highlight:has(.want-to-go) .icon {
+  color: var(--want-to-go);
+}
+
+.restaurant:not(.highlight):has(.want-to-go) {
+  background-color: var(--want-to-go);
+}
+
+.restaurant:not(.highlight):has(.want-to-go)::after {
+  border-top: 9px solid var(--want-to-go);
+}
