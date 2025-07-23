@@ -1,0 +1,20 @@
+[
+	{
+		"name": "Marin French Cheese Co.",
+		"link": "https://marinfrenchcheese.com/",
+		"address": "7510 Pt. Reyes - Petaluma Rd, Petaluma, CA 94952",
+		"description": "French Cheese and Picnic Spot",
+		"icon1": "cheese-swiss",
+		"icon2": "martini-glass",
+		"type": "food",
+		"price": "$40",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Vegan OK",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 38.137449602066624,
+			"lng": -122.70978142999168
+		}
+	},
+]
