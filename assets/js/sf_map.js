@@ -15,13 +15,13 @@ async function initMap() {
   // Get the data on restaurants from the JSON file held in '/assets/data/'
   // And build the markers based on that
   await d3.json("/assets/data/sf_recs.json", function (d) {
-    const restaurants = d;
-    for (const restaurant of restaurants) {
+    const recs = d;
+    for (const rec of recs) {
       const AdvancedMarkerElement = new google.maps.marker.AdvancedMarkerElement({
       map,
-      content: buildContent(restaurant),
-      position: restaurant.position,
-      title: restaurant.name,
+      content: buildContent(rec),
+      position: rec.position,
+      title: rec.name,
       });
 
       AdvancedMarkerElement.addListener("click", () => {
