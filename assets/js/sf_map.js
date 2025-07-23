@@ -14,21 +14,19 @@ async function initMap() {
 
   // Get the data on restaurants from the JSON file held in '/assets/data/'
   // And build the markers based on that
-  await d3.json("/assets/data/sf_recs.json", function (d) {
-    const recs = d;
-    for (const rec of recs) {
-      const AdvancedMarkerElement = new google.maps.marker.AdvancedMarkerElement({
+  const recs = await d3.json("/assets/data/sf_recs.json");
+  for (const rec of recs) {
+    const marker = new google.maps.marker.AdvancedMarkerElement({
       map,
       content: buildContent(rec),
       position: rec.position,
       title: rec.name,
-      });
+    });
 
-      AdvancedMarkerElement.addListener("click", () => {
-        toggleHighlight(AdvancedMarkerElement, restaurant);
-      });
-    }
-  });
+    marker.addListener("click", () => {
+      toggleHighlight(marker, rec);
+    });
+  }
 
 
   // Build the legend and throw it in the bottom right  
