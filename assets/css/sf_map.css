@@ -54,9 +54,9 @@ body {
 }
 
 /*
- * Resturant styles in unhighlighted state.
+ * rec styles in unhighlighted state.
  */
-.restaurant {
+.rec {
   align-items: center;
   background-color: #FFFFFF;
   border: 1px solid #FFFFFF;
@@ -73,7 +73,7 @@ body {
   width: 40px;
 }
 
-.restaurant::after {
+.rec::after {
   border-left: 9px solid transparent;
   border-right: 9px solid transparent;
   border-top: 9px solid #FFFFFF;
@@ -88,46 +88,46 @@ body {
   z-index: 1;
 }
 
-.restaurant .icon {
+.rec .icon {
   align-items: center;
   display: flex;
   justify-content: center;
   color: #FFFFFF;
 }
 
-.restaurant .icon svg {
+.rec .icon svg {
   height: 20px;
   width: auto;
 }
 
-.restaurant .details {
+.rec .details {
   display: none;
   flex-direction: column;
   flex: 1;
 }
 
-.restaurant .address {
+.rec .address {
   color: #9E9E9E;
   font-size: 14px;
   margin-bottom: 2px;
   margin-top: 2px;
 }
 
-.restaurant .description {
+.rec .description {
   color: #9E9E9E;
   font-size: 14px;
   margin-bottom: 2px;
   margin-top: 2px;
 }
 
-.restaurant .features {
+.rec .features {
   align-items: flex-end;
   display: flex;
   flex-direction: row;
   gap: 10px;  
 }
 
-.restaurant .features > div {
+.rec .features > div {
   align-items: center;
   background: #F5F5F5;
   border-radius: 5px;
@@ -140,9 +140,9 @@ body {
 }
 
 /*
- * Restaurant styles in highlighted state.
+ * rec styles in highlighted state.
  */
-.restaurant.highlight {
+.rec.highlight {
   background-color: #FFFFFF;
   border-radius: 8px;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
@@ -151,118 +151,118 @@ body {
   width: auto;
 }
 
-.restaurant.highlight::after {
+.rec.highlight::after {
   border-top: 9px solid #FFFFFF;
 }
 
-.restaurant.highlight .details {
+.rec.highlight .details {
   display: flex;
 }
 
-.restaurant.highlight .icon svg {
+.rec.highlight .icon svg {
   width: 50px;
   height: 50px;
 }
 
-.restaurant .dollar {
+.rec .dollar {
   color: #FFA000;
 }
 
-.restaurant .veg {
+.rec .veg {
   color: #388E3C;
 }
 
-.restaurant .nonveg {
+.rec .nonveg {
   color: #8F3838;
 }
 
-.restaurant .rez {
+.rec .rez {
   color: #383B8F;
 }
 
 /*
  * Icon colors.
  */
-.restaurant.highlight:has(.grab-and-go) .icon {
+.rec.highlight:has(.grab-and-go) .icon {
   color: var(--grab-and-go);
 }
 
-.restaurant:not(.highlight):has(.grab-and-go) {
+.rec:not(.highlight):has(.grab-and-go) {
   background-color: var(--grab-and-go);
 }
 
-.restaurant:not(.highlight):has(.grab-and-go)::after {
+.rec:not(.highlight):has(.grab-and-go)::after {
   border-top: 9px solid var(--grab-and-go);
 }
 
-.restaurant.highlight:has(.affordable) .icon {
+.rec.highlight:has(.affordable) .icon {
   color: var(--affordable);
 }
 
-.restaurant:not(.highlight):has(.affordable) {
+.rec:not(.highlight):has(.affordable) {
   background-color: var(--affordable);
 }
 
-.restaurant:not(.highlight):has(.affordable)::after {
+.rec:not(.highlight):has(.affordable)::after {
   border-top: 9px solid var(--affordable);
 }
 
-.restaurant.highlight:has(.affordable-and-drinks) .icon {
+.rec.highlight:has(.affordable-and-drinks) .icon {
   color: var(--affordable-and-drinks);
 }
 
-.restaurant:not(.highlight):has(.affordable-and-drinks) {
+.rec:not(.highlight):has(.affordable-and-drinks) {
   background-color: var(--affordable-and-drinks);
 }
 
-.restaurant:not(.highlight):has(.affordable-and-drinks)::after {
+.rec:not(.highlight):has(.affordable-and-drinks)::after {
   border-top: 9px solid var(--affordable-and-drinks);
 }
 
-.restaurant.highlight:has(.expensive) .icon {
+.rec.highlight:has(.expensive) .icon {
   color: var(--expensive);
 }
 
-.restaurant:not(.highlight):has(.expensive) {
+.rec:not(.highlight):has(.expensive) {
   background-color: var(--expensive);
 }
 
-.restaurant:not(.highlight):has(.expensive)::after {
+.rec:not(.highlight):has(.expensive)::after {
   border-top: 9px solid var(--expensive);
 }
 
-.restaurant.highlight:has(.expensive-and-drinks) .icon {
+.rec.highlight:has(.expensive-and-drinks) .icon {
   color: var(--expensive-and-drinks);
 }
 
-.restaurant:not(.highlight):has(.expensive-and-drinks) {
+.rec:not(.highlight):has(.expensive-and-drinks) {
   background-color: var(--expensive-and-drinks);
 }
 
-.restaurant:not(.highlight):has(.expensive-and-drinks)::after {
+.rec:not(.highlight):has(.expensive-and-drinks)::after {
   border-top: 9px solid var(--expensive-and-drinks);
 }
 
-.restaurant.highlight:has(.drinks) .icon {
+.rec.highlight:has(.drinks) .icon {
   color: var(--drinks);
 }
 
-.restaurant:not(.highlight):has(.drinks) {
+.rec:not(.highlight):has(.drinks) {
   background-color: var(--drinks);
 }
 
-.restaurant:not(.highlight):has(.drinks)::after {
+.rec:not(.highlight):has(.drinks)::after {
   border-top: 9px solid var(--drinks);
 }
 
-.restaurant.highlight:has(.want-to-go) .icon {
+.rec.highlight:has(.want-to-go) .icon {
   color: var(--want-to-go);
 }
 
-.restaurant:not(.highlight):has(.want-to-go) {
+.rec:not(.highlight):has(.want-to-go) {
   background-color: var(--want-to-go);
 }
 
-.restaurant:not(.highlight):has(.want-to-go)::after {
+.rec:not(.highlight):has(.want-to-go)::after {
   border-top: 9px solid var(--want-to-go);
 }

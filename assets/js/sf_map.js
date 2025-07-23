@@ -3,7 +3,7 @@ async function initMap() {
   // Request needed libraries.
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-  const center = { lat: 38.90892791748047, lng: -77.03687286376953 };
+  const center = { lat: 37.966774418236604, lng: -122.52741599352697 };
   const map = new Map(document.getElementById("map"), {
     zoom: 14,
     center,
@@ -12,7 +12,7 @@ async function initMap() {
     mapId: "99ceafbf2eaede861f64936d",
   });
 
-  // Get the data on restaurants from the JSON file held in '/assets/data/'
+  // Get the data on recs from the JSON file held in '/assets/data/'
   // And build the markers based on that
   const recs = await d3.json("/assets/data/sf_recs.json");
   console.log("recs:", recs);
@@ -29,24 +29,7 @@ async function initMap() {
     });
   }
 
-
-  // Build the legend and throw it in the bottom right  
-  for (const key in legend_colors) {
-    const type = legend_colors[key];
-    const div = document.createElement("div");
-
-    div.innerHTML = `<span style="color:${type.color};"><i class="fa-solid fa-circle"></i> ${type.name}</span>`;
-    legend.appendChild(div);
-  }
-  map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
-
-  // Build the back button and throw it in the top left
-  const arrow_div = document.createElement("div");
-  arrow_div.innerHTML = `<a href="/"><span class="back-arrow fa-solid fa-arrow-left"></span></a>`;
-  map.controls[google.maps.ControlPosition.LEFT_TOP].push(arrow_div);
-}
-
-function toggleHighlight(markerView, restaurant) {
+function toggleHighlight(markerView, rec) {
   if (markerView.content.classList.contains("highlight")) {
     markerView.content.classList.remove("highlight");
     markerView.zIndex = null;
@@ -56,34 +39,34 @@ function toggleHighlight(markerView, restaurant) {
   }
 }
 
-function buildContent(restaurant) {
+function buildContent(rec) {
   const content = document.createElement("div");
 
-  content.classList.add("restaurant");
+  content.classList.add("rec");
   content.innerHTML = `
-    <div class="icon ${restaurant.type}">
-            <i class="fa-solid fa-${restaurant.icon1} fa-md"></i>
-            <i class="fa-solid fa-${restaurant.icon2} fa-md"></i>
+    <div class="icon ${rec.type}">
+            <i class="fa-solid fa-${rec.icon1} fa-md"></i>
+            <i class="fa-solid fa-${rec.icon2} fa-md"></i>
     </div>
     <div class="details">
-        <div class="name"><a href="${restaurant.link}">${restaurant.name}</a></div>
-        <div class="address">${restaurant.address}</div>
-        <div class="description">${restaurant.description}</div>
+        <div class="name"><a href="${rec.link}">${rec.name}</a></div>
+        <div class="address">${rec.address}</div>
+        <div class="description">${rec.description}</div>
         <div class="features">
         <div>
             <i aria-hidden="true" class="fa-solid fa-badge-dollar fa-lg dollar" title="Average Dinner"></i>
             <span class="fa-sr-only">Average Dinner</span>
-            <span>${restaurant.price}</span>
+            <span>${rec.price}</span>
         </div>
         <div>
-            <i aria-hidden="true" class="fa-solid fa-${restaurant.extra_icon} fa-lg ${restaurant.extra_color}" title="Extra"></i>
+            <i aria-hidden="true" class="fa-solid fa-${rec.extra_icon} fa-lg ${rec.extra_color}" title="Extra"></i>
             <span class="fa-sr-only">Extra</span>
-            <span>${restaurant.extra_text}</span>
+            <span>${rec.extra_text}</span>
         </div>
         <div>
             <i aria-hidden="true" class="fa-solid fa-calendar-lines-pen fa-lg rez" title="Reservation"></i>
             <span class="fa-sr-only">Reservation</span>
-            <span>${restaurant.rez}</span>
+            <span>${rec.rez}</span>
         </div>
         </div>
     </div>
@@ -91,36 +74,5 @@ function buildContent(restaurant) {
   return content;
 }
 
-const legend_colors = {
-  grab_and_go: {
-    name: "Grab & Go",
-    color: "#D05353"
-  },
-  affordable_sitdown: {
-    name: "Affordable Sitdown",
-    color: "#41BBD9"
-  },
-  affordable_and_drinks: {
-    name: "Affordable & Drinks",
-    color: "#7CD179"
-  },
-  expensive_sitdown: {
-    name: "Expensive Sitdown",
-    color: "#33658A"
-  },
-  expensive_and_drinks: {
-    name: "Expensive & Drinks",
-    color: "#679965"
-  },
-  drinks: {
-    name: "Drinks",
-    color: "#FFB140"
-  },
-  want_to_go: {
-    name: "Want to Go",
-    color: "#262626"
-  },
-
-}
 
 initMap();
