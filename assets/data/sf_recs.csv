@@ -1,6 +1,6 @@
 name|link|address|description|icon1|icon2|type|level|price|extra_icon|extra_color|extra_text|rez|lat|lng
 Marin French Cheese Co.|https://marinfrenchcheese.com/|7510 Pt. Reyes - Petaluma Rd, Petaluma, CA 94952|Fantastic French-style cheese with a beautiful picnic spot by a pond.|cheese-swiss||food|2|$$||||No Rez|38.1374496|-122.7097814
-Gundlach Bundschu|https://www.gunbun.com/|2000 Denmark St, Sonoma, CA 95476|Great wines with a good tasting and cave tour.|grapes||wine|1|$$$||||Rez Rec'd|38.28060833|-122.4169462
+Gundlach Bundschu|https://www.gunbun.com/|2000 Denmark St, Sonoma, CA 95476|Great wines with a good tasting and cave tour.|grapes||drinks|1|$$$||||Rez Rec'd|38.28060833|-122.4169462
 the girl & the fig|https://www.thegirlandthefig.com/|110 W Spain St, Sonoma, CA 95476|Wine-centric Sonoma-style food.|fork-knife||food|1|$$$||||Rez Rec'd|38.29391305|-122.4588066
 Jack London State Historic Park|https://jacklondonpark.com/|2400 London Ranch Rd, Glen Ellen, CA 95442|Historic house built by Jack London with a museum to his life and travels, and wonderful hiking in the valley of the moon.|house||hike|2|$||||No Rez|38.35595143|-122.5425193
 Armstrong Redwoods|https://www.parks.ca.gov/?page_id=450|17000 Armstrong Woods Rd, Guerneville, CA 95446|Amazing redwoods and hiking.|tree||hike|3|$||||No Rez|38.53703622|-123.0066686
@@ -19,7 +19,7 @@ Ocean Beach|||Very long sandy beach along the ocean.|wave||point|2|Free||||No Re
 Hong Kong Lounge|https://www.newhongkonglounge.com/|5322 Geary Blvd, San Francisco, CA 94121|Classic sit-down dim sum.|bowl-chopsticks||food|1|$$||||Rez Rec'd|37.78062063|-122.4768129
 Han Il Kwan|https://hanilkwan.store/|1802 Balboa St, San Francisco, CA 94121|Good KBBQ spot, even the Korean tourists go here.|meat||food|1|$$||||No Rez|37.77672306|-122.4783791
 Twin Peaks|https://sfrecpark.org/facilities/facility/details/twin-peaks-384|501 Twin Peaks Blvd, San Francisco, CA 94114|Short hike to a view from the top of the city.|binoculars||point|1|Free||||No Rez|37.75333619|-122.4475013
-Point Reyes Lighthouse|https://www.nps.gov/pore/planyourvisit/lighthouse.htm|Sir Francis Drake Blvd, Inverness, CA 94937|Nice hike to a great lighthouse in the Point Reyes National Seashore|Lighthouse||hike|2|$||||No Rez|37.99555392580326|-123.02031115473649
+Point Reyes Lighthouse|https://www.nps.gov/pore/planyourvisit/lighthouse.htm|Sir Francis Drake Blvd, Inverness, CA 94937|Nice hike to a great lighthouse in the Point Reyes National Seashore|lighthouse||hike|2|$||||No Rez|37.99555392580326|-123.02031115473649
 Station House Cafe|https://stationhousecafe.com/menu/|11285 CA-1, Point Reyes Station, CA 94956|Classic American brunch.|pancakes||food|1|$||||No Rez|38.06789722306245|-122.80617836724804
 Tomales Bay Oyster Co|http://tomalesbayoystercompany.com/|15479 CA-1, Marshall, CA 94940|Roadside stop for oysters.|crab||food|1|$$||||No Rez|38.11554198720886|-122.85335845382026
 Patrick's Salt Water Taffy|https://www.patricksofbodegabay.com/|915 CA-1, Bodega Bay, CA 94923|Pink striped shack selling a huge variety of taffy.|candy||food|1|$||||No Rez|38.329672558552176|-123.04573071433374
@@ -27,3 +27,10 @@ Shell Beach|http://parks.sonomacounty.ca.gov/Get_Outdoors/Parks/Shell_Beach_Sea_
 Goat Rock|http://www.parks.ca.gov/?page_id=451|Salmon Creek Jenner, Jenner, CA 95450|Rocky beech area with impressive views.|wave||hike|1|$||||No Rez|38.440314672928274|-123.12624428778751
 Duncan's Landing||Duncan's Landing Overlook, Bodega Bay, CA 94923|Picturesque overlook with a short hike down to a beech.|wave||hike|2|Free||||No Rez|38.39436604204237|-123.09519090777945
 Sea Ranch|||Planned coastal community with unique, style-defining architecture, including the community chapel.|house||area|1|Free||||No Rez|38.72126108260489|-123.46579015611614
+Russian River Brewing Co.|http://russianriverbrewing.com/|725 4th St, Santa Rosa, CA 95404|Iconic brewery that helped start the craft beer movement, amazing IPAs and sours. Downtown pub location.|beer-mug||drink|2|$||||No Rez|38.44168057154158|-122.71167497663
+Russian River Brewing Co.|http://russianriverbrewing.com/|700 Mitchell Ln, Windsor, CA 95492|Iconic brewery that helped start the craft beer movement, amazing IPAs and sours. Brewery location.|beer-mug||drink|2|$||||No Rez|38.53158420655067|-122.80039915556488
+Charles Schulz Museum & Ice Rink|https://schulzmuseum.org/|2301 Hardies Ln, Santa Rosa, CA 95403|Museum for the creator of Peanuts and Snoopy, and to cartooning in general. Also has an ice rink.|dog||museum|1|$||||No Rez|38.460325952283526|-122.73596111842664
+Jelly Belly Factory|https://www.jellybelly.com/california-factory-store|1 Jelly Belly Ln, Fairfield, CA 94533|Factory store, museum, and tour for Jelly Belly Beans.|candy||point|1|$||||No Rez|38.238826986592315|-122.07850659919468
+Copperfield's Books|http://copperfieldsbooks.com/|140 Kentucky St, Petaluma, CA 94952|Great bookstore with extensive used selection downstairs.|book||shopping|1|$||||No Rez|38.23483113729603|-122.6416448233938
+Mi Pueblo El Centro|http://eatmipueblo.com/|108 Kentucky St #2926, Petaluma, CA 94952|Solid SF Mexican food.|burrito||food|1|$||||No Rez|38.234064934993384|-122.64118046174453
+Crooked Goat Brewing|http://www.crookedgoatbrewing.com/|110 Howard St, Petaluma, CA 94952|Friendly brewery.|beer-mug||drink|1|$||||No Rez|38.23332640229537|-122.64435906524055

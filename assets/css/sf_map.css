@@ -1,11 +1,11 @@
 :root {
   --food: var(--color-humor);
   --hike: var(--color-fantasy);
-  --wine: var(--color-philosophy);
+  --drinks: var(--color-philosophy);
   --shopping: var(--color-goldenrod);
   --museum: var(--color-western);
   --point: var(--color-male);
-  --area: var(--color-goldenrod);
+  --area: var(--color-darkgray);
 }
 
 /*
@@ -207,16 +207,16 @@ body {
   border-top: 9px solid var(--hike);
 }
 
-.rec.highlight:has(.wine) .icon {
-  color: var(--wine);
+.rec.highlight:has(.drinks) .icon {
+  color: var(--drinks);
 }
 
-.rec:not(.highlight):has(.wine) {
-  background-color: var(--wine);
+.rec:not(.highlight):has(.drinks) {
+  background-color: var(--drinks);
 }
 
-.rec:not(.highlight):has(.wine)::after {
-  border-top: 9px solid var(--wine);
+.rec:not(.highlight):has(.drinks)::after {
+  border-top: 9px solid var(--drinks);
 }
 
 .rec.highlight:has(.shopping) .icon {
