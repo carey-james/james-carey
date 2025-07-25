@@ -340,5 +340,23 @@
 			"lat": 37.77672305938178,   
 			"lng": -122.4783790951455
 		}
+	},
+	{
+		"name": "Twin Peaks",
+		"link": "https://sfrecpark.org/facilities/facility/details/twin-peaks-384",
+		"address": "501 Twin Peaks Blvd, San Francisco, CA 94114",
+		"description": "French Cheese and Picnic Spot",
+		"icon1": "binoculars",
+		"icon2": "",
+		"type": "point",
+		"price": "$40",
+		"extra_icon": "leaf",
+		"extra_color": "veg",
+		"extra_text": "Vegan OK",
+		"rez": "Rez Rec'd",
+		"position": {
+			"lat": 37.753336185706004,    
+			"lng": -122.44750125220467
+		}
 	}
 ]
