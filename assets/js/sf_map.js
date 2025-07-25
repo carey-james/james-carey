@@ -20,7 +20,7 @@ async function initMap() {
     const marker = new google.maps.marker.AdvancedMarkerElement({
       map,
       content: buildContent(rec),
-      position: rec.position,
+      position: {lat: parseFloat(rec.lat), lng: parseFloat(rec.lng)},
       title: rec.name,
     });
 
