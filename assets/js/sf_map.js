@@ -15,6 +15,7 @@ async function initMap() {
   // Get the data on recs from the JSON file held in '/assets/data/'
   // And build the markers based on that
   const recs = await d3.dsv('|', '/assets/data/sf_recs.csv');
+  console.log(recs)
   for (const rec of recs) {
     const marker = new google.maps.marker.AdvancedMarkerElement({
       map,
