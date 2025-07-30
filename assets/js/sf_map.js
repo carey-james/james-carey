@@ -43,14 +43,14 @@ function toggleHighlight(markerView, rec) {
 function buildContent(rec) {
   const content = document.createElement("div");
 
-  content.classList.add("rec");
+  content.classList.add("rec"); 
   let levelText = '';
   if (rec.level == '1') {
     levelText = '<i aria-hidden="true" class="fa-solid fa-star fa-lg star" title="Star"></i> <span>If Nearby</span>'
   } else if (rec.level == '2') {
-    levelText = '<i aria-hidden="true" class="fa-solid fa-star fa-lg star" title="Star"></i> <i aria-hidden="true" class="fa-solid fa-star fa-lg star" title="Star"></i> <span>Worth a Detour</span>'
+    levelText = '<i aria-hidden="true" class="fa-solid fa-star fa-lg star" title="Star"></i><i aria-hidden="true" class="fa-solid fa-star fa-lg star" title="Star"></i> <span>Worth a Detour</span>'
   } else {
-    levelText = '<i aria-hidden="true" class="fa-solid fa-star fa-lg star" title="Star"></i> <i aria-hidden="true" class="fa-solid fa-star fa-lg star" title="Star"></i> <i aria-hidden="true" class="fa-solid fa-star fa-lg star" title="Star"></i> <span>Worth a Trip</span>'
+    levelText = '<i aria-hidden="true" class="fa-solid fa-star fa-lg star" title="Star"></i><i aria-hidden="true" class="fa-solid fa-star fa-lg star" title="Star"></i><i aria-hidden="true" class="fa-solid fa-star fa-lg star" title="Star"></i> <span>Worth a Trip</span>'
   }
   content.innerHTML = `
     <div class="icon ${rec.type}">
