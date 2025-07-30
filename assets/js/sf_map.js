@@ -28,7 +28,61 @@ async function initMap() {
       toggleHighlight(marker, rec);
     });
   }
+
+  // Init the grid
+  initRecGrid(recs);
 }
+
+function initRecGrid(recs) {
+  const gridOptions = {
+    columnDefs: [
+      {
+        headerName: '',
+        field: 'icon1',
+        width: 50,
+        cellRenderer: (params) => {
+          return `<i class="fa-solid fa-${params.value} fa-lg"></i>`;
+        },
+      },
+      {
+        headerName: 'Name',
+        field: 'name',
+        minWidth: 160,
+        cellRenderer: (params) => {
+          return `<a href="${params.data.link}" target="_blank">${params.value}</a>`;
+        },
+      },
+      { headerName: 'Address', field: 'address', minWidth: 180 },
+      { headerName: 'Type', field: 'type', width: 100 },
+      {
+        headerName: 'Level',
+        field: 'level',
+        width: 120,
+        cellRenderer: (params) => {
+          const level = params.value;
+          let stars = '';
+          for (let i = 0; i < level; i++) {
+            stars += `<i class="fa-solid fa-star star" style="color:#ffc107;"></i>`;
+          }
+          return stars;
+        },
+      },
+      { headerName: 'Price', field: 'price', width: 90 },
+      { headerName: 'Description', field: 'description', minWidth: 200 },
+    ],
+    defaultColDef: {
+      resizable: true,
+      wrapText: true,
+      autoHeight: true,
+    },
+    rowData: recs,
+    domLayout: 'autoHeight',
+  };
+
+  const gridDiv = document.querySelector('#recGrid');
+  new agGrid.Grid(gridDiv, gridOptions);
+}
+
 
 function toggleHighlight(markerView, rec) {
   if (markerView.content.classList.contains("highlight")) {
