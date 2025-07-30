@@ -167,19 +167,15 @@ body {
 }
 
 .rec .dollar {
-  color: #FFA000;
+  color: var(--color-scifi);
 }
 
-.rec .veg {
-  color: #388E3C;
-}
-
-.rec .nonveg {
-  color: #8F3838;
+.rec .star {
+  color: var(--color-favorite);
 }
 
 .rec .rez {
-  color: #383B8F;
+  color: var(--color-slate);
 }
 
 /*

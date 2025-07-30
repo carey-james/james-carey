@@ -44,6 +44,18 @@ function buildContent(rec) {
   const content = document.createElement("div");
 
   content.classList.add("rec");
+  let priceIcon = '';
+  if (rec.price == 'Free') {
+    priceIcon = `
+      <span>Free</span>
+    `
+  } else {
+    for (let i = 0; i < (rec.price.length); i++) {
+      priceIcon += `
+        <i aria-hidden="true" class="fa-solid fa-badge-dollar fa-lg dollar" title="Dollar"></i>
+      `
+    }
+  }
   content.innerHTML = `
     <div class="icon ${rec.type}">
             <i class="fa-solid fa-${rec.icon1} fa-md"></i>
@@ -55,9 +67,7 @@ function buildContent(rec) {
         <div class="description">${rec.description}</div>
         <div class="features">
         <div>
-            <i aria-hidden="true" class="fa-solid fa-badge-dollar fa-lg dollar" title="Average Dinner"></i>
-            <span class="fa-sr-only">Average Dinner</span>
-            <span>${rec.price}</span>
+          ${priceIcon}
         </div>
         <div>
             <i aria-hidden="true" class="fa-solid fa-${rec.extra_icon} fa-lg ${rec.extra_color}" title="Extra"></i>
