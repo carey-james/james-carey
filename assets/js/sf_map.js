@@ -79,7 +79,7 @@ function initRecGrid(recs) {
             </div>
           `;
         }
-      }
+      },
       { headerName: 'Price', field: 'price', width: 90 },
       { headerName: 'Description', field: 'description', minWidth: 200 },
     ],
