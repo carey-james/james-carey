@@ -37,13 +37,21 @@ function initRecGrid(recs) {
   const gridOptions = {
     columnDefs: [
       {
-        headerName: '',
+        headerName: '', // No header
         field: 'icon1',
-        width: 50,
+        minWidth: 50,
+        maxWidth: 60,
         cellRenderer: (params) => {
-          return `<i class="fa-solid fa-${params.value} fa-lg"></i>`;
-        },
+          const type = params.data.type?.toLowerCase() || 'default';
+          const icon1 = params.data.icon1;
+          return `
+            <div class="icon ${type}">
+              <i class="fa-solid fa-${icon1} fa-lg"></i>
+            </div>
+          `;
+        }
       },
+
       {
         headerName: 'Name',
         field: 'name',
@@ -53,20 +61,25 @@ function initRecGrid(recs) {
         },
       },
       { headerName: 'Address', field: 'address', minWidth: 180 },
-      { headerName: 'Type', field: 'type', width: 100 },
       {
-        headerName: 'Level',
-        field: 'level',
-        width: 120,
+        headerName: "Level",
+        field: "level",
+        minWidth: 160,
         cellRenderer: (params) => {
-          const level = params.value;
-          let stars = '';
-          for (let i = 0; i < level; i++) {
-            stars += `<i class="fa-solid fa-star star" style="color:#ffc107;"></i>`;
-          }
-          return stars;
-        },
-      },
+          const level = parseInt(params.value, 10);
+          const stars = '<i class="fa-solid fa-star fa-sm star"></i>'.repeat(level);
+          let text = '';
+          if (level === 1) text = 'If Nearby';
+          else if (level === 2) text = 'Worth a Detour';
+          else if (level === 3) text = 'Worth a Trip';
+
+          return `
+            <div class="level-cell">
+              ${stars} <span class="level-desc">${text}</span>
+            </div>
+          `;
+        }
+      }
       { headerName: 'Price', field: 'price', width: 90 },
       { headerName: 'Description', field: 'description', minWidth: 200 },
     ],
