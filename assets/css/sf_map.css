@@ -90,8 +90,8 @@ body {
   z-index: 1;
 }
 
-.rec .name {
-  color:  #000000;
+.rec .link {
+  color:  var(--color-slate);
 }
 
 .rec .icon {
@@ -113,14 +113,14 @@ body {
 }
 
 .rec .address {
-  color: var(--color-darkgray);
+  color: var(--color-lightgray);
   font-size: 14px;
   margin-bottom: 2px;
   margin-top: 2px;
 }
 
 .rec .description {
-  color: var(--color-slate);
+  color: var(--color-darkgray);
   font-size: 14px;
   margin-bottom: 2px;
   margin-top: 2px;
@@ -154,7 +154,7 @@ body {
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
   height: auto;
   padding: 8px 15px;
-  width: 300px;                 /* You can adjust this value */
+  width: 400px;                 /* You can adjust this value */
   max-width: 90vw;              /* For responsiveness on small screens */
   white-space: normal;          /* Ensure text can wrap */
   word-wrap: break-word;        /* Break long words if needed */
