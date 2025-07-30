@@ -68,7 +68,7 @@ function buildContent(rec) {
             <span>${rec.price}</span>
         </div>
         <div>
-            ${rec.levelText}
+            ${levelText}
         </div>
         <div>
             <i aria-hidden="true" class="fa-solid fa-calendar-lines-pen fa-lg rez" title="Reservation"></i>
