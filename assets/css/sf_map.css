@@ -135,7 +135,7 @@ body {
   border-radius: 10px;
   border: 1px solid #ccc;
   display: flex;
-  font-size: 15px;
+  font-size: 12px;
   gap: 5px;
   padding: 6px;
   z-index: 2;
@@ -150,11 +150,22 @@ body {
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
   height: 80px;
   padding: 8px 15px;
-  width: auto;
+  width: 300px;                 /* You can adjust this value */
+  max-width: 90vw;              /* For responsiveness on small screens */
+  white-space: normal;          /* Ensure text can wrap */
+  word-wrap: break-word;        /* Break long words if needed */
 }
 
 .rec.highlight::after {
   border-top: 9px solid #FFFFFF;
+}
+
+.rec.highlight .address,
+.rec.highlight .description {
+  white-space: normal;          /* Allow text to wrap */
+  overflow-wrap: break-word;    /* Handle long words properly */
+  max-width: 100%;              /* Respect container width */
+  display: block;               /* Ensure block layout */
 }
 
 .rec.highlight .details {
