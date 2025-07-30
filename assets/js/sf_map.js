@@ -53,6 +53,7 @@ function buildContent(rec) {
     for (let i = 0; i < (rec.price.length); i++) {
       priceIcon += `
         <i aria-hidden="true" class="fa-solid fa-badge-dollar fa-lg dollar" title="Dollar"></i>
+        <span class="fa-sr-only">Dollar</span>
       `
     }
   }
