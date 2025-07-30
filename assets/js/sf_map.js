@@ -46,7 +46,7 @@ function initRecGrid(recs) {
           const icon1 = params.data.icon1;
           return `
             <div class="icon ${type}">
-              <i class="fa-solid fa-${icon1} fa-lg"></i>
+              <i class="fa-solid fa-${icon1} fa-lg ${type}"></i>
             </div>
           `;
         }

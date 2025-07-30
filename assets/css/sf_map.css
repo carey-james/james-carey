@@ -278,6 +278,72 @@ body {
   border-top: 9px solid var(--area);
 }
 
+* Grid */
+  .ag-header-cell {
+      font-size: 18px;
+      font-family: 'Raleway', 'Helvetica', sans-serif;
+      font-weight: 100;
+      padding: 5px 3px; 
+    text-align: center; 
+    white-space: normal;
+      word-wrap: break-word;
+      display: flex;
+      justify-content: center;
+      align-items: center;  }
+
+  .ag-cell {
+      font-size: 10px;
+      font-family: 'Bitter', sans-serif;
+      padding: 1px 1px;
+      line-height: 1.1;
+      white-space: normal;
+      word-wrap: break-word;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+
+  .ag-cell[col-id='game'] {
+      font-size: 16px;
+      font-family: 'Raleway', 'Helvetica', sans-serif;
+      font-weight: 100; }
+
+  .ag-header-cell[col-id='game'],
+  .ag-cell[col-id='game'] {
+      min-width: 180px;
+      text-align: left;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; }
+
+  .ag-cell[col-id='mechanics'], 
+  .ag-cell[col-id='theme'], 
+  .ag-cell[col-id='players'], 
+  .ag-cell[col-id='expansion'], 
+  .ag-cell[col-id='co-op'], 
+  .ag-cell[col-id='legacy'], 
+  .ag-cell[col-id='favorite'], 
+  .ag-cell[col-id='play_more'] {
+      text-align: center ;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+
+  .ag-cell[col-id='mechanics_rating'], 
+  .ag-cell[col-id='theme_rating'], 
+  .ag-cell[col-id='time'],
+  .ag-cell[col-id='learning_complexity'], 
+  .ag-cell[col-id='playing_complexity'],
+  .ag-cell[col-id='extras'],
+  .ag-cell[col-id='blurb'] {
+    text-align: left;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; }
+
+  .ag-cell[col-id='blurb'] {
+    font-style: italic; }
+
 /* container */
   .container {
     position: relative;
