@@ -57,7 +57,7 @@ function initRecGrid(recs) {
         field: 'name',
         minWidth: 160,
         cellRenderer: (params) => {
-          return `<a href="${params.data.link}" target="_blank">${params.value}</a>`;
+          return `<a href="${params.data.link}" class="black-link" target="_blank">${params.value}</a>`;
         },
       },
       { headerName: 'Address', field: 'address', minWidth: 180 },
@@ -126,7 +126,7 @@ function buildContent(rec) {
             <i class="fa-solid fa-${rec.icon2} fa-md"></i>
     </div>
     <div class="details">
-        <div class="name"><a href="${rec.link}">${rec.name}</a></div>
+        <div class="name"><a href="${rec.link}" class="black-link">${rec.name}</a></div>
         <div class="address">${rec.address}</div>
         <div class="description">${rec.description}</div>
         <div class="features">

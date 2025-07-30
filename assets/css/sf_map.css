@@ -53,6 +53,16 @@ body {
   color: #FFFFFF !important;
 }
 
+.black-link {
+  color: #000000 !important;
+  text-decoration: none;
+}
+
+.black-link:hover {
+  text-decoration: underline;
+}
+
+
 /*
  * rec styles in unhighlighted state.
  */
@@ -303,46 +313,37 @@ body {
       justify-content: center;
       align-items: center; }
 
-  .ag-cell[col-id='game'] {
+  .ag-cell[col-id='name'] {
       font-size: 16px;
       font-family: 'Raleway', 'Helvetica', sans-serif;
       font-weight: 100; }
 
-  .ag-header-cell[col-id='game'],
-  .ag-cell[col-id='game'] {
+  .ag-header-cell[col-id='name'],
+  .ag-cell[col-id='name'] {
       min-width: 180px;
       text-align: left;
       display: flex;
       justify-content: flex-start;
       align-items: center; }
 
-  .ag-cell[col-id='mechanics'], 
-  .ag-cell[col-id='theme'], 
-  .ag-cell[col-id='players'], 
-  .ag-cell[col-id='expansion'], 
-  .ag-cell[col-id='co-op'], 
-  .ag-cell[col-id='legacy'], 
-  .ag-cell[col-id='favorite'], 
-  .ag-cell[col-id='play_more'] {
-      text-align: center ;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-
-  .ag-cell[col-id='mechanics_rating'], 
-  .ag-cell[col-id='theme_rating'], 
-  .ag-cell[col-id='time'],
-  .ag-cell[col-id='learning_complexity'], 
-  .ag-cell[col-id='playing_complexity'],
-  .ag-cell[col-id='extras'],
-  .ag-cell[col-id='blurb'] {
+  .ag-cell[col-id='address'], 
+  .ag-cell[col-id='level'], 
+  .ag-cell[col-id='price'],
+  .ag-cell[col-id='description'] {
     text-align: left;
       display: flex;
       justify-content: flex-start;
       align-items: center; }
 
-  .ag-cell[col-id='blurb'] {
-    font-style: italic; }
+  /* Type-based icon colors inside AG Grid */
+  .ag-cell .icon.food i { color: var(--food); }
+  .ag-cell .icon.hike i { color: var(--hike); }
+  .ag-cell .icon.drinks i { color: var(--drinks); }
+  .ag-cell .icon.shopping i { color: var(--shopping); }
+  .ag-cell .icon.museum i { color: var(--museum); }
+  .ag-cell .icon.point i { color: var(--point); }
+  .ag-cell .icon.area i { color: var(--area); }
+
 
 /* container */
   .container {
