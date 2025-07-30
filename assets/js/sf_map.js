@@ -80,7 +80,8 @@ function initRecGrid(recs) {
   };
 
   const gridDiv = document.querySelector('#recGrid');
-  new agGrid.Grid(gridDiv, gridOptions);
+  agGrid.createGrid(gridDiv, gridOptions);
+
 }
 
 
