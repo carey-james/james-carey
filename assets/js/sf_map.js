@@ -44,18 +44,13 @@ function buildContent(rec) {
   const content = document.createElement("div");
 
   content.classList.add("rec");
-  let priceIcon = '';
-  if (rec.price == 'Free') {
-    priceIcon = `
-      <span>Free</span>
-    `
+  let levelText = '';
+  if (rec.level == '1') {
+    levelText = '<i aria-hidden="true" class="fa-solid fa-star fa-lg star" title="Star"></i> <span>If Nearby</span>'
+  } else if (rec.level == '2') {
+    levelText = '<i aria-hidden="true" class="fa-solid fa-star fa-lg star" title="Star"></i> <i aria-hidden="true" class="fa-solid fa-star fa-lg star" title="Star"></i> <span>Worth a Detour</span>'
   } else {
-    for (let i = 0; i < (rec.price.length); i++) {
-      priceIcon += `
-        <i aria-hidden="true" class="fa-solid fa-badge-dollar fa-lg dollar" title="Dollar"></i>
-        <span class="fa-sr-only">Dollar</span>
-      `
-    }
+    levelText = '<i aria-hidden="true" class="fa-solid fa-star fa-lg star" title="Star"></i> <i aria-hidden="true" class="fa-solid fa-star fa-lg star" title="Star"></i> <i aria-hidden="true" class="fa-solid fa-star fa-lg star" title="Star"></i> <span>Worth a Trip</span>'
   }
   content.innerHTML = `
     <div class="icon ${rec.type}">
@@ -68,12 +63,12 @@ function buildContent(rec) {
         <div class="description">${rec.description}</div>
         <div class="features">
         <div>
-          ${priceIcon}
+            <i aria-hidden="true" class="fa-solid fa-badge-dollar fa-lg dollar" title="Price"></i>
+            <span class="fa-sr-only">Price</span>
+            <span>${rec.price}</span>
         </div>
         <div>
-            <i aria-hidden="true" class="fa-solid fa-${rec.extra_icon} fa-lg ${rec.extra_color}" title="Extra"></i>
-            <span class="fa-sr-only">Extra</span>
-            <span>${rec.extra_text}</span>
+            ${rec.levelText}
         </div>
         <div>
             <i aria-hidden="true" class="fa-solid fa-calendar-lines-pen fa-lg rez" title="Reservation"></i>
