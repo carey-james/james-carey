@@ -346,25 +346,24 @@ body {
 
 .filter-bar {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin: 20px 0;
+  gap: 1.5rem;
+  margin: 1rem 0;
 }
 
 .filter-group {
   display: flex;
   flex-direction: column;
   font-family: 'Raleway', sans-serif;
-  font-size: 14px;
 }
 
-.filter-group select {
-  min-width: 120px;
-  padding: 4px;
-  font-size: 14px;
+multi-checkbox {
+  width: 150px;
 }
 
-
+/* optionally style labels */
+multi-checkbox label {
+  font-size: 0.9rem;
+}
 
 /* container */
   .container {
