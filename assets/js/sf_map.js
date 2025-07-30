@@ -81,7 +81,7 @@ function initRecGrid(recs) {
         }
       },
       { headerName: 'Price', field: 'price', width: 90 },
-      { headerName: 'Description', field: 'description', minWidth: 200 },
+      { headerName: 'Description', field: 'description', flex: 1, minWidth: 200 },
     ],
     defaultColDef: {
       resizable: true,
