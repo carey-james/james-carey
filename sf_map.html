@@ -9,7 +9,7 @@
 		<meta name="description" content="James' DC Restaurant Recs.">
 		<meta name="author" content="James Carey">
 		<script src="https://kit.fontawesome.com/15088ec22c.js" crossorigin="anonymous"></script>
-		<<script src="https://d3js.org/d3.v7.min.js"></script>
+		<script src="https://d3js.org/d3.v7.min.js"></script>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-grid.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-theme-quartz.css" />
 		<script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
@@ -42,6 +42,20 @@
 					(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
 		  			({key: "AIzaSyD4j6yJKQ2nHJnJJd9lUjw-IgSI2eyhIPA", v: "weekly"});
 		  		</script>
+		  		<div id="options" class="filter-bar">
+				  <div class="filter-group">
+				    <label for="typeFilter">Type</label>
+				    <select id="typeFilter" multiple></select>
+				  </div>
+				  <div class="filter-group">
+				    <label for="levelFilter">Level</label>
+				    <select id="levelFilter" multiple></select>
+				  </div>
+				  <div class="filter-group">
+				    <label for="priceFilter">Price</label>
+				    <select id="priceFilter" multiple></select>
+				  </div>
+				</div>
 		  		<div id="recGrid" style="height: 600px"></div>
 			</div>
 		</div>
