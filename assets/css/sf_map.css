@@ -132,10 +132,10 @@ body {
 .rec .features > div {
   align-items: center;
   background: #F5F5F5;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 1px solid #ccc;
   display: flex;
-  font-size: 10px;
+  font-size: 20px;
   gap: 5px;
   padding: 6px;
   z-index: 2;
