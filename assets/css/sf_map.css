@@ -370,16 +370,22 @@ body {
   align-items: center;
   gap: 4px;
   color: #333;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  gap: 5px;
+  padding: 6px;
+  z-index: 2;
 }
 
-.icon.food    { color: var(--food); }
-.icon.hike    { color: var(--hike); }
-.icon.drinks  { color: var(--drinks); }
-.icon.shopping{ color: var(--shopping); }
-.icon.museum  { color: var(--museum); }
-.icon.point   { color: var(--point); }
-.icon.area    { color: var(--area); }
-.icon.star    { color: var(--color-favorite); }
+.filter-toggle .icon.food { color: var(--food); }
+.filter-toggle .icon.hike { color: var(--hike); }
+.filter-toggle .icon.drinks { color: var(--drinks); }
+.filter-toggle .icon.shopping { color: var(--shopping); }
+.filter-toggle .icon.museum { color: var(--museum); }
+.filter-toggle .icon.point { color: var(--point); }
+.filter-toggle .icon.area { color: var(--area); }
+.filter-toggle .icon.star { color: var(--color-favorite); }
 
 
 .filter-toggle.inactive {
