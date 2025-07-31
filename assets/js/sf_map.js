@@ -184,7 +184,7 @@ function buildContent(rec) {
 }
 
 function updateFilters() {
-  if (!gridApi || !map) return;
+  //if (!gridApi || !map) return;
   // Update MAP
   for (const { marker, rec } of activeMarkers) {
     const visible =
