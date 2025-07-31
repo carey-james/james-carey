@@ -391,7 +391,7 @@ body {
   border: 1px solid #ccc;
   border-top: none;
   background-color: #ffffff;
-  color: var(--color-slate) !important;
+  color: var(--color-slate);
   max-height: 200px;
   overflow-y: auto;
   position: absolute;
