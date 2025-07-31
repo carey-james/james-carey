@@ -1,60 +1,37 @@
 async function initMap() {
+  
+  // Request needed libraries.
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-
+  const center = { lat: 37.966774418236604, lng: -122.52741599352697 };
   const map = new Map(document.getElementById("map"), {
     zoom: 9,
-    center: { lat: 37.96677, lng: -122.52741 },
+    center,
     mapTypeControl: false,
     streetViewControl: false,
     mapId: "99ceafbf2eaede861f64936d",
   });
 
+  // Get the data on recs from the JSON file held in '/assets/data/'
+  // And build the markers based on that
   const recs = await d3.dsv('|', '/assets/data/sf_recs.csv');
   let allMarkers = [];
   let allRecs = recs;
 
-  function capitalize(s) {
-    return s[0].toUpperCase() + s.slice(1);
-  }
+  populateFilterOptions(recs);
+  initRecGrid(recs);
 
-  function fillCheckbox(containerSel, items) {
-    const ul = document.querySelector(containerSel);
-    ul.innerHTML = '';
-    items.forEach(item => {
-      const li = document.createElement('li');
-      li.innerHTML = `<label><input type="checkbox" value="${item.value}"> ${item.text}</label>`;
-      ul.appendChild(li);
+  // Listen for filter changes
+  document.querySelectorAll('#options select').forEach(select => {
+    select.addEventListener('change', () => {
+      const filtered = applyFilters(recs);
+      updateMarkers(filtered);
+      updateGrid(filtered);
     });
-  }
-
-  function populateFilters(recs) {
-    const types = [...new Set(recs.map(r => r.type))].sort();
-    const levels = ['1','2','3'];
-    const levelLabels = { '1': 'If Nearby', '2': 'Worth a Detour', '3': 'Worth a Trip' };
-    const prices = [...new Set(recs.map(r => r.price))].sort();
-
-    fillCheckbox('#typeFilter ul', types.map(t => ({ value: t, text: capitalize(t) })));
-    fillCheckbox('#levelFilter ul', levels.map(l => ({ value: l, text: levelLabels[l] })));
-    fillCheckbox('#priceFilter ul', prices.map(p => ({ value: p, text: p })));
-  }
-
-  function applyFilters(data) {
-    const getChecked = sel =>
-      Array.from(document.querySelectorAll(sel + ' input:checked')).map(i => i.value);
-
-    const types = getChecked('#typeFilter');
-    const levels = getChecked('#levelFilter');
-    const prices = getChecked('#priceFilter');
-
-    return data.filter(r =>
-      (types.length === 0 || types.includes(r.type)) &&
-      (levels.length === 0 || levels.includes(r.level)) &&
-      (prices.length === 0 || prices.includes(r.price))
-    );
-  }
+  });
 
   function updateMarkers(filteredRecs) {
+    // Clear all old markers
     allMarkers.forEach(marker => marker.map = null);
     allMarkers = [];
 
@@ -62,28 +39,38 @@ async function initMap() {
       const marker = new google.maps.marker.AdvancedMarkerElement({
         map,
         content: buildContent(rec),
-        position: { lat: parseFloat(rec.lat), lng: parseFloat(rec.lng) },
+        position: {lat: parseFloat(rec.lat), lng: parseFloat(rec.lng)},
         title: rec.name,
       });
 
-      marker.addListener("click", () => toggleHighlight(marker, rec));
+      marker.addListener("click", () => {
+        toggleHighlight(marker, rec);
+      });
+
       allMarkers.push(marker);
     }
   }
 
-  document.querySelectorAll('#options input[type=checkbox]').forEach(cb => {
-    cb.addEventListener('change', () => {
-      const filtered = applyFilters(allRecs);
-      updateMarkers(filtered);
-      gridOptions.api.setRowData(filtered);
+  function updateGrid(filteredRecs) {
+    gridOptions.api.setRowData(filteredRecs);
+  }
+  console.log(recs)
+  for (const rec of recs) {
+    const marker = new google.maps.marker.AdvancedMarkerElement({
+      map,
+      content: buildContent(rec),
+      position: {lat: parseFloat(rec.lat), lng: parseFloat(rec.lng)},
+      title: rec.name,
     });
-  });
 
-  populateFilters(recs);
-  updateMarkers(recs);
+    marker.addListener("click", () => {
+      toggleHighlight(marker, rec);
+    });
+  }
+
+  // Init the grid
   initRecGrid(recs);
 }
-
 
 let gridOptions;
 

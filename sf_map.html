@@ -13,14 +13,13 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-grid.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-theme-quartz.css" />
 		<script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
-		<script type="module" src="https://unpkg.com/multi-checkbox/multi-checkbox.js"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-		<link rel="stylesheet"	type="text/css" href="assets/css/colors.css" />
-		<link rel="stylesheet"	type="text/css" href="assets/css/main.css">
-		<link rel="stylesheet"	type="text/css" href="assets/css/sf_map.css" />
+		<link rel="stylesheet"  type="text/css" href="assets/css/colors.css" />
+		<link rel="stylesheet"  type="text/css" href="assets/css/main.css">
+		<link rel="stylesheet"  type="text/css" href="assets/css/sf_map.css" />
 	</head>
 		<body>
 		<!-- Header -->
@@ -41,29 +40,23 @@
 				<div id="map"></div>
 				<script>
 					(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-						({key: "AIzaSyD4j6yJKQ2nHJnJJd9lUjw-IgSI2eyhIPA", v: "weekly"});
-					</script>
-					<div id="options" class="filter-bar">
-					<div class="filter-group">
-						<label>Type</label>
-						<multi-checkbox id="typeFilter">
-							<ul slot="check-values"></ul>
-						</multi-checkbox>
-					</div>
-					<div class="filter-group">
-						<label>Level</label>
-						<multi-checkbox id="levelFilter">
-							<ul slot="check-values"></ul>
-						</multi-checkbox>
-					</div>
-					<div class="filter-group">
-						<label>Price</label>
-						<multi-checkbox id="priceFilter">
-							<ul slot="check-values"></ul>
-						</multi-checkbox>
-					</div>
+		  			({key: "AIzaSyD4j6yJKQ2nHJnJJd9lUjw-IgSI2eyhIPA", v: "weekly"});
+		  		</script>
+		  		<div id="options" class="filter-bar">
+				  <div class="filter-group">
+				    <label for="typeFilter">Type</label>
+				    <select id="typeFilter" multiple></select>
+				  </div>
+				  <div class="filter-group">
+				    <label for="levelFilter">Level</label>
+				    <select id="levelFilter" multiple></select>
+				  </div>
+				  <div class="filter-group">
+				    <label for="priceFilter">Price</label>
+				    <select id="priceFilter" multiple></select>
+				  </div>
 				</div>
-					<div id="recGrid" style="height: 600px"></div>
+		  		<div id="recGrid" style="height: 600px"></div>
 			</div>
 		</div>
 		<!-- Scripts -->
