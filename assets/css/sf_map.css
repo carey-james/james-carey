@@ -390,7 +390,8 @@ body {
   margin: 0;
   border: 1px solid #ccc;
   border-top: none;
-  background-color: #fff;
+  background-color: #ffffff;
+  color: var(--color-slate);
   max-height: 200px;
   overflow-y: auto;
   position: absolute;
