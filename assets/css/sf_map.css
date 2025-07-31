@@ -372,14 +372,15 @@ body {
   color: #333;
 }
 
-.filter-toggle .icon.food i { color: var(--food); }
-.filter-toggle .icon.hike i { color: var(--hike); }
-.filter-toggle .icon.drinks i { color: var(--drinks); }
-.filter-toggle .icon.shopping i { color: var(--shopping); }
-.filter-toggle .icon.museum i { color: var(--museum); }
-.filter-toggle .icon.point i { color: var(--point); }
-.filter-toggle.icon.area i { color: var(--area); }
-.filter-toggle .icon.star i { color: var(--shopping); }
+.icon.food    { color: var(--food); }
+.icon.hike    { color: var(--hike); }
+.icon.drinks  { color: var(--drinks); }
+.icon.shopping{ color: var(--shopping); }
+.icon.museum  { color: var(--museum); }
+.icon.point   { color: var(--point); }
+.icon.area    { color: var(--area); }
+.icon.star    { color: var(--color-favorite); }
+
 
 .filter-toggle.inactive {
   opacity: 0.4;
