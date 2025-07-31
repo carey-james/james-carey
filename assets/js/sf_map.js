@@ -15,45 +15,6 @@ async function initMap() {
   // Get the data on recs from the JSON file held in '/assets/data/'
   // And build the markers based on that
   const recs = await d3.dsv('|', '/assets/data/sf_recs.csv');
-  let allMarkers = [];
-  let allRecs = recs;
-
-  populateFilterOptions(recs);
-  initRecGrid(recs);
-
-  // Listen for filter changes
-  document.querySelectorAll('#options select').forEach(select => {
-    select.addEventListener('change', () => {
-      const filtered = applyFilters(recs);
-      updateMarkers(filtered);
-      updateGrid(filtered);
-    });
-  });
-
-  function updateMarkers(filteredRecs) {
-    // Clear all old markers
-    allMarkers.forEach(marker => marker.map = null);
-    allMarkers = [];
-
-    for (const rec of filteredRecs) {
-      const marker = new google.maps.marker.AdvancedMarkerElement({
-        map,
-        content: buildContent(rec),
-        position: {lat: parseFloat(rec.lat), lng: parseFloat(rec.lng)},
-        title: rec.name,
-      });
-
-      marker.addListener("click", () => {
-        toggleHighlight(marker, rec);
-      });
-
-      allMarkers.push(marker);
-    }
-  }
-
-  function updateGrid(filteredRecs) {
-    gridOptions.api.setRowData(filteredRecs);
-  }
   console.log(recs)
   for (const rec of recs) {
     const marker = new google.maps.marker.AdvancedMarkerElement({
@@ -72,10 +33,8 @@ async function initMap() {
   initRecGrid(recs);
 }
 
-let gridOptions;
-
 function initRecGrid(recs) {
-  gridOptions = {
+  const gridOptions = {
     columnDefs: [
       {
         headerName: '', // No header
@@ -188,48 +147,6 @@ function buildContent(rec) {
     </div>
     `;
   return content;
-}
-
-function populateFilterOptions(recs) {
-  const typeSet = new Set();
-  const levelSet = new Set();
-  const priceSet = new Set();
-
-  recs.forEach(rec => {
-    if (rec.type) typeSet.add(rec.type);
-    if (rec.level) levelSet.add(rec.level);
-    if (rec.price) priceSet.add(rec.price);
-  });
-
-  populateSelect('#typeFilter', [...typeSet]);
-  populateSelect('#levelFilter', [...levelSet].sort());
-  populateSelect('#priceFilter', [...priceSet]);
-}
-
-function populateSelect(selector, values) {
-  const select = document.querySelector(selector);
-  values.forEach(value => {
-    const option = document.createElement('option');
-    option.value = value;
-    option.textContent = value;
-    select.appendChild(option);
-  });
-}
-
-function applyFilters(data) {
-  const selectedTypes = getSelectedValues('#typeFilter');
-  const selectedLevels = getSelectedValues('#levelFilter');
-  const selectedPrices = getSelectedValues('#priceFilter');
-
-  return data.filter(rec =>
-    (selectedTypes.length === 0 || selectedTypes.includes(rec.type)) &&
-    (selectedLevels.length === 0 || selectedLevels.includes(rec.level)) &&
-    (selectedPrices.length === 0 || selectedPrices.includes(rec.price))
-  );
-}
-
-function getSelectedValues(selector) {
-  return Array.from(document.querySelector(selector).selectedOptions).map(opt => opt.value);
 }
 
 
