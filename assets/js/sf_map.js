@@ -3,7 +3,7 @@ let gridApi = null;
 let map = null; // 👈 define this at the top of the file
 
 const filters = {
-  type: new Set(["food", "drinks", "museum", "hike", "point", "shopping"]),
+  type: new Set(["food", "drinks", "museum", "hike", "point", "shopping", "area"]),
   level: new Set(["1", "2", "3"]),
   price: new Set(["Free", "$", "$$", "$$$"]),
 };

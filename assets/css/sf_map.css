@@ -379,7 +379,8 @@ body {
 /* container */
   .container {
     position: relative;
-    border-radius: 10px; }
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.6); } }
 
   @media screen and (min-width: 1000px) {
     .container {
