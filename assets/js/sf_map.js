@@ -71,22 +71,13 @@ async function initMap() {
     }
   }
 
-  document.querySelectorAll('.dropdown-check-list').forEach(dropdown => {
-    const anchor = dropdown.querySelector('.anchor');
-    anchor.addEventListener('click', function () {
-      dropdown.classList.toggle('visible');
+  document.querySelectorAll('#options input[type=checkbox]').forEach(cb => {
+    cb.addEventListener('change', () => {
+      const filtered = applyFilters(allRecs);
+      updateMarkers(filtered);
+      gridOptions.api.setRowData(filtered);
     });
   });
-
-  // Optional: Close dropdowns when clicking outside
-  document.addEventListener('click', function (e) {
-    document.querySelectorAll('.dropdown-check-list').forEach(dropdown => {
-      if (!dropdown.contains(e.target)) {
-        dropdown.classList.remove('visible');
-      }
-    });
-  });
-
 
   populateFilters(recs);
   updateMarkers(recs);

@@ -356,62 +356,14 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-.dropdown-check-list {
-  display: inline-block;
-  margin-right: 1rem;
-  font-family: 'Raleway', sans-serif;
-  font-size: 14px;
+multi-checkbox {
+  width: 150px;
 }
 
-.dropdown-check-list .anchor {
-  position: relative;
-  cursor: pointer;
-  display: inline-block;
-  padding: 8px 40px 8px 12px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  border-radius: 4px;
+/* optionally style labels */
+multi-checkbox label {
+  font-size: 0.9rem;
 }
-
-.dropdown-check-list .anchor:after {
-  position: absolute;
-  content: "";
-  border-left: 2px solid black;
-  border-top: 2px solid black;
-  padding: 5px;
-  right: 10px;
-  top: 35%;
-  transform: rotate(-135deg);
-}
-
-.dropdown-check-list ul.items {
-  padding: 6px;
-  display: none;
-  margin: 0;
-  border: 1px solid #ccc;
-  border-top: none;
-  background-color: #fff;
-  max-height: 200px;
-  overflow-y: auto;
-  position: absolute;
-  z-index: 1000;
-  width: 200px;
-  border-radius: 0 0 4px 4px;
-}
-
-.dropdown-check-list ul.items li {
-  list-style: none;
-  margin: 4px 0;
-}
-
-.dropdown-check-list.visible .anchor {
-  color: #0074d9;
-}
-
-.dropdown-check-list.visible .items {
-  display: block;
-}
-
 
 /* container */
   .container {
