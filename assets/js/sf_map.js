@@ -45,6 +45,25 @@ async function initMap() {
   // Init the grid
   initRecGrid(recs);
 
+    document.querySelectorAll(".filter-toggle").forEach(el => {
+    el.addEventListener("click", () => {
+      const category = el.dataset.filter;
+      const value = el.dataset.value;
+
+      if (filters[category].has(value)) {
+        filters[category].delete(value);
+        el.classList.add("inactive");
+        el.querySelector("i").classList.replace("fa-eye", "fa-eye-slash");
+      } else {
+        filters[category].add(value);
+        el.classList.remove("inactive");
+        el.querySelector("i").classList.replace("fa-eye-slash", "fa-eye");
+      }
+
+      updateFilters();
+    });
+  });
+
 }
 
 function initRecGrid(recs) {
@@ -110,25 +129,6 @@ function initRecGrid(recs) {
   const grid = agGrid.createGrid(gridDiv, gridOptions);
   gridApi = grid.api;
 
-  document.querySelectorAll(".filter-toggle").forEach(el => {
-    el.addEventListener("click", () => {
-      const category = el.dataset.filter;
-      const value = el.dataset.value;
-
-      if (filters[category].has(value)) {
-        filters[category].delete(value);
-        el.classList.add("inactive");
-        el.querySelector("i").classList.replace("fa-eye", "fa-eye-slash");
-      } else {
-        filters[category].add(value);
-        el.classList.remove("inactive");
-        el.querySelector("i").classList.replace("fa-eye-slash", "fa-eye");
-      }
-
-      updateFilters();
-    });
-  });
-
 }
 
 
@@ -184,6 +184,7 @@ function buildContent(rec) {
 }
 
 function updateFilters() {
+  if (!gridApi || !map) return;
   // Update MAP
   for (const { marker, rec } of activeMarkers) {
     const visible =
