@@ -357,6 +357,15 @@ body {
   justify-content: center;
 }
 
+.filter-bar .icon.food i { color: var(--food); }
+.filter-bar .icon.hike i { color: var(--hike); }
+.filter-bar .icon.drinks i { color: var(--drinks); }
+.filter-bar .icon.shopping i { color: var(--shopping); }
+.filter-bar .icon.museum i { color: var(--museum); }
+.filter-bar .icon.point i { color: var(--point); }
+.filter-bar .icon.area i { color: var(--area); }
+.filter-bar .icon.star i { color: var(--shopping); }
+
 .filter-group {
   display: flex;
   gap: 10px;
