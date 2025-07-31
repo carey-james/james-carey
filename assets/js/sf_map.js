@@ -1,3 +1,13 @@
+let activeMarkers = [];
+let gridApi = null;
+
+const filters = {
+  type: new Set(["food", "drinks", "museum", "hike", "point", "shopping"]),
+  level: new Set(["1", "2", "3"]),
+  price: new Set(["Free", "$", "$$", "$$$"]),
+};
+
+
 async function initMap() {
   
   // Request needed libraries.
@@ -27,10 +37,32 @@ async function initMap() {
     marker.addListener("click", () => {
       toggleHighlight(marker, rec);
     });
+
+    activeMarkers.push({ marker, rec });
   }
 
   // Init the grid
   initRecGrid(recs);
+
+  document.querySelectorAll(".filter-toggle").forEach(el => {
+    el.addEventListener("click", () => {
+      const category = el.dataset.filter;
+      const value = el.dataset.value;
+
+      if (filters[category].has(value)) {
+        filters[category].delete(value);
+        el.classList.add("inactive");
+        el.querySelector("i").classList.replace("fa-eye", "fa-eye-slash");
+      } else {
+        filters[category].add(value);
+        el.classList.remove("inactive");
+        el.querySelector("i").classList.replace("fa-eye-slash", "fa-eye");
+      }
+
+      updateFilters();
+    });
+  });
+
 }
 
 function initRecGrid(recs) {
@@ -93,7 +125,8 @@ function initRecGrid(recs) {
   };
 
   const gridDiv = document.querySelector('#recGrid');
-  agGrid.createGrid(gridDiv, gridOptions);
+  const grid = agGrid.createGrid(gridDiv, gridOptions);
+  gridApi = grid.api;
 
 }
 
@@ -147,6 +180,29 @@ function buildContent(rec) {
     </div>
     `;
   return content;
+}
+
+function updateFilters() {
+  // Update MAP
+  for (const { marker, rec } of activeMarkers) {
+    const visible =
+      filters.type.has(rec.type) &&
+      filters.level.has(rec.level) &&
+      filters.price.has(rec.price);
+    marker.map = visible ? marker.map ?? map : null;
+  }
+
+  // Update GRID
+  gridApi.setFilterModel(null); // Clear existing filters
+  gridApi.setRowData(
+    activeMarkers
+      .map(({ rec }) => rec)
+      .filter(rec =>
+        filters.type.has(rec.type) &&
+        filters.level.has(rec.level) &&
+        filters.price.has(rec.price)
+      )
+  );
 }
 
 

@@ -344,6 +344,37 @@ body {
   .ag-cell .icon.point i { color: var(--point); }
   .ag-cell .icon.area i { color: var(--area); }
 
+.filter-bar {
+  margin: 20px auto;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.filter-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #333;
+}
+
+.filter-toggle.inactive {
+  opacity: 0.4;
+}
 
 /* container */
   .container {
