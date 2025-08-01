@@ -357,6 +357,10 @@ body {
   justify-content: center;
 }
 
+.filter-title {
+  color: var(--color-slate);
+}
+
 .filter-group {
   display: flex;
   gap: 10px;
