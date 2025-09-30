@@ -157,6 +157,9 @@ function getShelfWidth() {
 
 // Book height based on published year
 function getPublishedHeight(arr) {
+	if (arr < 1900) {
+		return ((1900 - PUB_YEAR_HEIGHT_MIN)/(PUB_YEAR_HEIGHT_MAX - PUB_YEAR_HEIGHT_MIN)) * (95 - 65) + 65;
+	}
 	return ((arr - PUB_YEAR_HEIGHT_MIN)/(PUB_YEAR_HEIGHT_MAX - PUB_YEAR_HEIGHT_MIN)) * (95 - 65) + 65;
 }
 
