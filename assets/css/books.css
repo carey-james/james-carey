@@ -721,6 +721,9 @@
 	.shelf-wrapper .genre-Biography {
 		fill: var(--color-biography); }
 
+	.shelf-wrapper .genre-Math-and-Science {
+		fill: var(--color-math-and-science); }
+
 	.shelf-wrapper .genre-Music {
 		fill: var(--color-music); }
 
@@ -853,6 +856,9 @@
 	.tippy-tooltip.book-Biography-theme {
 		border: 1px solid var(--color-biography); }
 
+	.tippy-tooltip.book-Math-and-Science-theme {
+		border: 1px solid var(--color-math-and-science); }
+
 	.tippy-tooltip.book-Music-theme {
 		border: 1px solid var(--color-music); }
 
@@ -899,6 +905,10 @@
 	.tippy-tooltip.book-Biography-theme [x-arrow] {
 		border-top-color: var(--color-biography);
 		border-bottom-color: var(--color-biography); }
+
+	.tippy-tooltip.book-Math-and-Science-theme [x-arrow] {
+		border-top-color: var(--color-math-and-science);
+		border-bottom-color: var(--color-math-and-science); }
 
 	.tippy-tooltip.book-Music-theme [x-arrow] {
 		border-top-color: var(--color-music);
@@ -988,6 +998,9 @@
 
 	.modal .tag-Biography {
 		background-color: var(--color-biography); }
+
+	.modal .tag-Math-and-Science {
+		background-color: var(--color-math-and-science); }
 
 	.modal .tag-Music {
 		background-color: var(--color-music); }
@@ -1360,6 +1373,9 @@
 	
 	.content .genre-icon-Biography {
 		fill: var(--color-biography); }
+
+	.content .genre-icon-Math-and-Science {
+		fill: var(--color-math-and-science); }
 	
 	.content .genre-icon-Music {
 		fill: var(--color-music); }
