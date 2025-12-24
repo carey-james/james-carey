@@ -1,6 +1,6 @@
 let activeMarkers = [];
 let gridApi = null;
-let map = null; // 👈 define this at the top of the file
+let map = null;
 
 const filters = {
   type: new Set(["food", "drinks", "museum", "hike", "point", "shopping", "area"]),
@@ -25,7 +25,7 @@ async function initMap() {
 
   // Get the data on recs from the JSON file held in '/assets/data/'
   // And build the markers based on that
-  const recs = await d3.dsv('|', '/assets/data/sf_recs.csv');
+  const recs = await d3.dsv('|', '/assets/data/dc_recs.csv');
   console.log(recs)
   for (const rec of recs) {
     const marker = new google.maps.marker.AdvancedMarkerElement({
