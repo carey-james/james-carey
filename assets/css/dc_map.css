@@ -1,0 +1,424 @@
+:root {
+  --food: var(--color-humor);
+  --hike: var(--color-fantasy);
+  --drinks: var(--color-philosophy);
+  --shopping: var(--color-goldenrod);
+  --museum: var(--color-western);
+  --point: var(--color-male);
+  --area: var(--color-darkgray);
+}
+
+/*
+ * Makes the sample page fill the window.
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map.
+ */
+#map {
+  height: 600px;
+  width: 100%;
+}
+
+/*
+ * Legend Styles
+ */
+#legend {
+  background: #FFFFFF;
+  padding: 3px;
+  margin: 3px;
+  border-left: 9px solid transparent;
+  font-size: 14px;
+  border-radius: 5%;
+}
+
+/* 
+ * Back Arrow style.
+ */
+.back-arrow {
+  color:#262626; 
+  font-size: 5em;
+  margin-top: 2.5vh;
+  margin-left: 5vw;
+}
+
+.back-arrow a:hover {
+  color: #FFFFFF !important;
+}
+
+.black-link {
+  color: #000000 !important;
+  text-decoration: none;
+}
+
+.black-link:hover {
+  text-decoration: underline;
+}
+
+
+/*
+ * rec styles in unhighlighted state.
+ */
+.rec {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+  color: #263238;
+  display: flex;
+  font-size: 20px;
+  gap: 25px;
+  height: 40px;
+  justify-content: center;
+  padding: 4px;
+  position: relative;
+  transition: all 0.3s ease-out;
+  width: 40px;
+}
+
+.rec::after {
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 9px solid #FFFFFF;
+  content: "";
+  height: 0;
+  left: 50%;
+  position: absolute;
+  top: 95%;
+  transform: translate(-50%, 0);
+  transition: all 0.3s ease-out;
+  width: 0;
+  z-index: 1;
+}
+
+.rec .link {
+  color:  var(--color-slate);
+}
+
+.rec .icon {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: #FFFFFF;
+}
+
+.rec .icon svg {
+  height: 20px;
+  width: auto;
+}
+
+.rec .details {
+  display: none;
+  flex-direction: column;
+  flex: 1;
+}
+
+.rec .address {
+  color: var(--color-lightgray);
+  font-size: 14px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+.rec .description {
+  color: var(--color-darkgray);
+  font-size: 14px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+.rec .features {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;  
+}
+
+.rec .features > div {
+  align-items: center;
+  background: #F5F5F5;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  font-size: 12px;
+  gap: 5px;
+  padding: 6px;
+  z-index: 2;
+}
+
+/*
+ * rec styles in highlighted state.
+ */
+.rec.highlight {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+  height: auto;
+  padding: 8px 15px;
+  width: 400px;                 /* You can adjust this value */
+  max-width: 75vw;              /* For responsiveness on small screens */
+  white-space: normal;          /* Ensure text can wrap */
+  word-wrap: break-word;        /* Break long words if needed */
+}
+
+.rec.highlight::after {
+  border-top: 9px solid #FFFFFF;
+}
+
+.rec.highlight .address,
+.rec.highlight .description {
+  white-space: normal;          /* Allow text to wrap */
+  overflow-wrap: break-word;    /* Handle long words properly */
+  max-width: 100%;              /* Respect container width */
+  display: block;               /* Ensure block layout */
+}
+
+.rec.highlight .details {
+  display: flex;
+}
+
+.rec.highlight .icon svg {
+  width: 50px;
+  height: 50px;
+}
+
+.rec .dollar {
+  color: var(--color-scifi);
+}
+
+.rec .star {
+  color: var(--color-favorite);
+}
+
+.rec .rez {
+  color: var(--color-slate);
+}
+
+/*
+ * Icon colors.
+ */
+.rec.highlight:has(.food) .icon {
+  color: var(--food);
+}
+
+.rec:not(.highlight):has(.food) {
+  background-color: var(--food);
+}
+
+.rec:not(.highlight):has(.food)::after {
+  border-top: 9px solid var(--food);
+}
+
+.rec.highlight:has(.hike) .icon {
+  color: var(--hike);
+}
+
+.rec:not(.highlight):has(.hike) {
+  background-color: var(--hike);
+}
+
+.rec:not(.highlight):has(.hike)::after {
+  border-top: 9px solid var(--hike);
+}
+
+.rec.highlight:has(.drinks) .icon {
+  color: var(--drinks);
+}
+
+.rec:not(.highlight):has(.drinks) {
+  background-color: var(--drinks);
+}
+
+.rec:not(.highlight):has(.drinks)::after {
+  border-top: 9px solid var(--drinks);
+}
+
+.rec.highlight:has(.shopping) .icon {
+  color: var(--shopping);
+}
+
+.rec:not(.highlight):has(.shopping) {
+  background-color: var(--shopping);
+}
+
+.rec:not(.highlight):has(.shopping)::after {
+  border-top: 9px solid var(--shopping);
+}
+
+.rec.highlight:has(.museum) .icon {
+  color: var(--museum);
+}
+
+.rec:not(.highlight):has(.museum) {
+  background-color: var(--museum);
+}
+
+.rec:not(.highlight):has(.museum)::after {
+  border-top: 9px solid var(--museum);
+}
+
+.rec.highlight:has(.point) .icon {
+  color: var(--point);
+}
+
+.rec:not(.highlight):has(.point) {
+  background-color: var(--point);
+}
+
+.rec:not(.highlight):has(.point)::after {
+  border-top: 9px solid var(--point);
+}
+
+.rec.highlight:has(.area) .icon {
+  color: var(--area);
+}
+
+.rec:not(.highlight):has(.area) {
+  background-color: var(--area);
+}
+
+.rec:not(.highlight):has(.area)::after {
+  border-top: 9px solid var(--area);
+}
+
+* Grid */
+  .ag-header-cell {
+      font-size: 18px;
+      font-family: 'Raleway', 'Helvetica', sans-serif;
+      font-weight: 100;
+      padding: 5px 3px; 
+    text-align: center; 
+    white-space: normal;
+      word-wrap: break-word;
+      display: flex;
+      justify-content: center;
+      align-items: center;  }
+
+  .ag-cell {
+      font-size: 12px;
+      font-family: 'Bitter', sans-serif;
+      padding: 1px 1px;
+      line-height: 1.1;
+      white-space: normal;
+      word-wrap: break-word;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+
+  .ag-cell[col-id='name'] {
+      font-size: 16px;
+      font-family: 'Raleway', 'Helvetica', sans-serif;
+      font-weight: 100; }
+
+  .ag-header-cell[col-id='name'],
+  .ag-cell[col-id='name'] {
+      min-width: 180px;
+      text-align: left;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; }
+
+  .ag-cell[col-id='address'], 
+  .ag-cell[col-id='level'], 
+  .ag-cell[col-id='price'],
+  .ag-cell[col-id='description'] {
+    text-align: left;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; }
+
+  /* Type-based icon colors inside AG Grid */
+  .ag-cell .icon.food i { color: var(--food); }
+  .ag-cell .icon.hike i { color: var(--hike); }
+  .ag-cell .icon.drinks i { color: var(--drinks); }
+  .ag-cell .icon.shopping i { color: var(--shopping); }
+  .ag-cell .icon.museum i { color: var(--museum); }
+  .ag-cell .icon.point i { color: var(--point); }
+  .ag-cell .icon.area i { color: var(--area); }
+
+.filter-bar {
+  margin: 20px auto;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.filter-title {
+  color: var(--color-slate);
+}
+
+.filter-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #333;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  gap: 5px;
+  padding: 6px;
+  z-index: 2;
+}
+
+.filter-toggle .icon.food { color: var(--food); }
+.filter-toggle .icon.hike { color: var(--hike); }
+.filter-toggle .icon.drinks { color: var(--drinks); }
+.filter-toggle .icon.shopping { color: var(--shopping); }
+.filter-toggle .icon.museum { color: var(--museum); }
+.filter-toggle .icon.point { color: var(--point); }
+.filter-toggle .icon.area { color: var(--area); }
+.filter-toggle .icon.star { color: var(--color-favorite); }
+
+
+.filter-toggle.inactive {
+  opacity: 0.4;
+}
+
+/* container */
+  .container {
+    position: relative;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8); }
+
+  @media screen and (min-width: 1000px) {
+    .container {
+    margin: 0 auto;
+    max-width: 960px;
+    width: 960px; }
+    .container.is-fluid {
+    margin: 0 20px;
+    max-width: none;
+    width: auto; } 
+
+  @media screen and (min-width: 1192px) {
+    .container {
+    max-width: 1152px;
+    width: 1152px; } }
+
+  @media screen and (min-width: 1384px) {
+    .container {
+    max-width: 1344px;
+    width: 1344px; } }
