@@ -1,11 +1,11 @@
 :root {
-  --food: var(--color-humor);
-  --hike: var(--color-fantasy);
-  --drinks: var(--color-philosophy);
-  --shopping: var(--color-goldenrod);
-  --museum: var(--color-western);
-  --point: var(--color-male);
-  --area: var(--color-darkgray);
+  --grab-and-go: var(--color-mint);
+  --affordable: var(--color-scifi);
+  --expensive: var(--color-fantasy);
+  --drinks: var(--color-goldenrod);
+  --affordable-and-drinks: var(--color-teal);
+  --expensive-and-drinks: var(--color-dark-teal);
+  --want-to-go: var(--color-darkgray);
 }
 
 /*
