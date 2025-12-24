@@ -14,13 +14,13 @@ async function initMap() {
   // Request needed libraries.
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-  const center = { lat: 37.966774418236604, lng: -122.52741599352697 };
+  const center = { lat: 38.90892791748047, lng: -77.03687286376953 };
   map = new Map(document.getElementById("map"), {
-    zoom: 9,
+    zoom: 14,
     center,
     mapTypeControl: false,
     streetViewControl: false,
-    mapId: "99ceafbf2eaede861f64936d",
+    mapId: "347ecc0a4fa8540",
   });
 
   // Get the data on recs from the JSON file held in '/assets/data/'
