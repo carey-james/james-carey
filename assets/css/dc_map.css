@@ -2,7 +2,7 @@
   --grab-and-go: var(--color-mint);
   --affordable: var(--color-scifi);
   --expensive: var(--color-fantasy);
-  --drinks: var(--color-goldenrod);
+  --drinks: var(--color-mystery);
   --affordable-and-drinks: var(--color-teal);
   --expensive-and-drinks: var(--color-dark-teal);
   --want-to-go: var(--color-darkgray);
@@ -204,28 +204,40 @@ body {
 /*
  * Icon colors.
  */
-.rec.highlight:has(.food) .icon {
-  color: var(--food);
+.rec.highlight:has(.grab-and-go) .icon {
+  color: var(--grab-and-go);
 }
 
-.rec:not(.highlight):has(.food) {
-  background-color: var(--food);
+.rec:not(.highlight):has(.grab-and-go) {
+  background-color: var(--grab-and-go);
 }
 
-.rec:not(.highlight):has(.food)::after {
-  border-top: 9px solid var(--food);
+.rec:not(.highlight):has(.grab-and-go)::after {
+  border-top: 9px solid var(--grab-and-go);
 }
 
-.rec.highlight:has(.hike) .icon {
-  color: var(--hike);
+.rec.highlight:has(.affordable) .icon {
+  color: var(--affordable);
 }
 
-.rec:not(.highlight):has(.hike) {
-  background-color: var(--hike);
+.rec:not(.highlight):has(.affordable) {
+  background-color: var(--affordable);
 }
 
-.rec:not(.highlight):has(.hike)::after {
-  border-top: 9px solid var(--hike);
+.rec:not(.highlight):has(.affordable)::after {
+  border-top: 9px solid var(--affordable);
+}
+
+.rec.highlight:has(.expensive) .icon {
+  color: var(--expensive);
+}
+
+.rec:not(.highlight):has(.expensive) {
+  background-color: var(--expensive);
+}
+
+.rec:not(.highlight):has(.expensive)::after {
+  border-top: 9px solid var(--expensive);
 }
 
 .rec.highlight:has(.drinks) .icon {
@@ -240,52 +252,40 @@ body {
   border-top: 9px solid var(--drinks);
 }
 
-.rec.highlight:has(.shopping) .icon {
-  color: var(--shopping);
+.rec.highlight:has(.affordable-and-drinks) .icon {
+  color: var(--affordable-and-drinks);
 }
 
-.rec:not(.highlight):has(.shopping) {
-  background-color: var(--shopping);
+.rec:not(.highlight):has(.affordable-and-drinks) {
+  background-color: var(--affordable-and-drinks);
 }
 
-.rec:not(.highlight):has(.shopping)::after {
-  border-top: 9px solid var(--shopping);
+.rec:not(.highlight):has(.affordable-and-drinks)::after {
+  border-top: 9px solid var(--affordable-and-drinks);
 }
 
-.rec.highlight:has(.museum) .icon {
-  color: var(--museum);
+.rec.highlight:has(.expensive-and-drinks) .icon {
+  color: var(--expensive-and-drinks);
 }
 
-.rec:not(.highlight):has(.museum) {
-  background-color: var(--museum);
+.rec:not(.highlight):has(.expensive-and-drinks) {
+  background-color: var(--expensive-and-drinks);
 }
 
-.rec:not(.highlight):has(.museum)::after {
-  border-top: 9px solid var(--museum);
+.rec:not(.highlight):has(.expensive-and-drinks)::after {
+  border-top: 9px solid var(--expensive-and-drinks);
 }
 
-.rec.highlight:has(.point) .icon {
-  color: var(--point);
+.rec.highlight:has(.want-to-go) .icon {
+  color: var(--want-to-go);
 }
 
-.rec:not(.highlight):has(.point) {
-  background-color: var(--point);
+.rec:not(.highlight):has(.want-to-go) {
+  background-color: var(--want-to-go);
 }
 
-.rec:not(.highlight):has(.point)::after {
-  border-top: 9px solid var(--point);
-}
-
-.rec.highlight:has(.area) .icon {
-  color: var(--area);
-}
-
-.rec:not(.highlight):has(.area) {
-  background-color: var(--area);
-}
-
-.rec:not(.highlight):has(.area)::after {
-  border-top: 9px solid var(--area);
+.rec:not(.highlight):has(.want-to-go)::after {
+  border-top: 9px solid var(--want-to-go);
 }
 
 * Grid */
@@ -336,13 +336,13 @@ body {
       align-items: center; }
 
   /* Type-based icon colors inside AG Grid */
-  .ag-cell .icon.food i { color: var(--food); }
-  .ag-cell .icon.hike i { color: var(--hike); }
+  .ag-cell .icon.grab-and-go i { color: var(--grab-and-go); }
+  .ag-cell .icon.affordable i { color: var(--affordable); }
+  .ag-cell .icon.expensive i { color: var(--expensive); }
   .ag-cell .icon.drinks i { color: var(--drinks); }
-  .ag-cell .icon.shopping i { color: var(--shopping); }
-  .ag-cell .icon.museum i { color: var(--museum); }
-  .ag-cell .icon.point i { color: var(--point); }
-  .ag-cell .icon.area i { color: var(--area); }
+  .ag-cell .icon.affordable-and-drinks i { color: var(--affordable-and-drinks); }
+  .ag-cell .icon.expensive-and-drinks i { color: var(--expensive-and-drinks); }
+  .ag-cell .icon.want-to-go i { color: var(--want-to-go); }
 
 .filter-bar {
   margin: 20px auto;
@@ -383,15 +383,13 @@ body {
   z-index: 2;
 }
 
-.filter-toggle .icon.food { color: var(--food); }
-.filter-toggle .icon.hike { color: var(--hike); }
-.filter-toggle .icon.drinks { color: var(--drinks); }
-.filter-toggle .icon.shopping { color: var(--shopping); }
-.filter-toggle .icon.museum { color: var(--museum); }
-.filter-toggle .icon.point { color: var(--point); }
-.filter-toggle .icon.area { color: var(--area); }
-.filter-toggle .icon.star { color: var(--color-favorite); }
-
+.filter-toggle .icon.grab-and-go i { color: var(--grab-and-go); }
+.filter-toggle .icon.affordable i { color: var(--affordable); }
+.filter-toggle .icon.expensive i { color: var(--expensive); }
+.filter-toggle .icon.drinks i { color: var(--drinks); }
+.filter-toggle .icon.affordable-and-drinks i { color: var(--affordable-and-drinks); }
+.filter-toggle .icon.expensive-and-drinks i { color: var(--expensive-and-drinks); }
+.filter-toggle .icon.want-to-go i { color: var(--want-to-go); }
 
 .filter-toggle.inactive {
   opacity: 0.4;
