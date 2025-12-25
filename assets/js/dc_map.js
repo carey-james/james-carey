@@ -3,9 +3,9 @@ let gridApi = null;
 let map = null;
 
 const filters = {
-  type: new Set(["food", "drinks", "museum", "hike", "point", "shopping", "area"]),
+  type: new Set(["grab-and-go", "food", "drinks", "food-and-drinks", "want-to-go"]),
   level: new Set(["1", "2", "3"]),
-  price: new Set(["Free", "$", "$$", "$$$"]),
+  price: new Set(["$", "$$", "$$$", "$$$$"]),
 };
 
 

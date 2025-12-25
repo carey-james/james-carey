@@ -1,63 +1,63 @@
 name|link|address|description|icon1|icon2|type|level|price|extra_icon|extra_color|extra_text|rez|lat|lng
-Astoria|https://astoriadc.com/|1521 17th St NW|Chinese & Tiki Cocktails|bowl-chopsticks-noodles|martini-glass|expensive-and-drinks|3|$$$|leaf|veg|Vegan OK|Rez Rec'd|38.91074373631267|-77.03832824711489
+Astoria|https://astoriadc.com/|1521 17th St NW|Chinese & Tiki Cocktails|bowl-chopsticks-noodles|martini-glass|food-and-drinks|3|$$$|leaf|veg|Vegan OK|Rez Rec'd|38.91074373631267|-77.03832824711489
 Aslin DC|https://www.aslinbeer.com/dc|1740 14th St NW|Beergarden|beer-mug||drinks|2|$|utensils|veg|Snacks|No Rez|38.91394036088174|-77.03242493027032
 Left Door||1345 S St NW|Bartender's choice cocktails|martini-glass||drinks|2|$$|utensils|nonveg|No Food|No Rez|38.91442527494764|-77.03146677542595
 ChurchKey|https://www.churchkeydc.com/|1337 14th St NW|Huge draft selection, warm vibes|beer-mug||drinks|1|$$|utensils|veg|Food|No Rez|38.90847885390439|-77.03163649585525
-All Day at Kramers|https://www.kramers.com/all-day-by-kramers-menus/|1337 14th St NW|American bistro food & books|fork-knife||affordable|1|$$|leaf|veg|Vegan OK|No Rez|38.91083549831795|-77.04374105522061
-Pizzeria Paradiso|https://www.eatyourpizza.com/lunch-dinner|2003 P St NW|Woodfired Pizza and Beer|pizza-slice||affordable|1|$|leaf|veg|Veg OK|No Rez|38.90987941538678|-77.04515542838818
+All Day at Kramers|https://www.kramers.com/all-day-by-kramers-menus/|1337 14th St NW|American bistro food & books|fork-knife||food|1|$$|leaf|veg|Vegan OK|No Rez|38.91083549831795|-77.04374105522061
+Pizzeria Paradiso|https://www.eatyourpizza.com/lunch-dinner|2003 P St NW|Woodfired Pizza and Beer|pizza-slice||food|1|$|leaf|veg|Veg OK|No Rez|38.90987941538678|-77.04515542838818
 Roaming Rooster|http://www.roamingroosterdc.com/menus|1301 U St NW|Fried Chicken Sandwiches|burger-soda||grab-and-go|1|$|leaf|veg|Veg OK|No Rez|38.91727029463436|-77.0304322078068
-Maydan|https://www.maydandc.com/#menus-section|1346 Florida Ave NW|Woodfired Middle Eastern|shish-kebab|martini-glass|expensive-and-drinks|2|$$$|leaf|veg|Vegan OK|Need Rez|38.919790278240065|-77.03102444348733
-Lucky Buns|https://www.luckybuns.com/|2000 18th St NW|Burgers|burger-soda||affordable|1|$|leaf|nonveg|Non Veg|No Rez|38.91724909808782|-77.04192240531168
-Jack Rose|http://jackrosediningsaloon.com/|2007 18th St NW|Steakhouse & Whisky|steak|whiskey-glass-ice|expensive-and-drinks|1|$$|leaf|nonveg|Non Veg|Rez Rec'd|38.91739520468794|-77.04144318671433
+Maydan|https://www.maydandc.com/#menus-section|1346 Florida Ave NW|Woodfired Middle Eastern|shish-kebab|martini-glass|food-and-drinks|2|$$$|leaf|veg|Vegan OK|Need Rez|38.919790278240065|-77.03102444348733
+Lucky Buns|https://www.luckybuns.com/|2000 18th St NW|Burgers|burger-soda||food|1|$|leaf|nonveg|Non Veg|No Rez|38.91724909808782|-77.04192240531168
+Jack Rose|http://jackrosediningsaloon.com/|2007 18th St NW|Steakhouse & Whisky|steak|whiskey-glass-ice|food-and-drinks|1|$$|leaf|nonveg|Non Veg|Rez Rec'd|38.91739520468794|-77.04144318671433
 The Green Zone|http://thegreenzonedc.com/|2226 18th St NW|Middle Eastern Cocktails|martini-glass||drinks|2|$$|utensils|veg|Snacks|Rez Rec'd|38.9194927225516|-77.04186088089233
-Retrobottega|https://www.retrobottegadc.com/|2435 18th St NW|Italian|fork-knife||expensive|1|$$|leaf|nonveg|Non Veg|Rez Rec'd|38.92139768544606|-77.04201926220323
-Taqueria Al Lado|http://taqueriaallado.com/|1792 Columbia Rd NW|Taqueria|taco||affordable|1|$|leaf|nonveg|Non Veg|No Rez|38.92267980949279|-77.04225290184581
-Lapis|http://www.lapisdc.com/foodanddrink#theanchorname|1847 Columbia Rd NW|Afghani|shish-kebab||expensive|1|$$$|leaf|veg|Vegan OK|Rez Rec'd|38.92131518055421|-77.04386872119899
-SURA|http://www.suradcrestaurant.com/|2016 P St NW|Thai, Chinatown Izakaya Style|bowl-chopsticks-noodles||affordable|1|$$|leaf|veg|Vegan OK|Rez Rec'd|38.909455467693334|-77.04568315301594
+Retrobottega|https://www.retrobottegadc.com/|2435 18th St NW|Italian|fork-knife||food|1|$$|leaf|nonveg|Non Veg|Rez Rec'd|38.92139768544606|-77.04201926220323
+Taqueria Al Lado|http://taqueriaallado.com/|1792 Columbia Rd NW|Taqueria|taco||food|1|$|leaf|nonveg|Non Veg|No Rez|38.92267980949279|-77.04225290184581
+Lapis|http://www.lapisdc.com/foodanddrink#theanchorname|1847 Columbia Rd NW|Afghani|shish-kebab||food|1|$$$|leaf|veg|Vegan OK|Rez Rec'd|38.92131518055421|-77.04386872119899
+SURA|http://www.suradcrestaurant.com/|2016 P St NW|Thai, Chinatown Izakaya Style|bowl-chopsticks-noodles||food|1|$$|leaf|veg|Vegan OK|Rez Rec'd|38.909455467693334|-77.04568315301594
 Fountain Inn|https://www.fountaininndc.com/|1659 Wisconsin Ave NW|Historical American Cocktails|martini-glass||drinks|3|$$$|utensils|veg|Snacks|Rez Rec'd|38.91194485142495|-77.06554365696101
-The Sovereign|https://thesovereigndc.com/#menus|1206 Wisconsin Ave NW|Belgian Food and Drinks|fork-knife|martini-glass|expensive-and-drinks|2|$$|leaf|nonveg|Non Veg|Rez Rec'd|38.9054837469555|-77.0634676362041
+The Sovereign|https://thesovereigndc.com/#menus|1206 Wisconsin Ave NW|Belgian Food and Drinks|fork-knife|martini-glass|food-and-drinks|2|$$|leaf|nonveg|Non Veg|Rez Rec'd|38.9054837469555|-77.0634676362041
 Lost Generation|https://www.lostgenbrewing.com/|327 S St NE|Neighborhood Brewery|beer-mug||drinks|2|$|utensils|veg|Food|No Rez|38.913581318721434|-77.00093905497639
 Red Bear Brewing|http://www.redbear.beer/|209 M St NE|Queer Brewery|beer-mug||drinks|1|$|utensils|veg|Food|No Rez|38.905396555858815|-77.00247001828106
 SUNdeVICH|http://www.sundevich.com/|601 NJ Ave NW|Sandwiches around the world|sandwich||grab-and-go|1|$|leaf|veg|Vegan OK|No Rez|38.89814152316606|-77.01159513438341
-Tonari|https://www.tonaridc.com/menus/|707 6th St NW|Italian, Japanese Style|pizza-slice|martini-glass|affordable-and-drinks|3|$$|leaf|veg|Veg OK|No Rez|38.898984770750154|-77.01972627358228
-Daikaya|http://www.daikaya.com/|705 6th St NW|Ramen|bowl-chopsticks-noodles||affordable|2|$$|leaf|veg|Veg OK|Rez Rec'd|38.898592959781446|-77.01953901016702
+Tonari|https://www.tonaridc.com/menus/|707 6th St NW|Italian, Japanese Style|pizza-slice|martini-glass|food-and-drinks|3|$$|leaf|veg|Veg OK|No Rez|38.898984770750154|-77.01972627358228
+Daikaya|http://www.daikaya.com/|705 6th St NW|Ramen|bowl-chopsticks-noodles||food|2|$$|leaf|veg|Veg OK|Rez Rec'd|38.898592959781446|-77.01953901016702
 Denson|http://www.densondc.com/|600 F St NW|Underground Cocktail Lounge|martini-glass||drinks|1|$$|utensils|veg|Food|Rez Rec'd|38.8970196020797|-77.02009417681136
 The Golden Age|https://www.thegoldenagedc.com/|1726 CT Ave NW|Classic Cocktails and Vibes|martini-glass||drinks|2|$$|utensils|veg|Food|No Rez|38.9134648721217|-77.04599894600852
 McClellan's Retreat|http://mcclellansretreat.com/|2031 FL Ave NW|Thematic, Divey Cocktails|martini-glass||drinks|2|$$|utensils|nonveg|No Food|No Rez|38.91428381528258|-77.04651724592503
 OKPB|https://okpbdc.com/|3165 Mt Pleasant St NW|Speakeasy, Cocktails|martini-glass||drinks|3|$$|utensils|nonveg|No Food|No Rez|38.930723957034644|-77.03788851113629
 St Vincent|http://www.stvincentwine.com/|3213 Georgia Ave NW|Hoppin' Winebar|wine-glass||drinks|1|$$|utensils|veg|Snacks|No Rez|38.93044187205989|-77.02367015777584
-Sonny's|https://www.sonnyspizzadc.com/menu|3120 Georgia Ave NW|Pizza and Natural Wine|pizza-slice|wine-glass|affordable-and-drinks|2|$|leaf|nonveg|Non Veg|No Rez|38.929633492755165|-77.02359059269064
-Andy's Pizza|http://eatandyspizza.com/|808 V St NW|Pizza and Chill|pizza-slice|beer-mug|affordable-and-drinks|2|$|leaf|veg|Vegan OK|No Rez|38.917555157187486|-77.02327969804855
-Izakaya Seki|http://www.sekidc.com/|1117 V St NW|Real Japanese Izakaya|sushi||expensive|2|$$$|leaf|veg|Veg OK|Rez Rec'd|38.918225462053925|-77.02774138914938
-Anju|https://www.anjurestaurant.com/|1805 18th St NW|Korean Comfort|bowl-chopsticks-noodles||expensive|2|$$|leaf|veg|Veg OK|Rez Rec'd|38.91437127660703|-77.04142916945742
-Bluejacket|https://www.bluejacketdc.com/|300 Tingey St SE|Bustling Microbrewery|burger|beer-mug|affordable-and-drinks|1|$$|leaf|nonveg|Non Veg|No Rez|38.87520335874293|-77.00078224263386
-Chloe|http://restaurantchloe.com/|1331 4th St SE|International Flare|earth-americas||expensive|1|$$$|leaf|nonveg|Non Veg|Rez Rec'd|38.87466461731492|-77.00070446295385
+Sonny's|https://www.sonnyspizzadc.com/menu|3120 Georgia Ave NW|Pizza and Natural Wine|pizza-slice|wine-glass|food-and-drinks|2|$|leaf|nonveg|Non Veg|No Rez|38.929633492755165|-77.02359059269064
+Andy's Pizza|http://eatandyspizza.com/|808 V St NW|Pizza and Chill|pizza-slice|beer-mug|food-and-drinks|2|$|leaf|veg|Vegan OK|No Rez|38.917555157187486|-77.02327969804855
+Izakaya Seki|http://www.sekidc.com/|1117 V St NW|Real Japanese Izakaya|sushi||food|2|$$$|leaf|veg|Veg OK|Rez Rec'd|38.918225462053925|-77.02774138914938
+Anju|https://www.anjurestaurant.com/|1805 18th St NW|Korean Comfort|bowl-chopsticks-noodles||food|2|$$|leaf|veg|Veg OK|Rez Rec'd|38.91437127660703|-77.04142916945742
+Bluejacket|https://www.bluejacketdc.com/|300 Tingey St SE|Bustling Microbrewery|burger|beer-mug|food-and-drinks|1|$$|leaf|nonveg|Non Veg|No Rez|38.87520335874293|-77.00078224263386
+Chloe|http://restaurantchloe.com/|1331 4th St SE|International Flare|earth-americas||food|1|$$$|leaf|nonveg|Non Veg|Rez Rec'd|38.87466461731492|-77.00070446295385
 Union Stage|https://www.unionstage.com/|740 Water St SW|Tiny bar above the stage|beer-mug||drinks|1|$|utensils|veg|Food|No Rez|38.87886073496985|-77.02385521263515
 12 Stories|https://www.12storiesdc.com/menus/|75 District Square SW|Worth it for the view|martini-glass||drinks|1|$$$|utensils|veg|Snacks|Rez Rec'd|38.87957952208748|-77.02523768800638
-2Fifty BBQ|http://www.2fiftybbq.com/|4700 Riverdale Rd, Riverdale Park|DMV BBQ|grill-hot||affordable|1|$|leaf|nonveg|Non Veg|No Rez|38.962000788687796|-76.93481591674815
-Nina May|http://www.ninamaydc.com/|1337 11sh St NW|Farm-to-Table, Great Brunch|fork-knife||expensive|1|$$$|leaf|nonveg|Non Veg|Rez Rec'd|38.90842259278633|-77.02665901076719
-Tiger Fork|http://www.tigerforkdc.com/|Blagden Alley NW|Chinese & Medicinal Cocktails|bowl-chopsticks-noodles|martini-glass|expensive-and-drinks|2|$$|leaf|nonveg|Non Veg|No Rez|38.906533096429015|-77.0248382521691
+2Fifty BBQ|http://www.2fiftybbq.com/|4700 Riverdale Rd, Riverdale Park|DMV BBQ|grill-hot||food|1|$|leaf|nonveg|Non Veg|No Rez|38.962000788687796|-76.93481591674815
+Nina May|http://www.ninamaydc.com/|1337 11sh St NW|Farm-to-Table, Great Brunch|fork-knife||food|1|$$$|leaf|nonveg|Non Veg|Rez Rec'd|38.90842259278633|-77.02665901076719
+Tiger Fork|http://www.tigerforkdc.com/|Blagden Alley NW|Chinese & Medicinal Cocktails|bowl-chopsticks-noodles|martini-glass|food-and-drinks|2|$$|leaf|nonveg|Non Veg|No Rez|38.906533096429015|-77.0248382521691
 Call Your Mother Trolley|https://www.callyourmotherdeli.com/|8804 Old Georgetown Rd, Bethesda|Bagels on benches|bagel||grab-and-go|1|$|leaf|veg|Vegan OK|No Rez|38.999842546535966|-77.10977620428476
-Daniel O'Connell's|http://www.danieloconnells.com/|112 King St, Alexandria|Irish American Pub|fork-knife|beer-mug|affordable-and-drinks|1|$$|leaf|nonveg|Non Veg|No Rez|38.804188620639906|-77.04075965720466
+Daniel O'Connell's|http://www.danieloconnells.com/|112 King St, Alexandria|Irish American Pub|fork-knife|beer-mug|food-and-drinks|1|$$|leaf|nonveg|Non Veg|No Rez|38.804188620639906|-77.04075965720466
 Bagel Uprising|https://bageluprising.com/|2307A Mt Vernon Ave, Alexandria|Quality Bagels|bagel||grab-and-go|1|$|leaf|veg|Vegan OK|No Rez|38.82647767387219|-77.05829606084536
 Caboose Brewing|https://caboosebrewing.com/restaurant-brewpub-vienna-va/|520 Mill St NE, Vienna|Bike-Up Beers|beer-mug||drinks|1|$|utensils|veg|Food|No Rez|38.907552592880194|-77.2705644963627
 Aslin Alexandria|http://www.aslinbeer.com/|847 S Pickett St, Alexandria|Brewery with cool events|beer-mug||drinks|1|$|utensils|veg|Food|No Rez|38.80426714390321|-77.13787685354649
 Quill|https://www.jeffersondc.com/downtown-washington-dc-restaurants/quill/|1200 16th St NW|The Jefferson's swanky cocktail bar|martini-glass||drinks|2|$$$|utensils|veg|Snacks|Rez Rec'd|38.90594105738225|-77.03682421959189
 Allegory|http://allegory-dc.com/|1201 K St NW|Storybook themed cocktails|martini-glass||drinks|2|$$$|utensils|veg|Snacks|No Rez|38.90287508254804|-77.02830169735198
-Yellow|http://www.yellowthecafe.com/|1524 Wisconsin Ave NW|Levantine Café|flatbread-stuffed||affordable|2|$|leaf|veg|Vegan OK|No Rez|38.90946093704561|-77.06463329255155
-La Bohème|https://www.labohemedc.com/|2622 P St NW|Themed French Menus|fork-knife||expensive|3|$$$|leaf|nonveg|Non Veg|Need Rez|38.909198985872756|-77.05549607977214
-barmini|http://www.minibarbyjoseandres.com/barmini/|501 9th St NW|Molecular Cocktails|martini-glass||want-to-go|1|$$$|utensils|veg|Food|Need Rez|38.89630436813174|-77.02364387102429
+Yellow|http://www.yellowthecafe.com/|1524 Wisconsin Ave NW|Levantine Café|flatbread-stuffed||food|2|$|leaf|veg|Vegan OK|No Rez|38.90946093704561|-77.06463329255155
+La Bohème|https://www.labohemedc.com/|2622 P St NW|Themed French Menus|fork-knife||food|3|$$$$|leaf|nonveg|Non Veg|Need Rez|38.909198985872756|-77.05549607977214
+barmini|http://www.minibarbyjoseandres.com/barmini/|501 9th St NW|Molecular Cocktails|martini-glass||want-to-go|1|$$$$|utensils|veg|Food|Need Rez|38.89630436813174|-77.02364387102429
 Call Your Mother Barracks Row|https://www.callyourmotherdeli.com/|701 8th St SE|Bagels in SE|bagel||grab-and-go|1|$|leaf|veg|Vegan OK|No Rez|38.8811116199946|-76.99524904652372
 Call Your Mother West End|https://www.callyourmotherdeli.com/|1143 NH Ave NW|Chic Bagels|bagel||grab-and-go|1|$|leaf|veg|Vegan OK|No Rez|38.90491249829901|-77.0474111337449
 Call Your Mother Logan|https://www.callyourmotherdeli.com/|1471 P St NW|Bagels to Go|bagel||grab-and-go|1|$|leaf|veg|Vegan OK|No Rez|38.90981277722425|-77.03396859249283
 Little Pearl|https://www.littlepearldc.com/|921 Penn Ave SE|Prix Fixe New American|fork-knife||want-to-go|1|$$$|leaf|veg|Vegan OK|Need Rez|38.883134162123355|-76.99356927579936
-Brightwood Pizza & Anxo Cider|https://store.anxodc.com/|711 Kennedy St NW|Pizza and Cider|pizza-slice|apple-whole|affordable-and-drinks|1|$$|leaf|veg|Vegan OK|No Rez|38.956533316905045|-77.0228473691132
-Keren||711 Kennedy St NW|Nicest Eritrean|pan-food||affordable|2|$|leaf|veg|Vegan OK|No Rez|38.9167039714651|-77.0412631551551
+Brightwood Pizza & Anxo Cider|https://store.anxodc.com/|711 Kennedy St NW|Pizza and Cider|pizza-slice|apple-whole|food-and-drinks|1|$$|leaf|veg|Vegan OK|No Rez|38.956533316905045|-77.0228473691132
+Keren||711 Kennedy St NW|Nicest Eritrean|pan-food||food|2|$|leaf|veg|Vegan OK|No Rez|38.9167039714651|-77.0412631551551
 Exiles|http://www.exilesbar.com/|1610 U St NW|Chill Tavern|beer-mug||drinks|1|$|utensils|veg|Food|No Rez|38.91678012855483|-77.03742480070991
 Bandit Taco|https://www.bandittacodc.com/|1946 NH Ave NW|Quick Burritos and Tacos|burrito||grab-and-go|1|$|leaf|veg|Veg OK|No Rez|38.9166076448446|-77.03715367604283
-El Presidente|https://elpresidentedc.com/|1255 Union St NE|Neo Mexico City|taco|martini-glass|expensive-and-drinks|2|$$|leaf|veg|Veg OK|Rez Rec'd|38.90829662909372|-77.0005820894272
+El Presidente|https://elpresidentedc.com/|1255 Union St NE|Neo Mexico City|taco|martini-glass|food-and-drinks|2|$$|leaf|veg|Veg OK|Rez Rec'd|38.90829662909372|-77.0005820894272
 Annabelle|https://annabelledc.com/|2132 FL Ave NW|New American|fork-knife||want-to-go|1|$$$|leaf|nonveg|Non Veg|Rez Rec'd|38.912743220573915|-77.04721026118611
-Sushi Taro|http://www.sushitaro.com/|1503 17 St NW|Omakase Sushi|sushi||want-to-go|1|$$$|leaf|veg|Veg OK|Rez Rec'd|38.90992279987566|-77.03824453711889
-Copycat Co.|http://www.copycatcompany.com/|1110 H St NE|Cocktails and Chinese|martini-glass|bowl-chopsticks-noodles|expensive-and-drinks|2|$30|utensils|veg|Vegan OK|No Rez|38.90036981449956|-76.99103050708743
+Sushi Taro|http://www.sushitaro.com/|1503 17 St NW|Omakase Sushi|sushi||want-to-go|1|$$$$|leaf|veg|Veg OK|Rez Rec'd|38.90992279987566|-77.03824453711889
+Copycat Co.|http://www.copycatcompany.com/|1110 H St NE|Cocktails and Chinese|martini-glass|bowl-chopsticks-noodles|food-and-drinks|2|$$$|utensils|veg|Vegan OK|No Rez|38.90036981449956|-76.99103050708743
 Silver Lyan|https://www.silverlyan.com/|900 F St NW|Fansy Cocktails in a Basement Vault|martini-glass||drinks|3|$$$|leaf|veg|Snacks|Rez Rec'd|38.89708112499451|-77.02438958466213
 Press Club|https://www.pressclubdc.com/|1506 19th St NW|Vinyl Lounge and Craft Cocktails|martini-glass||drinks|3|$$$|leaf|veg|Snacks|Rez Rec'd|38.9107206932717|-77.04362909841187

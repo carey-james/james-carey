@@ -1,10 +1,8 @@
 :root {
   --grab-and-go: var(--color-female);
-  --affordable: var(--color-tangarine);
-  --expensive: var(--color-brick);
-  --drinks: var(--color-male);
-  --affordable-and-drinks: var(--color-mystery);
-  --expensive-and-drinks: var(--color-philosophy);
+  --food: var(--color-brick);
+  --drinks: var(--color-philosophy);
+  --food-and-drinks: var(--color-mystery);
   --want-to-go: var(--color-darkgray);
 }
 
@@ -216,28 +214,16 @@ body {
   border-top: 9px solid var(--grab-and-go);
 }
 
-.rec.highlight:has(.affordable) .icon {
-  color: var(--affordable);
+.rec.highlight:has(.food) .icon {
+  color: var(--food);
 }
 
-.rec:not(.highlight):has(.affordable) {
-  background-color: var(--affordable);
+.rec:not(.highlight):has(.food) {
+  background-color: var(--food);
 }
 
-.rec:not(.highlight):has(.affordable)::after {
-  border-top: 9px solid var(--affordable);
-}
-
-.rec.highlight:has(.expensive) .icon {
-  color: var(--expensive);
-}
-
-.rec:not(.highlight):has(.expensive) {
-  background-color: var(--expensive);
-}
-
-.rec:not(.highlight):has(.expensive)::after {
-  border-top: 9px solid var(--expensive);
+.rec:not(.highlight):has(.food)::after {
+  border-top: 9px solid var(--food);
 }
 
 .rec.highlight:has(.drinks) .icon {
@@ -252,28 +238,16 @@ body {
   border-top: 9px solid var(--drinks);
 }
 
-.rec.highlight:has(.affordable-and-drinks) .icon {
-  color: var(--affordable-and-drinks);
+.rec.highlight:has(.food-and-drinks) .icon {
+  color: var(--food-and-drinks);
 }
 
-.rec:not(.highlight):has(.affordable-and-drinks) {
-  background-color: var(--affordable-and-drinks);
+.rec:not(.highlight):has(.food-and-drinks) {
+  background-color: var(--food-and-drinks);
 }
 
-.rec:not(.highlight):has(.affordable-and-drinks)::after {
-  border-top: 9px solid var(--affordable-and-drinks);
-}
-
-.rec.highlight:has(.expensive-and-drinks) .icon {
-  color: var(--expensive-and-drinks);
-}
-
-.rec:not(.highlight):has(.expensive-and-drinks) {
-  background-color: var(--expensive-and-drinks);
-}
-
-.rec:not(.highlight):has(.expensive-and-drinks)::after {
-  border-top: 9px solid var(--expensive-and-drinks);
+.rec:not(.highlight):has(.food-and-drinks)::after {
+  border-top: 9px solid var(--food-and-drinks);
 }
 
 .rec.highlight:has(.want-to-go) .icon {
@@ -290,58 +264,56 @@ body {
 
 * Grid */
   .ag-header-cell {
-      font-size: 18px;
-      font-family: 'Raleway', 'Helvetica', sans-serif;
-      font-weight: 100;
-      padding: 5px 3px; 
+    font-size: 18px;
+    font-family: 'Raleway', 'Helvetica', sans-serif;
+    font-weight: 100;
+    padding: 5px 3px; 
     text-align: center; 
     white-space: normal;
-      word-wrap: break-word;
-      display: flex;
-      justify-content: center;
-      align-items: center;  }
+    word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;  }
 
   .ag-cell {
-      font-size: 12px;
-      font-family: 'Bitter', sans-serif;
-      padding: 1px 1px;
-      line-height: 1.1;
-      white-space: normal;
-      word-wrap: break-word;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
+    font-size: 12px;
+    font-family: 'Bitter', sans-serif;
+    padding: 1px 1px;
+    line-height: 1.1;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
 
   .ag-cell[col-id='name'] {
-      font-size: 16px;
-      font-family: 'Raleway', 'Helvetica', sans-serif;
-      font-weight: 100; }
+    font-size: 16px;
+    font-family: 'Raleway', 'Helvetica', sans-serif;
+    font-weight: 100; }
 
   .ag-header-cell[col-id='name'],
   .ag-cell[col-id='name'] {
-      min-width: 180px;
-      text-align: left;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center; }
+    min-width: 180px;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
 
   .ag-cell[col-id='address'], 
   .ag-cell[col-id='level'], 
   .ag-cell[col-id='price'],
   .ag-cell[col-id='description'] {
     text-align: left;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center; }
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
 
   /* Type-based icon colors inside AG Grid */
   .ag-cell .icon.grab-and-go i { color: var(--grab-and-go); }
-  .ag-cell .icon.affordable i { color: var(--affordable); }
-  .ag-cell .icon.expensive i { color: var(--expensive); }
+  .ag-cell .icon.food i { color: var(--food); }
   .ag-cell .icon.drinks i { color: var(--drinks); }
-  .ag-cell .icon.affordable-and-drinks i { color: var(--affordable-and-drinks); }
-  .ag-cell .icon.expensive-and-drinks i { color: var(--expensive-and-drinks); }
+  .ag-cell .icon.food-and-drinks i { color: var(--food-and-drinks); }
   .ag-cell .icon.want-to-go i { color: var(--want-to-go); }
 
 .filter-bar {
@@ -384,11 +356,9 @@ body {
 }
 
 .filter-toggle .icon.grab-and-go i { color: var(--grab-and-go); }
-.filter-toggle .icon.affordable i { color: var(--affordable); }
-.filter-toggle .icon.expensive i { color: var(--expensive); }
+.filter-toggle .icon.food i { color: var(--food); }
 .filter-toggle .icon.drinks i { color: var(--drinks); }
-.filter-toggle .icon.affordable-and-drinks i { color: var(--affordable-and-drinks); }
-.filter-toggle .icon.expensive-and-drinks i { color: var(--expensive-and-drinks); }
+.filter-toggle .icon.food-and-drinks i { color: var(--affordable-and-drinks); }
 .filter-toggle .icon.want-to-go i { color: var(--want-to-go); }
 
 .filter-toggle.inactive {
