@@ -355,11 +355,11 @@ body {
   z-index: 2;
 }
 
-.filter-toggle .icon.grab-and-go i { color: var(--grab-and-go); }
-.filter-toggle .icon.food i { color: var(--food); }
-.filter-toggle .icon.drinks i { color: var(--drinks); }
-.filter-toggle .icon.food-and-drinks i { color: var(--affordable-and-drinks); }
-.filter-toggle .icon.want-to-go i { color: var(--want-to-go); }
+.filter-toggle .icon.grab-and-go { color: var(--grab-and-go); }
+.filter-toggle .icon.food { color: var(--food); }
+.filter-toggle .icon.drinks { color: var(--drinks); }
+.filter-toggle .icon.food-and-drinks { color: var(--affordable-and-drinks); }
+.filter-toggle .icon.want-to-go { color: var(--want-to-go); }
 
 .filter-toggle.inactive {
   opacity: 0.4;
