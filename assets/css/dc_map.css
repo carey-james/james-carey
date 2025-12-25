@@ -324,7 +324,6 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
@@ -359,7 +358,7 @@ body {
 .filter-toggle .icon.grab-and-go { color: var(--grab-and-go); }
 .filter-toggle .icon.food { color: var(--food); }
 .filter-toggle .icon.drinks { color: var(--drinks); }
-.filter-toggle .icon.food-and-drinks { color: var(--affordable-and-drinks); }
+.filter-toggle .icon.food-and-drinks { color: var(--food-and-drinks); }
 .filter-toggle .icon.want-to-go { color: var(--want-to-go); }
 
 .filter-toggle.inactive {
