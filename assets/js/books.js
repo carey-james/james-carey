@@ -644,7 +644,8 @@ async function initBooks() {
 	const data_2023 = await d3.dsv('|', 'https://raw.githubusercontent.com/carey-james/Reading-List/main/2023/books.csv');
 	const data_2024 = await d3.dsv('|', 'https://raw.githubusercontent.com/carey-james/Reading-List/main/2024/books.csv');
 	const data_2025 = await d3.dsv('|', 'https://raw.githubusercontent.com/carey-james/Reading-List/main/2025/books.csv');
-	const raw_data = data_2022.concat(data_2023.concat(data_2024.concat(data_2025)));
+	const data_2026 = await d3.dsv('|', 'https://raw.githubusercontent.com/carey-james/Reading-List/main/2026/books.csv');
+	const raw_data = data_2022.concat(data_2023.concat(data_2024.concat(data_2025.concat(data_2026))));
 	const data = _.sortBy(raw_data.map(dateFixer),['year','date']);
 	runner(data);
 }
