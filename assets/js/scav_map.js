@@ -103,7 +103,6 @@ function buildContent(rec) {
         </div>
     </div>
     `;
-  console.log(JSON.stringify(rec.type));
   return content;
 }
 
