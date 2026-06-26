@@ -2,13 +2,6 @@ let activeMarkers = [];
 let gridApi = null;
 let map = null;
 
-const filters = {
-  type: new Set(["grab-and-go", "food", "drinks", "food-and-drinks", "want-to-go"]),
-  level: new Set(["1", "2", "3"]),
-  price: new Set(["$", "$$", "$$$", "$$$$"]),
-};
-
-
 async function initMap() {
   
   // Request needed libraries.
@@ -45,25 +38,6 @@ async function initMap() {
   // Init the grid
   initRecGrid(recs);
 
-    document.querySelectorAll(".filter-toggle").forEach(el => {
-    el.addEventListener("click", () => {
-      const category = el.dataset.filter;
-      const value = el.dataset.value;
-
-      if (filters[category].has(value)) {
-        filters[category].delete(value);
-        el.classList.add("inactive");
-        el.querySelector("i").classList.replace("fa-eye", "fa-eye-slash");
-      } else {
-        filters[category].add(value);
-        el.classList.remove("inactive");
-        el.querySelector("i").classList.replace("fa-eye-slash", "fa-eye");
-      }
-
-      updateFilters();
-    });
-  });
-
 }
 
 function initRecGrid(recs) {
@@ -75,8 +49,8 @@ function initRecGrid(recs) {
         minWidth: 50,
         maxWidth: 60,
         cellRenderer: (params) => {
-          const icon1 = params.data.icon1;
           const color = getPointsColor(params.data.points);
+          const icon1 = params.data.icon1;
           return `
             <div class="icon" style="color:${color}">
             <i class="fa-solid fa-${icon1} fa-lg"></i>
@@ -132,25 +106,23 @@ function initRecGrid(recs) {
 }
 
 function getPointsColor(points) {
-  // Unknown value
   if (points === "?" || points == null || points === "") {
-    return "#8a2be2"; // Purple
+    return "#8a2be2"; // purple
   }
 
   const value = Number(points);
 
-  // Clamp between 5 and 50
   const min = 5;
   const max = 50;
+
   const t = Math.max(0, Math.min(1, (value - min) / (max - min)));
 
-  // RGB interpolation:
-  // Yellow (255,255,0) -> Red (255,0,0)
+  // Yellow -> Red
   const r = 255;
   const g = Math.round(255 * (1 - t));
   const b = 0;
 
-  return `rgb(${r}, ${g}, ${b})`;
+  return `rgb(${r},${g},${b})`;
 }
 
 
@@ -166,53 +138,42 @@ function toggleHighlight(markerView, rec) {
 
 function buildContent(rec) {
   const content = document.createElement("div");
-
-  const color = getPointsColor(rec.points);
-
-  content.classList.add("rec"); 
-  content.style.setProperty("--marker-color", color);
-
+  content.classList.add("rec");
+  content.style.setProperty("--marker-color", getPointsColor(rec.points));
   content.innerHTML = `
-    <div class="icon ${rec.type}">
-            <span>${rec.points}</span>
+    <div class="icon">
+      <span>${rec.points}</span>
     </div>
     <div class="details">
         <div class="name">${rec.name}</div>
-        <div class="address">${rec.lat} - ${rec.lng}</div>
+        <div class="address">${rec.address}</div>
         <div class="description">${rec.description}</div>
         <div class="features">
-        <div>
-            <i aria-hidden="true" class="fa-solid fa-badge-dollar fa-lg dollar" title="Price"></i>
-            <span>${rec.price}</span>
-        </div>
-        <div>
-            <i aria-hidden="true" class="fa-solid fa-star fa-lg star" title="Star"></i> 
-            <span>${rec.points}</span>
-        </div>
+            <div>
+                <i class="fa-solid fa-badge-dollar fa-lg dollar"></i>
+                <span>${rec.price}</span>
+            </div>
+            <div>
+                <i class="fa-solid fa-star fa-lg star"></i>
+                <span>${rec.points}</span>
+            </div>
         </div>
     </div>
-    `;
+  `;
   return content;
 }
 
 function updateFilters() {
-  //if (!gridApi || !map) return;
-  // Update MAP
   for (const { marker, rec } of activeMarkers) {
     const visible =
-      filters.type.has(rec.type) &&
       filters.level.has(rec.level) &&
       filters.price.has(rec.price);
     marker.setMap(visible ? map : null);
   }
-
-  // Update GRID
-  gridApi.setFilterModel(null); // Clear existing filters
   gridApi.setRowData(
     activeMarkers
       .map(({ rec }) => rec)
       .filter(rec =>
-        filters.type.has(rec.type) &&
         filters.level.has(rec.level) &&
         filters.price.has(rec.price)
       )
