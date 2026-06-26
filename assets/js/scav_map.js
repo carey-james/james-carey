@@ -88,18 +88,23 @@ function buildContent(rec) {
   content.classList.add("rec", rec.type);
   content.innerHTML = `
     <div class="icon ${rec.type}">
-            <span>${rec.pts}</span>
+            <span>${rec.number}</span>
     </div>
     <div class="details">
         <div class="name"><a href="${rec.link}" class="black-link">${rec.name}</a></div>
         <div class="address">${rec.lat}, ${rec.lng}</div>
         <div class="description">${rec.description}</div>
         <div class="features">
-        <div>
-            <i aria-hidden="true" class="fa-solid fa-badge-dollar fa-lg dollar" title="Price"></i>
-            <span class="fa-sr-only">Price</span>
-            <span>${rec.price}</span>
-        </div>
+          <div>
+              <i aria-hidden="true" class="fa-solid fa-star fa-lg star" title="Star></i>
+              <span class="fa-sr-only">Points</span>
+              <span>${rec.pts}</span>
+          </div>
+          <div>
+              <i aria-hidden="true" class="fa-solid fa-badge-dollar fa-lg dollar" title="Price"></i>
+              <span class="fa-sr-only">Price</span>
+              <span>${rec.price}</span>
+          </div>
         </div>
     </div>
     `;
