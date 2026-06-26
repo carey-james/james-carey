@@ -139,7 +139,8 @@ function toggleHighlight(markerView, rec) {
 function buildContent(rec) {
   const content = document.createElement("div");
   content.classList.add("rec");
-  content.style.setProperty("--marker-color", getPointsColor(rec.points));
+  const color = getPointsColor(rec.points);
+  content.style.setProperty("--marker-color", color);
   content.innerHTML = `
     <div class="icon">
       <span>${rec.points}</span>
