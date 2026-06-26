@@ -50,10 +50,10 @@ function initRecGrid(recs) {
         maxWidth: 60,
         cellRenderer: (params) => {
           const type = params.data.type?.toLowerCase() || 'default';
-          const icon1 = params.data.icon1;
+          const pts = params.data.pts;
           return `
             <div class="icon ${type}">
-              <span>${rec.pts}</span>
+              <span>${pts}</span>
             </div>
           `;
         }
