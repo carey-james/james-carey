@@ -43,28 +43,14 @@ async function initMap() {
 function initRecGrid(recs) {
   const gridOptions = {
     columnDefs: [
-      {
-        headerName: 'Points', // No header
-        field: 'pts',
-        minWidth: 50,
-        maxWidth: 60,
-        cellRenderer: (params) => {
-          const type = params.data.type?.toLowerCase() || 'default';
-          const pts = params.data.pts;
-          return `
-            <div class="icon ${type}">
-              <span>${pts}</span>
-            </div>
-          `;
-        }
-      },
-
+      { headerName: '#', field: 'number', width: 50 },
+      { headerName: 'Points', field: 'pts', width: 50 },
       {
         headerName: 'Name',
         field: 'name',
         minWidth: 160,
         cellRenderer: (params) => {
-          return `<a href="${params.data.link}" class="black-link" target="_blank">${params.value}</a>`;
+          return `<span>${params.value}</span>`;
         },
       },
       { headerName: 'Price', field: 'price', width: 90 },
