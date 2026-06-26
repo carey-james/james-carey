@@ -2,13 +2,6 @@ let activeMarkers = [];
 let gridApi = null;
 let map = null;
 
-const filters = {
-  type: new Set(["grab-and-go", "food", "drinks", "food-and-drinks", "want-to-go"]),
-  level: new Set(["1", "2", "3"]),
-  price: new Set(["$", "$$", "$$$", "$$$$"]),
-};
-
-
 async function initMap() {
   
   // Request needed libraries.
@@ -45,33 +38,14 @@ async function initMap() {
   // Init the grid
   initRecGrid(recs);
 
-    document.querySelectorAll(".filter-toggle").forEach(el => {
-    el.addEventListener("click", () => {
-      const category = el.dataset.filter;
-      const value = el.dataset.value;
-
-      if (filters[category].has(value)) {
-        filters[category].delete(value);
-        el.classList.add("inactive");
-        el.querySelector("i").classList.replace("fa-eye", "fa-eye-slash");
-      } else {
-        filters[category].add(value);
-        el.classList.remove("inactive");
-        el.querySelector("i").classList.replace("fa-eye-slash", "fa-eye");
-      }
-
-      updateFilters();
-    });
-  });
-
 }
 
 function initRecGrid(recs) {
   const gridOptions = {
     columnDefs: [
       {
-        headerName: '', // No header
-        field: 'icon1',
+        headerName: 'Points', // No header
+        field: 'pts',
         minWidth: 50,
         maxWidth: 60,
         cellRenderer: (params) => {
@@ -79,7 +53,7 @@ function initRecGrid(recs) {
           const icon1 = params.data.icon1;
           return `
             <div class="icon ${type}">
-              <i class="fa-solid fa-${icon1} fa-lg ${type}"></i>
+              <span>${pts}</span>
             </div>
           `;
         }
@@ -92,26 +66,6 @@ function initRecGrid(recs) {
         cellRenderer: (params) => {
           return `<a href="${params.data.link}" class="black-link" target="_blank">${params.value}</a>`;
         },
-      },
-      { headerName: 'Address', field: 'address', minWidth: 180 },
-      {
-        headerName: "Level",
-        field: "level",
-        minWidth: 160,
-        cellRenderer: (params) => {
-          const level = parseInt(params.value, 10);
-          const stars = '<i class="fa-solid fa-star fa-sm star"></i>'.repeat(level);
-          let text = '';
-          if (level === 1) text = 'If Nearby';
-          else if (level === 2) text = 'Worth a Detour';
-          else if (level === 3) text = 'Worth a Trip';
-
-          return `
-            <div class="level-cell">
-              ${stars} <span class="level-desc">${text}</span>
-            </div>
-          `;
-        }
       },
       { headerName: 'Price', field: 'price', width: 90 },
       { headerName: 'Description', field: 'description', flex: 1, minWidth: 200 },
@@ -147,7 +101,7 @@ function buildContent(rec) {
 
   content.classList.add("rec"); 
   content.innerHTML = `
-    <div class="icon">
+    <div class="icon ${rec.type}">
             <span>${rec.pts}</span>
     </div>
     <div class="details">
@@ -165,30 +119,5 @@ function buildContent(rec) {
     `;
   return content;
 }
-
-function updateFilters() {
-  //if (!gridApi || !map) return;
-  // Update MAP
-  for (const { marker, rec } of activeMarkers) {
-    const visible =
-      filters.type.has(rec.type) &&
-      filters.level.has(rec.level) &&
-      filters.price.has(rec.price);
-    marker.setMap(visible ? map : null);
-  }
-
-  // Update GRID
-  gridApi.setFilterModel(null); // Clear existing filters
-  gridApi.setRowData(
-    activeMarkers
-      .map(({ rec }) => rec)
-      .filter(rec =>
-        filters.type.has(rec.type) &&
-        filters.level.has(rec.level) &&
-        filters.price.has(rec.price)
-      )
-  );
-}
-
 
 initMap();
