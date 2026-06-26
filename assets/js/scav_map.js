@@ -75,17 +75,17 @@ function initRecGrid(recs) {
 function toggleHighlight(markerView, rec) {
   if (markerView.content.classList.contains("highlight")) {
     markerView.content.classList.remove("highlight");
-    markerView.zIndex = null;
+    markerView.zIndex = 1;
   } else {
     markerView.content.classList.add("highlight");
-    markerView.zIndex = 1;
+    markerView.zIndex = 1000;
   }
 }
 
 function buildContent(rec) {
   const content = document.createElement("div");
 
-  content.classList.add("rec"); 
+  content.classList.add("rec", rec.type);
   content.innerHTML = `
     <div class="icon ${rec.type}">
             <span>${rec.pts}</span>
