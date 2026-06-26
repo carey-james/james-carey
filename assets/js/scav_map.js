@@ -163,22 +163,4 @@ function buildContent(rec) {
   return content;
 }
 
-function updateFilters() {
-  for (const { marker, rec } of activeMarkers) {
-    const visible =
-      filters.level.has(rec.level) &&
-      filters.price.has(rec.price);
-    marker.setMap(visible ? map : null);
-  }
-  gridApi.setRowData(
-    activeMarkers
-      .map(({ rec }) => rec)
-      .filter(rec =>
-        filters.level.has(rec.level) &&
-        filters.price.has(rec.price)
-      )
-  );
-}
-
-
 initMap();

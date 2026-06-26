@@ -105,7 +105,7 @@ body {
   border: 1px solid var(--color-offwhite);
   border-radius: 8px;
 
-  width: 400px;
+  transform: scale(1.1);
   max-width: 75vw;
 
   height: auto;
