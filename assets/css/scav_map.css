@@ -96,7 +96,6 @@ body {
   transform: translate(-50%, 0);
   transition: all 0.3s ease-out;
   width: 0;
-  z-index: 1000;
 }
 
 .rec .link {
@@ -167,6 +166,7 @@ body {
   max-width: 75vw;              /* For responsiveness on small screens */
   white-space: normal;          /* Ensure text can wrap */
   word-wrap: break-word;        /* Break long words if needed */
+  z-index: 1000;
 }
 
 .rec.highlight::after {
