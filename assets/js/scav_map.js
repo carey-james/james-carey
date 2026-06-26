@@ -147,7 +147,7 @@ function buildContent(rec) {
     </div>
     <div class="details">
         <div class="name">${rec.name}</div>
-        <div class="address">${rec.address}</div>
+        <div class="address">${rec.lat} / ${rec.lng}</div>
         <div class="description">${rec.description}</div>
         <div class="features">
             <div>
@@ -161,6 +161,7 @@ function buildContent(rec) {
         </div>
     </div>
   `;
+  console.log(getPointsColor(rec.points));
   return content;
 }
 
