@@ -53,7 +53,7 @@ function initRecGrid(recs) {
           const icon1 = params.data.icon1;
           return `
             <div class="icon ${type}">
-              <span>${pts}</span>
+              <span>${rec.pts}</span>
             </div>
           `;
         }
