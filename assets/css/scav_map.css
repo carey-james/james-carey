@@ -1,11 +1,11 @@
 :root {
-  --five: var(--color-brick);
-  --ten: var(--color-fantasy);
-  --fifteen: var(--color-philosophy);
-  --twenty: var(--color-goldenrod);
-  --thirty: var(--color-western);
-  --forty: var(--color-male);
-  --question: var(--color-darkgray);
+  --five: #fbc638;
+  --ten: #ffb231;
+  --fifteen: #FF9C33;
+  --twenty: #ed7844;
+  --thirty: #E84F38;
+  --forty: #e73838;
+  --question: #E838DF;
 }
 
 /*
