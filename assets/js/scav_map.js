@@ -44,11 +44,11 @@ function initRecGrid(recs) {
   const gridOptions = {
     columnDefs: [
       { headerName: '#', field: 'number', width: 50 },
-      { headerName: 'Points', field: 'pts', width: 50 },
+      { headerName: 'Pts', field: 'pts', width: 60 },
       {
         headerName: 'Name',
         field: 'name',
-        minWidth: 160,
+        minWidth: 200,
         cellRenderer: (params) => {
           return `<span>${params.value}</span>`;
         },

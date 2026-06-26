@@ -205,87 +205,87 @@ body {
 /*
  * Icon colors.
  */
-.rec.highlight:has(.food) .icon {
+.rec.highlight:has(.five) .icon {
   color: var(--five);
 }
 
-.rec:not(.highlight):has(.food) {
+.rec:not(.highlight):has(.five) {
   background-color: var(--five);
 }
 
-.rec:not(.highlight):has(.food)::after {
+.rec:not(.highlight):has(.five)::after {
   border-top: 9px solid var(--five);
 }
 
-.rec.highlight:has(.hike) .icon {
+.rec.highlight:has(.ten) .icon {
   color: var(--ten);
 }
 
-.rec:not(.highlight):has(.hike) {
+.rec:not(.highlight):has(.ten) {
   background-color: var(--ten);
 }
 
-.rec:not(.highlight):has(.hike)::after {
+.rec:not(.highlight):has(.ten)::after {
   border-top: 9px solid var(--ten);
 }
 
-.rec.highlight:has(.drinks) .icon {
+.rec.highlight:has(.fifteen) .icon {
   color: var(--fifteen);
 }
 
-.rec:not(.highlight):has(.drinks) {
+.rec:not(.highlight):has(.fifteen) {
   background-color: var(--fifteen);
 }
 
-.rec:not(.highlight):has(.drinks)::after {
+.rec:not(.highlight):has(.fifteen)::after {
   border-top: 9px solid var(--fifteen);
 }
 
-.rec.highlight:has(.shopping) .icon {
+.rec.highlight:has(.twenty) .icon {
   color: var(--twenty);
 }
 
-.rec:not(.highlight):has(.shopping) {
+.rec:not(.highlight):has(.twenty) {
   background-color: var(--twenty);
 }
 
-.rec:not(.highlight):has(.shopping)::after {
+.rec:not(.highlight):has(.twenty)::after {
   border-top: 9px solid var(--twenty);
 }
 
-.rec.highlight:has(.museum) .icon {
+.rec.highlight:has(.thirty) .icon {
   color: var(--thirty);
 }
 
-.rec:not(.highlight):has(.museum) {
+.rec:not(.highlight):has(.thirty) {
   background-color: var(--thirty);
 }
 
-.rec:not(.highlight):has(.museum)::after {
+.rec:not(.highlight):has(.thirty)::after {
   border-top: 9px solid var(--thirty);
 }
 
-.rec.highlight:has(.point) .icon {
+.rec.highlight:has(.forty) .icon {
   color: var(--forty);
 }
 
-.rec:not(.highlight):has(.point) {
+.rec:not(.highlight):has(.forty) {
   background-color: var(--forty);
 }
 
-.rec:not(.highlight):has(.point)::after {
+.rec:not(.highlight):has(.forty)::after {
   border-top: 9px solid var(--forty);
 }
 
-.rec.highlight:has(.area) .icon {
+.rec.highlight:has(.question) .icon {
   color: var(--question);
 }
 
-.rec:not(.highlight):has(.area) {
+.rec:not(.highlight):has(.question) {
   background-color: var(--question);
 }
 
-.rec:not(.highlight):has(.area)::after {
+.rec:not(.highlight):has(.question)::after {
   border-top: 9px solid var(--question);
 }
 
@@ -337,13 +337,13 @@ body {
       align-items: center; }
 
   /* Type-based icon colors inside AG Grid */
-  .ag-cell .icon.food i { color: var(--five); }
-  .ag-cell .icon.hike i { color: var(--ten); }
-  .ag-cell .icon.drinks i { color: var(--fifteen); }
-  .ag-cell .icon.shopping i { color: var(--twenty); }
-  .ag-cell .icon.museum i { color: var(--thirty); }
-  .ag-cell .icon.point i { color: var(--forty); }
-  .ag-cell .icon.area i { color: var(--question); }
+  .ag-cell .icon.five i { color: var(--five); }
+  .ag-cell .icon.ten i { color: var(--ten); }
+  .ag-cell .icon.fifteen i { color: var(--fifteen); }
+  .ag-cell .icon.twenty i { color: var(--twenty); }
+  .ag-cell .icon.thirty i { color: var(--thirty); }
+  .ag-cell .icon.forty i { color: var(--forty); }
+  .ag-cell .icon.question i { color: var(--question); }
 
 .filter-bar {
   margin: 20px auto;
@@ -370,7 +370,7 @@ body {
 }
 
 .filter-toggle {
-  cursor: pointer;
+  cursor: fortyer;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -384,13 +384,13 @@ body {
   z-index: 2;
 }
 
-.filter-toggle .icon.food { color: var(--five); }
-.filter-toggle .icon.hike { color: var(--ten); }
-.filter-toggle .icon.drinks { color: var(--fifteen); }
-.filter-toggle .icon.shopping { color: var(--twenty); }
-.filter-toggle .icon.museum { color: var(--thirty); }
-.filter-toggle .icon.point { color: var(--forty); }
-.filter-toggle .icon.area { color: var(--question); }
+.filter-toggle .icon.five { color: var(--five); }
+.filter-toggle .icon.ten { color: var(--ten); }
+.filter-toggle .icon.fifteen { color: var(--fifteen); }
+.filter-toggle .icon.twenty { color: var(--twenty); }
+.filter-toggle .icon.thirty { color: var(--thirty); }
+.filter-toggle .icon.forty { color: var(--forty); }
+.filter-toggle .icon.question { color: var(--question); }
 .filter-toggle .icon.star { color: var(--color-favorite); }
 
 
