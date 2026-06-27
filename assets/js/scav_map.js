@@ -91,18 +91,16 @@ function buildContent(rec) {
             <span>${rec.number}</span>
     </div>
     <div class="details">
-        <div class="name"><a href="${rec.link}" class="black-link">${rec.name}</a></div>
+        <div class="name">${rec.name}</div>
         <div class="address">${rec.lat}, ${rec.lng}</div>
         <div class="description">${rec.description}</div>
         <div class="features">
           <div>
               <span class="fa-sr-only">Points</span>
-              <span>${rec.pts}</span>
+              <span>${rec.pts} Points</span>
           </div>
           <div>
-              <i aria-hidden="true" class="fa-solid fa-badge-dollar fa-lg dollar" title="Price"></i>
-              <span class="fa-sr-only">Price</span>
-              <span>${rec.price}</span>
+              <span>Potential Cost: ${rec.price}</span>
           </div>
         </div>
     </div>
