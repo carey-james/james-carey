@@ -1,7 +1,7 @@
 number|name|pts|type|description|price|lat|lng
 1|Make your own Triumphal Arch|10|ten|Create your own triumphal arch on the site of Trump's proposed arch.|Free|38.88575782574633|-77.05996482192745
 2|Tree Pose in the National Arboretum|30|thirty|Practice Vrksasana in the pagoda gazebo at the National Arboretum.|Free|38.91227706084044|-76.95573996310593
-3|Roll a 20 at Labyrinth|5|five|Score a critical hit on a d20 at Free RPG day at Labyrinth Games & Puzzles.|Free|38.88471076137848|-76.99685930817108
+3|Roll a d20 at Labyrinth|?|question|Roll a d20 at Free RPG day at Labyrinth Games & Puzzles; your roll is your score.|Free|38.88471076137848|-76.99685930817108
 4|Compare Fabergé and Chicken Eggs|30|thirty|Compare the size of a real chicken egg and a Fabergé egg in the Hillwood collection.|Ticket|38.94363780599873|-77.05247222533039
 5|Fall down the Exorcist Steps|5|five|Recreate being thrown from a window down these treacherous stairs.|Free|38.905418482481004|-77.07018536446695
 6|Have a Beer at the Brewmaster's Castle|5|five|Enjoy a cold one at the Heurich House Biergarten.|Item|38.908151832008|-77.04418848088557
@@ -10,7 +10,7 @@ number|name|pts|type|description|price|lat|lng
 9|Fly like Kate Winslet at the Titanic Memorial|5|five|Recreate the bow of the ship scene from Titanic at the Titanic Memorial.|Free|38.87192430955153|-77.01932478484298
 10|Lotus Pose with the Lotuses|30|thirty|Practice Padmasana in front of Lotuses at the Kenilworth Aquatic Gardens|Free|38.91305711052478|-76.94376930629777
 11|Mimic Kilroy at the WWII Memorial|5|five|Mimic Kilroy's pose at the WWII Memorial, both you and he must be in frame.|Free|38.889625363137505|-77.04029262108524
-12|Blue Yourself at the Reflecting Pool|30|thirty|Paint your face blue (a la Tobias Fünke) to match the new color of the Reflecting Pool.|Item|38.889279124302846|-77.04513170304523
+12|Blue Yourself at the Reflecting Pool|40|forty|Paint your face blue (a la Tobias Fünke) to match the new color of the Reflecting Pool.|Item|38.889279124302846|-77.04513170304523
 13|Set Your Watch by the Master Clock|5|five|Set the time on your watch or other clock using the USNO Master Clock.|Free|38.921447576340725|-77.06332461869503
 14|Drop Newton's Apple on your Head|15|fifteen|Drop an apple on your head under the NIST clone of the Newton Apple Tree.|Item|38.941936776880596|-77.06557690174678
 15|Bread First|10|ten|Eat bread from Bread Furst; must be the first photo you take.|Item|38.947523165340165|-77.0657379016294
@@ -34,7 +34,7 @@ number|name|pts|type|description|price|lat|lng
 33|Rename Carey Park|20|twenty|Make a new sign for 'Lillian' Carey Park to rename it James Carey Park.|Free|38.84082427470785|-77.13977067543274
 34|Climb the Bouldering Project|5|five|Climb the outside of the Bouldering Project.|Free|38.91173713532876|-77.00409082115308
 35|One Mile Run|15|fifteen|Run one mile on the Four Mile Run trail.|Free|38.84135820181767|-77.04776028915853
-36|Be in Maryland in Virginia|10|ten|Be in the Maryland section of Jones' Point (as def. by the Boundary Stone or Google).|Free|38.790344501982155|-77.04037143692855
+36|Be in Maryland in Virginia|20|twenty|Be in the Maryland section of Jones' Point (as def. by the Boundary Stone or Google).|Free|38.790344501982155|-77.04037143692855
 37|Read a First and Second Story|40|forty|Find the same book in both the Dupont Circle and Rockville locations of Second Story books.|Free|39.05663928931769|-77.11064347486753
 38|Send a boat down the Cascading Waterfall|5|five|Send a boat down at least 3 levels of the Malcolm X Park Waterfall.|Free|38.920014791557165|-77.03563954862962
 39|Get your Library (of Congress) Card|15|fifteen|Get a library card at the Library of Congress.|Free|38.88865280290025|-77.00452644333957
@@ -71,7 +71,7 @@ number|name|pts|type|description|price|lat|lng
 70|Play a Tune at the Glass Forest|10|ten|Play a tune (doesn't need to be good) on the Glass Forest.|Free|38.92434032972697|-77.10324045451593
 71|There's a McDonalds in the Pentagon (City)|10|ten|Order an eat one item from the Pentagon City McDonalds.|Item|38.86334102887239|-77.06095699503203
 72|Be in DC in Virginia|10|ten|Pose in front of the house downspout labeled "Alexandria, DC."|Free|38.80325791408509|-77.04292261869497
-73|Fill Up the Ice Well|15|fifteen|Drop (frozen) ice at the Historic Ice Well monument.|Free|38.8057055617233|-77.04354136622362
+73|Fill Up the Ice Well|20|twenty|Drop (frozen) ice at the Historic Ice Well monument.|Free|38.8057055617233|-77.04354136622362
 74|Find a Lady Bird at the Johnson Memorial Grove|15|fifteen|Take a picture with a bird at the LBJ Memorial Grove.|Free|38.87855831332509|-77.05142612259698
 75|Flop at Audi Field|10|ten|Preform a Soccer Flop at Audi Field.|Free|38.8688040612557|-77.01145936824861
 76|Buy James Booze|15|fifteen|Buy the party a bottle of Rum at Cotton and Reed.|Item|38.90949072317599|-76.99772087849126
@@ -91,3 +91,44 @@ number|name|pts|type|description|price|lat|lng
 90|Merry-Go-Round-And-Round|15|fifteen|Ride the Carousel on the National Mall, twice.|Ticket|38.88904313099329|-77.02458449472164
 91|Flexin' like Flavin|5|five|Use your body to recreate a piece by Dan Flavin in the Hirshhorn.|Free|38.88818301457156|-77.02287894409488
 92|Eat the Ice-Cream of the Future|10|ten|Eat Dippin' Dots in the National Zoo.|Item|38.92781009266652|-77.04682648379055
+93|Find a Home-Grown Gem|5|five|Find a gem from your home state in the Minerals and Gems at the Museum of Natural History.|Free|38.891126246502324|-77.02623650918103
+94|Sign with the Signers|5|five|Sign something at the Signers' Memorial.|Free|38.891107856194196|-77.04300731119336
+95|Study the Law|15|fifteen|Read a legal textbook at GULC.|Item|38.898267010575815|-77.0126605177865
+96|Study the (Washington College of) Law|15|fifteen|Read a legal textbook at AUWCL.|Item|38.94590972036531|-77.07978594999331
+97|Climb the Highest Height|10|ten|Plant a flag atop the highest point in DC at Fort Reno Park.|Free|38.95183360606069|-77.07609954594226
+98|Imagine Yourself an Educator|20|twenty|Sketch yourself and place it with the DC Educators sketches at the Anacostia Community Musuem.|Item|38.856510330665245|-76.97678622954763
+99|Sacred-Secular Sightseeing|10|ten|Point out the Darth Vader on the National Cathedral.|Free|38.93061278458411|-77.07106255870599
+100|Hey! I Know that Grave!|15|fifteen|Find a grave (or tomb) of someone with a Wikipedia page in the Oak Hill Cemetery.|Free|38.91315860816416|-77.0578495742832
+101|Get Swole|10|ten|Work out at the Rock Creek Trail Exercise Course.|Free|38.920864123144234|-77.0519890509248
+102|Oh Say Can You See|15|fifteen|Be seen in the Francis Scott Key Memorial from the other side of Key Bridge.|Free|38.90476838610816|-77.06823019157076
+103|Discover (Racist?) Gay History|15|fifteen|Read a passage from Walt Whitman at the grave of Peter Doyle.|Free|38.88072472245456|-76.97879395161169
+104|Do the Roar|15|fifteen|Do that classic Shrek ogre roar on the Marsh Observation Deck on Roosevelt Island.|Free|38.89464465762819|-77.06076484895746
+105|Put it All on Black|30|thirty|Place a bet in the MGM National Harbor Casino.|Item|38.79507254560175|-77.00894458867167
+106|Enjoy a Cold One with Some Cold Ones|30|thirty|Drink a beer at Tysons Biergarten in front of Northrop Grumman.|Item|38.922452102162644|-77.20762235678492
+107|Be Treated Like Family|30|thirty|Be served at the Hyattsville Crossing Olive Garden.|Item|38.96737586324981|-76.95932919941197
+108|Get Some Lift|20|twenty|Use the Lift and Gravity machine at the College Park Aviation Museum.|Ticket|38.97878337231124|-76.92221923935806
+109|Go to the (Burnt) Ends of the Earth|30|thirty|Eat Burnt Ends at 2fifty BBQ in Riverdale.|Item|38.96209090705828|-76.93482936480362
+110|Call Your Mother|5|five|Call your mom from the Logan Circle Call Your Mother.|Free|38.90980959413535|-77.03411233552202
+111|The Price of Happiness?|10|ten|Find Red Bottoms in the National Museum of the American Indian.|Free|38.88831599944247|-77.01643359065869
+112|Take the Water Taxi|30|thirty|Take the Potomac Water Taxi.|Ticket|38.80504052779596|-77.03840566031937
+113|Ride the Big Wheel (Part 2)|30|thirty|Ride the Capital Wheel.|Ticket|38.785457462559904|-77.0190706683959
+114|Ride the Big Wheel (Part 1)|30|thirty|Ride the 'Great American State Fair' Ferris Wheel.|Free|38.88976382987193|-77.01695064234787
+115|Get a Drink at the Summerhouse|5|five|Fill up a water bottle at the Capitol Summerhouse.|Free|38.891458862045496|-77.01070296369501
+116|Get Some Little Guys|15|fifteen|Buy a Warhammer or D&D Miniature at Your Hobby Place.|Item|38.81202260496588|-77.04568135408954
+117|Find What the Torpedos See|15|fifteen|Find any piece of underwater themed art at the Torpedo Factory.|Free|38.804897769353744|-77.03982114360743
+118|Eastern(?) Market|10|ten|Find Asian (Chinese, Arabic, Hindi, etc) script on any item sold at Eastern Market.|Free|38.88648650202005|-76.99611788905422
+119|Jump the Little Falls|15|fifteen|Jump over the falls at Little Falls Branch.|Free|38.94001403303627|-77.11831055833152
+120|Jump the Great Falls|40|forty|(Safely) jump any stretch of water at Great Falls.|Free|38.996549609233604|-77.24814701558282
+121|Eat Some Mall Sushi|20|twenty|Eat sushi from the conveyor belt at Tyson's.|Item|38.923503869123515|-77.22423456200538
+122|Get Self-Help in Capitol Hill|15|fifteen|Find a self-help book in any Capitol Hill Little Free Library.|Free|38.888056222709224|-76.99823297345178
+123|A Real Childhood Cafe|10|ten|Order and drink a cup of Milk (Oat or Almond Okay) from Childhood Cafe.|Item|38.91662857031338|-77.03872060929514
+124|Enjoy the Flowers with a Friend|10|ten|Find a butterfly in the garden at Mitchell Park.|Free|38.914364982643235|-77.04979068255145
+125|Fight on the Beaches|10|ten|Throw a punch at the Winston Churchhill Memorial.|Free|38.91979716858528|-77.06146408691882
+126|Peirce the Mill|5|five|Sing a Peirce the Veil song in front of Peirce Mill.|Free|38.940251226282136|-77.05187392929246
+127|Bring the Jungle to Upton Sinclair|15|fifteen|Lay (respectfully) foliage at the grave of Upton Sinclair in Rock Creek Cemetery.|Free|38.94691010005902|-77.01086850800002
+128|Make it to the Top|15|fifteen|Stand on top of the North Corner Boundary Stone.|Free|38.995942971169754|-77.04099012379777
+129|Read at Anna J Cooper Circle|5|five|Read a passage from A Voice from the South at the only circle in DC named after a woman.|Free|38.9158903659472|-77.01564672681522
+130|Cheer Up Your Only Friend|5|five|Drink a Cheerwine at Your Only Friend.|Item|38.90480733570658|-77.02416502931996
+131|See a Ford at Ford's|5|five|Take a picture with both a Ford car and Ford's Theatre in frame.|Free|38.896667662023496|-77.02591111859218
+132|Take Sarah to Indiana|30|thirty|Take a physical cut-out of Sarah Prazeau to Indiana Plaza.|Item|38.89361682934498|-77.02149089471412
+133|Contemplate Your Journey at the Wayside Shrine|15|fifteen|Spend a moment of contemplation at the Wayside Shrine at the Franciscan Monastery.|Free|38.937605712332434|-76.98292153525107
