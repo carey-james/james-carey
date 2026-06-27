@@ -96,7 +96,6 @@ function buildContent(rec) {
         <div class="description">${rec.description}</div>
         <div class="features">
           <div>
-              <i aria-hidden="true" class="fa-solid fa-star fa-lg star"</i>
               <span class="fa-sr-only">Points</span>
               <span>${rec.pts}</span>
           </div>
