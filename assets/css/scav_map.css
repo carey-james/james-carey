@@ -8,6 +8,8 @@
   --question: #E838DF;
 }
 
+
+
 /*
  * Makes the sample page fill the window.
  */
@@ -16,6 +18,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #ffb231 !important;
 }
 
 /*
