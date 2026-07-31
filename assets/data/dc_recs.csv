@@ -1,7 +1,6 @@
 name|link|address|description|icon1|icon2|type|level|price|extra_icon|extra_color|extra_text|rez|lat|lng
 Astoria|https://astoriadc.com/|1521 17th St NW|Chinese & Tiki Cocktails|bowl-chopsticks-noodles|martini-glass|food-and-drinks|3|$$$|leaf|veg|Vegan OK|Rez Rec'd|38.91074373631267|-77.03832824711489
 Aslin DC|https://www.aslinbeer.com/dc|1740 14th St NW|Beergarden|beer-mug||drinks|2|$|utensils|veg|Snacks|No Rez|38.91394036088174|-77.03242493027032
-Left Door||1345 S St NW|Bartender's choice cocktails|martini-glass||drinks|2|$$|utensils|nonveg|No Food|No Rez|38.91442527494764|-77.03146677542595
 ChurchKey|https://www.churchkeydc.com/|1337 14th St NW|Huge draft selection, warm vibes|beer-mug||drinks|1|$$|utensils|veg|Food|No Rez|38.90847885390439|-77.03163649585525
 All Day at Kramers|https://www.kramers.com/all-day-by-kramers-menus/|1337 14th St NW|American bistro food & books|fork-knife||food|1|$$|leaf|veg|Vegan OK|No Rez|38.91083549831795|-77.04374105522061
 Pizzeria Paradiso|https://www.eatyourpizza.com/lunch-dinner|2003 P St NW|Woodfired Pizza and Beer|pizza-slice||food|1|$|leaf|veg|Veg OK|No Rez|38.90987941538678|-77.04515542838818
@@ -19,7 +18,6 @@ The Sovereign|https://thesovereigndc.com/#menus|1206 Wisconsin Ave NW|Belgian Fo
 Lost Generation|https://www.lostgenbrewing.com/|327 S St NE|Neighborhood Brewery|beer-mug||drinks|2|$|utensils|veg|Food|No Rez|38.913581318721434|-77.00093905497639
 Red Bear Brewing|http://www.redbear.beer/|209 M St NE|Queer Brewery|beer-mug||drinks|1|$|utensils|veg|Food|No Rez|38.905396555858815|-77.00247001828106
 SUNdeVICH|http://www.sundevich.com/|601 NJ Ave NW|Sandwiches around the world|sandwich||grab-and-go|1|$|leaf|veg|Vegan OK|No Rez|38.89814152316606|-77.01159513438341
-Tonari|https://www.tonaridc.com/menus/|707 6th St NW|Italian, Japanese Style|pizza-slice|martini-glass|food-and-drinks|3|$$|leaf|veg|Veg OK|No Rez|38.898984770750154|-77.01972627358228
 Daikaya|http://www.daikaya.com/|705 6th St NW|Ramen|bowl-chopsticks-noodles||food|2|$$|leaf|veg|Veg OK|Rez Rec'd|38.898592959781446|-77.01953901016702
 Denson|http://www.densondc.com/|600 F St NW|Underground Cocktail Lounge|martini-glass||drinks|1|$$|utensils|veg|Food|Rez Rec'd|38.8970196020797|-77.02009417681136
 The Golden Age|https://www.thegoldenagedc.com/|1726 CT Ave NW|Classic Cocktails and Vibes|martini-glass||drinks|2|$$|utensils|veg|Food|No Rez|38.9134648721217|-77.04599894600852
@@ -64,3 +62,4 @@ Press Club|https://www.pressclubdc.com/|1506 19th St NW|Vinyl Lounge and Craft C
 Raven Grill||3125 Mt Pleasant St NW APT 101|Cash-Only Dive|beer-mug||drinks|1|$||nonveg||No Rez|38.92941491790523|-77.0373334047467
 The Wonderland Ballroom|https://www.thewonderlandballroom.com/menu/|1101 Kenyon St NW|Dive with Dancing|beer-mug||drinks|1|$||nonveg||No Rez|38.92987874673619|-77.02797169458677
 Service Bar|https://www.servicebardc.com/menu|926 U St NW|Inventive Cocktails|martini-glass||drinks|3|$$$||nonveg|Snacks|No Rez|38.91687701828131|-77.02504502362703
+Perry's|https://www.perrysam.com/|1811 Columbia Rd NW|Modern Seasonal Japanese|sushi||food|2|$$$|leaf|veg|Vegan OK|Rez Rec'd|38.92208432089313|-77.04351097563743

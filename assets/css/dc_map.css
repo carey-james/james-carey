@@ -160,10 +160,11 @@ body {
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
   height: auto;
   padding: 8px 15px;
-  width: 400px;                 /* You can adjust this value */
-  max-width: 75vw;              /* For responsiveness on small screens */
-  white-space: normal;          /* Ensure text can wrap */
-  word-wrap: break-word;        /* Break long words if needed */
+  width: 400px;
+  max-width: 75vw;
+  white-space: normal;
+  word-wrap: break-word;
+  z-index: 1000;
 }
 
 .rec.highlight::after {
@@ -172,10 +173,10 @@ body {
 
 .rec.highlight .address,
 .rec.highlight .description {
-  white-space: normal;          /* Allow text to wrap */
-  overflow-wrap: break-word;    /* Handle long words properly */
-  max-width: 100%;              /* Respect container width */
-  display: block;               /* Ensure block layout */
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  display: block;
 }
 
 .rec.highlight .details {
