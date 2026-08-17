@@ -4,6 +4,36 @@
 // Pages
 // =========================================================
 
+// =========================================================
+// Home
+// =========================================================
+
+.home-icons {
+	li {
+		a {
+			border-bottom: 0;
+		}
+	}
+}
+
+.home-header {
+	h3 {
+		margin: 0 0 1.5em;
+	}
+}
+
+// ---------------------------------------------------------
+// About
+// ---------------------------------------------------------
+
+.cvhead {
+	position: relative;
+	text-align: center;
+
+	h3 {
+		text-transform: none;
+	}
+}
 
 // =========================================================
 // Books
@@ -535,51 +565,6 @@
 	.share {
 		display: flex;
 		align-items: center;
-	}
-}
-
-
-// =========================================================
-// Invite / CV
-// =========================================================
-
-#cvhead {
-	margin-top: 2.5vh;
-	margin-left: 5vw;
-
-	text-align: left;
-
-	header {
-		display: inline-block;
-
-		color: rgba($white, 0.5);
-		vertical-align: middle;
-	}
-
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	strong,
-	b {
-		color: $white;
-	}
-
-	a {
-		color: inherit;
-
-		&:hover {
-			color: $white;
-		}
-	}
-
-	h3 {
-		margin-right: 30vw;
-		margin-left: 10vw;
-
-		text-transform: none;
 	}
 }
 

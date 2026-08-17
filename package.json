@@ -21,8 +21,11 @@
   },
   "homepage": "https://github.com/carey-james/james-carey#readme",
   "dependencies": {
+    "d3": "^7.9.0",
+    "lodash": "^4.18.1",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "tippy.js": "^6.3.7"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.0.5",

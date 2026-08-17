@@ -28,6 +28,9 @@ html {
 	background-size:
 		auto,
 		cover;
+	background-attachment:
+		scroll,
+		fixed;
 
 	font-size: $font-size-root;
 	text-rendering: optimizeLegibility;
@@ -59,6 +62,33 @@ a {
 	&:hover {
 		border-bottom-color: transparent;
 		color: $mint;
+	}
+}
+
+.back-link {
+	position: fixed;
+	top: 1.5rem;
+	left: 1.5rem;
+
+	border-bottom: 0;
+	z-index: 10;
+
+	margin-top: 2.5vh;
+	margin-left: 5vw;
+
+	text-align: left;
+
+	display: inline-block;
+
+	color: rgba($white, 0.5);
+	vertical-align: middle;
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: $white;
+		}
 	}
 }
 
@@ -191,6 +221,30 @@ hr {
 	}
 }
 
+// ---------------------------------------------------------
+// CV / Internal page header
+// ---------------------------------------------------------
+
+.cvhead {
+	margin-top: 10vh;
+	margin-left: 5vw;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	strong,
+	b {
+		color: $white;
+	}
+
+	h3 {
+		text-transform: none;
+	}
+}
+
 
 // ---------------------------------------------------------
 // Footer
@@ -237,6 +291,50 @@ hr {
 // Lists
 // ---------------------------------------------------------
 
+ol,
+ul {
+	list-style: none;
+}
+
+ol {
+	list-style: decimal;
+	margin: 0 0 2em;
+	padding-left: 1.25em;
+
+	li {
+		padding-left: 0.25em;
+	}
+}
+
+ul {
+	list-style: disc;
+	margin: 0 0 2em;
+	padding-left: 1em;
+
+	li {
+		padding-left: 0.5em;
+	}
+}
+
+ul.alt {
+	list-style: none;
+	padding-left: 0;
+
+	li {
+		border-top: $border-width solid $border-color;
+		padding: 0.5em 0;
+
+		&:first-child {
+			border-top: 0;
+			padding-top: 0;
+		}
+	}
+}
+
+dl {
+	margin: 0 0 2em;
+}
+
 ul.icons {
 	cursor: default;
 	list-style: none;
@@ -252,6 +350,76 @@ ul.icons {
 
 		.icon::before {
 			font-size: 1.5em;
+		}
+	}
+}
+
+ul.actions {
+	cursor: default;
+	list-style: none;
+	padding-left: 0;
+
+	li {
+		display: inline-block;
+		padding: 0 1em 0 0;
+		vertical-align: middle;
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
+	&.small li {
+		padding-right: 0.5em;
+	}
+
+	&.vertical {
+		li {
+			display: block;
+			padding: 1em 0 0;
+
+			&:first-child {
+				padding-top: 0;
+			}
+
+			> * {
+				margin-bottom: 0;
+			}
+		}
+
+		&.small li {
+			padding-top: 0.5em;
+
+			&:first-child {
+				padding-top: 0;
+			}
+		}
+	}
+
+	&.fit {
+		display: table;
+		margin-left: -1em;
+		padding: 0;
+		table-layout: fixed;
+		width: calc(100% + 1em);
+
+		li {
+			display: table-cell;
+			padding: 0 0 0 1em;
+
+			> * {
+				margin-bottom: 0;
+				min-width: 0;
+			}
+		}
+
+		&.small {
+			margin-left: -0.5em;
+			width: calc(100% + 0.5em);
+
+			li {
+				padding-left: 0.5em;
+			}
 		}
 	}
 }
