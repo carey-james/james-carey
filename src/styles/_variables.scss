@@ -1,0 +1,242 @@
+// =========================================================
+// Colors
+// =========================================================
+
+// Core
+$white: #ffffff;
+$off-white: #dddddd;
+$slate: #313a3d;
+$light-gray: #6f7577;
+$dark-gray: #61686b;
+$mint: #8cd1a8;
+
+//Neutral Colors
+$gray-darkest: #262524;
+$gray-dark: #53504D;
+$gray-medium: #918E8B;
+$gray-light: #E4E2E0;
+$gray-border: #DBDBDB;
+$gray-background: #F5F3F1;
+
+// Book / content categories
+$lit: #92140c;
+$mystery: #926ebc;
+$horror: #4b4a67;
+$humor: #ad471e;
+$scifi: #6aaf8d;
+$fantasy: #345830;
+$historical: #bd6d27;
+$biography: #0e4159;
+$science: #275e71;
+$music: #429195;
+$essays: #353a47;
+$economics: #343a1a;
+$philosophy: #4a3554;
+$western: #6f1a07;
+$favorite: #e29f37;
+
+// Other categories
+$male: #6699cc;
+$female: #f48876;
+$nonbinary: #d6d4d2;
+
+// Named colors / aliases
+$butter-mint: #9bc8b7;
+$dark-teal: #275e71;
+$teal: #429195;
+$goldenrod: #e29f37;
+$cream: #e6d8ac;
+$brick: #ad471e;
+$tangerine: #bd6d27;
+
+// Utility colors found in the old styles
+$black: #000000;
+$near-black: #262626;
+$map-text: #263238;
+$search-text: #53504d;
+$spinner-gray: #454d50;
+
+
+// =========================================================
+// Map Category Colors
+// =========================================================
+
+// DC
+$dc-grab-and-go: $female;
+$dc-food: $brick;
+$dc-drinks: $philosophy;
+$dc-food-and-drinks: $mystery;
+$dc-want-to-go: $dark-gray;
+
+// SF
+$sf-food: $brick;
+$sf-hike: $fantasy;
+$sf-drinks: $philosophy;
+$sf-shopping: $goldenrod;
+$sf-museum: $western;
+$sf-point: $male;
+$sf-area: $dark-gray;
+
+
+// =========================================================
+// Typography
+// =========================================================
+
+$font-heading: 'Raleway', Helvetica, sans-serif;
+$font-body: 'Bitter', serif;
+$font-ui: 'Raleway', Helvetica, sans-serif;
+
+$font-size-root: 16px;
+$font-size-body: 16pt;
+
+$font-weight-thin: 100;
+$font-weight-light: 200;
+$font-weight-normal: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+
+// =========================================================
+// Breakpoints
+// =========================================================
+
+$breakpoint-mobile-small: 480px;
+$breakpoint-mobile: 736px;
+$breakpoint-tablet: 768px;
+$breakpoint-tablet-large: 980px;
+$breakpoint-desktop: 1000px;
+$breakpoint-wide: 1192px;
+$breakpoint-wider: 1384px;
+$breakpoint-large: 1680px;
+
+
+// =========================================================
+// Layout
+// =========================================================
+
+$site-min-width: 300px;
+
+$header-height: 100vh;
+$header-height-mobile: 80vh;
+
+$container-desktop: 960px;
+$container-wide: 1152px;
+$container-wider: 1344px;
+
+$container-padding: 1.5rem;
+$container-padding-mobile: 1rem;
+
+
+// =========================================================
+// Spacing
+// =========================================================
+
+$space-xs: 0.25rem;
+$space-sm: 0.5rem;
+$space-md: 0.75rem;
+$space-lg: 1rem;
+$space-xl: 1.5rem;
+$space-2xl: 2rem;
+$space-3xl: 3rem;
+$space-4xl: 5rem;
+
+$column-gap: 0.75rem;
+
+
+// =========================================================
+// Borders
+// =========================================================
+
+$border-width: 1px;
+$border-width-heavy: 2px;
+
+$border-color: $off-white;
+
+$border-radius-small: 2px;
+$border-radius-medium: 5%;
+$border-radius-round: 50%;
+
+
+// =========================================================
+// Transitions
+// =========================================================
+
+$transition-fast: 0.2s ease-in-out;
+$transition-normal: 0.3s ease-out;
+
+
+// =========================================================
+// Maps
+// =========================================================
+
+$map-height: 600px;
+
+$map-marker-size: 40px;
+$map-marker-icon-size: 20px;
+$map-marker-font-size: 20px;
+
+$map-marker-gap: 25px;
+$map-feature-gap: 10px;
+
+$map-legend-padding: 3px;
+$map-legend-margin: 3px;
+$map-legend-border-width: 9px;
+
+$map-marker-arrow-size: 9px;
+
+
+// =========================================================
+// Forms / Controls
+// =========================================================
+
+$input-height: 1.5em;
+
+$checkbox-size: 16px;
+
+$control-label-size: 12pt;
+$control-small-size: 10pt;
+
+
+// =========================================================
+// Search
+// =========================================================
+
+$search-width: 420px;
+$search-result-max-height: 300px;
+
+$search-result-font-size: 12px;
+$search-result-count-size: 14px;
+
+$search-result-padding: 0.6em 1em;
+
+$search-shadow:
+	0 2px 4px 2px rgba(0, 0, 0, 0.1);
+
+
+// =========================================================
+// Grid / Tables
+// =========================================================
+
+$grid-header-size: 18px;
+$grid-cell-size: 10px;
+$grid-game-size: 16px;
+
+$grid-game-min-width: 180px;
+
+// =========================================================
+// Effects
+// =========================================================
+
+$overlay-opacity: 0.95;
+
+$spinner-size: 2em;
+$spinner-color: $spinner-gray;
+
+// =========================================================
+// Breakpoints
+// =========================================================
+
+$breakpoint-tablet: 769px;
+$breakpoint-desktop: 1000px;
+$breakpoint-widescreen: 1192px;
+$breakpoint-fullhd: 1384px;

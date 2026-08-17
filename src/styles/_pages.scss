@@ -1,0 +1,650 @@
+@use 'variables' as *;
+
+// =========================================================
+// Pages
+// =========================================================
+
+
+// =========================================================
+// Books
+// =========================================================
+
+// ---------------------------------------------------------
+// Search / Options
+// ---------------------------------------------------------
+
+.books {
+	.search,
+	.options {
+		padding-bottom: $space-md;
+		text-align: center;
+
+		.field,
+		.label,
+		.control {
+			display: inline-block;
+			margin-bottom: 0;
+		}
+
+		.label {
+			margin-right: 0.2rem;
+			margin-left: 0.2rem;
+
+			font-size: $control-label-size;
+			font-weight: $font-weight-regular;
+		}
+	}
+
+	.search {
+		padding-top: $space-md;
+
+		.field {
+			position: relative;
+		}
+
+		.control,
+		.search-result {
+			width: $search-width;
+		}
+
+		.search-input-wrapper {
+			position: relative;
+		}
+
+		.close-x {
+			position: absolute;
+			top: 2px;
+			right: 6px;
+			display: inline-block;
+
+			a {
+				color: $search-text;
+			}
+		}
+
+		.close-thin::after {
+			cursor: pointer;
+			content: '×';
+			font-size: 18px;
+			line-height: 100%;
+		}
+
+		.search-result {
+			position: absolute;
+			right: 0;
+			z-index: 10;
+
+			overflow-y: auto;
+
+			max-height: $search-result-max-height;
+
+			background: $white;
+			border-right: $border-width solid $search-text;
+			border-bottom: $border-width solid $search-text;
+			border-left: $border-width solid $search-text;
+			border-radius: 0 0 $border-radius-small $border-radius-small;
+
+			box-shadow: $search-shadow;
+
+			font-size: $search-result-font-size;
+
+			li.count,
+			.item {
+				max-width: 100%;
+				text-align: left;
+			}
+
+			.item {
+				padding: $search-result-padding;
+				border-top: $border-width solid $nonbinary;
+
+				i {
+					background: #e5e1b5;
+					font-style: normal;
+				}
+			}
+
+			.item-hover {
+				background: #f5f3f1;
+				cursor: pointer;
+			}
+
+			li.count {
+				padding: 0.4em 1em;
+
+				color: $search-text;
+				font-size: $search-result-count-size;
+
+				i {
+					color: $female;
+					font-style: normal;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+	.options {
+		padding-top: $space-md;
+		margin-bottom: $space-md;
+	}
+}
+
+
+// ---------------------------------------------------------
+// Bookshelf
+// ---------------------------------------------------------
+
+.shelf-wrapper {
+	overflow-x: auto;
+
+	svg {
+		float: left;
+		background: rgba($white, 0.6);
+	}
+
+	.shelf-gap {
+		fill: none;
+		stroke: $slate;
+		stroke-width: 2.5;
+	}
+
+	.book-male,
+	.book-female {
+		stroke: $search-text;
+		stroke-width: 1;
+	}
+
+	.genre-Lit {
+		fill: $lit;
+	}
+
+	.genre-Mystery {
+		fill: $mystery;
+	}
+
+	.genre-Horror {
+		fill: $horror;
+	}
+
+	.genre-Humor {
+		fill: $humor;
+	}
+
+	.genre-SciFi {
+		fill: $scifi;
+	}
+
+	.genre-Fantasy {
+		fill: $fantasy;
+	}
+
+	.genre-Historical {
+		fill: $historical;
+	}
+
+	.genre-Biography {
+		fill: $biography;
+	}
+
+	.genre-Science {
+		fill: $science;
+	}
+
+	.genre-Music {
+		fill: $music;
+	}
+
+	.genre-Essays {
+		fill: $essays;
+	}
+
+	.genre-Economics {
+		fill: $economics;
+	}
+
+	.genre-Philosophy {
+		fill: $philosophy;
+	}
+
+	.genre-Western {
+		fill: $western;
+	}
+
+	.age-overlay {
+		fill: rgba($black, 0.2);
+		stroke: none;
+	}
+
+	.favorite {
+		fill: $favorite;
+	}
+
+	.line-gender-Male {
+		stroke: $male;
+	}
+
+	.line-gender-Female {
+		stroke: $female;
+	}
+
+	.line-gender-NB {
+		stroke: $nonbinary;
+	}
+
+	.line-form-Poetry,
+	.line-form-Drama {
+		stroke-dasharray: 3, 3;
+	}
+
+	.legend-0 {
+		fill: $slate;
+		font-size: 14px;
+	}
+
+	.legend-0-bg {
+		fill: none;
+	}
+
+	.legend-0-count {
+		fill: $dark-gray;
+		font-size: 12px;
+		alignment-baseline: central;
+	}
+
+	.legend-arrow {
+		fill: $dark-gray;
+	}
+
+	.legend-1 {
+		fill: $off-white;
+		font-size: 12px;
+		alignment-baseline: hanging;
+	}
+}
+
+
+// =========================================================
+// Book Modal
+// =========================================================
+
+.modal {
+	p {
+		margin-bottom: 0.2em;
+	}
+
+	.image {
+		width: 96px;
+	}
+
+	.modal-count {
+		margin-top: -10px;
+		padding-bottom: 20px;
+
+		color: $search-text;
+		font-size: 12px;
+		text-align: center;
+	}
+
+	.modal-author-info {
+		margin-top: 6px;
+
+		color: #918e8b;
+		font-size: 14px;
+	}
+
+	.tag {
+		color: $white;
+	}
+
+	.tag-form,
+	.tag-series {
+		background: #3b3a38;
+	}
+
+	.tag-favorite {
+		background: $favorite;
+	}
+
+	.tag-Lit {
+		background: $lit;
+	}
+
+	.tag-Mystery {
+		background: $mystery;
+	}
+
+	.tag-Horror {
+		background: $horror;
+	}
+
+	.tag-Humor {
+		background: $humor;
+	}
+
+	.tag-SciFi {
+		background: $scifi;
+	}
+
+	.tag-Fantasy {
+		background: $fantasy;
+	}
+
+	.tag-Historical {
+		background: $historical;
+	}
+
+	.tag-Biography {
+		background: $biography;
+	}
+
+	.tag-Science {
+		background: $science;
+	}
+
+	.tag-Music {
+		background: $music;
+	}
+
+	.tag-Essays {
+		background: $essays;
+	}
+
+	.tag-Economics {
+		background: $economics;
+	}
+
+	.tag-Philosophy {
+		background: $philosophy;
+	}
+
+	.tag-Western {
+		background: $western;
+	}
+}
+
+
+// =========================================================
+// Games
+// =========================================================
+
+.games {
+	.options {
+		padding-top: $space-md;
+		padding-bottom: $space-md;
+		margin-bottom: $space-md;
+
+		text-align: center;
+
+		.field,
+		.label,
+		.control {
+			display: inline-block;
+			margin-bottom: 0;
+		}
+
+		.field {
+			margin-right: 16px;
+			margin-bottom: 8px;
+			margin-left: 16px;
+		}
+
+		.checkbox {
+			width: $checkbox-size;
+			height: $checkbox-size;
+			border: $border-width solid $mint;
+			accent-color: $mint;
+		}
+
+		.slider {
+			accent-color: $mint;
+		}
+
+		.filter-sub {
+			color: $off-white;
+			font-size: $control-small-size;
+			font-style: italic;
+			font-weight: $font-weight-regular;
+		}
+
+		.label {
+			margin-right: 0.2rem;
+			margin-left: 0.2rem;
+
+			font-size: $control-label-size;
+			font-weight: $font-weight-regular;
+		}
+
+		.slider-value {
+			margin-right: 0.2rem;
+			margin-left: 0.2rem;
+
+			color: $goldenrod;
+			font-size: $control-label-size;
+			font-weight: bold;
+		}
+	}
+}
+
+
+// ---------------------------------------------------------
+// Games Grid
+// ---------------------------------------------------------
+
+#gamesGrid {
+	max-width: 100%;
+}
+
+.ag-header-cell {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding: 5px 3px;
+
+	font-family: $font-heading;
+	font-size: $grid-header-size;
+	font-weight: $font-weight-thin;
+	text-align: center;
+	white-space: normal;
+	word-wrap: break-word;
+}
+
+.ag-cell {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding: 1px;
+
+	font-family: $font-body;
+	font-size: $grid-cell-size;
+	line-height: 1.1;
+	text-align: center;
+	white-space: normal;
+	word-wrap: break-word;
+
+	&[col-id='game'] {
+		min-width: $grid-game-min-width;
+
+		font-family: $font-heading;
+		font-size: $grid-game-size;
+		font-weight: $font-weight-thin;
+		text-align: left;
+
+		justify-content: flex-start;
+	}
+
+	&[col-id='mechanics'],
+	&[col-id='theme'],
+	&[col-id='players'],
+	&[col-id='expansion'],
+	&[col-id='co-op'],
+	&[col-id='legacy'],
+	&[col-id='favorite'],
+	&[col-id='play_more'] {
+		text-align: center;
+	}
+
+	&[col-id='mechanics_rating'],
+	&[col-id='theme_rating'],
+	&[col-id='time'],
+	&[col-id='learning_complexity'],
+	&[col-id='playing_complexity'],
+	&[col-id='extras'],
+	&[col-id='blurb'] {
+		justify-content: flex-start;
+		text-align: left;
+	}
+
+	&[col-id='blurb'] {
+		font-style: italic;
+	}
+}
+
+
+// ---------------------------------------------------------
+// Games Lower Text / Footer
+// ---------------------------------------------------------
+
+.lower-text {
+	padding-top: $space-md;
+	padding-bottom: $space-md;
+
+	color: $white;
+	font-size: $control-small-size;
+	font-style: italic;
+	font-weight: $font-weight-regular;
+}
+
+.footer {
+	padding-left: 10px;
+
+	background: rgba($black, 0.6);
+	color: $white;
+	font-size: $control-small-size;
+
+	p {
+		line-height: 2;
+	}
+
+	a {
+		color: #e5e1b5;
+	}
+
+	.share {
+		display: flex;
+		align-items: center;
+	}
+}
+
+
+// =========================================================
+// Invite / CV
+// =========================================================
+
+#cvhead {
+	margin-top: 2.5vh;
+	margin-left: 5vw;
+
+	text-align: left;
+
+	header {
+		display: inline-block;
+
+		color: rgba($white, 0.5);
+		vertical-align: middle;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	strong,
+	b {
+		color: $white;
+	}
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: $white;
+		}
+	}
+
+	h3 {
+		margin-right: 30vw;
+		margin-left: 10vw;
+
+		text-transform: none;
+	}
+}
+
+
+// =========================================================
+// Page Responsive Rules
+// =========================================================
+
+// Books
+@media screen and (max-width: $breakpoint-tablet) {
+	.books {
+		.search {
+			.control,
+			.search-result {
+				width: 80% !important;
+			}
+
+			.search-result {
+				right: 10% !important;
+			}
+		}
+
+		.field,
+		.label {
+			display: block !important;
+			text-align: center;
+		}
+
+		.modal-prev {
+			padding-left: 6px !important;
+		}
+
+		.modal-next {
+			padding-right: 6px !important;
+		}
+
+		.legend {
+			border-right: none !important;
+
+			img {
+				max-width: 320px;
+			}
+		}
+	}
+}
+
+
+// Games
+@media screen and (min-width: $breakpoint-desktop) {
+	#gamesGrid {
+		overflow-x: auto;
+
+		-webkit-overflow-scrolling: touch;
+
+		&::-webkit-scrollbar {
+			height: 8px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: darkgray;
+			border-radius: 4px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: #f1f1f1;
+		}
+	}
+}
