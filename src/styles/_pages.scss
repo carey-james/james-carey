@@ -31,9 +31,11 @@
 // ---------------------------------------------------------
 
 .books {
-	.search,
 	.options {
+		padding-top: $space-md;
 		padding-bottom: $space-md;
+		margin-bottom: $space-md;
+
 		text-align: center;
 
 		.field,
@@ -50,11 +52,6 @@
 			font-size: $control-label-size;
 			font-weight: $font-weight-regular;
 		}
-	}
-
-	.options {
-		padding-top: $space-md;
-		margin-bottom: $space-md;
 	}
 }
 
@@ -83,60 +80,10 @@
 		stroke-width: 1;
 	}
 
-	.genre-Lit {
-		fill: $lit;
-	}
-
-	.genre-Mystery {
-		fill: $mystery;
-	}
-
-	.genre-Horror {
-		fill: $horror;
-	}
-
-	.genre-Humor {
-		fill: $humor;
-	}
-
-	.genre-SciFi {
-		fill: $scifi;
-	}
-
-	.genre-Fantasy {
-		fill: $fantasy;
-	}
-
-	.genre-Historical {
-		fill: $historical;
-	}
-
-	.genre-Biography {
-		fill: $biography;
-	}
-
-	.genre-Science {
-		fill: $science;
-	}
-
-	.genre-Music {
-		fill: $music;
-	}
-
-	.genre-Essays {
-		fill: $essays;
-	}
-
-	.genre-Economics {
-		fill: $economics;
-	}
-
-	.genre-Philosophy {
-		fill: $philosophy;
-	}
-
-	.genre-Western {
-		fill: $western;
+	@each $genre, $color in $genre-colors {
+		.genre-#{$genre} {
+			fill: $color;
+		}
 	}
 
 	.age-overlay {
@@ -189,12 +136,148 @@
 		font-size: 12px;
 		alignment-baseline: hanging;
 	}
+
+	.legend-1-bg {
+		fill: $slate;
+		stroke: none;
+		stroke-width: 0;
+	}
+
+	.legend-1-percent {
+		text-anchor: end;
+		font-size: 10px;
+		fill: $white;
+		transform: rotate(90deg);
+	}
+
+	.legend-1-count {
+		text-anchor: end;
+		font-size: 12px;
+		fill: $white;
+	}
 }
 
 
-// =========================================================
+// ---------------------------------------------------------
+// Legends
+// ---------------------------------------------------------
+
+.content {
+	margin-bottom: 0 !important;
+	background-color: rgba($black, 0.4);
+
+	.section {
+		background-color: transparent;
+	}
+
+	.legend {
+		&:not(:last-child) {
+			border-right: $border-width solid $gray-light;
+		}
+
+		ul {
+			margin-bottom: 1rem;
+
+			font-size: 14px;
+			color: $white;
+
+			li {
+				list-style: circle;
+			}
+		}
+	}
+
+	.line-label {
+		fill: $white;
+		font-family: $font-heading;
+		font-size: 12px;
+		alignment-baseline: hanging;
+	}
+
+	.favorite {
+		fill: $favorite;
+		font-family: $font-heading;
+		font-size: 12px;
+	}
+
+	.genre-square {
+		border-radius: $border-radius-small;
+	}
+
+	@each $genre, $color in $genre-colors {
+		.genre-icon-#{$genre} {
+			fill: $color;
+		}
+	}
+
+	.book-template {
+		stroke-width: 3;
+		stroke: $white;
+		fill: none;
+	}
+
+	.line-gender-Example,
+	.line-gender-Male,
+	.line-gender-Female,
+	.line-gender-NB {
+		stroke-width: 2;
+	}
+
+	.line-gender-Example {
+		stroke: $white;
+	}
+
+	.line-gender-Male {
+		stroke: $male;
+	}
+
+	.line-gender-Female {
+		stroke: $female;
+	}
+
+	.line-gender-NB {
+		stroke: $nonbinary;
+	}
+
+	.line-form-dash {
+		stroke-dasharray: 3, 3;
+	}
+
+	a {
+		color: $gray-darkest;
+		text-decoration: underline;
+	}
+
+	i {
+		font-style: normal;
+		background-color: #e5e1b5;
+	}
+}
+
+
+// ---------------------------------------------------------
+// Book Tooltip
+// ---------------------------------------------------------
+
+.tippy-popper {
+	text-align: left;
+
+	strong {
+		font-weight: $font-weight-regular;
+		color: $white;
+	}
+}
+
+.tippy-tooltip {
+	border-radius: $border-radius-medium;
+	color: $off-white;
+	font-family: $font-heading;
+}
+
+
+// ---------------------------------------------------------
 // Book Modal
-// =========================================================
+// ---------------------------------------------------------
 
 .modal {
 	.modal-card {
@@ -228,6 +311,7 @@
 	.book-blurb {
 		margin-top: $space-md;
 		padding-top: $space-md;
+
 		border-top: $border-width solid rgba($slate, 0.3);
 
 		.js-d-blurb {
@@ -236,7 +320,21 @@
 	}
 
 	.tag {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		height: 2em;
+		padding: 0 0.875em;
+
+		border-radius: 290486px;
+
+		background-color: whitesmoke;
 		color: $white;
+
+		font-size: 0.75rem;
+		line-height: 1.5;
+		white-space: nowrap;
 	}
 
 	.tag-form,
@@ -248,60 +346,10 @@
 		background: $favorite;
 	}
 
-	.tag-Lit {
-		background: $lit;
-	}
-
-	.tag-Mystery {
-		background: $mystery;
-	}
-
-	.tag-Horror {
-		background: $horror;
-	}
-
-	.tag-Humor {
-		background: $humor;
-	}
-
-	.tag-SciFi {
-		background: $scifi;
-	}
-
-	.tag-Fantasy {
-		background: $fantasy;
-	}
-
-	.tag-Historical {
-		background: $historical;
-	}
-
-	.tag-Biography {
-		background: $biography;
-	}
-
-	.tag-Science {
-		background: $science;
-	}
-
-	.tag-Music {
-		background: $music;
-	}
-
-	.tag-Essays {
-		background: $essays;
-	}
-
-	.tag-Economics {
-		background: $economics;
-	}
-
-	.tag-Philosophy {
-		background: $philosophy;
-	}
-
-	.tag-Western {
-		background: $western;
+	@each $genre, $color in $genre-colors {
+		.tag-#{$genre} {
+			background: $color;
+		}
 	}
 
 	.modal-card-foot {
@@ -312,6 +360,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
 		width: 100%;
 	}
 

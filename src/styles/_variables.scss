@@ -35,6 +35,23 @@ $philosophy: #4a3554;
 $western: #6f1a07;
 $favorite: #e29f37;
 
+$genre-colors: (
+	Lit: $lit,
+	Mystery: $mystery,
+	Horror: $horror,
+	Humor: $humor,
+	SciFi: $scifi,
+	Fantasy: $fantasy,
+	Historical: $historical,
+	Biography: $biography,
+	Science: $science,
+	Music: $music,
+	Essays: $essays,
+	Economics: $economics,
+	Philosophy: $philosophy,
+	Western: $western
+);
+
 // Other categories
 $male: #6699cc;
 $female: #f48876;

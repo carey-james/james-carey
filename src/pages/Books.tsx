@@ -4,6 +4,23 @@ import { createRoot } from 'react-dom/client'
 import { initBooks } from '../scripts/books'
 import '../styles/main.scss'
 
+// Used in the Genre Legend svg
+const GENRES = [
+	'Biography',
+	'Economics',
+	'Fantasy',
+	'Historical',
+	'Horror',
+	'Humor',
+	'Lit',
+	'Science',
+	'Music',
+	'Mystery',
+	'Philosophy',
+	'SciFi',
+	'Western',
+] as const
+
 function Books() {
 	useEffect(() => {
 		initBooks()
@@ -134,7 +151,18 @@ function Books() {
 							</svg>
 							<svg id='genres-legend-svg' width='300'>
 								<g>
-									{/* genre legend entries go here */}
+									{GENRES.map((genre, index) => {
+										const x = index * 20
+										return (
+											<g key={genre}>
+												<rect className={`genre-square genre-icon-${genre}`} x={x} y='30' width='16' height='16' rx='1' ry='1'/>
+												<image x={x + 2} y='32' width='12' height='12' href={`/icons/book-icons/${genre}.svg`}/>
+												<text x='46' y={-10 - x} transform='rotate(90, -4, 4)' className='line-label'>
+													{genre}
+												</text>
+											</g>
+										)
+									})}
 								</g>
 							</svg>
 						</div>
