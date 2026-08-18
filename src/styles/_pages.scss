@@ -22,19 +22,6 @@
 	}
 }
 
-// ---------------------------------------------------------
-// About
-// ---------------------------------------------------------
-
-.cvhead {
-	position: relative;
-	text-align: center;
-
-	h3 {
-		text-transform: none;
-	}
-}
-
 // =========================================================
 // Books
 // =========================================================
@@ -62,95 +49,6 @@
 
 			font-size: $control-label-size;
 			font-weight: $font-weight-regular;
-		}
-	}
-
-	.search {
-		padding-top: $space-md;
-
-		.field {
-			position: relative;
-		}
-
-		.control,
-		.search-result {
-			width: $search-width;
-		}
-
-		.search-input-wrapper {
-			position: relative;
-		}
-
-		.close-x {
-			position: absolute;
-			top: 2px;
-			right: 6px;
-			display: inline-block;
-
-			a {
-				color: $search-text;
-			}
-		}
-
-		.close-thin::after {
-			cursor: pointer;
-			content: '×';
-			font-size: 18px;
-			line-height: 100%;
-		}
-
-		.search-result {
-			position: absolute;
-			right: 0;
-			z-index: 10;
-
-			overflow-y: auto;
-
-			max-height: $search-result-max-height;
-
-			background: $white;
-			border-right: $border-width solid $search-text;
-			border-bottom: $border-width solid $search-text;
-			border-left: $border-width solid $search-text;
-			border-radius: 0 0 $border-radius-small $border-radius-small;
-
-			box-shadow: $search-shadow;
-
-			font-size: $search-result-font-size;
-
-			li.count,
-			.item {
-				max-width: 100%;
-				text-align: left;
-			}
-
-			.item {
-				padding: $search-result-padding;
-				border-top: $border-width solid $nonbinary;
-
-				i {
-					background: #e5e1b5;
-					font-style: normal;
-				}
-			}
-
-			.item-hover {
-				background: #f5f3f1;
-				cursor: pointer;
-			}
-
-			li.count {
-				padding: 0.4em 1em;
-
-				color: $search-text;
-				font-size: $search-result-count-size;
-
-				i {
-					color: $female;
-					font-style: normal;
-					font-weight: bold;
-				}
-			}
 		}
 	}
 
@@ -299,28 +197,42 @@
 // =========================================================
 
 .modal {
-	p {
-		margin-bottom: 0.2em;
+	.modal-card {
+		width: 90%;
+		max-width: 600px;
 	}
 
-	.image {
-		width: 96px;
+	.modal-card-head {
+		align-items: center;
 	}
 
-	.modal-count {
-		margin-top: -10px;
-		padding-bottom: 20px;
-
-		color: $search-text;
-		font-size: 12px;
-		text-align: center;
+	.modal-card-title {
+		font-family: $font-heading;
+		font-weight: $font-weight-thin;
 	}
 
-	.modal-author-info {
-		margin-top: 6px;
+	.modal-card-body {
+		padding: $space-md;
+	}
 
-		color: #918e8b;
-		font-size: 14px;
+	.book-details {
+		p {
+			margin-bottom: 0.2em;
+		}
+
+		strong {
+			color: $slate;
+		}
+	}
+
+	.book-blurb {
+		margin-top: $space-md;
+		padding-top: $space-md;
+		border-top: $border-width solid rgba($slate, 0.3);
+
+		.js-d-blurb {
+			font-style: italic;
+		}
 	}
 
 	.tag {
@@ -390,6 +302,28 @@
 
 	.tag-Western {
 		background: $western;
+	}
+
+	.modal-card-foot {
+		justify-content: center;
+	}
+
+	.modal-navigation {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.js-modal-count {
+		color: $search-text;
+		font-size: 12px;
+		text-align: center;
+	}
+
+	.js-modal-prev,
+	.js-modal-next {
+		min-width: 90px;
 	}
 }
 

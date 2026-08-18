@@ -24,7 +24,7 @@ function Books() {
 					<h3>Books read since 2022</h3>
 				</header>
 			</section>
-			<div className='wrapper books-page'>
+			<div className='wrapper books'>
 				<div className='container'>
 					<div className='options'>
 						<div className='field'>
@@ -67,9 +67,76 @@ function Books() {
 				<div className='container'>
 					<div className='content'>
 						<div className='section'>
-							<svg id='main-legend-svg' width='300'></svg>
-							<svg id='genders-legend-svg' width='120'></svg>
-							<svg id='genres-legend-svg' width='300'></svg>
+							<a id='visualization'></a>
+							<svg id='main-legend-svg' width='300'>
+								<defs>
+									<marker id='head' orient='auto' markerWidth='3' markerHeight='4' refX='0.1' refY='2'>
+										<path d='M0,0 V4 L2,2 Z' fill='$white' />
+									</marker>
+								</defs>
+								<g>
+									<text x='24' y='-32' transform='rotate(90, -4, 4)' className='line-label'>
+										Year Published
+									</text>
+									<path id='arrow-line-year' markerEnd='url(#head)' strokeWidth='2' fill='none' stroke='$white' d='M 40, 90, 40 25,0'/>
+									<path id='favorite' className='favorite' d='M 50 20 V 10 L 56 14 L 62 10 V 20 Z'/>
+									<text x='72' y='14' className='favorite'>
+										Favorite
+									</text>
+									<rect className='book-template' x='50' y='20' width='25' height='90' rx='1' ry='1'/>
+									<line x1='50' y1='30' x2='75' y2='30' className='line-gender-Example'/>
+									<path id='arrow-line-pages' markerEnd='url(#head)' strokeWidth='2' fill='none' stroke='$white' d='M50, 120, 75 120,0'/>
+
+									<text x='50' y='126' className='line-label'>
+										Pages
+									</text>
+									<line x1='90' y1='30' x2='115' y2='30' className='line-gender-Example' />
+									<text x='34' y='-104' transform='rotate(90, -4, 4)' className='line-label'>
+										Non-Fiction
+									</text>
+									<line x1='130' y1='30' x2='155' y2='30' className='line-gender-Example'/>
+									<line x1='130' y1='34' x2='155' y2='34' className='line-gender-Example'/>
+									<text x='38' y='-144' transform='rotate(90, -4, 4)' className='line-label'>
+										Fiction
+									</text>
+									<line x1='170' y1='30' x2='195' y2='30' className='line-gender-Example'/>
+									<line x1='170' y1='34' x2='195' y2='34' className='line-gender-Example'/>
+									<line x1='170' y1='38' x2='195' y2='38' className='line-gender-Example'/>
+									<text x='42' y='-184' transform='rotate(90, -4, 4)' className='line-label'>
+										Comics
+									</text>
+									<line x1='210' y1='30' x2='235' y2='30' className='line-gender-Example line-form-dash'/>
+									<line x1='210' y1='34' x2='235' y2='34' className='line-gender-Example line-form-dash'/>
+									<text x='38' y='-224' transform='rotate(90, -4, 4)' className='line-label'>
+										Poetry
+									</text>
+									<line x1='250' y1='30' x2='275' y2='30' className='line-gender-Example line-form-dash'/>
+									<text x='34' y='-264' transform='rotate(90, -4, 4)' className='line-label'>
+										Drama
+									</text>
+								</g>
+							</svg>
+							<svg id='genders-legend-svg' width='120'>
+								<g>
+									<line x1='0' y1='30' x2='25' y2='30' className='line-gender-Male'/>
+									<text x='34' y='-14' transform='rotate(90, -4, 4)' className='line-label'>
+										Male
+									</text>
+									<line x1='40' y1='30' x2='65' y2='30' className='line-gender-Female'/>
+									<text x='34' y='-54' transform='rotate(90, -4, 4)' className='line-label'>
+										Female
+									</text>
+									<line x1='80' y1='30' x2='105'y2='30' className='line-gender-NB'/>
+									<text x='34' y='-94' transform='rotate(90, -4, 4)' className='line-label'>
+										NB
+									</text>
+								</g>
+							</svg>
+							<svg id='genres-legend-svg' width='300'>
+								<g>
+									{/* genre legend entries go here */}
+								</g>
+							</svg>
 						</div>
 					</div>
 				</div>
